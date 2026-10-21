@@ -1,0 +1,86 @@
+{
+  "source": "source.json",
+  "status": "observed visual behavior; not extracted source animation code",
+  "time_unit": "seconds",
+  "timing_precision_note": "boundaries approximate, generally within 0.5 seconds; manual frame review",
+  "exact_easing_known": false,
+  "beats": [
+    {
+      "start": 0,
+      "end": 1.5,
+      "id": "hero",
+      "observed": "Oversized title contracts while it and an uneven-height photo strip travel upward",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 1.5,
+      "end": 4.3,
+      "id": "statement",
+      "observed": "Centered statement settles into a reading hold",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 4.3,
+      "end": 6.5,
+      "id": "philosophy",
+      "observed": "Stone panel rises with asymmetric photos and staged text visibility",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 6.5,
+      "end": 12.6,
+      "id": "team-stack",
+      "observed": "Fixed section label; portraits, names and roles cycle in a clipped vertical stack",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 12.6,
+      "end": 16.6,
+      "id": "photo-row",
+      "observed": "Heading stays in place while three images and a text gap rearrange horizontally",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 16.6,
+      "end": 19.5,
+      "id": "awards",
+      "observed": "Stone panel pushes upward; heading resolves above rule and lists; cursor travels",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 19.5,
+      "end": 22.2,
+      "id": "collaborators",
+      "observed": "Offset left photo/text and larger right list; vertical section travel",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 22.2,
+      "end": 24.6,
+      "id": "testimonial",
+      "observed": "Left heading and right portrait/quote panel move into a reading hold",
+      "behavior_confidence": "high"
+    },
+    {
+      "start": 24.6,
+      "end": 25.2,
+      "id": "footer",
+      "observed": "Dark footer exposes oversized cropped wordmark",
+      "behavior_confidence": "medium"
+    },
+    {
+      "start": 25.2,
+      "end": 26.516667,
+      "id": "loop-return",
+      "observed": "Pale reset and clipped hero elements restore opening composition",
+      "behavior_confidence": "medium"
+    }
+  ],
+  "implementation_advice": {
+    "engine": "HyperFrames",
+    "orchestration": "one paused GSAP timeline, deterministic seeking",
+    "scroll_simulation": "transform x/y of inner content wrappers; no live scroll handlers",
+    "layout": "precomputed geometry and overflow-hidden masks",
+    "validation": "lint, check, seek samples, 540x960 MP4 first"
+  }
+}

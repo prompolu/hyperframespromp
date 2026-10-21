@@ -1,0 +1,31 @@
+{
+  "title": "About Page—Architecture & Interior Design Studio",
+  "creator": "Tubik",
+  "shot_id": 27477873,
+  "shot_url": "https://dribbble.com/shots/27477873-About-Page-Architecture-Interior-Design-Studio",
+  "media_url": "https://cdn.dribbble.com/userupload/48088161/file/806a846af8b46d9b8ec4ad568798827d.mp4",
+  "discovery_url": "https://dribbble.com/Tubik?page=3",
+  "discovery_attribute": "screenshot-27477873 img[data-animated-url]",
+  "inspected_date": "2026-10-21",
+  "sha256": "42ada5c4dbd881b6c9b4a880387b30d3f20538564a8104dd4de0d8a2704ecaa3",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 3200,
+        "height": 2400,
+        "r_frame_rate": "60/1",
+        "nb_frames": "1591"
+      }
+    ],
+    "format": {
+      "duration": "26.516667",
+      "size": "9458863"
+    }
+  },
+  "source_code_available": false,
+  "audio_stream_present": false
+}

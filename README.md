@@ -13,6 +13,10 @@ Rebuilt with real photographic imagery, the website's light ivory/dark ink/bronz
 
 Open an MP4 on GitHub and select **Download raw file** to play it locally.
 
+## New design reference — Tubik architecture motion
+
+[Observed style and motion breakdown](references/tubik-architecture-27477873/README.md), including attributed frame studies, reusable design tokens, a timestamped motion map, and a proposed French 60-second PROMPOLU storyboard. This extracts the actual Dribbble MP4; it does not replace or rerender the existing film.
+
 ## Source and installation
 
 - Official instructions: https://github.com/heygen-com/hyperframes#skills

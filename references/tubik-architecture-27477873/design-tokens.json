@@ -1,0 +1,124 @@
+{
+  "reference_observations": {
+    "status": "observed from compressed MP4; not original source tokens",
+    "decoded_flat_color_samples": {
+      "opening_paper": "#F3F3F3",
+      "stone_panel": "#DDDBD7",
+      "presentation_matte": "#111111",
+      "footer_dark": "#282828"
+    },
+    "font_family": null,
+    "font_classification": "grotesque sans-serif; exact family and weight unverified",
+    "type_treatment": [
+      "oversized sentence-case hero",
+      "tight tracking",
+      "compact line-height",
+      "small uppercase section labels"
+    ],
+    "image_treatment": [
+      "rectangular crops",
+      "mixed image heights",
+      "natural photographic colors"
+    ],
+    "layout": [
+      "centered statements",
+      "asymmetric photo/text spreads",
+      "pinned label with vertical stack",
+      "three-photo sliding row",
+      "fine horizontal rules"
+    ],
+    "easing_curves": null
+  },
+  "prompolu_proposed_adaptation": {
+    "status": "brand values retained; layout and motion settings proposed",
+    "format": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "duration_seconds": 60
+    },
+    "colors": {
+      "paper": "#F1F0EC",
+      "ink": "#15171A",
+      "bronze": "#8C6A45",
+      "bronze_small_text": "#765333",
+      "rule": "#D8D5CE"
+    },
+    "typography": {
+      "hero_family": "Anton",
+      "hero_weight": 400,
+      "editorial_family": "DM Sans",
+      "editorial_weight": 600,
+      "body_family": "DM Sans",
+      "body_weight": 400,
+      "hero_size_px_range": [
+        112,
+        152
+      ],
+      "editorial_size_px_range": [
+        72,
+        96
+      ],
+      "body_size_px_range": [
+        36,
+        44
+      ],
+      "label_min_px": 28
+    },
+    "geometry": {
+      "title_safe_horizontal_px": 108,
+      "title_safe_vertical_px": 192,
+      "photo_corner_radius_px": 0,
+      "rule_width_px": 2
+    },
+    "motion": {
+      "text_reveal": {
+        "seconds": [
+          0.55,
+          0.8
+        ],
+        "travel_y_px": [
+          32,
+          64
+        ],
+        "ease": "power3.out",
+        "stagger_seconds": [
+          0.08,
+          0.12
+        ]
+      },
+      "panel_push": {
+        "seconds": [
+          0.85,
+          1.1
+        ],
+        "ease": "power2.inOut"
+      },
+      "stack_transition": {
+        "seconds": [
+          0.75,
+          0.95
+        ],
+        "minimum_reading_hold_seconds": 1.6
+      },
+      "photo_row_shift": {
+        "seconds": [
+          1,
+          1.3
+        ],
+        "ease": "power2.inOut"
+      },
+      "closing_hold_min_seconds": 3
+    },
+    "constraints": [
+      "real photography",
+      "no invented manufacturer geometry",
+      "no unverified performance figures",
+      "no borrowed testimonials or awards",
+      "authentic black logo",
+      "French voiceover and music",
+      "ivory-dominant film",
+      "no website modification"
+    ]
+  }
+}
