@@ -1,0 +1,27 @@
+[
+  {
+    "path": "assets/fonts/Anton-Regular.ttf",
+    "source": "https://prompolu.com/assets/font-0.ttf",
+    "sha256": "fd9301f2837c99df2be07cc7f0be66e9470f5354d8fcf1606027c67fcd637a53"
+  },
+  {
+    "path": "assets/fonts/DM-Sans-Regular.ttf",
+    "source": "https://prompolu.com/assets/font-1.ttf",
+    "sha256": "b0ae3e89a7d3ef2b1838bb4b1ceb0b17cc3435af061eee809d76aa623ff116e9"
+  },
+  {
+    "path": "assets/fonts/DM-Sans-Semibold.ttf",
+    "source": "https://prompolu.com/assets/font-3.ttf",
+    "sha256": "b79a2ea7a38f33fd96a282fadb9ce97626bb0724a44d21075859f0e50239993a"
+  },
+  {
+    "path": "assets/brand/logo-prompolu.png",
+    "source": "https://prompolu.com/assets/logo-prompolu.png",
+    "sha256": "2e23815cb6d79cfc040644d6d4f2e85c04b35e64d2578c560ca0a7b5605636cc"
+  },
+  {
+    "path": "assets/vendor/gsap.min.js",
+    "source": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js",
+    "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "category": "kinetic-type",
+  "duration_s": 5,
+  "fps": 30,
+  "canvas": { "w": 1080, "h": 1920, "aspect": "9:16" },
+  "style": "Premium French architectural technical study: controlled kinetic typography, charcoal field, paper-white aluminium section, bronze insulating connection. One continuous composition; the dominant motion is the measured separation of two aluminium bodies. End in stillness.",
+  "palette": ["#15171A", "#F1F0EC", "#8C6A45"],
+  "font": "Anton",
+  "secondary_font": "DM Sans",
+  "font_assets": ["assets/fonts/Anton-Regular.ttf", "assets/fonts/DM-Sans-Regular.ttf", "assets/fonts/DM-Sans-Semibold.ttf"],
+  "beats": [0.1, 0.8, 1.55, 2.45, 3.3],
+  "export": "mp4",
+  "test_export": { "w": 540, "h": 960, "fps": 30, "duration_s": 5 },
+  "asset_needs": [],
+  "resolved_assets": {
+    "logo": "assets/brand/logo-prompolu.png",
+    "source": "https://prompolu.com",
+    "notes": "Brand research and local file sourcing were handled before design; no website capture or remote resource is required at render time. The user supplied the three palette colors."
+  },
+  "block": "caption-clip-wipe",
+  "customize": {
+    "headline": "RUPTURE DE PONT THERMIQUE",
+    "headline_lines": ["RUPTURE DE", "PONT", "THERMIQUE"],
+    "font": "Anton",
+    "foreground": "#F1F0EC",
+    "background": "#15171A",
+    "accent": "#8C6A45",
+    "title_entrance": "Reuse the installed caption-clip-wipe component's clip-reveal approach, adapting its typography, timing, alignment, and palette in place. No slam, shake, neon or elastic motion.",
+    "title_persistence": "Keep the title readable after its reveal; it anchors the technical schematic for the rest of the five-second shot."
+  },
+  "catalog_evidence": {
+    "query": "headline reveal",
+    "tier": "words",
+    "selected_component": "caption-clip-wipe",
+    "custom_gap": "The thermal-break diagram requires project-specific generic vector geometry. Draw it as a schematic, never as a manufacturer's cross-section."
+  },
+  "shot_brief": "A calm PROMPOLU identity frame introduces RUPTURE DE PONT THERMIQUE through a precise masked type reveal. Beneath it, two simplified hollow aluminium bodies settle into a technical section view. The bodies separate symmetrically along one horizontal axis, exposing the insulating gap; two bronze bars then resolve into the polyamide connection. Cream technical labels identify exterior, interior, and polyamide. The last 1.7 seconds hold the complete, explicitly generic schematic with no performance claims, dimensions, or proprietary profile features.",
+  "content": {
+    "block": "caption-clip-wipe",
+    "scenes": [
+      {
+        "id": "hook",
+        "start": 0,
+        "end": 1.55,
+        "text": "RUPTURE DE PONT THERMIQUE",
+        "emphasis_words": ["THERMIQUE"],
+        "emotion": "precise, premium, architectural",
+        "motion": "At 0.10s reveal the headline with the clip-wipe primitive in a total stagger shorter than 0.5s; use expo.out for the reveal and a short opacity-only DM Sans metadata entrance. From 0.80s introduce the generic section view with a restrained scale and opacity settle, keeping the title visible.",
+        "beats": [0.1, 0.8]
+      },
+      {
+        "id": "separation-and-connection",
+        "start": 1.55,
+        "end": 3.3,
+        "text": "EXTÉRIEUR / INTÉRIEUR — POLYAMIDE ISOLANT",
+        "emphasis_words": ["POLYAMIDE"],
+        "emotion": "controlled, explanatory",
+        "motion": "Move the left aluminium body left and the right body right over about 1.0s with power3.inOut. Each moves approximately 65–90 design pixels. At 2.45s reveal the two bronze connecting bars from their center across the gap over about 0.55s with expo.out. Reveal the polyamide callout with opacity only; no free-floating decorative lines.",
+        "beats": [1.55, 2.45]
+      },
+      {
+        "id": "technical-resolve",
+        "start": 3.3,
+        "end": 5,
+        "text": "SCHÉMA DE PRINCIPE · NON CONTRACTUEL",
+        "emphasis_words": [],
+        "emotion": "clear, resolved, confident",
+        "motion": "Hold the completed labeled assembly. Permit only a brief final opacity settle at the beginning; no continuing ambient zoom, fading to black, or end-card replacement.",
+        "beats": [3.3]
+      }
+    ],
+    "schematic": {
+      "geometry": "Exactly two simple hollow rectangular aluminium bodies plus two parallel connecting polyamide bars. No proprietary fins, chamber topology, manufacturer identifiers, dimensions, U-values, temperature readings, or quantified claims.",
+      "labels": ["EXTÉRIEUR", "INTÉRIEUR", "POLYAMIDE ISOLANT", "SCHÉMA DE PRINCIPE · NON CONTRACTUEL"],
+      "material_color_note": "Bronze identifies the insulating connection in this illustration; it is not a claim about the real material's color.",
+      "layout": {
+        "safe_margin_px": 80,
+        "header": "PROMPOLU logo, small technical-study metadata, understated structural rule.",
+        "headline": "Upper-left zone, roughly y=270–680. Three compact lines. Anton approximately 90–110px, adjusted to the measured width without clipping.",
+        "hero": "Middle/lower-middle technical zone, roughly y=820–1370, x=96–984. Largest object in the frame; final separation balanced around the vertical centerline.",
+        "callouts": "Place exterior/interior labels close to their respective metal bodies, and the polyamide label below the central gap with a connector ending on an actual bronze bar.",
+        "footer": "Persistent generic-schematic notice, DM Sans at least 26–32px at the 1080px design width."
+      },
+      "contrast": "Use cream for all small labels on charcoal. Bronze on charcoal is only 3.65:1, so reserve it for large text, geometry, or non-text accents. Cream on charcoal is 15.75:1."
+    }
+  },
+  "build_constraints": [
+    "Editable HTML/SVG and local fonts, rendered by actual HyperFrames; no pre-rendered substitute.",
+    "Use one full-duration clip with a stable id and timing attributes; animate only inner groups.",
+    "Register one paused root GSAP timeline on window.__timelines with matching composition id, then seek(0); no wallclock or random effects.",
+    "Use explicit fromTo states for delayed reveals and avoid concurrent conflicting transforms on the same element.",
+    "Design at 1080×1920, render the first MP4 at 540×960, 30fps, 150 frames.",
+    "Inspect proof frames around 0.5s, 1.4s, 2.3s, 3.3s and 4.5s before rendering.",
+    "The user explicitly authorized this test render. Do not begin a full 60-second film."
+  ]
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1920" />
+  <title>PROMPOLU — Rupture de pont thermique</title>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <style>
+    @font-face { font-family:"Anton";src:url("assets/fonts/Anton-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:block; }
+    @font-face { font-family:"DM Sans";src:url("assets/fonts/DM-Sans-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:block; }
+    @font-face { font-family:"DM Sans";src:url("assets/fonts/DM-Sans-Semibold.ttf") format("truetype");font-style:normal;font-weight:600;font-display:block; }
+    :root { --ink:#15171a;--paper:#f1f0ec;--bronze:#8c6a45;--metal:#c7c9cc;--metal-edge:#8d9197;--rule:#414349;--render-scale:1; }
+    * { box-sizing:border-box; }
+    html,body { margin:0;width:1080px;height:1920px;overflow:hidden;background:var(--ink);color:var(--paper);font-family:"DM Sans",sans-serif; }
+    #stage { position:relative;width:100%;height:100%;overflow:hidden;background:var(--ink); }
+    /* Full-size editable design; the proof variant scales only this wrapper. */
+    .design-canvas { position:absolute;inset:0;width:1080px;height:1920px;transform:scale(var(--render-scale));transform-origin:0 0;background:var(--ink); }
+    .scene-content { display:flex;flex-direction:column;width:100%;height:100%;padding:96px 88px 94px; }
+    .masthead { display:flex;justify-content:space-between;align-items:center;min-height:58px;padding-bottom:36px;border-bottom:1px solid var(--rule); }
+    .brand-mark { display:block;width:390px;height:auto;filter:invert(1); }
+    .edition { display:flex;flex-direction:column;align-items:flex-end;gap:5px;font-size:20px;line-height:1.3;letter-spacing:.13em; }
+    .title-zone { padding-top:66px; }
+    .eyebrow { margin:0 0 30px;font-size:23px;font-weight:600;letter-spacing:.18em;line-height:1.4; }
+    h1 { display:flex;flex-direction:column;gap:0;margin:0;font-family:"Anton",sans-serif;font-weight:400;font-size:132px;line-height:1.14;letter-spacing:-.025em; }
+    /* Adapted from official caption-clip-wipe's word-group reveal recipe. */
+    .title-line { display:block;width:100%;clip-path:inset(0 0% 0 0); }
+    .subtitle { margin:27px 0 0;font-size:25px;line-height:1.5;letter-spacing:.08em; }
+    .hero-zone { display:flex;flex-direction:column;margin-top:62px; }
+    .region-labels { display:grid;grid-template-columns:1fr 1fr;gap:170px;margin-bottom:18px; }
+    .region-label { margin:0;text-align:center;font-size:25px;line-height:1.4;letter-spacing:.12em; }
+    .schematic { display:block;width:904px;height:492px;overflow:visible; }
+    .aluminium-fill { fill:var(--metal); }
+    .aluminium-outline { fill:none;stroke:var(--paper);stroke-width:2; }
+    .inner-edge { fill:none;stroke:var(--metal-edge);stroke-width:2; }
+    .polyamide-fill { fill:var(--bronze); }
+    .polyamide-edge { fill:none;stroke:var(--paper);stroke-opacity:.52;stroke-width:1; }
+    .callout-line { fill:none;stroke:var(--paper);stroke-width:2; }
+    .callout-anchor { fill:var(--paper); }
+    .polyamide-label { display:flex;align-items:center;justify-content:center;gap:14px;margin-top:8px; }
+    .material-swatch { display:block;width:28px;height:28px;background:var(--bronze); }
+    .material-name { margin:0;font-size:29px;font-weight:600;line-height:1.4;letter-spacing:.09em; }
+    .footer { margin-top:auto;display:flex;flex-direction:column;gap:26px; }
+    .resolve-line { display:flex;justify-content:space-between;align-items:baseline;padding-bottom:30px;border-bottom:1px solid var(--rule); }
+    .resolve-line p { margin:0;font-size:28px;line-height:1.4; }
+    .study-index { font-size:21px;letter-spacing:.13em; }
+    .disclaimer { margin:0;font-size:25px;line-height:1.5;letter-spacing:.035em; }
+  </style>
+</head>
+<body>
+  <div data-hf-id="hf-9orw" id="stage" data-composition-id="prompolu-thermal-break" data-start="0" data-duration="5" data-fps="30" data-width="1080" data-height="1920">
+    <section data-hf-id="hf-draw" id="technical-scene" class="clip design-canvas" data-start="0" data-duration="5" data-track-index="0">
+      <div data-hf-id="hf-cn5c" class="scene-content">
+        <header data-hf-id="hf-vcxt" class="masthead">
+          <img data-hf-id="hf-mvrk" id="prompolu-mark" class="brand-mark" src="assets/brand/logo-prompolu.png" alt="PROMPOLU Aluminium" width="602" height="83" />
+          <div data-hf-id="hf-7u3q" class="edition"><span data-hf-id="hf-zwn4">ÉTUDE</span><span data-hf-id="hf-gev7">TECHNIQUE / 01</span></div>
+        </header>
+        <div data-hf-id="hf-jp35" class="title-zone">
+          <p data-hf-id="hf-oor3" id="eyebrow" class="eyebrow">L’INTELLIGENCE DE LA MATIÈRE</p>
+          <h1 data-hf-id="hf-7qu1" id="headline" aria-label="Rupture de pont thermique">
+            <span data-hf-id="hf-00e8" id="title-rupture" class="title-line">RUPTURE DE</span>
+            <span data-hf-id="hf-im0z" id="title-pont" class="title-line">PONT</span>
+            <span data-hf-id="hf-elgd" id="title-thermique" class="title-line">THERMIQUE</span>
+          </h1>
+          <p data-hf-id="hf-ni8v" id="subtitle" class="subtitle">ALUMINIUM · LIAISON ISOLANTE</p>
+        </div>
+        <div data-hf-id="hf-trdb" id="technical-hero" class="hero-zone">
+          <div data-hf-id="hf-k0oo" class="region-labels">
+            <p data-hf-id="hf-0jgc" id="exterior-label" class="region-label">EXTÉRIEUR</p>
+            <p data-hf-id="hf-fuag" id="interior-label" class="region-label">INTÉRIEUR</p>
+          </div>
+          <svg data-hf-id="hf-d47m" id="profile-diagram" class="schematic" viewBox="0 0 920 500" role="img" aria-label="Schéma générique : deux sections creuses d’aluminium reliées par deux barrettes isolantes en polyamide">
+            <!-- Generic two-body principle only: no manufacturer's profile geometry. -->
+            <g data-hf-id="hf-8m70" id="aluminium-left">
+              <path data-hf-id="hf-mnp2" class="aluminium-fill" fill-rule="evenodd" d="M90 40H410V370H90Z M111 61V349H389V61Z" />
+              <path data-hf-id="hf-xb5v" class="aluminium-outline" d="M90 40H410V370H90Z" />
+              <path data-hf-id="hf-wwzp" class="inner-edge" d="M111 61H389V349H111Z" />
+            </g>
+            <g data-hf-id="hf-c5pv" id="aluminium-right">
+              <path data-hf-id="hf-bmhj" class="aluminium-fill" fill-rule="evenodd" d="M510 40H830V370H510Z M531 61V349H809V61Z" />
+              <path data-hf-id="hf-chqr" class="aluminium-outline" d="M510 40H830V370H510Z" />
+              <path data-hf-id="hf-s7q4" class="inner-edge" d="M531 61H809V349H531Z" />
+            </g>
+            <g data-hf-id="hf-rd38" id="polyamide-bars">
+              <g data-hf-id="hf-u5mz" id="polyamide-top">
+                <rect data-hf-id="hf-e32a" class="polyamide-fill" x="350" y="125" width="220" height="36" />
+                <rect data-hf-id="hf-64iu" class="polyamide-edge" x="350" y="125" width="220" height="36" />
+              </g>
+              <g data-hf-id="hf-kyw7" id="polyamide-bottom">
+                <rect data-hf-id="hf-ba4d" class="polyamide-fill" x="350" y="250" width="220" height="36" />
+                <rect data-hf-id="hf-2tep" class="polyamide-edge" x="350" y="250" width="220" height="36" />
+              </g>
+            </g>
+            <g data-hf-id="hf-iq4y" id="polyamide-callout">
+              <path data-hf-id="hf-ifov" class="callout-line" d="M460 286V486" />
+              <circle data-hf-id="hf-lvj8" class="callout-anchor" cx="460" cy="286" r="5" />
+            </g>
+          </svg>
+          <div data-hf-id="hf-mylw" id="polyamide-label" class="polyamide-label">
+            <span data-hf-id="hf-b7jy" class="material-swatch" aria-hidden="true"></span>
+            <p data-hf-id="hf-hup4" class="material-name">POLYAMIDE ISOLANT</p>
+          </div>
+        </div>
+        <footer data-hf-id="hf-vadb" class="footer">
+          <div data-hf-id="hf-gzkx" id="technical-resolve" class="resolve-line">
+            <p data-hf-id="hf-2vbd">Deux faces. Une liaison isolante.</p>
+            <span data-hf-id="hf-djzz" class="study-index">PRINCIPE / 01</span>
+          </div>
+          <p data-hf-id="hf-qs4j" id="schematic-disclaimer" class="disclaimer">SCHÉMA DE PRINCIPE · NON CONTRACTUEL</p>
+        </footer>
+      </div>
+    </section>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Restrained adaptation of the official caption-clip-wipe recipe.
+    tl.fromTo("#eyebrow", { opacity: 0 }, { opacity: 1, duration: 0.26, ease: "power1.out" }, 0.10);
+    tl.fromTo(".title-line", { clipPath: "inset(0 100% 0 0)", y: 12 }, { clipPath: "inset(0 0% 0 0)", y: 0, duration: 0.58, stagger: 0.10, ease: "expo.out" }, 0.14);
+    tl.fromTo("#subtitle", { opacity: 0 }, { opacity: 1, duration: 0.32, ease: "sine.out" }, 0.69);
+    // The schematic appears before the two material bodies separate.
+    tl.fromTo("#technical-hero", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.62, ease: "power4.out" }, 0.80);
+    tl.fromTo("#aluminium-left", { x: 40 }, { x: -60, duration: 1.00, ease: "power3.inOut" }, 1.55);
+    tl.fromTo("#aluminium-right", { x: -40 }, { x: 60, duration: 1.00, ease: "power3.inOut" }, 1.55);
+    // Polyamide connects the two final inside edges (350 and 570).
+    tl.fromTo("#polyamide-top", { scaleX: 0, opacity: 0, transformOrigin: "50% 50%" }, { scaleX: 1, opacity: 1, duration: 0.55, ease: "expo.out" }, 2.45);
+    tl.fromTo("#polyamide-bottom", { scaleX: 0, opacity: 0, transformOrigin: "50% 50%" }, { scaleX: 1, opacity: 1, duration: 0.55, ease: "circ.out" }, 2.54);
+    tl.fromTo("#polyamide-callout", { opacity: 0 }, { opacity: 1, duration: 0.23, ease: "none" }, 2.98);
+    tl.fromTo("#polyamide-label", { opacity: 0 }, { opacity: 1, duration: 0.28, ease: "power2.out" }, 3.03);
+    tl.fromTo("#technical-resolve", { opacity: 0 }, { opacity: 1, duration: 0.24, ease: "sine.out" }, 3.10);
+    // The resolved composition holds to the fixed five-second endpoint.
+    window.__timelines["prompolu-thermal-break"] = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>

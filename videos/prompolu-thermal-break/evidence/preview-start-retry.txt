@@ -1,0 +1,15 @@
+
+  Lint: 0 error(s), 1 warning(s) — see the Lint badge in Studio, or run `hyperframes lint` for full output.
+
+┌  hyperframes preview
+
+  Project   prompolu-thermal-break
+  Studio    http://localhost:3002/#project/prompolu-thermal-break
+  Server    http://localhost:3002
+  Desktop   Keep editing by chatting with Framey in the HyperFrames desktop app → https://hyperframes.dev/studio/download?os=linux
+
+  Running in the background. Log: /workspace/hyperframespromp/videos/prompolu-thermal-break/.hyperframes/state/hyperframes/previews/0254537bf3d7c3ff.log
+  Changes reload automatically in the studio.
+
+  Stop with: hyperframes preview "/workspace/hyperframespromp/videos/prompolu-thermal-break" --stop
+

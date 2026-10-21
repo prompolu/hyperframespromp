@@ -1,0 +1,15 @@
+◆  Capturing 5 frames at [0.5s, 1.4s, 2.3s, 3.3s, 4.5s] from prompolu-thermal-break
+
+   Fonts: 3 loaded
+   Note: added an end-of-timeline frame at 4.85s. Short beats between your --at times may still be skipped — pass them explicitly.
+   Revision: none (inputs-changed)
+   State: /workspace/hyperframespromp/videos/prompolu-thermal-break/.hyperframes/video-state.json
+
+◇  6 snapshots saved to /workspace/hyperframespromp/videos/prompolu-thermal-break/evidence/proof-frames
+   evidence/proof-frames/frame-00-at-0.5s.png
+   evidence/proof-frames/frame-01-at-1.4s.png
+   evidence/proof-frames/frame-02-at-2.3s.png
+   evidence/proof-frames/frame-03-at-3.3s.png
+   evidence/proof-frames/frame-04-at-4.5s.png
+   evidence/proof-frames/frame-05-at-4.85s.png
+   /workspace/hyperframespromp/videos/prompolu-thermal-break/evidence/proof-frames/contact-sheet.jpg (grid view for AI review)

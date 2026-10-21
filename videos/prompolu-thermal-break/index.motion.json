@@ -1,0 +1,14 @@
+{
+  "duration": 5,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#title-thermique", "bySec": 1 },
+    { "kind": "appearsBy", "selector": "#technical-hero", "bySec": 1.4 },
+    { "kind": "appearsBy", "selector": "#polyamide-label", "bySec": 3.4 },
+    { "kind": "before", "a": "#technical-hero", "b": "#polyamide-label" },
+    { "kind": "staysInFrame", "selector": "#headline" },
+    { "kind": "staysInFrame", "selector": "#profile-diagram" },
+    { "kind": "staysInFrame", "selector": "#polyamide-label" },
+    { "kind": "staysInFrame", "selector": "#schematic-disclaimer" },
+    { "kind": "keepsMoving", "withinSelector": "#technical-scene", "maxStaticSec": 2 }
+  ]
+}

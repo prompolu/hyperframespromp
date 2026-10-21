@@ -1,6 +1,6 @@
 # HyperFrames project skills
 
-All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. No video or composition has been created.
+All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. The first editable PROMPOLU technical animation is available below.
 
 ## Source and installation
 
@@ -34,4 +34,18 @@ Codex runtime discovery is verified with the official Codex CLI 0.110.0: its app
 
 The preinstalled Codex CLI 0.163.0 cannot initialize its app server because the cloud-mounted Codex home is read-only (`installation_id` writes fail). Discovery through that specific runtime remains blocked; the compatibility check above used an isolated official 0.110.0 CLI with SQLite state directed to `/tmp`. The installed skill files were unchanged.
 
-These are skill instructions, not an initialized rendering project. Rendering prerequisites, credentials, browser downloads, and video generation remain outside this installation task.
+The rendering project has its own pinned CLI commands and validation evidence under `videos/prompolu-thermal-break/`.
+
+
+## PROMPOLU — first motion graphics test
+
+Five-second French technical animation, rendered using HyperFrames at 30 FPS. The schematic is generic and labeled non-contractual.
+
+- [1080 × 1920 MP4](videos/prompolu-thermal-break/renders/prompolu-thermal-break-1080x1920.mp4)
+- [540 × 960 preview MP4](videos/prompolu-thermal-break/renders/prompolu-thermal-break-test-540x960.mp4)
+- [Download the editable project ZIP](artifacts/prompolu-thermal-break-editable.zip)
+- [Editable source and rendering instructions](videos/prompolu-thermal-break/README.md)
+
+For a file download, open the file above and select **Download raw file** on GitHub.
+
+<img src="videos/prompolu-thermal-break/evidence/1080-decoded-final.png" alt="PROMPOLU thermal-break animation final frame: a generic aluminium schematic with polyamide connectors" width="270" />

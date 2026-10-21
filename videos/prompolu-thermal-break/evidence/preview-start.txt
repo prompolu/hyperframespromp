@@ -1,0 +1,5 @@
+│
+■  ENOENT: no such file or directory, mkdir '/home/agent/.local/state/hyperframes/previews'
+
+  Lint: 1 error(s), 1 warning(s) — see the Lint badge in Studio, or run `hyperframes lint` for full output.
+

@@ -1,0 +1,24 @@
+[
+  {
+    "file": "renders/prompolu-thermal-break-test-540x960.mp4",
+    "width": 540,
+    "height": 960,
+    "fps": 30,
+    "duration": 5,
+    "frames": 150,
+    "distinctDecodedFrames": 91,
+    "fullDecode": "passed",
+    "sha256": "0551da31770e34b8cc3561ec2fe53403d90fdac2a1d11657a83343943425e19f"
+  },
+  {
+    "file": "renders/prompolu-thermal-break-1080x1920.mp4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 5,
+    "frames": 150,
+    "distinctDecodedFrames": 116,
+    "fullDecode": "passed",
+    "sha256": "657fa4e0bf9c1fe76b6b1f595d12f31ff345a63d261482dbab10ac057bcf62e0"
+  }
+]

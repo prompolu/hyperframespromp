@@ -1,0 +1,13 @@
+{
+  "name": "prompolu-thermal-break",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bash scripts/hyperframes.sh preview",
+    "check": "bash scripts/hyperframes.sh check",
+    "doctor": "bash scripts/hyperframes.sh doctor --json",
+    "snapshot": "bash scripts/hyperframes.sh snapshot",
+    "render:test": "bash scripts/render-test.sh",
+    "render": "bash scripts/hyperframes.sh render --fps 30 --quality looks --workers 2 --strict --no-best-effort --output renders/prompolu-thermal-break-1080x1920.mp4"
+  }
+}

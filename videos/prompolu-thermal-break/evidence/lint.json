@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "errorCount": 0,
+  "warningCount": 1,
+  "infoCount": 0,
+  "findings": [
+    {
+      "code": "nested_structure_needs_subcomposition",
+      "severity": "warning",
+      "message": "<section id=\"technical-scene\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+      "elementId": "technical-scene",
+      "fixHint": "Move <section id=\"technical-scene\"> and its contents into a sub-composition file and mount it with data-composition-src.",
+      "file": "/workspace/hyperframespromp/videos/prompolu-thermal-break/index.html",
+      "line": 51,
+      "column": 5
+    }
+  ],
+  "filesScanned": 1,
+  "_meta": {
+    "version": "0.8.183",
+    "updateAvailable": false
+  }
+}
