@@ -1,0 +1,14 @@
+◆  Capturing 6 frames at [5s, 15s, 25s, 35s, 45s, 55s] from prompolu-thermal-break-60s
+
+   Fonts: 3 loaded
+   Revision: none (inputs-changed)
+   State: /workspace/hyperframespromp/videos/prompolu-thermal-break-60s/.hyperframes/video-state.json
+
+◇  6 snapshots saved to /workspace/hyperframespromp/videos/prompolu-thermal-break-60s/evidence/proof-frames
+   evidence/proof-frames/frame-00-at-5s.png
+   evidence/proof-frames/frame-01-at-15s.png
+   evidence/proof-frames/frame-02-at-25s.png
+   evidence/proof-frames/frame-03-at-35s.png
+   evidence/proof-frames/frame-04-at-45s.png
+   evidence/proof-frames/frame-05-at-55s.png
+   /workspace/hyperframespromp/videos/prompolu-thermal-break-60s/evidence/proof-frames/contact-sheet.jpg (grid view for AI review)

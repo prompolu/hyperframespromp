@@ -1,0 +1,127 @@
+[SystemMemory] cgroup memory limit detected: 32768 MiB. It governs memory-adaptive render behaviour instead of host RAM.
+[BrowserManager] Browser launched (Chrome/154.0.8037.57, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[HyperFrames] render runtime fps {"canonicalFps":30,"source":"default","rawFpsSource":"default","rawFps":30,"fallbackReason":"missing"}
+[initSession:screenshot] page.goto complete (1851ms)
+[initSession:screenshot] GSAP proxy flush complete (1898ms)
+[initSession:screenshot] pollHfReady complete (1918ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (1934ms)
+[initSession:screenshot] applyVideoMetadataHints complete (1935ms)
+[initSession:screenshot] media + fonts + tailwind ready (2211ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (2231ms)
+
+Animation map: 108/108 tweens (skipped 0 micro-tweens)
+  paced-slow: 36
+  collision: 64
+  staggers: 14 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms, 9699ms, 301ms, 9699ms, 301ms, 9699ms, 301ms); 14 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms, 9699ms, 301ms, 9699ms, 301ms, 9699ms, 301ms); 8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms); 8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms); 8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms); 8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms); 4 elements stagger with uneven intervals (301ms, 9699ms, 301ms); 4 elements stagger with uneven intervals (301ms, 9699ms, 301ms)
+Timeline (60.0s, each char ≈ 1.00s):
+  0s                                                    60s
+  ┼───────────────────────────────────────────────────────────┤
+  ██████████                                                    div.photo-motion scale+x
+  ██████████                                                    div.progress-fill scaleX
+  █                                                             p.kicker opacity
+  ██                                                            span.headline-line clipPath+y
+  ███████████                                                   div.photo-motion scale+x
+  ███████████                                                   div.progress-fill scaleX
+  ███████████                                                   div.photo-motion scale+x
+  ███████████                                                   div.progress-fill scaleX
+  ███████████                                                   div.photo-motion scale+x
+  ███████████                                                   div.progress-fill scaleX
+  ███████████                                                   div.photo-motion scale+x
+  ███████████                                                   div.progress-fill scaleX
+  ███████████                                                   div.photo-motion scale+x
+  ███████████                                                   div.progress-fill scaleX
+  ███████████                                                   div.photo-motion scale+x
+  ███████████                                                   div.progress-fill scaleX
+  ███████████                                                   div.photo-motion scale+x
+  ███████████                                                   div.progress-fill scaleX
+  █                                                             p.kicker opacity
+  █                                                             p.kicker opacity
+  █                                                             p.kicker opacity
+  █                                                             p.kicker opacity
+  █                                                             p.kicker opacity
+  █                                                             p.kicker opacity
+  █                                                             p.kicker opacity
+  ██                                                            span.headline-line clipPath+y
+  ██                                                            span.headline-line clipPath+y
+  ██                                                            span.headline-line clipPath+y
+  ██                                                            span.headline-line clipPath+y
+  ██                                                            span.headline-line clipPath+y
+  ██                                                            span.headline-line clipPath+y
+  ██                                                            span.headline-line clipPath+y
+   █                                                            p.tag opacity+x
+   █                                                            p.body opacity+y
+   █                                                            p.tag opacity+x
+   █                                                            p.tag opacity+x
+   █                                                            p.tag opacity+x
+   █                                                            p.tag opacity+x
+   █                                                            p.tag opacity+x
+   █                                                            p.tag opacity+x
+   █                                                            p.tag opacity+x
+   ██                                                           p.body opacity+y
+   ██                                                           p.body opacity+y
+   ██                                                           p.body opacity+y
+   ██                                                           p.body opacity+y
+   ██                                                           p.body opacity+y
+   ██                                                           p.body opacity+y
+   ██                                                           p.body opacity+y
+            ██████████                                          div.photo-motion scale+x
+            ██████████                                          div.progress-fill scaleX
+            █                                                   p.kicker opacity
+            ██                                                  span.headline-line clipPath+y
+            ███████████                                         div.photo-motion scale+x
+            ███████████                                         div.progress-fill scaleX
+            █                                                   p.kicker opacity
+            ██                                                  span.headline-line clipPath+y
+             █                                                  p.tag opacity+x
+             █                                                  p.body opacity+y
+             █                                                  p.tag opacity+x
+             ██                                                 p.body opacity+y
+                      ██████████                                div.photo-motion scale+x
+                      ██████████                                div.progress-fill scaleX
+                      █                                         p.kicker opacity
+                      ██                                        span.headline-line clipPath+y
+                      ███████████                               div.photo-motion scale+x
+                      ███████████                               div.progress-fill scaleX
+                      █                                         p.kicker opacity
+                      ██                                        span.headline-line clipPath+y
+                       █                                        p.tag opacity+x
+                       █                                        p.body opacity+y
+                       █                                        p.tag opacity+x
+                       ██                                       p.body opacity+y
+                                ██████████                      div.photo-motion scale+x
+                                ██████████                      div.progress-fill scaleX
+                                █                               p.kicker opacity
+                                ██                              span.headline-line clipPath+y
+                                ███████████                     div.photo-motion scale+x
+                                ███████████                     div.progress-fill scaleX
+                                █                               p.kicker opacity
+                                ██                              span.headline-line clipPath+y
+                                 █                              p.tag opacity+x
+                                 █                              p.body opacity+y
+                                 █                              p.tag opacity+x
+                                 ██                             p.body opacity+y
+                                          ██████████            div.photo-motion scale+x
+                                          ██████████            div.progress-fill scaleX
+                                          █                     p.kicker opacity
+                                          ██                    span.headline-line clipPath+y
+                                          ███████████           div.photo-motion scale+x
+                                          ███████████           div.progress-fill scaleX
+                                          █                     p.kicker opacity
+                                          ██                    span.headline-line clipPath+y
+                                           █                    p.tag opacity+x
+                                           █                    p.body opacity+y
+                                           █                    p.tag opacity+x
+                                           ██                   p.body opacity+y
+                                                    ██████████  div.photo-motion scale+x
+                                                    ██████████  div.progress-fill scaleX
+                                                    █           p.kicker opacity
+                                                    ██          span.headline-line clipPath+y
+                                                    ██████████  div.photo-motion scale+x
+                                                    ██████████  div.progress-fill scaleX
+                                                    █           p.kicker opacity
+                                                    ██          span.headline-line clipPath+y
+                                                     █          p.tag opacity+x
+                                                     █          p.body opacity+y
+                                                     █          p.tag opacity+x
+                                                     ██         p.body opacity+y

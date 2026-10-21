@@ -1,0 +1,101 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 7
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 60,
+    "samples": [
+      1.579,
+      4.737,
+      7.895,
+      11.053,
+      14.211,
+      17.368,
+      20.526,
+      23.684,
+      26.842,
+      30,
+      33.158,
+      36.316,
+      39.474,
+      42.632,
+      45.789,
+      48.947,
+      52.105,
+      55.263,
+      58.421
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.579,
+      14.211,
+      30,
+      42.632,
+      58.421
+    ],
+    "checked": 40,
+    "passed": 40
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "d0347080-4dc3-454b-b7f1-e4cf1aa126ad",
+    "revision": null,
+    "report": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/.hyperframes/artifacts/checks/d0347080-4dc3-454b-b7f1-e4cf1aa126ad.json",
+    "attribution": "inputs-changed"
+  },
+  "_meta": {
+    "version": "0.8.183",
+    "updateAvailable": false
+  }
+}

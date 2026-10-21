@@ -1,0 +1,23 @@
+[
+  {
+    "file": "residential-1.jpg",
+    "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1900&q=90&fit=crop",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "usage": "Illustrative architectural photography; not represented as PROMPOLU projects"
+  },
+  {
+    "file": "residential-2.jpg",
+    "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1900&q=90&fit=crop",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "usage": "Illustrative architectural photography; not represented as PROMPOLU projects"
+  },
+  {
+    "file": "residential-3.jpg",
+    "url": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1900&q=90&fit=crop",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "usage": "Illustrative architectural photography; not represented as PROMPOLU projects"
+  }
+]

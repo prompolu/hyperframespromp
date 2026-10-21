@@ -1,0 +1,13 @@
+{
+  "website": "https://prompolu.com",
+  "cssSource": "https://prompolu.com/styles.css",
+  "cssSha256": "98ba4f6b1b171016886a0d5840493adf074de5c6ef0134100565c8ce12347e06",
+  "rootDeclaration": ":root{--ink:#15171a;--paper:#f1f0ec;--bronze:#8c6a45;--bronze-dark:#765333;--line:#d8d5ce;--display:Anton,Impact,'Arial Narrow',sans-serif;--body:'DM Sans',Arial,sans-serif;--gutter:5.4vw}",
+  "fontSource": "https://prompolu.com/assets/fonts.css",
+  "fontCssSha256": "c5dc8d65199c82693e61efd7400b85e2b2f2f73637a0b219a17ae14f44a8cecf",
+  "usedFonts": [
+    "Anton",
+    "DM Sans"
+  ],
+  "visualCorrection": "Warm ivory dominates; dark ink typography; original black logo; bronze accents. No predominantly charcoal canvas."
+}

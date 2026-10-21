@@ -1,0 +1,804 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 7
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 60,
+    "samples": [
+      1.2,
+      3.6,
+      6,
+      8.4,
+      10.8,
+      13.2,
+      15.6,
+      18,
+      20.4,
+      22.8,
+      25.2,
+      27.6,
+      30,
+      32.4,
+      34.8,
+      37.2,
+      39.6,
+      42,
+      44.4,
+      46.8,
+      49.2,
+      51.6,
+      54,
+      56.4,
+      58.8
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": false,
+    "errorCount": 18,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-01 .body",
+        "message": "#scene-01 .body matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-01 .copy",
+        "message": "#scene-01 .copy matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-01 .lower",
+        "message": "#scene-01 .lower matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-02 .body",
+        "message": "#scene-02 .body matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-02 .copy",
+        "message": "#scene-02 .copy matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-02 .lower",
+        "message": "#scene-02 .lower matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-03 .body",
+        "message": "#scene-03 .body matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-03 .copy",
+        "message": "#scene-03 .copy matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-03 .lower",
+        "message": "#scene-03 .lower matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-04 .body",
+        "message": "#scene-04 .body matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-04 .copy",
+        "message": "#scene-04 .copy matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-04 .lower",
+        "message": "#scene-04 .lower matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-05 .body",
+        "message": "#scene-05 .body matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-05 .copy",
+        "message": "#scene-05 .copy matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-05 .lower",
+        "message": "#scene-05 .lower matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-06 .body",
+        "message": "#scene-06 .body matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-06 .copy",
+        "message": "#scene-06 .copy matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "motion_selector_missing",
+        "severity": "error",
+        "time": 0,
+        "selector": "#scene-06 .lower",
+        "message": "#scene-06 .lower matched no element in any sampled frame — check the selector",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "fixHint": "Verify the selector exists in the composition and is spelled correctly.",
+        "dataAttributes": {
+          "data-composition-id": "prompolu-film-60s",
+          "data-start": "0",
+          "data-duration": "60",
+          "data-fps": "30",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      }
+    ],
+    "enabled": true,
+    "specPath": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.2,
+      15.6,
+      30,
+      44.4,
+      58.8
+    ],
+    "checked": 39,
+    "passed": 39
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      ".hyperframes/artifacts/snapshots/159bd7d1-936c-478b-9d41-9265a101f67e/frame-00-at-1.2s.png",
+      ".hyperframes/artifacts/snapshots/159bd7d1-936c-478b-9d41-9265a101f67e/frame-01-at-15.6s.png",
+      ".hyperframes/artifacts/snapshots/159bd7d1-936c-478b-9d41-9265a101f67e/frame-02-at-30.0s.png",
+      ".hyperframes/artifacts/snapshots/159bd7d1-936c-478b-9d41-9265a101f67e/frame-03-at-44.4s.png",
+      ".hyperframes/artifacts/snapshots/159bd7d1-936c-478b-9d41-9265a101f67e/frame-04-at-58.8s.png"
+    ],
+    "times": [
+      1.2,
+      15.6,
+      30,
+      44.4,
+      58.8
+    ],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "571bf4f3-8a3e-4ec0-bab6-cf7d2de42e95",
+    "revision": null,
+    "report": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/.hyperframes/artifacts/checks/571bf4f3-8a3e-4ec0-bab6-cf7d2de42e95.json",
+    "attribution": "inputs-changed"
+  },
+  "_meta": {
+    "version": "0.8.183",
+    "updateAvailable": false
+  }
+}

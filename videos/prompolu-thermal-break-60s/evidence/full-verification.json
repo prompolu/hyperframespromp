@@ -1,0 +1,19 @@
+{
+  "file": "renders/PROMPOLU-60s-1080x1920.mp4",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 1800,
+  "durationSeconds": 60.0,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "audioSampleRate": "48000",
+  "audioDuration": "60.000000",
+  "fullDecode": "passed",
+  "audioLevels": [
+    "[Parsed_volumedetect_0 @ 0x7f3354002400] mean_volume: -18.1 dB",
+    "[Parsed_volumedetect_0 @ 0x7f3354002400] max_volume: -1.8 dB"
+  ],
+  "sha256": "710c0435da4e7972a7158ee77c7723c6ebeae4434a9f980964b8858b51186888",
+  "bytes": 67160618
+}

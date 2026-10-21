@@ -1,0 +1,6180 @@
+{
+  "composition": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s",
+  "duration": 60,
+  "totalTweens": 108,
+  "mappedTweens": 108,
+  "skippedMicroTweens": 0,
+  "tweens": [
+    {
+      "index": 1,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0,
+      "end": 10,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.667,
+          "x": 51,
+          "y": 549,
+          "w": 970,
+          "h": 899,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5,
+          "x": 27,
+          "y": 535,
+          "w": 1002,
+          "h": 928,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.333,
+          "x": 4,
+          "y": 520,
+          "w": 1032,
+          "h": 956,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 970→1032px. height 899→956px. ends at (4, 520) 1032×956px. FLAGS: paced-slow."
+    },
+    {
+      "index": 2,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0,
+      "end": 10,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.667,
+          "x": 108,
+          "y": 1831,
+          "w": 144,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5,
+          "x": 108,
+          "y": 1831,
+          "w": 432,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.333,
+          "x": 108,
+          "y": 1831,
+          "w": 717,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 144→717px. ends at (108, 1831) 717×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 3,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.12,
+      "end": 0.42,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.17,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 0.2869,
+          "visible": true
+        },
+        {
+          "t": 0.27,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 0.7388,
+          "visible": true
+        },
+        {
+          "t": 0.37,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 0.9684,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). opacity 0.3→1.0. ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 4,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.2,
+      "end": 1.07,
+      "duration": 0.87,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 0.345,
+          "x": 108,
+          "y": 296,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.635,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.925,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (expo.out). moves 4px up. ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 5,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 49,
+          "y": 548,
+          "w": 973,
+          "h": 901,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 25,
+          "y": 533,
+          "w": 1004,
+          "h": 930,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 2,
+          "y": 519,
+          "w": 1035,
+          "h": 959,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 973→1035px. height 901→959px. ends at (2, 519) 1035×959px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 6,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 108,
+          "y": 1831,
+          "w": 170,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 108,
+          "y": 1831,
+          "w": 458,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 108,
+          "y": 1831,
+          "w": 746,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 170→746px. ends at (108, 1831) 746×5px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 7,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 49,
+          "y": 548,
+          "w": 973,
+          "h": 901,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 25,
+          "y": 533,
+          "w": 1004,
+          "h": 930,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 2,
+          "y": 519,
+          "w": 1035,
+          "h": 959,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 973→1035px. height 901→959px. ends at (2, 519) 1035×959px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 8,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 108,
+          "y": 1831,
+          "w": 170,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 108,
+          "y": 1831,
+          "w": 458,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 108,
+          "y": 1831,
+          "w": 746,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 170→746px. ends at (108, 1831) 746×5px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 9,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 49,
+          "y": 548,
+          "w": 973,
+          "h": 901,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 25,
+          "y": 533,
+          "w": 1004,
+          "h": 930,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 2,
+          "y": 519,
+          "w": 1035,
+          "h": 959,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 973→1035px. height 901→959px. ends at (2, 519) 1035×959px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 10,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 108,
+          "y": 1831,
+          "w": 170,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 108,
+          "y": 1831,
+          "w": 458,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 108,
+          "y": 1831,
+          "w": 746,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 170→746px. ends at (108, 1831) 746×5px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 11,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 49,
+          "y": 548,
+          "w": 973,
+          "h": 901,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 25,
+          "y": 533,
+          "w": 1004,
+          "h": 930,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 2,
+          "y": 519,
+          "w": 1035,
+          "h": 959,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 973→1035px. height 901→959px. ends at (2, 519) 1035×959px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 12,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 108,
+          "y": 1831,
+          "w": 170,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 108,
+          "y": 1831,
+          "w": 458,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 108,
+          "y": 1831,
+          "w": 746,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 170→746px. ends at (108, 1831) 746×5px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 13,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 49,
+          "y": 548,
+          "w": 973,
+          "h": 901,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 25,
+          "y": 533,
+          "w": 1004,
+          "h": 930,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 2,
+          "y": 519,
+          "w": 1035,
+          "h": 959,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 973→1035px. height 901→959px. ends at (2, 519) 1035×959px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 14,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 108,
+          "y": 1831,
+          "w": 170,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 108,
+          "y": 1831,
+          "w": 458,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 108,
+          "y": 1831,
+          "w": 746,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 170→746px. ends at (108, 1831) 746×5px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 15,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 49,
+          "y": 548,
+          "w": 973,
+          "h": 901,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 25,
+          "y": 533,
+          "w": 1004,
+          "h": 930,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 2,
+          "y": 519,
+          "w": 1035,
+          "h": 959,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 973→1035px. height 901→959px. ends at (2, 519) 1035×959px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 16,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 108,
+          "y": 1831,
+          "w": 170,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 108,
+          "y": 1831,
+          "w": 458,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 108,
+          "y": 1831,
+          "w": 746,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 170→746px. ends at (108, 1831) 746×5px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 17,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 49,
+          "y": 548,
+          "w": 973,
+          "h": 901,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 25,
+          "y": 533,
+          "w": 1004,
+          "h": 930,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 2,
+          "y": 519,
+          "w": 1035,
+          "h": 959,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). moves 29px up and 47px left. scales. width 973→1035px. height 901→959px. ends at (2, 519) 1035×959px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 18,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 0.301,
+      "end": 10.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 1.968,
+          "x": 108,
+          "y": 1831,
+          "w": 170,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 5.301,
+          "x": 108,
+          "y": 1831,
+          "w": 458,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 8.634,
+          "x": 108,
+          "y": 1831,
+          "w": 746,
+          "h": 5,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "paced-slow",
+        "collision"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. width 170→746px. ends at (108, 1831) 746×5px. FLAGS: paced-slow. Overlaps another animated element."
+    },
+    {
+      "index": 19,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.421,
+      "end": 0.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px. Overlaps another animated element."
+    },
+    {
+      "index": 20,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.421,
+      "end": 0.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px. Overlaps another animated element."
+    },
+    {
+      "index": 21,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.421,
+      "end": 0.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px. Overlaps another animated element."
+    },
+    {
+      "index": 22,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.421,
+      "end": 0.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px. Overlaps another animated element."
+    },
+    {
+      "index": 23,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.421,
+      "end": 0.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px. Overlaps another animated element."
+    },
+    {
+      "index": 24,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.421,
+      "end": 0.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px. Overlaps another animated element."
+    },
+    {
+      "index": 25,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 0.421,
+      "end": 0.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 0.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px. Overlaps another animated element."
+    },
+    {
+      "index": 26,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.501,
+      "end": 1.371,
+      "duration": 0.87,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 0.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (expo.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 27,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.501,
+      "end": 1.371,
+      "duration": 0.87,
+      "ease": "expo.out",
+      "bboxes": [
+        {
+          "t": 0.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (expo.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 28,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.501,
+      "end": 1.371,
+      "duration": 0.87,
+      "ease": "power4.out",
+      "bboxes": [
+        {
+          "t": 0.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power4.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 29,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.501,
+      "end": 1.371,
+      "duration": 0.87,
+      "ease": "circ.out",
+      "bboxes": [
+        {
+          "t": 0.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (circ.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 30,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.501,
+      "end": 1.371,
+      "duration": 0.87,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 0.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power3.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 31,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.501,
+      "end": 1.371,
+      "duration": 0.87,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 0.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (sine.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 32,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 0.501,
+      "end": 1.371,
+      "duration": 0.87,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 0.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 0.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power2.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 33,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1,
+      "end": 1.4,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.067,
+          "x": 99,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.2588,
+          "visible": true
+        },
+        {
+          "t": 1.2,
+          "x": 104,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.7071,
+          "visible": true
+        },
+        {
+          "t": 1.333,
+          "x": 107,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9239,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). moves 8px right. opacity 0.3→0.9. ends at (107, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 34,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.2,
+      "end": 1.85,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.308,
+          "x": 108,
+          "y": 1598,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.3942,
+          "visible": true
+        },
+        {
+          "t": 1.525,
+          "x": 108,
+          "y": 1590,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.8439,
+          "visible": true
+        },
+        {
+          "t": 1.742,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9942,
+          "visible": true
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). moves 11px up. opacity 0.4→1.0. ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 35,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1.301,
+      "end": 1.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9914,
+          "visible": true
+        },
+        {
+          "t": 1.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 36,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1.301,
+      "end": 1.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9914,
+          "visible": true
+        },
+        {
+          "t": 1.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 37,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1.301,
+      "end": 1.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9914,
+          "visible": true
+        },
+        {
+          "t": 1.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 38,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1.301,
+      "end": 1.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9914,
+          "visible": true
+        },
+        {
+          "t": 1.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 39,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1.301,
+      "end": 1.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9914,
+          "visible": true
+        },
+        {
+          "t": 1.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 40,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1.301,
+      "end": 1.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9914,
+          "visible": true
+        },
+        {
+          "t": 1.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 41,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 1.301,
+      "end": 1.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 1.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 0.9914,
+          "visible": true
+        },
+        {
+          "t": 1.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        },
+        {
+          "t": 1.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 42,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.501,
+      "end": 2.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.609,
+          "x": 108,
+          "y": 1588,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9431,
+          "visible": true
+        },
+        {
+          "t": 1.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9995,
+          "visible": true
+        },
+        {
+          "t": 2.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px. Overlaps another animated element."
+    },
+    {
+      "index": 43,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.501,
+      "end": 2.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.609,
+          "x": 108,
+          "y": 1588,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9431,
+          "visible": true
+        },
+        {
+          "t": 1.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9995,
+          "visible": true
+        },
+        {
+          "t": 2.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px. Overlaps another animated element."
+    },
+    {
+      "index": 44,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.501,
+      "end": 2.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.609,
+          "x": 108,
+          "y": 1588,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9431,
+          "visible": true
+        },
+        {
+          "t": 1.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9995,
+          "visible": true
+        },
+        {
+          "t": 2.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px. Overlaps another animated element."
+    },
+    {
+      "index": 45,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.501,
+      "end": 2.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.609,
+          "x": 108,
+          "y": 1588,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9431,
+          "visible": true
+        },
+        {
+          "t": 1.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9995,
+          "visible": true
+        },
+        {
+          "t": 2.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px. Overlaps another animated element."
+    },
+    {
+      "index": 46,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.501,
+      "end": 2.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.609,
+          "x": 108,
+          "y": 1588,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9431,
+          "visible": true
+        },
+        {
+          "t": 1.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9995,
+          "visible": true
+        },
+        {
+          "t": 2.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px. Overlaps another animated element."
+    },
+    {
+      "index": 47,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.501,
+      "end": 2.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.609,
+          "x": 108,
+          "y": 1588,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9431,
+          "visible": true
+        },
+        {
+          "t": 1.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9995,
+          "visible": true
+        },
+        {
+          "t": 2.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px. Overlaps another animated element."
+    },
+    {
+      "index": 48,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 1.501,
+      "end": 2.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 1.609,
+          "x": 108,
+          "y": 1588,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9431,
+          "visible": true
+        },
+        {
+          "t": 1.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 0.9995,
+          "visible": true
+        },
+        {
+          "t": 2.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": true
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px. Overlaps another animated element."
+    },
+    {
+      "index": 49,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 10,
+      "end": 20,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 11.667,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 15,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 18.333,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 50,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 10,
+      "end": 20,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 11.667,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 15,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 18.333,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 51,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 10.12,
+      "end": 10.42,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 10.17,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 10.27,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 10.37,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 52,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 10.2,
+      "end": 11.07,
+      "duration": 0.87,
+      "ease": "power4.out",
+      "bboxes": [
+        {
+          "t": 10.345,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 10.635,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 10.925,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power4.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 53,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 10.301,
+      "end": 20.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 11.968,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 15.301,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 18.634,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 54,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 10.301,
+      "end": 20.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 11.968,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 15.301,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 18.634,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 55,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 10.421,
+      "end": 10.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 10.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 10.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 10.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 56,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 10.501,
+      "end": 11.371,
+      "duration": 0.87,
+      "ease": "power4.out",
+      "bboxes": [
+        {
+          "t": 10.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 10.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power4.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 57,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 11,
+      "end": 11.4,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 11.067,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.2,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.333,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 58,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 11.2,
+      "end": 11.85,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 11.308,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.525,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.742,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 59,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 11.301,
+      "end": 11.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 11.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 60,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 11.501,
+      "end": 12.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 11.609,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 11.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 12.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 61,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 20,
+      "end": 30,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 21.667,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 25,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 28.333,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 62,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 20,
+      "end": 30,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 21.667,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 25,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 28.333,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 63,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 20.12,
+      "end": 20.42,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 20.17,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 20.27,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 20.37,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 64,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 20.2,
+      "end": 21.07,
+      "duration": 0.87,
+      "ease": "circ.out",
+      "bboxes": [
+        {
+          "t": 20.345,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 20.635,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 20.925,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (circ.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 65,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 20.301,
+      "end": 30.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 21.968,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 25.301,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 28.634,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 66,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 20.301,
+      "end": 30.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 21.968,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 25.301,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 28.634,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 67,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 20.421,
+      "end": 20.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 20.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 20.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 20.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 68,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 20.501,
+      "end": 21.371,
+      "duration": 0.87,
+      "ease": "circ.out",
+      "bboxes": [
+        {
+          "t": 20.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 20.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (circ.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 69,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 21,
+      "end": 21.4,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 21.067,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.2,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.333,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 70,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 21.2,
+      "end": 21.85,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 21.308,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.525,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.742,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 71,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 21.301,
+      "end": 21.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 21.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 72,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 21.501,
+      "end": 22.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 21.609,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 21.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 22.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 73,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 30,
+      "end": 40,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 31.667,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 35,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 38.333,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 74,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 30,
+      "end": 40,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 31.667,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 35,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 38.333,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 75,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 30.12,
+      "end": 30.42,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 30.17,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 30.27,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 30.37,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 76,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 30.2,
+      "end": 31.07,
+      "duration": 0.87,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 30.345,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 30.635,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 30.925,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power3.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 77,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 30.301,
+      "end": 40.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 31.968,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 35.301,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 38.634,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 78,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 30.301,
+      "end": 40.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 31.968,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 35.301,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 38.634,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 79,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 30.421,
+      "end": 30.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 30.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 30.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 30.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 80,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 30.501,
+      "end": 31.371,
+      "duration": 0.87,
+      "ease": "power3.out",
+      "bboxes": [
+        {
+          "t": 30.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 30.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power3.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 81,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 31,
+      "end": 31.4,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 31.067,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.2,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.333,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 82,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 31.2,
+      "end": 31.85,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 31.308,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.525,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.742,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 83,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 31.301,
+      "end": 31.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 31.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 84,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 31.501,
+      "end": 32.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 31.609,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 31.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 32.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 85,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 40,
+      "end": 50,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 41.667,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 45,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 48.333,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 86,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 40,
+      "end": 50,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 41.667,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 45,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 48.333,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 87,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 40.12,
+      "end": 40.42,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 40.17,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 40.27,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 40.37,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 88,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 40.2,
+      "end": 41.07,
+      "duration": 0.87,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 40.345,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 40.635,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 40.925,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (sine.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 89,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 40.301,
+      "end": 50.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 41.968,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 45.301,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 48.634,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 90,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 40.301,
+      "end": 50.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 41.968,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 45.301,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 48.634,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 91,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 40.421,
+      "end": 40.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 40.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 40.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 40.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 92,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 40.501,
+      "end": 41.371,
+      "duration": 0.87,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 40.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 40.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (sine.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 93,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 41,
+      "end": 41.4,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 41.067,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.2,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.333,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 94,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 41.2,
+      "end": 41.85,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 41.308,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.525,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.742,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 95,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 41.301,
+      "end": 41.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 41.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 96,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 41.501,
+      "end": 42.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 41.609,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 41.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 42.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 97,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 50,
+      "end": 60,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 51.667,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 55,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 58.333,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 98,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 50,
+      "end": 60,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 51.667,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 55,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 58.333,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 99,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 50.12,
+      "end": 50.42,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 50.17,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 50.27,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 50.37,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 100,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 50.2,
+      "end": 51.07,
+      "duration": 0.87,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 50.345,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 50.635,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 50.925,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power2.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 101,
+      "selector": "div.photo-motion",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "start": 50.301,
+      "end": 60.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 51.968,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 55.301,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 58.634,
+          "x": -8,
+          "y": 513,
+          "w": 1048,
+          "h": 971,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.photo-motion animates scale+x over 10.00s (none). scales. ends at (-8, 513) 1048×971px. FLAGS: paced-slow."
+    },
+    {
+      "index": 102,
+      "selector": "div.progress-fill",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "scaleX"
+      ],
+      "start": 50.301,
+      "end": 60.301,
+      "duration": 10,
+      "ease": "none",
+      "bboxes": [
+        {
+          "t": 51.968,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 55.301,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 58.634,
+          "x": 108,
+          "y": 1831,
+          "w": 864,
+          "h": 5,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "paced-slow"
+      ],
+      "summary": "div.progress-fill animates scaleX over 10.00s (none). scales. ends at (108, 1831) 864×5px. FLAGS: paced-slow."
+    },
+    {
+      "index": 103,
+      "selector": "p.kicker",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity"
+      ],
+      "start": 50.421,
+      "end": 50.721,
+      "duration": 0.3,
+      "ease": "power1.out",
+      "bboxes": [
+        {
+          "t": 50.471,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 50.571,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 50.671,
+          "x": 108,
+          "y": 230,
+          "w": 864,
+          "h": 34,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.kicker animates opacity over 0.30s (power1.out). ends at (108, 230) 864×34px."
+    },
+    {
+      "index": 104,
+      "selector": "span.headline-line",
+      "driver": "target",
+      "targets": 2,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "start": 50.501,
+      "end": 51.371,
+      "duration": 0.87,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 50.646,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 50.936,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.226,
+          "x": 108,
+          "y": 292,
+          "w": 864,
+          "h": 106,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "span.headline-line animates clipPath+y over 0.87s (power2.out). ends at (108, 292) 864×106px. Overlaps another animated element."
+    },
+    {
+      "index": 105,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 51,
+      "end": 51.4,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 51.067,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.2,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.333,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 106,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 51.2,
+      "end": 51.85,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 51.308,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.525,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.742,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    },
+    {
+      "index": 107,
+      "selector": "p.tag",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "start": 51.301,
+      "end": 51.701,
+      "duration": 0.4,
+      "ease": "sine.out",
+      "bboxes": [
+        {
+          "t": 51.368,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.501,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.634,
+          "x": 108,
+          "y": 1530,
+          "w": 442,
+          "h": 35,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [
+        "collision"
+      ],
+      "summary": "p.tag animates opacity+x over 0.40s (sine.out). ends at (108, 1530) 442×35px. Overlaps another animated element."
+    },
+    {
+      "index": 108,
+      "selector": "p.body",
+      "driver": "target",
+      "targets": 1,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "start": 51.501,
+      "end": 52.151,
+      "duration": 0.65,
+      "ease": "power2.out",
+      "bboxes": [
+        {
+          "t": 51.609,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 51.826,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        },
+        {
+          "t": 52.043,
+          "x": 108,
+          "y": 1587,
+          "w": 850,
+          "h": 102,
+          "opacity": 1,
+          "visible": false
+        }
+      ],
+      "flags": [],
+      "summary": "p.body animates opacity+y over 0.65s (power2.out). ends at (108, 1587) 850×102px."
+    }
+  ],
+  "choreography": "Timeline (60.0s, each char ≈ 1.00s):\n  0s                                                    60s\n  ┼───────────────────────────────────────────────────────────┤\n  ██████████                                                    div.photo-motion scale+x\n  ██████████                                                    div.progress-fill scaleX\n  █                                                             p.kicker opacity\n  ██                                                            span.headline-line clipPath+y\n  ███████████                                                   div.photo-motion scale+x\n  ███████████                                                   div.progress-fill scaleX\n  ███████████                                                   div.photo-motion scale+x\n  ███████████                                                   div.progress-fill scaleX\n  ███████████                                                   div.photo-motion scale+x\n  ███████████                                                   div.progress-fill scaleX\n  ███████████                                                   div.photo-motion scale+x\n  ███████████                                                   div.progress-fill scaleX\n  ███████████                                                   div.photo-motion scale+x\n  ███████████                                                   div.progress-fill scaleX\n  ███████████                                                   div.photo-motion scale+x\n  ███████████                                                   div.progress-fill scaleX\n  ███████████                                                   div.photo-motion scale+x\n  ███████████                                                   div.progress-fill scaleX\n  █                                                             p.kicker opacity\n  █                                                             p.kicker opacity\n  █                                                             p.kicker opacity\n  █                                                             p.kicker opacity\n  █                                                             p.kicker opacity\n  █                                                             p.kicker opacity\n  █                                                             p.kicker opacity\n  ██                                                            span.headline-line clipPath+y\n  ██                                                            span.headline-line clipPath+y\n  ██                                                            span.headline-line clipPath+y\n  ██                                                            span.headline-line clipPath+y\n  ██                                                            span.headline-line clipPath+y\n  ██                                                            span.headline-line clipPath+y\n  ██                                                            span.headline-line clipPath+y\n   █                                                            p.tag opacity+x\n   █                                                            p.body opacity+y\n   █                                                            p.tag opacity+x\n   █                                                            p.tag opacity+x\n   █                                                            p.tag opacity+x\n   █                                                            p.tag opacity+x\n   █                                                            p.tag opacity+x\n   █                                                            p.tag opacity+x\n   █                                                            p.tag opacity+x\n   ██                                                           p.body opacity+y\n   ██                                                           p.body opacity+y\n   ██                                                           p.body opacity+y\n   ██                                                           p.body opacity+y\n   ██                                                           p.body opacity+y\n   ██                                                           p.body opacity+y\n   ██                                                           p.body opacity+y\n            ██████████                                          div.photo-motion scale+x\n            ██████████                                          div.progress-fill scaleX\n            █                                                   p.kicker opacity\n            ██                                                  span.headline-line clipPath+y\n            ███████████                                         div.photo-motion scale+x\n            ███████████                                         div.progress-fill scaleX\n            █                                                   p.kicker opacity\n            ██                                                  span.headline-line clipPath+y\n             █                                                  p.tag opacity+x\n             █                                                  p.body opacity+y\n             █                                                  p.tag opacity+x\n             ██                                                 p.body opacity+y\n                      ██████████                                div.photo-motion scale+x\n                      ██████████                                div.progress-fill scaleX\n                      █                                         p.kicker opacity\n                      ██                                        span.headline-line clipPath+y\n                      ███████████                               div.photo-motion scale+x\n                      ███████████                               div.progress-fill scaleX\n                      █                                         p.kicker opacity\n                      ██                                        span.headline-line clipPath+y\n                       █                                        p.tag opacity+x\n                       █                                        p.body opacity+y\n                       █                                        p.tag opacity+x\n                       ██                                       p.body opacity+y\n                                ██████████                      div.photo-motion scale+x\n                                ██████████                      div.progress-fill scaleX\n                                █                               p.kicker opacity\n                                ██                              span.headline-line clipPath+y\n                                ███████████                     div.photo-motion scale+x\n                                ███████████                     div.progress-fill scaleX\n                                █                               p.kicker opacity\n                                ██                              span.headline-line clipPath+y\n                                 █                              p.tag opacity+x\n                                 █                              p.body opacity+y\n                                 █                              p.tag opacity+x\n                                 ██                             p.body opacity+y\n                                          ██████████            div.photo-motion scale+x\n                                          ██████████            div.progress-fill scaleX\n                                          █                     p.kicker opacity\n                                          ██                    span.headline-line clipPath+y\n                                          ███████████           div.photo-motion scale+x\n                                          ███████████           div.progress-fill scaleX\n                                          █                     p.kicker opacity\n                                          ██                    span.headline-line clipPath+y\n                                           █                    p.tag opacity+x\n                                           █                    p.body opacity+y\n                                           █                    p.tag opacity+x\n                                           ██                   p.body opacity+y\n                                                    ██████████  div.photo-motion scale+x\n                                                    ██████████  div.progress-fill scaleX\n                                                    █           p.kicker opacity\n                                                    ██          span.headline-line clipPath+y\n                                                    ██████████  div.photo-motion scale+x\n                                                    ██████████  div.progress-fill scaleX\n                                                    █           p.kicker opacity\n                                                    ██          span.headline-line clipPath+y\n                                                     █          p.tag opacity+x\n                                                     █          p.body opacity+y\n                                                     █          p.tag opacity+x\n                                                     ██         p.body opacity+y",
+  "density": [
+    {
+      "t": 0,
+      "activeTweens": 25
+    },
+    {
+      "t": 0.5,
+      "activeTweens": 32
+    },
+    {
+      "t": 1,
+      "activeTweens": 33
+    },
+    {
+      "t": 1.5,
+      "activeTweens": 31
+    },
+    {
+      "t": 2,
+      "activeTweens": 23
+    },
+    {
+      "t": 2.5,
+      "activeTweens": 16
+    },
+    {
+      "t": 3,
+      "activeTweens": 16
+    },
+    {
+      "t": 3.5,
+      "activeTweens": 16
+    },
+    {
+      "t": 4,
+      "activeTweens": 16
+    },
+    {
+      "t": 4.5,
+      "activeTweens": 16
+    },
+    {
+      "t": 5,
+      "activeTweens": 16
+    },
+    {
+      "t": 5.5,
+      "activeTweens": 16
+    },
+    {
+      "t": 6,
+      "activeTweens": 16
+    },
+    {
+      "t": 6.5,
+      "activeTweens": 16
+    },
+    {
+      "t": 7,
+      "activeTweens": 16
+    },
+    {
+      "t": 7.5,
+      "activeTweens": 16
+    },
+    {
+      "t": 8,
+      "activeTweens": 16
+    },
+    {
+      "t": 8.5,
+      "activeTweens": 16
+    },
+    {
+      "t": 9,
+      "activeTweens": 16
+    },
+    {
+      "t": 9.5,
+      "activeTweens": 18
+    },
+    {
+      "t": 10,
+      "activeTweens": 23
+    },
+    {
+      "t": 10.5,
+      "activeTweens": 8
+    },
+    {
+      "t": 11,
+      "activeTweens": 9
+    },
+    {
+      "t": 11.5,
+      "activeTweens": 7
+    },
+    {
+      "t": 12,
+      "activeTweens": 5
+    },
+    {
+      "t": 12.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 13,
+      "activeTweens": 4
+    },
+    {
+      "t": 13.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 14,
+      "activeTweens": 4
+    },
+    {
+      "t": 14.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 15,
+      "activeTweens": 4
+    },
+    {
+      "t": 15.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 16,
+      "activeTweens": 4
+    },
+    {
+      "t": 16.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 17,
+      "activeTweens": 4
+    },
+    {
+      "t": 17.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 18,
+      "activeTweens": 4
+    },
+    {
+      "t": 18.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 19,
+      "activeTweens": 4
+    },
+    {
+      "t": 19.5,
+      "activeTweens": 6
+    },
+    {
+      "t": 20,
+      "activeTweens": 11
+    },
+    {
+      "t": 20.5,
+      "activeTweens": 8
+    },
+    {
+      "t": 21,
+      "activeTweens": 9
+    },
+    {
+      "t": 21.5,
+      "activeTweens": 7
+    },
+    {
+      "t": 22,
+      "activeTweens": 5
+    },
+    {
+      "t": 22.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 23,
+      "activeTweens": 4
+    },
+    {
+      "t": 23.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 24,
+      "activeTweens": 4
+    },
+    {
+      "t": 24.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 25,
+      "activeTweens": 4
+    },
+    {
+      "t": 25.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 26,
+      "activeTweens": 4
+    },
+    {
+      "t": 26.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 27,
+      "activeTweens": 4
+    },
+    {
+      "t": 27.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 28,
+      "activeTweens": 4
+    },
+    {
+      "t": 28.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 29,
+      "activeTweens": 4
+    },
+    {
+      "t": 29.5,
+      "activeTweens": 6
+    },
+    {
+      "t": 30,
+      "activeTweens": 11
+    },
+    {
+      "t": 30.5,
+      "activeTweens": 8
+    },
+    {
+      "t": 31,
+      "activeTweens": 9
+    },
+    {
+      "t": 31.5,
+      "activeTweens": 7
+    },
+    {
+      "t": 32,
+      "activeTweens": 5
+    },
+    {
+      "t": 32.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 33,
+      "activeTweens": 4
+    },
+    {
+      "t": 33.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 34,
+      "activeTweens": 4
+    },
+    {
+      "t": 34.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 35,
+      "activeTweens": 4
+    },
+    {
+      "t": 35.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 36,
+      "activeTweens": 4
+    },
+    {
+      "t": 36.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 37,
+      "activeTweens": 4
+    },
+    {
+      "t": 37.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 38,
+      "activeTweens": 4
+    },
+    {
+      "t": 38.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 39,
+      "activeTweens": 4
+    },
+    {
+      "t": 39.5,
+      "activeTweens": 6
+    },
+    {
+      "t": 40,
+      "activeTweens": 11
+    },
+    {
+      "t": 40.5,
+      "activeTweens": 8
+    },
+    {
+      "t": 41,
+      "activeTweens": 9
+    },
+    {
+      "t": 41.5,
+      "activeTweens": 7
+    },
+    {
+      "t": 42,
+      "activeTweens": 5
+    },
+    {
+      "t": 42.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 43,
+      "activeTweens": 4
+    },
+    {
+      "t": 43.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 44,
+      "activeTweens": 4
+    },
+    {
+      "t": 44.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 45,
+      "activeTweens": 4
+    },
+    {
+      "t": 45.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 46,
+      "activeTweens": 4
+    },
+    {
+      "t": 46.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 47,
+      "activeTweens": 4
+    },
+    {
+      "t": 47.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 48,
+      "activeTweens": 4
+    },
+    {
+      "t": 48.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 49,
+      "activeTweens": 4
+    },
+    {
+      "t": 49.5,
+      "activeTweens": 6
+    },
+    {
+      "t": 50,
+      "activeTweens": 11
+    },
+    {
+      "t": 50.5,
+      "activeTweens": 8
+    },
+    {
+      "t": 51,
+      "activeTweens": 9
+    },
+    {
+      "t": 51.5,
+      "activeTweens": 7
+    },
+    {
+      "t": 52,
+      "activeTweens": 5
+    },
+    {
+      "t": 52.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 53,
+      "activeTweens": 4
+    },
+    {
+      "t": 53.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 54,
+      "activeTweens": 4
+    },
+    {
+      "t": 54.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 55,
+      "activeTweens": 4
+    },
+    {
+      "t": 55.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 56,
+      "activeTweens": 4
+    },
+    {
+      "t": 56.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 57,
+      "activeTweens": 4
+    },
+    {
+      "t": 57.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 58,
+      "activeTweens": 4
+    },
+    {
+      "t": 58.5,
+      "activeTweens": 4
+    },
+    {
+      "t": 59,
+      "activeTweens": 4
+    },
+    {
+      "t": 59.5,
+      "activeTweens": 4
+    }
+  ],
+  "staggers": [
+    {
+      "elements": [
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion"
+      ],
+      "props": [
+        "scale",
+        "x"
+      ],
+      "count": 14,
+      "intervals": [
+        0.301,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9.699,
+        0.301,
+        9.699,
+        0.301,
+        9.699,
+        0.301
+      ],
+      "avgInterval": 2.331,
+      "consistent": false,
+      "note": "14 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms, 9699ms, 301ms, 9699ms, 301ms, 9699ms, 301ms)"
+    },
+    {
+      "elements": [
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill"
+      ],
+      "props": [
+        "scaleX"
+      ],
+      "count": 14,
+      "intervals": [
+        0.301,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9.699,
+        0.301,
+        9.699,
+        0.301,
+        9.699,
+        0.301
+      ],
+      "avgInterval": 2.331,
+      "consistent": false,
+      "note": "14 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms, 9699ms, 301ms, 9699ms, 301ms, 9699ms, 301ms)"
+    },
+    {
+      "elements": [
+        "p.kicker",
+        "p.kicker",
+        "p.kicker",
+        "p.kicker",
+        "p.kicker",
+        "p.kicker",
+        "p.kicker",
+        "p.kicker"
+      ],
+      "props": [
+        "opacity"
+      ],
+      "count": 8,
+      "intervals": [
+        0.301,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgInterval": 0.043,
+      "consistent": false,
+      "note": "8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms)"
+    },
+    {
+      "elements": [
+        "span.headline-line",
+        "span.headline-line",
+        "span.headline-line",
+        "span.headline-line",
+        "span.headline-line",
+        "span.headline-line",
+        "span.headline-line",
+        "span.headline-line"
+      ],
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "count": 8,
+      "intervals": [
+        0.301,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgInterval": 0.043,
+      "consistent": false,
+      "note": "8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms)"
+    },
+    {
+      "elements": [
+        "p.tag",
+        "p.tag",
+        "p.tag",
+        "p.tag",
+        "p.tag",
+        "p.tag",
+        "p.tag",
+        "p.tag"
+      ],
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "count": 8,
+      "intervals": [
+        0.301,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgInterval": 0.043,
+      "consistent": false,
+      "note": "8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms)"
+    },
+    {
+      "elements": [
+        "p.body",
+        "p.body",
+        "p.body",
+        "p.body",
+        "p.body",
+        "p.body",
+        "p.body",
+        "p.body"
+      ],
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "count": 8,
+      "intervals": [
+        0.301,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgInterval": 0.043,
+      "consistent": false,
+      "note": "8 elements stagger with uneven intervals (301ms, 0ms, 0ms, 0ms, 0ms, 0ms, 0ms)"
+    },
+    {
+      "elements": [
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion",
+        "div.photo-motion"
+      ],
+      "props": [
+        "scale",
+        "x"
+      ],
+      "count": 4,
+      "intervals": [
+        0.301,
+        9.699,
+        0.301
+      ],
+      "avgInterval": 3.434,
+      "consistent": false,
+      "note": "4 elements stagger with uneven intervals (301ms, 9699ms, 301ms)"
+    },
+    {
+      "elements": [
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill",
+        "div.progress-fill"
+      ],
+      "props": [
+        "scaleX"
+      ],
+      "count": 4,
+      "intervals": [
+        0.301,
+        9.699,
+        0.301
+      ],
+      "avgInterval": 3.434,
+      "consistent": false,
+      "note": "4 elements stagger with uneven intervals (301ms, 9699ms, 301ms)"
+    }
+  ],
+  "elements": {
+    "div.photo-motion": {
+      "firstAppears": 0,
+      "lastAnimates": 60.301,
+      "tweenCount": 18,
+      "props": [
+        "scale",
+        "x"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": -8,
+        "y": 513,
+        "w": 1048,
+        "h": 971
+      }
+    },
+    "div.progress-fill": {
+      "firstAppears": 0,
+      "lastAnimates": 60.301,
+      "tweenCount": 18,
+      "props": [
+        "scaleX"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 108,
+        "y": 1831,
+        "w": 864,
+        "h": 5
+      }
+    },
+    "p.kicker": {
+      "firstAppears": 0.12,
+      "lastAnimates": 50.721,
+      "tweenCount": 18,
+      "props": [
+        "opacity"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 108,
+        "y": 230,
+        "w": 864,
+        "h": 34
+      }
+    },
+    "span.headline-line": {
+      "firstAppears": 0.2,
+      "lastAnimates": 51.371,
+      "tweenCount": 18,
+      "props": [
+        "clipPath",
+        "y"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 108,
+        "y": 292,
+        "w": 864,
+        "h": 106
+      }
+    },
+    "p.tag": {
+      "firstAppears": 1,
+      "lastAnimates": 51.701,
+      "tweenCount": 18,
+      "props": [
+        "opacity",
+        "x"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 108,
+        "y": 1530,
+        "w": 442,
+        "h": 35
+      }
+    },
+    "p.body": {
+      "firstAppears": 1.2,
+      "lastAnimates": 52.151,
+      "tweenCount": 18,
+      "props": [
+        "opacity",
+        "y"
+      ],
+      "endsVisible": false,
+      "finalPosition": {
+        "x": 108,
+        "y": 1587,
+        "w": 850,
+        "h": 102
+      }
+    }
+  },
+  "deadZones": [],
+  "snapshots": [
+    {
+      "t": 0,
+      "visibleElements": 7,
+      "animatingNow": [
+        "div.photo-motion",
+        "div.progress-fill"
+      ],
+      "elements": [
+        {
+          "id": "film",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-01",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-02",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-03",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-04",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-05",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-06",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 15,
+      "visibleElements": 7,
+      "animatingNow": [
+        "div.photo-motion",
+        "div.progress-fill",
+        "div.photo-motion",
+        "div.progress-fill"
+      ],
+      "elements": [
+        {
+          "id": "film",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-01",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-02",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-03",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-04",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-05",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-06",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 30,
+      "visibleElements": 7,
+      "animatingNow": [
+        "div.photo-motion",
+        "div.progress-fill",
+        "div.photo-motion",
+        "div.progress-fill",
+        "div.photo-motion",
+        "div.progress-fill"
+      ],
+      "elements": [
+        {
+          "id": "film",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-01",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-02",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-03",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-04",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-05",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-06",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 45,
+      "visibleElements": 7,
+      "animatingNow": [
+        "div.photo-motion",
+        "div.progress-fill",
+        "div.photo-motion",
+        "div.progress-fill"
+      ],
+      "elements": [
+        {
+          "id": "film",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-01",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-02",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-03",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-04",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-05",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-06",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "t": 59.9,
+      "visibleElements": 7,
+      "animatingNow": [
+        "div.photo-motion",
+        "div.progress-fill",
+        "div.photo-motion",
+        "div.progress-fill"
+      ],
+      "elements": [
+        {
+          "id": "film",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-01",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-02",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-03",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-04",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-05",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        },
+        {
+          "id": "host-scene-06",
+          "x": 0,
+          "y": 0,
+          "w": 1080,
+          "h": 1920,
+          "opacity": 1
+        }
+      ]
+    }
+  ]
+}

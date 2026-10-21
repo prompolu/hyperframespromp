@@ -1,0 +1,23 @@
+{
+  "duration": 10,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-06 .body",
+      "bySec": 2.1
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-06 .copy"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-06 .lower"
+    },
+    {
+      "kind": "keepsMoving",
+      "withinSelector": "#scene-06",
+      "maxStaticSec": 2
+    }
+  ]
+}

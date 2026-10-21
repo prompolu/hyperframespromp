@@ -1,0 +1,55 @@
+{
+  "ok": false,
+  "errorCount": 6,
+  "warningCount": 0,
+  "infoCount": 0,
+  "findings": [
+    {
+      "code": "font_family_without_font_face",
+      "severity": "error",
+      "message": "Font families used without @font-face declaration: dm sans, anton. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+      "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files. For an OS-bundled system font (e.g. Hiragino Sans, Microsoft YaHei) that has no downloadable file, use src: local('Exact Font Name') instead. The declaration alone satisfies this check without needing a font file.",
+      "file": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/compositions/scenes/scene-01.html"
+    },
+    {
+      "code": "font_family_without_font_face",
+      "severity": "error",
+      "message": "Font families used without @font-face declaration: dm sans, anton. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+      "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files. For an OS-bundled system font (e.g. Hiragino Sans, Microsoft YaHei) that has no downloadable file, use src: local('Exact Font Name') instead. The declaration alone satisfies this check without needing a font file.",
+      "file": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/compositions/scenes/scene-02.html"
+    },
+    {
+      "code": "font_family_without_font_face",
+      "severity": "error",
+      "message": "Font families used without @font-face declaration: dm sans, anton. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+      "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files. For an OS-bundled system font (e.g. Hiragino Sans, Microsoft YaHei) that has no downloadable file, use src: local('Exact Font Name') instead. The declaration alone satisfies this check without needing a font file.",
+      "file": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/compositions/scenes/scene-03.html"
+    },
+    {
+      "code": "font_family_without_font_face",
+      "severity": "error",
+      "message": "Font families used without @font-face declaration: dm sans, anton. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+      "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files. For an OS-bundled system font (e.g. Hiragino Sans, Microsoft YaHei) that has no downloadable file, use src: local('Exact Font Name') instead. The declaration alone satisfies this check without needing a font file.",
+      "file": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/compositions/scenes/scene-04.html"
+    },
+    {
+      "code": "font_family_without_font_face",
+      "severity": "error",
+      "message": "Font families used without @font-face declaration: dm sans, anton. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+      "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files. For an OS-bundled system font (e.g. Hiragino Sans, Microsoft YaHei) that has no downloadable file, use src: local('Exact Font Name') instead. The declaration alone satisfies this check without needing a font file.",
+      "file": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/compositions/scenes/scene-05.html"
+    },
+    {
+      "code": "font_family_without_font_face",
+      "severity": "error",
+      "message": "Font families used without @font-face declaration: dm sans, anton. These are not in the auto-resolved font list, so the renderer cannot supply them automatically. Text will fall back to a generic font, producing incorrect typography in the video.",
+      "fixHint": "Add @font-face { font-family: '...'; src: url('capture/assets/fonts/...woff2'); } for each font family, pointing to the captured .woff2 files. For an OS-bundled system font (e.g. Hiragino Sans, Microsoft YaHei) that has no downloadable file, use src: local('Exact Font Name') instead. The declaration alone satisfies this check without needing a font file.",
+      "file": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/compositions/scenes/scene-06.html"
+    }
+  ],
+  "filesScanned": 7,
+  "_meta": {
+    "version": "0.8.183",
+    "updateAvailable": false
+  }
+}

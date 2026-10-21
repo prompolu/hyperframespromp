@@ -2,6 +2,17 @@
 
 All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. The first editable PROMPOLU technical animation is available below.
 
+## Latest video — 60-second photographic version
+
+Rebuilt with real photographic imagery, the website's light ivory/dark ink/bronze identity, French voiceover and original music. 1080 × 1920, 30 FPS, 60 seconds. Photos are credited illustrative stock, not claims of PROMPOLU installations.
+
+- [Full-resolution 60-second MP4](videos/prompolu-thermal-break-60s/renders/PROMPOLU-60s-1080x1920.mp4)
+- [Smaller 60-second preview](videos/prompolu-thermal-break-60s/renders/PROMPOLU-60s-preview-540x960.mp4)
+- [Editable project ZIP](artifacts/PROMPOLU-60s-editable.zip)
+- [Source, credits and rendering instructions](videos/prompolu-thermal-break-60s/README.md)
+
+Open an MP4 on GitHub and select **Download raw file** to play it locally.
+
 ## Source and installation
 
 - Official instructions: https://github.com/heygen-com/hyperframes#skills

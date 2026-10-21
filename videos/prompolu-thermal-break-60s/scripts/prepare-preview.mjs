@@ -1,0 +1,10 @@
+import {cp,mkdir,readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url),target=new URL('.hyperframes/preview-project/',root);
+await mkdir(target,{recursive:true});
+for(const name of ['assets','compositions','hyperframes.json','index.motion.json'])await cp(new URL(name,root),new URL(name,target),{recursive:true});
+let s=await readFile(new URL('index.html',root),'utf8');
+s=s.replace(/(<div id="film"[^>]*data-width=")1080("[^>]*data-height=")1920/, '$1540$2960');
+s=s.replace('width=1080, height=1920','width=540, height=960');
+s=s.replace('</head>','<style>html,body{width:540px!important;height:960px!important}#film{width:1080px!important;height:1920px!important;transform:scale(.5);transform-origin:0 0}</style></head>');
+await writeFile(new URL('index.html',target),s);
+console.log('Prepared half-size preview project');

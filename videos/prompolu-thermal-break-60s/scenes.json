@@ -1,0 +1,80 @@
+[
+  {
+    "id": "scene-01",
+    "kicker": "LE CONFORT PREND FORME",
+    "title": [
+      "RUPTURE DE",
+      "PONT THERMIQUE"
+    ],
+    "body": "Le détail qui change la façon de penser votre fenêtre.",
+    "photo": "residential-1.jpg",
+    "layout": "hero",
+    "credit": "Photographie d’illustration · Unsplash",
+    "tag": "COMPRENDRE EN 60 SECONDES"
+  },
+  {
+    "id": "scene-02",
+    "kicker": "01 / COMPRENDRE LE MATÉRIAU",
+    "title": [
+      "L’ALUMINIUM",
+      "CONDUIT LA CHALEUR."
+    ],
+    "body": "Un matériau solide et durable, mais naturellement conducteur.",
+    "photo": "residential-2.jpg",
+    "layout": "photo-top",
+    "credit": "Photographie d’illustration · Unsplash",
+    "tag": "EXTÉRIEUR / INTÉRIEUR"
+  },
+  {
+    "id": "scene-03",
+    "kicker": "02 / INTERROMPRE LA CONTINUITÉ",
+    "title": [
+      "UNE COUPURE.",
+      "UNE LIAISON."
+    ],
+    "body": "Le polyamide relie les parties aluminium tout en créant une liaison isolante.",
+    "photo": "residential-2.jpg",
+    "layout": "hero",
+    "credit": "Photographie d’illustration · Unsplash",
+    "tag": "POLYAMIDE ISOLANT"
+  },
+  {
+    "id": "scene-04",
+    "kicker": "03 / PENSER LE CONFORT",
+    "title": [
+      "L’HIVER. L’ÉTÉ.",
+      "LE MÊME SOIN."
+    ],
+    "body": "Limiter les échanges thermiques, selon le système et la configuration choisis.",
+    "photo": "residential-3.jpg",
+    "layout": "photo-top",
+    "credit": "Photographie d’illustration · Unsplash",
+    "tag": "UNE MENUISERIE BIEN PENSÉE"
+  },
+  {
+    "id": "scene-05",
+    "kicker": "04 / CHOISIR L’ENSEMBLE",
+    "title": [
+      "PROFILÉ. VITRAGE.",
+      "QUALITÉ DE POSE."
+    ],
+    "body": "La performance se construit avec tous les éléments de la fenêtre.",
+    "photo": "facade.jpg",
+    "layout": "hero",
+    "credit": "Photo : SEIER+SEIER · CC BY 2.0 · recadrée",
+    "tag": "UNE CONFIGURATION ADAPTÉE"
+  },
+  {
+    "id": "scene-06",
+    "kicker": "FÈS / SEFROU",
+    "title": [
+      "PARLONS DE",
+      "VOTRE PROJET."
+    ],
+    "body": "La qualité, notre meilleur profil.",
+    "photo": "residential-1.jpg",
+    "layout": "closing",
+    "credit": "Photographie d’illustration · Unsplash",
+    "tag": "prompolu.com"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "prompolu-thermal-break-60s",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bash scripts/hyperframes.sh preview",
+    "check": "bash scripts/hyperframes.sh check",
+    "render": "bash scripts/hyperframes.sh render --fps 30 --quality looks --workers 3 --strict --no-best-effort --output renders/PROMPOLU-60s-1080x1920.mp4",
+    "snapshot": "bash scripts/hyperframes.sh snapshot"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "0.8.183",
+    "@hyperframes/producer": "0.8.183"
+  }
+}

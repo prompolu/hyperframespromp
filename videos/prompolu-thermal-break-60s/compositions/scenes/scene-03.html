@@ -1,0 +1,44 @@
+<!doctype html><html lang="fr"><head><meta charset="UTF-8"></head><body><template>
+ <style>
+ @font-face {font-family:"Anton";src:url("../../assets/fonts/Anton-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block;}
+ @font-face {font-family:"DM Sans";src:url("../../assets/fonts/DM-Sans-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block;}
+ @font-face {font-family:"DM Sans";src:url("../../assets/fonts/DM-Sans-Semibold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:block;}
+ #scene-03 {position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#F1F0EC;color:#15171A;font-family:"DM Sans",sans-serif;}
+ #scene-03 * {box-sizing:border-box;}
+ #scene-03 .masthead {position:absolute;left:108px;right:108px;top:91px;height:80px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:2px solid #D8D5CE;}
+ #scene-03 .logo {display:block;width:326px;height:auto;}
+ #scene-03 .number {font-size:25px;letter-spacing:.13em;padding-top:4px;}
+ #scene-03 .copy {position:absolute;left:108px;right:108px;top:230px;}
+ #scene-03 .kicker {margin:0 0 28px;font-size:24px;font-weight:600;letter-spacing:.12em;color:#765333;line-height:1.4;}
+ #scene-03 h1 {margin:0;display:flex;flex-direction:column;gap:8px;font-family:"Anton",sans-serif;font-size:91px;line-height:1.16;font-weight:400;letter-spacing:-.018em;}
+ #scene-03 .headline-line {display:block;}
+ #scene-03 .photo-window {position:absolute;left:72px;right:72px;top:565px;height:867px;overflow:hidden;background:#D8D5CE;}
+ #scene-03 .photo-motion {position:absolute;inset:0;will-change:transform;}
+ #scene-03 .photo {display:block;width:100%;height:100%;object-fit:cover;object-position:30% 50%;}
+ #scene-03 .photo-credit {position:absolute;left:108px;right:108px;top:1453px;margin:0;font-size:23px;line-height:1.4;color:#15171A;}
+ #scene-03 .lower {position:absolute;left:108px;right:108px;top:1530px;}
+ #scene-03 .tag {display:inline-block;margin:0 0 22px;color:#765333;font-size:25px;letter-spacing:.09em;font-weight:600;line-height:1.4;}
+ #scene-03 .body {margin:0;font-size:36px;line-height:1.42;max-width:850px;}
+ #scene-03 .footer {position:absolute;left:108px;right:108px;bottom:105px;display:flex;justify-content:space-between;gap:20px;padding-top:22px;border-top:2px solid #D8D5CE;font-size:24px;line-height:1.4;}
+ #scene-03 .progress-track {position:absolute;left:108px;right:108px;bottom:84px;height:5px;background:#D8D5CE;}
+ #scene-03 .progress-fill {height:100%;width:100%;background:#8C6A45;transform-origin:0 50%;}
+ </style>
+ <div id="scene-03" data-composition-id="scene-03" data-width="1080" data-height="1920" data-duration="10" data-fps="30">
+ <header class="masthead"><img class="logo" src="../../assets/brand/logo-prompolu.png" alt="PROMPOLU Aluminium" width="602" height="83"><span class="number">03 / 06</span></header>
+ <div class="photo-window" data-layout-allow-overflow><div class="photo-motion"><img class="photo" src="../../assets/photos/residential-2.jpg" alt="Photographie architecturale d’illustration : menuiserie et espace réel" /></div></div>
+ <p class="photo-credit">Photographie d’illustration · Unsplash</p>
+ <div class="copy"><p class="kicker">02 / INTERROMPRE LA CONTINUITÉ</p><h1><span class="headline-line">UNE COUPURE.</span><span class="headline-line">UNE LIAISON.</span></h1></div>
+ <div class="lower"><p class="tag">POLYAMIDE ISOLANT</p><p class="body">Le polyamide relie les parties aluminium tout en créant une liaison isolante.</p></div>
+ <footer class="footer"><span>PROMPOLU ALUMINIUM</span><span>prompolu.com</span></footer>
+ <div class="progress-track"><div class="progress-fill"></div></div>
+ </div>
+ <script>
+ (()=>{const tl=gsap.timeline({paused:true});
+ tl.fromTo("#scene-03 .photo-motion",{scale:1.08,x:28},{scale:1.15,x:-18,duration:10,ease:"none"},0);
+ tl.fromTo("#scene-03 .kicker",{opacity:0},{opacity:1,duration:.3,ease:"power1.out"},.12);
+ tl.fromTo("#scene-03 .headline-line",{clipPath:"inset(0 100% 0 0)",y:16},{clipPath:"inset(0 0% 0 0)",y:0,duration:.75,stagger:.12,ease:"circ.out"},.20);
+ tl.fromTo("#scene-03 .tag",{opacity:0,x:-12},{opacity:1,x:0,duration:.4,ease:"sine.out"},1.0);
+ tl.fromTo("#scene-03 .body",{opacity:0,y:18},{opacity:1,y:0,duration:.65,ease:"power2.out"},1.2);
+ tl.fromTo("#scene-03 .progress-fill",{scaleX:0},{scaleX:1,duration:10,ease:"none"},0);
+ window.__timelines["scene-03"]=tl;tl.seek(0);})();
+ </script></template></body></html>

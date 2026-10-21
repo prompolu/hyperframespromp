@@ -1,0 +1,112 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 7
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 60,
+    "samples": [
+      1.579,
+      4.737,
+      7.895,
+      11.053,
+      14.211,
+      17.368,
+      20.526,
+      23.684,
+      26.842,
+      30,
+      33.158,
+      36.316,
+      39.474,
+      42.632,
+      45.789,
+      48.947,
+      52.105,
+      55.263,
+      58.421
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.579,
+      14.211,
+      30,
+      42.632,
+      58.421
+    ],
+    "checked": 40,
+    "passed": 40
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      ".hyperframes/artifacts/snapshots/b7411b24-13da-4659-be20-bce00c54a926/frame-00-at-1.6s.png",
+      ".hyperframes/artifacts/snapshots/b7411b24-13da-4659-be20-bce00c54a926/frame-01-at-14.2s.png",
+      ".hyperframes/artifacts/snapshots/b7411b24-13da-4659-be20-bce00c54a926/frame-02-at-30.0s.png",
+      ".hyperframes/artifacts/snapshots/b7411b24-13da-4659-be20-bce00c54a926/frame-03-at-42.6s.png",
+      ".hyperframes/artifacts/snapshots/b7411b24-13da-4659-be20-bce00c54a926/frame-04-at-58.4s.png"
+    ],
+    "times": [
+      1.579,
+      14.211,
+      30,
+      42.632,
+      58.421
+    ],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "f621ea6e-6d4b-464d-a170-42efc043d364",
+    "revision": null,
+    "report": "/workspace/hyperframespromp/videos/prompolu-thermal-break-60s/.hyperframes/artifacts/checks/f621ea6e-6d4b-464d-a170-42efc043d364.json",
+    "attribution": "inputs-changed"
+  },
+  "_meta": {
+    "version": "0.8.183",
+    "updateAvailable": false
+  }
+}

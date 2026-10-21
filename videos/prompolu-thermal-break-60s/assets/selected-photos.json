@@ -1,0 +1,37 @@
+[
+  {
+    "file": "residential-1.jpg",
+    "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1900&q=90&fit=crop",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "usage": "Illustrative architectural photography; not represented as PROMPOLU projects",
+    "sha256": "24d91da5ef884ba94deec4e5cb0c1717c6ccd20eedc34d0a86f1825be72c4d7b"
+  },
+  {
+    "file": "residential-2.jpg",
+    "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1900&q=90&fit=crop",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "usage": "Illustrative architectural photography; not represented as PROMPOLU projects",
+    "sha256": "98c9e503c184fdd58f0b10a14deb20531a35951c783810675e5fc4c3bac8d6c3"
+  },
+  {
+    "file": "residential-3.jpg",
+    "url": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1900&q=90&fit=crop",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "usage": "Illustrative architectural photography; not represented as PROMPOLU projects",
+    "sha256": "f83c0d53cce1c1679b9125873e3d01363daf330624dbbd4796c9ff9e39e4bc73"
+  },
+  {
+    "file": "facade.jpg",
+    "title": "File:Bbb low-cost housing, prototype, tegnestuen vandkunsten 2004-2008 (2263988203).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Bbb_low-cost_housing%2C_prototype%2C_tegnestuen_vandkunsten_2004-2008_%282263988203%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bbb_low-cost_housing,_prototype,_tegnestuen_vandkunsten_2004-2008_(2263988203).jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "author": "seier+seier",
+    "description": "bbb low-cost housing, kvistgård, elsinore, denmark.\narchitects: tegnestuen vandkunsten, 2004-2008.\nnew photos and text, june 2009.\nprefab courtyard low-cost housing. flat, wood elements. you are looking at a single unit in two floors. this is a prototype done partly to serve as a sales pavillion and partly to learn how to assemble the next 124 houses effectively.\nfour different courtyard houses are archieved by combining 5.2x5.2 meter modules. nine by nine, the courtyard houses are gathered around intimate communal spaces (kitchen always looking into this space). the resulting enclaves are placed freely in the gently sloping landscape.\nfacades are carbonized (that is baked or heat treated) wood and aluminium. the windows were not particularly low-cost but the client was looking for certain details whereby he could increase the quality of his project in a single move, so to speak. we recommended the windows. the client's own input here was to increase the interior ceiling height to 2,6 meter.\nthere is a lot to tell about this project, it has a long and troubled history already, but that won't be today.\nwe did a similar project for IKEA but I didn't work on that. this one is for a highly ambitious Danish client.\nclient's project web site\nwww.vandkunsten.com\nthis photo was uploaded with a CC license and may be used free of charge and in any way you see fit. \nif possible, please name photographer \"SEIER+SEIER\". \n\nif not, don't.",
+    "sha256": "d3ea24ba208b853c03e0737146a72fb676edeba99195569ec12050bc42202ed4"
+  }
+]

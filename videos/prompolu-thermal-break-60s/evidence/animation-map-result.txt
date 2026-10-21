@@ -1,0 +1,21 @@
+hyperframes: could not determine the bundled version for @hyperframes/producer; using @latest.
+Set HYPERFRAMES_SKILL_PKG_VERSION=<version> to pin it.
+hyperframes: could not determine the bundled version for @hyperframes/core; using @latest.
+Set HYPERFRAMES_SKILL_PKG_VERSION=<version> to pin it.
+file:///workspace/hyperframespromp/.agents/skills/hyperframes-animation/scripts/package-loader.mjs:301
+    throw new Error(
+          ^
+
+Error: Required helper package(s) are missing.
+To allow a one-time temporary dependency bootstrap for this run, set:
+  HYPERFRAMES_SKILL_BOOTSTRAP_DEPS=1
+The bootstrap command will be:
+  npm install --ignore-scripts --no-save @hyperframes/producer@latest @hyperframes/core@latest
+    at confirmBootstrap (file:///workspace/hyperframespromp/.agents/skills/hyperframes-animation/scripts/package-loader.mjs:301:11)
+    at importPackagesOrBootstrap (file:///workspace/hyperframespromp/.agents/skills/hyperframes-animation/scripts/package-loader.mjs:38:11)
+    at file:///workspace/hyperframespromp/.agents/skills/hyperframes-animation/scripts/animation-map.mjs:27:24
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0

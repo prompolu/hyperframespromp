@@ -1,0 +1,44 @@
+<!doctype html><html lang="fr"><head><meta charset="UTF-8"></head><body><template>
+ <style>
+ @font-face {font-family:"Anton";src:url("../../assets/fonts/Anton-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block;}
+ @font-face {font-family:"DM Sans";src:url("../../assets/fonts/DM-Sans-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block;}
+ @font-face {font-family:"DM Sans";src:url("../../assets/fonts/DM-Sans-Semibold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:block;}
+ #scene-06 {position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#F1F0EC;color:#15171A;font-family:"DM Sans",sans-serif;}
+ #scene-06 * {box-sizing:border-box;}
+ #scene-06 .masthead {position:absolute;left:108px;right:108px;top:91px;height:80px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:2px solid #D8D5CE;}
+ #scene-06 .logo {display:block;width:326px;height:auto;}
+ #scene-06 .number {font-size:25px;letter-spacing:.13em;padding-top:4px;}
+ #scene-06 .copy {position:absolute;left:108px;right:108px;top:230px;}
+ #scene-06 .kicker {margin:0 0 28px;font-size:24px;font-weight:600;letter-spacing:.12em;color:#765333;line-height:1.4;}
+ #scene-06 h1 {margin:0;display:flex;flex-direction:column;gap:8px;font-family:"Anton",sans-serif;font-size:91px;line-height:1.16;font-weight:400;letter-spacing:-.018em;}
+ #scene-06 .headline-line {display:block;}
+ #scene-06 .photo-window {position:absolute;left:72px;right:72px;top:565px;height:867px;overflow:hidden;background:#D8D5CE;}
+ #scene-06 .photo-motion {position:absolute;inset:0;will-change:transform;}
+ #scene-06 .photo {display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;}
+ #scene-06 .photo-credit {position:absolute;left:108px;right:108px;top:1453px;margin:0;font-size:23px;line-height:1.4;color:#15171A;}
+ #scene-06 .lower {position:absolute;left:108px;right:108px;top:1530px;}
+ #scene-06 .tag {display:inline-block;margin:0 0 22px;color:#765333;font-size:25px;letter-spacing:.09em;font-weight:600;line-height:1.4;}
+ #scene-06 .body {margin:0;font-size:36px;line-height:1.42;max-width:850px;}
+ #scene-06 .footer {position:absolute;left:108px;right:108px;bottom:105px;display:flex;justify-content:space-between;gap:20px;padding-top:22px;border-top:2px solid #D8D5CE;font-size:24px;line-height:1.4;}
+ #scene-06 .progress-track {position:absolute;left:108px;right:108px;bottom:84px;height:5px;background:#D8D5CE;}
+ #scene-06 .progress-fill {height:100%;width:100%;background:#8C6A45;transform-origin:0 50%;}
+ #scene-06 .photo-window {top:230px;height:890px;} #scene-06 .photo-credit {top:1138px;} #scene-06 .copy {top:1208px;} #scene-06 h1 {font-size:103px;} #scene-06 .lower {top:1555px;} #scene-06 .tag {font-size:43px;letter-spacing:0;font-weight:600;} #scene-06 .body {font-size:33px;}</style>
+ <div id="scene-06" data-composition-id="scene-06" data-width="1080" data-height="1920" data-duration="10" data-fps="30">
+ <header class="masthead"><img class="logo" src="../../assets/brand/logo-prompolu.png" alt="PROMPOLU Aluminium" width="602" height="83"><span class="number">06 / 06</span></header>
+ <div class="photo-window" data-layout-allow-overflow><div class="photo-motion"><img class="photo" src="../../assets/photos/residential-1.jpg" alt="Photographie architecturale d’illustration : menuiserie et espace réel" /></div></div>
+ <p class="photo-credit">Photographie d’illustration · Unsplash</p>
+ <div class="copy"><p class="kicker">FÈS / SEFROU</p><h1><span class="headline-line">PARLONS DE</span><span class="headline-line">VOTRE PROJET.</span></h1></div>
+ <div class="lower"><p class="tag">prompolu.com</p><p class="body">La qualité, notre meilleur profil.</p></div>
+ <footer class="footer"><span>PROMPOLU ALUMINIUM</span><span>FÈS · SEFROU</span></footer>
+ <div class="progress-track"><div class="progress-fill"></div></div>
+ </div>
+ <script>
+ (()=>{const tl=gsap.timeline({paused:true});
+ tl.fromTo("#scene-06 .photo-motion",{scale:1.1,x:-8},{scale:1.03,x:8,duration:10,ease:"none"},0);
+ tl.fromTo("#scene-06 .kicker",{opacity:0},{opacity:1,duration:.3,ease:"power1.out"},.12);
+ tl.fromTo("#scene-06 .headline-line",{clipPath:"inset(0 100% 0 0)",y:16},{clipPath:"inset(0 0% 0 0)",y:0,duration:.75,stagger:.12,ease:"power2.out"},.20);
+ tl.fromTo("#scene-06 .tag",{opacity:0,x:-12},{opacity:1,x:0,duration:.4,ease:"sine.out"},1.0);
+ tl.fromTo("#scene-06 .body",{opacity:0,y:18},{opacity:1,y:0,duration:.65,ease:"power2.out"},1.2);
+ tl.fromTo("#scene-06 .progress-fill",{scaleX:0},{scaleX:1,duration:10,ease:"none"},0);
+ window.__timelines["scene-06"]=tl;tl.seek(0);})();
+ </script></template></body></html>
