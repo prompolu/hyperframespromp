@@ -30,6 +30,8 @@ For updates, use a fresh clone and review the upstream revision. The installer p
 
 Installation reported 21 skills. All 945 installed files were compared byte for byte with the pinned source; all matched, and no symlinks were present. The published 21 skill names each have a nonempty `SKILL.md` with name and description frontmatter.
 
-Codex CLI `skills/list` verification was attempted, but its app server cannot initialize because the cloud-mounted Codex home is read-only (SQLite state and `installation_id` writes fail). Directory-level discovery is verified; runtime discovery has not been confirmed. Open a fresh Codex session in this repository and check its skills list once a writable Codex runtime is available.
+Codex runtime discovery is verified with the official Codex CLI 0.110.0: its app-server `skills/list` method, called with this repository as `cwd` and `forceReload: true`, returned all 21 repository skills and zero errors. This check required no model invocation or video creation. All 21 bundles also match the published upstream whole-directory hashes, and every installed file is tracked in Git.
+
+The preinstalled Codex CLI 0.163.0 cannot initialize its app server because the cloud-mounted Codex home is read-only (`installation_id` writes fail). Discovery through that specific runtime remains blocked; the compatibility check above used an isolated official 0.110.0 CLI with SQLite state directed to `/tmp`. The installed skill files were unchanged.
 
 These are skill instructions, not an initialized rendering project. Rendering prerequisites, credentials, browser downloads, and video generation remain outside this installation task.
