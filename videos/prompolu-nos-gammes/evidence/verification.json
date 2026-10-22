@@ -1,0 +1,42 @@
+{
+  "output": "renders/prompolu-nos-gammes-1920x1080.mp4",
+  "ffprobe": {
+    "stream": {
+      "codec_name": "h264",
+      "profile": "High",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "color_range": "tv",
+      "color_space": "bt709",
+      "color_transfer": "bt709",
+      "color_primaries": "bt709",
+      "r_frame_rate": "30/1",
+      "nb_read_frames": "300"
+    },
+    "format": {
+      "duration": "10.000000",
+      "size": "3055707"
+    }
+  },
+  "audio_streams": 0,
+  "full_decode": "ffmpeg -v error -i <mp4> -f null - : no errors",
+  "render": {
+    "renderer": "Playwright 1.56.1, Chromium 141.0.7390.37 headless",
+    "frame_time": "t = frame / 30 for frames 0..299",
+    "wall_clock_seconds": 85
+  },
+  "determinism": "window.seek(t) produced byte-identical PNGs for t = 5.5, 2.9, 8.7667 whether seeked first or after unrelated seeks in a different order",
+  "final_frame_check": {
+    "dom": "all 17 #finalLogo paths: opacity 1, identity transform, fill #15171A, filter none; #endLogoWrap offset 0,0; logo box 530, 479.52, 860 x 120.96",
+    "pixel_compare_vs_prompolu-logo.svg_rendered_alone": "ink bounding box x 531-1388 identical, y 482-598 vs 481-598; ink pixel count 34245 vs 34224 (0.06 %); differences limited to sub-pixel anti-aliasing at glyph edges"
+  },
+  "brand_colour_samples": {
+    "t0.5 background": "#F1F0EC",
+    "t3.45 background": "#15171A",
+    "t3.45 address bar": "#2B2D2F",
+    "t3.45 go button": "#F1F0EC",
+    "t2.94 button": "#8C6A45",
+    "t9.967 logo": "#15171A"
+  }
+}

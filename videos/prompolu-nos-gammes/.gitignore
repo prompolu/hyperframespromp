@@ -1,0 +1,4 @@
+node_modules/
+renders/work-*/
+*.log
+renders/stills/

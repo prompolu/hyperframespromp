@@ -1,0 +1,33 @@
+# PROMPOLU — Nos gammes · sound-design cue sheet (the film is rendered silent; no audio files were supplied)
+# Bed: bright minimal electronic / pop-house, ~125 BPM — sustained sub-bass pad, soft chord synth, soft kicks on transitions.
+# time (s)	cue
+0.00	airy riser (bed starts)
+0.62	soft bass thump + glass ping — icon pop
+1.20	deep swoosh-hit into the dark scene (strongest hit)
+1.30–1.60	soft pitched key-blips, one per logo letter (P R O M P O L U)
+2.00	soft scroll swish
+2.70	short zoom whoosh — push-in
+2.92	UI tap click — "Explorer nos gammes"
+3.05–3.20	rubbery stretch "zip" — button becomes the address bar
+3.30–3.60	typing blips — "prompolu.com"
+3.70–4.40	airy pendulum whooshes
+4.45	pop + bright ping — the "+"
+4.90	swoosh + notification "ding" — badge "3" forms
+5.38	fast scroll whoosh, decelerating with the fling
+6.07–6.44	dreamy shimmer riser — dissolve to haze
+6.48	typing blips — "Coulissants"
+6.52	bubbly pop — chip s140rp
+6.60	bubbly pop — chip window-original
+7.13	paper "flick" — card swap
+7.23	typing blips — "Battants"
+7.27	bubbly pop — chip s53rp-plus
+7.34	bubbly pop — chip porte-a400k
+7.91	paper "flick" — card swap
+8.00	typing blips — "Extérieur"
+8.04	bubbly pop — chip pergola
+8.11	bubbly pop — chip garde-corps
+8.56	fast downward whoosh + flash hit
+8.80	soft drop thud — P lands
+8.90	slide whoosh with a click as the P locks into the logo
+9.10–10.00	music fades to silence
+9.50	faint metallic shimmer — bronze sheen

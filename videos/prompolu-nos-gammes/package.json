@@ -1,0 +1,14 @@
+{
+  "name": "prompolu-nos-gammes",
+  "private": true,
+  "type": "module",
+  "description": "PROMPOLU — Nos gammes: 10-second 1920x1080 morph-chain website promo (GSAP + Playwright + FFmpeg).",
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "stills": "node scripts/render.mjs --stills 0.5,1.0,2.45,2.95,3.66,4.47,5.25,6.0,6.95,7.6,8.4,9.967",
+    "preview": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

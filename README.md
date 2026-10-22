@@ -2,7 +2,15 @@
 
 All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. The first editable PROMPOLU technical animation is available below.
 
-## Latest video — 60-second photographic version
+## Latest video — PROMPOLU — Nos gammes (10 s, 16:9)
+
+A cut-free morph-chain website promo: the P mark becomes an app tile, a button, the prompolu.com address bar, a product grid, range cards (Coulissants · Battants · Extérieur) and finally the PROMPOLU ALUMINIUM logo. 1920 × 1080, 30 FPS, exactly 300 frames. It is built as one GSAP-driven HTML page and rendered frame by frame with Playwright and FFmpeg. It is silent; a sound-design cue sheet is included.
+
+- [1920 × 1080 MP4](videos/prompolu-nos-gammes/renders/prompolu-nos-gammes-1920x1080.mp4)
+- [Contact sheet](videos/prompolu-nos-gammes/evidence/contact-sheet.jpg) · [sound cues](videos/prompolu-nos-gammes/cues.txt)
+- [Source, choices and rendering instructions](videos/prompolu-nos-gammes/README.md)
+
+## 60-second photographic version
 
 Rebuilt with real photographic imagery, the website's light ivory/dark ink/bronze identity, French voiceover and original music. 1080 × 1920, 30 FPS, 60 seconds. Photos are credited illustrative stock, not claims of PROMPOLU installations.
 
