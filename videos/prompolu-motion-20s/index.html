@@ -538,6 +538,17 @@
         s110p: ["cutout", "cutouts/s110p.webp"], s125rp: ["cutout", "cutouts/s125rp.webp"], s140rp: ["cutout", "cutouts/s140rp.webp"],
         s70p: ["cutout", "cutouts/s70p.webp"], s86rp: ["cutout", "cutouts/s86rp.webp"], s88r: ["cutout", "cutouts/s88r.webp"],
         s88rp: ["cutout", "cutouts/s88rp.webp"], s90rp: ["cutout", "cutouts/s90rp.webp"], s53: ["cutout", "cutouts/s53rp-plus.webp"],
+        // STRUGAL Maroc project references in Fès and Meknès (strugal.ma/fr/galeria), used with PROMPOLU's
+        // authorisation as STRUGAL distributor. Shown as illustrations; not presented as PROMPOLU installations.
+        fesAmrani1: ["photo", "strugal-maroc/villa-amrani-01.jpg"], fesAmrani2: ["photo", "strugal-maroc/villa-amrani-02.jpg"],
+        fesAmrani3: ["photo", "strugal-maroc/villa-amrani-03.jpg"], fesAmrani6: ["photo", "strugal-maroc/villa-amrani-06.jpg"],
+        fesAmrani7: ["photo", "strugal-maroc/villa-amrani-07.jpg"], fesAmrani9: ["photo", "strugal-maroc/villa-amrani-09.jpg"],
+        fesEsisa: ["photo", "strugal-maroc/esisa-04.jpg"],
+        mekMamounia7: ["photo", "strugal-maroc/escuela-al-mamounia-07.jpg"], mekMamounia9: ["photo", "strugal-maroc/escuela-al-mamounia-09.jpg"],
+        mekMamounia10: ["photo", "strugal-maroc/escuela-al-mamounia-10.jpg"], mekRiva3: ["photo", "strugal-maroc/direction-riva-03.jpg"],
+        mekRiva5: ["photo", "strugal-maroc/direction-riva-05.jpg"], mekToulal: ["photo", "strugal-maroc/clinique-toulal-01.jpg"],
+        mekGhofrane: ["photo", "strugal-maroc/residencia-al-ghofrane-02.jpg"], mekVolubilis: ["photo", "strugal-maroc/volubilis-centre-04.jpg"],
+        mekMoustakbal: ["photo", "strugal-maroc/residence-al-moustakbal-01.jpg"],
       };
       // Category cards (become the first card of each masonry column).
       const CATEGORIES = [
@@ -548,14 +559,14 @@
       ];
       // Masonry continuation per column: [image, height, object-position]
       const COLUMNS = [
-        [["s88r", 240], ["pergola", 440, "45% 50%"], ["s70p", 330], ["rBatt", 240], ["volets", 330, "40% 50%"], ["s125rp", 240],
-         ["dressing", 440, "50% 50%"], ["s90rp", 330], ["gardecorps", 240, "50% 60%"], ["s53", 330]],
-        [["s110p", 240], ["dressing", 440, "50% 50%"], ["rCoul", 240], ["s86rp", 330], ["porte", 440, "60% 50%"],
-         ["window", 240, "50% 50%"], ["s140rp", 330], ["gardecorps", 440, "35% 50%"], ["s88rp", 240], ["villa", 330, "40% 50%"]],
-        [["s90rp", 240], ["villa", 330, "60% 50%"], ["rGarde", 240], ["s88rp", 330], ["pergola", 440, "60% 50%"],
-         ["s70p", 240], ["volets", 440, "55% 50%"], ["s125rp", 330], ["battants", 240, "50% 50%"], ["s110p", 330]],
-        [["s125rp", 330], ["gardecorps", 440, "40% 55%"], ["s86rp", 240], ["battants", 330, "50% 45%"], ["s53", 240],
-         ["agencement", 440, "45% 50%"], ["rCoul", 240], ["s140rp", 330], ["porte", 440, "50% 50%"], ["s88r", 240]],
+        [["s88r", 240], ["pergola", 440, "45% 50%"], ["fesAmrani6", 330, "40% 50%"], ["rBatt", 240], ["volets", 330, "40% 50%"],
+         ["fesAmrani3", 240, "50% 55%"], ["dressing", 440, "50% 50%"], ["s90rp", 330], ["mekMamounia10", 240, "40% 50%"], ["s53", 330]],
+        [["s110p", 240], ["fesAmrani9", 440, "50% 50%"], ["rCoul", 240], ["s86rp", 330], ["porte", 440, "60% 50%"],
+         ["window", 240, "50% 50%"], ["s140rp", 330], ["gardecorps", 440, "35% 50%"], ["s88rp", 240], ["mekRiva5", 330, "60% 50%"]],
+        [["fesAmrani7", 240, "50% 50%"], ["mekToulal", 330, "50% 50%"], ["rGarde", 240], ["s88rp", 330], ["mekMamounia9", 440, "50% 50%"],
+         ["s70p", 240], ["mekGhofrane", 440, "50% 40%"], ["s125rp", 330], ["mekMamounia7", 240, "60% 50%"], ["fesEsisa", 330, "50% 50%"]],
+        [["mekRiva3", 330, "50% 50%"], ["fesAmrani1", 440, "50% 50%"], ["s86rp", 240], ["mekMoustakbal", 330, "60% 50%"], ["s53", 240],
+         ["mekVolubilis", 440, "50% 50%"], ["rCoul", 240], ["s140rp", 330], ["fesAmrani2", 440, "50% 50%"], ["s88r", 240]],
       ];
 
       // ---------- helpers ----------

@@ -318,5 +318,253 @@
   ],
   "other": {
     "gsap": "assets/vendor/gsap.min.js — GSAP 3.14.2 (standard GSAP license)"
+  },
+  "strugalMarocProjects": {
+    "gallery": "https://www.strugal.ma/fr/galeria",
+    "retrieved": "2026-10-22",
+    "permission": "Used at PROMPOLU's direction; PROMPOLU states it is authorised to use STRUGAL gallery imagery as a STRUGAL distributor.",
+    "note": "Real STRUGAL project references in Fès and Meknès, shown as illustrations of STRUGAL systems. Not presented as PROMPOLU installations; no project names or claims appear on screen. Images with visible signage or logos were excluded; no watermark was cropped or removed.",
+    "images": [
+      {
+        "file": "assets/images/strugal-maroc/villa-amrani-01.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/villa-amrani1.jpg",
+        "project": "Villa Amrani",
+        "projectPage": "https://www.strugal.ma/es/proyectos/villa-amrani",
+        "city": "Fès",
+        "architect": "Imane Zekhnini",
+        "category": "Unifamiliar",
+        "pixels": [
+          432,
+          600
+        ],
+        "sha256": "f212033f60c41541",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/villa-amrani-02.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/villa-amrani2.jpg",
+        "project": "Villa Amrani",
+        "projectPage": "https://www.strugal.ma/es/proyectos/villa-amrani",
+        "city": "Fès",
+        "architect": "Imane Zekhnini",
+        "category": "Unifamiliar",
+        "pixels": [
+          400,
+          600
+        ],
+        "sha256": "9860e6a6f58dd89b",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/villa-amrani-03.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/villa-amrani3.jpg",
+        "project": "Villa Amrani",
+        "projectPage": "https://www.strugal.ma/es/proyectos/villa-amrani",
+        "city": "Fès",
+        "architect": "Imane Zekhnini",
+        "category": "Unifamiliar",
+        "pixels": [
+          900,
+          600
+        ],
+        "sha256": "51e7a8f011109161",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/villa-amrani-06.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/villa-amrani6.jpg",
+        "project": "Villa Amrani",
+        "projectPage": "https://www.strugal.ma/es/proyectos/villa-amrani",
+        "city": "Fès",
+        "architect": "Imane Zekhnini",
+        "category": "Unifamiliar",
+        "pixels": [
+          880,
+          600
+        ],
+        "sha256": "44dc4bed63cea4cf",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/villa-amrani-07.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/villa-amrani7.jpg",
+        "project": "Villa Amrani",
+        "projectPage": "https://www.strugal.ma/es/proyectos/villa-amrani",
+        "city": "Fès",
+        "architect": "Imane Zekhnini",
+        "category": "Unifamiliar",
+        "pixels": [
+          900,
+          600
+        ],
+        "sha256": "034a59f7ae58d28c",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/villa-amrani-09.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/villa-amrani9.jpg",
+        "project": "Villa Amrani",
+        "projectPage": "https://www.strugal.ma/es/proyectos/villa-amrani",
+        "city": "Fès",
+        "architect": "Imane Zekhnini",
+        "category": "Unifamiliar",
+        "pixels": [
+          330,
+          600
+        ],
+        "sha256": "9e9ce4805e4b87a5",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/esisa-04.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/esisa-10.jpg",
+        "project": "ESISA",
+        "projectPage": "https://www.strugal.ma/es/proyectos/esisa",
+        "city": "Fès",
+        "architect": "Ste Qosalu y M Amrani Joutei Hicham",
+        "category": "Comercial",
+        "pixels": [
+          1200,
+          800
+        ],
+        "sha256": "3bb7a9c2ee6d6b48",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/escuela-al-mamounia-07.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/ecole-al-mamounia7.jpg",
+        "project": "Escuela Al Mamounia",
+        "projectPage": "https://www.strugal.ma/es/proyectos/escuela-al-mamounia",
+        "city": "Meknès",
+        "architect": "Abdelilah Benaboud",
+        "category": "Cultural",
+        "pixels": [
+          917,
+          600
+        ],
+        "sha256": "3922a1c18cbf8af8",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/escuela-al-mamounia-09.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/ecole-al-mamounia9.jpg",
+        "project": "Escuela Al Mamounia",
+        "projectPage": "https://www.strugal.ma/es/proyectos/escuela-al-mamounia",
+        "city": "Meknès",
+        "architect": "Abdelilah Benaboud",
+        "category": "Cultural",
+        "pixels": [
+          436,
+          600
+        ],
+        "sha256": "01d708caebc4eeaf",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/escuela-al-mamounia-10.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/ecole-al-mamounia10.jpg",
+        "project": "Escuela Al Mamounia",
+        "projectPage": "https://www.strugal.ma/es/proyectos/escuela-al-mamounia",
+        "city": "Meknès",
+        "architect": "Abdelilah Benaboud",
+        "category": "Cultural",
+        "pixels": [
+          900,
+          600
+        ],
+        "sha256": "d1bf9ac8e7981c10",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/direction-riva-03.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/direction-riva-4.jpg",
+        "project": "Dirección Riva",
+        "projectPage": "https://www.strugal.ma/es/proyectos/direction-riva",
+        "city": "Meknès",
+        "architect": "Redoine Akhwad",
+        "category": "Comercial",
+        "pixels": [
+          1200,
+          800
+        ],
+        "sha256": "7e9623fa1433a0a8",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/direction-riva-05.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/direction-riva-6.jpg",
+        "project": "Dirección Riva",
+        "projectPage": "https://www.strugal.ma/es/proyectos/direction-riva",
+        "city": "Meknès",
+        "architect": "Redoine Akhwad",
+        "category": "Comercial",
+        "pixels": [
+          1200,
+          950
+        ],
+        "sha256": "0f1b09f803204bc6",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/clinique-toulal-01.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/clinique-toulal-2.jpg",
+        "project": "Clínica Toulal",
+        "projectPage": "https://www.strugal.ma/es/proyectos/clinique-toulal",
+        "city": "Meknès",
+        "architect": "Alaoui Mrani Youssef",
+        "category": "Sociosanitario",
+        "pixels": [
+          1200,
+          800
+        ],
+        "sha256": "352c9f60006a7d30",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/residencia-al-ghofrane-02.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/residence-al-ghofrane-4.jpg",
+        "project": "Residencia Al Ghofrane",
+        "projectPage": "https://www.strugal.ma/es/proyectos/residencia-al-ghofrane",
+        "city": "Meknès",
+        "architect": "Kamal Benaoud",
+        "category": "Plurifamiliar",
+        "pixels": [
+          800,
+          1200
+        ],
+        "sha256": "ab5422f454ccb15f",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/volubilis-centre-04.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/volubilis-centre-9.jpg",
+        "project": "Centro Volubilis",
+        "projectPage": "https://www.strugal.ma/es/proyectos/volubilis-centre",
+        "city": "Meknès",
+        "architect": "Kamal  Benaoud",
+        "category": "Plurifamiliar",
+        "pixels": [
+          800,
+          1200
+        ],
+        "sha256": "78fdc73f006cb68f",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      },
+      {
+        "file": "assets/images/strugal-maroc/residence-al-moustakbal-01.jpg",
+        "source": "https://www.strugal.ma/sites/default/files/listings-gallery/residence-al-moustakbal-2.jpg",
+        "project": "Residencia Al Moustakbal",
+        "projectPage": "https://www.strugal.ma/es/proyectos/residence-al-moustakbal",
+        "city": "Meknès",
+        "architect": "Benaboud Abdelilah",
+        "category": "Plurifamiliar",
+        "pixels": [
+          1200,
+          800
+        ],
+        "sha256": "cd94e28eb2f46248",
+        "usage": "Masonry gallery (cover crop). STRUGAL Maroc project reference; resized only."
+      }
+    ]
   }
 }

@@ -53,8 +53,12 @@ The composition is deliberately a single file with one GSAP timeline. Lint warns
 | 3D teaser (pergola) | visualisation-3d-teaser.jpg | Visualisation panel |
 | Other product images | coulissant/battant/garde-corps teasers; products/pergola, garde-corps, volets-roulants, porte-a400k, dressing-profil | Masonry |
 | Profile cutouts | products/cutouts/s110p, s125rp, s140rp, s70p, s86rp, s88r, s88rp, s90rp, s53rp-plus | Masonry (contain fit, no labels) |
+| STRUGAL Maroc projects, Fès | strugal.ma/fr/galeria — Villa Amrani (arch. Imane Zekhnini) ×6, ESISA ×1 | Masonry |
+| STRUGAL Maroc projects, Meknès | strugal.ma/fr/galeria — École Al Mamounia ×3, Direction Riva ×2, Clinique Toulal, Résidence Al Ghofrane, Centre Volubilis, Résidence Al Moustakbal | Masonry |
 | Fonts | prompolu.com/assets/font-1.woff2 (DM Sans 400) and font-2.woff2 (500) | All new text; SIL OFL 1.1 |
 | Music and sound effects | Original — `scripts/compose-soundtrack.py` | Soundtrack (no samples or third-party audio) |
+
+The 16 STRUGAL Maroc photos are real STRUGAL project references in Fès and Meknès. They are used at PROMPOLU's direction as a STRUGAL distributor, are shown as illustrations of STRUGAL systems, and are never presented as PROMPOLU installations. No project name or claim appears on screen. Photos with visible signage or logos were skipped, and no watermark was cropped out.
 
 The following were deliberately not used: og-image.jpg (baked-in text), porte-a200-4fh2.jpg and accessoires-cuisine-starax.jpg (visible third-party marks), and cuisine-profil-ouvrant.jpg (excluded at the client's request). Full URLs, page origins, alt texts and checksums are in `assets/sources.json`.
 
