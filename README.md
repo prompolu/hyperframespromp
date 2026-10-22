@@ -2,6 +2,17 @@
 
 All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. The first editable PROMPOLU technical animation is available below.
 
+## Latest video — 20-second motion film (FR, 1920 × 1080)
+
+A premium architectural motion piece for PROMPOLU, using the original logo, the website's own images and DM Sans, with an original 120 BPM soundtrack. It runs as one continuous chain: a kinetic hook, a bronze field revealing the brand, a sphere wipe, the product families, a category selection, an accelerated masonry scroll, the sliding-window hero, the 3D visualisation feature, a "Demander un devis" capsule and the final brand frame. Specs: 30 fps, exactly 600 frames, H.264 with AAC stereo at −16 LUFS.
+
+- [PROMPOLU_Motion_20s_FR.mp4](videos/prompolu-motion-20s/renders/PROMPOLU_Motion_20s_FR.mp4)
+- [Final-frame PNG](videos/prompolu-motion-20s/renders/PROMPOLU_Motion_20s_FR_final-frame.png)
+- [Editable project ZIP](artifacts/PROMPOLU-motion-20s-editable.zip)
+- [Storyboard, sources, music and validation](videos/prompolu-motion-20s/README.md)
+
+<img src="videos/prompolu-motion-20s/renders/PROMPOLU_Motion_20s_FR_final-frame.png" alt="PROMPOLU final brand frame: logo, slogan « La qualité, notre meilleur profil. », Fès • Sefrou, prompolu.com" width="480" />
+
 ## Latest video — 60-second photographic version
 
 Rebuilt with real photographic imagery, the website's light ivory/dark ink/bronze identity, French voiceover and original music. 1080 × 1920, 30 FPS, 60 seconds. Photos are credited illustrative stock, not claims of PROMPOLU installations.

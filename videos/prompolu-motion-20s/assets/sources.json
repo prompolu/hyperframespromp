@@ -1,0 +1,322 @@
+{
+  "retrieved": "2026-10-22",
+  "site": "https://prompolu.com",
+  "images": [
+    {
+      "file": "assets/brand/logo-prompolu.png",
+      "source": "https://prompolu.com/assets/logo-prompolu.png",
+      "page": "all pages",
+      "siteAltText": "PROMPOLU ALUMINIUM",
+      "pixels": [
+        602,
+        83
+      ],
+      "sha256": "2e23815cb6d79cfc",
+      "usage": "Original PROMPOLU ALUMINIUM logo (602×83 palette PNG with transparency). Used unmodified; only moved, uniformly scaled and faded."
+    },
+    {
+      "file": "assets/images/window-original.webp",
+      "source": "https://prompolu.com/assets/window-original.webp",
+      "page": "/ and /coulissants",
+      "siteAltText": "Baie coulissante noire, visuel fourni",
+      "pixels": [
+        1505,
+        1045
+      ],
+      "sha256": "f63377ee25927edf",
+      "usage": "Black sliding bay — category card, masonry, hero"
+    },
+    {
+      "file": "assets/images/battants.webp",
+      "source": "https://prompolu.com/assets/battants.webp",
+      "page": "/ and /battants",
+      "siteAltText": "Fenêtre battante aluminium, illustration d’ambiance",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "6838b2157dcfc770",
+      "usage": "Opening window / hinge — 'Fenêtres & portes' card, masonry"
+    },
+    {
+      "file": "assets/images/agencement.webp",
+      "source": "https://prompolu.com/assets/agencement.webp",
+      "page": "/ and /agencement",
+      "siteAltText": "Agencement bois et aluminium, illustration d’ambiance",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "c7599768e600d2e6",
+      "usage": "Wood + aluminium fit-out — 'Agencement' card, masonry"
+    },
+    {
+      "file": "assets/images/bardage-villa.webp",
+      "source": "https://prompolu.com/assets/products/bardage-villa.webp",
+      "page": "/ and /exterieur",
+      "siteAltText": "Villa contemporaine avec habillage de façade à lames verticales de teinte bois, illustration de la gamme bardage aluminium",
+      "pixels": [
+        1427,
+        1102
+      ],
+      "sha256": "47badffb9071dbf4",
+      "usage": "Contemporary villa — 'Extérieur' card, masonry"
+    },
+    {
+      "file": "assets/images/visualisation-3d-teaser.jpg",
+      "source": "https://prompolu.com/assets/visualisation-3d-teaser.jpg",
+      "page": "/ and /visualisation-3d",
+      "siteAltText": "Pergola présentée en visualisation 3D",
+      "pixels": [
+        1200,
+        900
+      ],
+      "sha256": "131ee1d937105898",
+      "usage": "3D visualisation feature panel"
+    },
+    {
+      "file": "assets/images/coulissant-teaser.jpg",
+      "source": "https://prompolu.com/assets/coulissant-teaser.jpg",
+      "page": "/coulissants, /visualisation-3d",
+      "siteAltText": "Baie coulissante aluminium STRUGAL visualisée en 3D à taille réelle",
+      "pixels": [
+        1200,
+        900
+      ],
+      "sha256": "9a61a1592f289582",
+      "usage": "Masonry (isolated 3D render, contain fit)"
+    },
+    {
+      "file": "assets/images/battant-teaser.jpg",
+      "source": "https://prompolu.com/assets/battant-teaser.jpg",
+      "page": "/battants, /visualisation-3d",
+      "siteAltText": "Fenêtre battante aluminium visualisée en 3D, vantail ouvert",
+      "pixels": [
+        1200,
+        900
+      ],
+      "sha256": "505fcff348310d52",
+      "usage": "Masonry (isolated 3D render, contain fit)"
+    },
+    {
+      "file": "assets/images/garde-corps-teaser.jpg",
+      "source": "https://prompolu.com/assets/garde-corps-teaser.jpg",
+      "page": "/visualisation-3d",
+      "siteAltText": "Garde-corps aluminium et verre",
+      "pixels": [
+        1200,
+        900
+      ],
+      "sha256": "1eb602d3741a1001",
+      "usage": "Masonry (isolated 3D render, contain fit)"
+    },
+    {
+      "file": "assets/images/pergola.jpg",
+      "source": "https://prompolu.com/assets/products/pergola.jpg",
+      "page": "/exterieur",
+      "siteAltText": "Pergola aluminium avec cuisine d'extérieur",
+      "pixels": [
+        640,
+        479
+      ],
+      "sha256": "c7cdb5bbf8ad32f7",
+      "usage": "Masonry"
+    },
+    {
+      "file": "assets/images/garde-corps.jpg",
+      "source": "https://prompolu.com/assets/products/garde-corps.jpg",
+      "page": "/exterieur",
+      "siteAltText": "Garde-corps en verre et aluminium avec vue panoramique",
+      "pixels": [
+        640,
+        480
+      ],
+      "sha256": "970ac9f2c74f4785",
+      "usage": "Masonry"
+    },
+    {
+      "file": "assets/images/volets-roulants.jpg",
+      "source": "https://prompolu.com/assets/products/volets-roulants.jpg",
+      "page": "/exterieur",
+      "siteAltText": "Volets roulants aluminium sur maison moderne",
+      "pixels": [
+        640,
+        480
+      ],
+      "sha256": "ab0c51158499203b",
+      "usage": "Masonry"
+    },
+    {
+      "file": "assets/images/porte-a400k.jpg",
+      "source": "https://prompolu.com/assets/products/porte-a400k.jpg",
+      "page": "/battants",
+      "siteAltText": "Porte d'entrée A400K",
+      "pixels": [
+        640,
+        480
+      ],
+      "sha256": "c80fccf40dd54db7",
+      "usage": "Masonry"
+    },
+    {
+      "file": "assets/images/dressing-profil.jpg",
+      "source": "https://prompolu.com/assets/products/dressing-profil.jpg",
+      "page": "/agencement",
+      "siteAltText": "Dressing avec profil aluminium et portes vitrées",
+      "pixels": [
+        640,
+        479
+      ],
+      "sha256": "b3278ca1e6bae1c4",
+      "usage": "Masonry"
+    },
+    {
+      "file": "assets/images/cutouts/s110p.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s110p.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S110P",
+      "pixels": [
+        700,
+        635
+      ],
+      "sha256": "92268c44d39bdb9d",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s125rp.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s125rp.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S125RP",
+      "pixels": [
+        700,
+        613
+      ],
+      "sha256": "316057fcca6b4183",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s140rp.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s140rp.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S140RP",
+      "pixels": [
+        700,
+        588
+      ],
+      "sha256": "be65a6b7340ae82a",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s70p.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s70p.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S70P",
+      "pixels": [
+        700,
+        585
+      ],
+      "sha256": "1af87e875c68b530",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s86rp.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s86rp.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S86RP",
+      "pixels": [
+        700,
+        588
+      ],
+      "sha256": "3d75a4e54199db52",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s88r.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s88r.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S88R",
+      "pixels": [
+        700,
+        588
+      ],
+      "sha256": "1dd607ebf0790b81",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s88rp.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s88rp.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S88RP",
+      "pixels": [
+        700,
+        583
+      ],
+      "sha256": "0dbb9ffdb843d388",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s90rp.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s90rp.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S90RP",
+      "pixels": [
+        700,
+        580
+      ],
+      "sha256": "bc6a4decdc3580dd",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    },
+    {
+      "file": "assets/images/cutouts/s53rp-plus.webp",
+      "source": "https://prompolu.com/assets/products/cutouts/s53rp-plus.webp",
+      "page": "/coulissants or /battants",
+      "siteAltText": "Coupe du profilé STRUGAL S53RP+",
+      "pixels": [
+        700,
+        557
+      ],
+      "sha256": "d432c8303f38c0bc",
+      "usage": "Masonry (isolated profile corner section with transparency, contain fit). No model reference is shown on screen."
+    }
+  ],
+  "fonts": [
+    {
+      "file": "assets/fonts/DMSans-Regular.woff2",
+      "source": "https://prompolu.com/assets/font-1.woff2",
+      "note": "DM Sans 400 as served by prompolu.com/assets/fonts.css; SIL OFL 1.1 (assets/fonts/OFL-DM-Sans.txt)"
+    },
+    {
+      "file": "assets/fonts/DMSans-Medium.woff2",
+      "source": "https://prompolu.com/assets/font-2.woff2",
+      "note": "DM Sans 500 as served by prompolu.com/assets/fonts.css; SIL OFL 1.1"
+    }
+  ],
+  "audio": [
+    {
+      "file": "assets/audio/prompolu-soundtrack.wav",
+      "source": "original — synthesised by scripts/compose-soundtrack.py, mastered by scripts/master-audio.py",
+      "note": "No samples, loops or third-party recordings. Stems in assets/audio/stems/."
+    }
+  ],
+  "notUsed": [
+    {
+      "source": "https://prompolu.com/assets/og-image.jpg",
+      "reason": "contains baked-in text/logo layout"
+    },
+    {
+      "source": "https://prompolu.com/assets/products/porte-a200-4fh2.jpg",
+      "reason": "third-party mark printed in the image"
+    },
+    {
+      "source": "https://prompolu.com/assets/products/accessoires-cuisine-starax.jpg",
+      "reason": "third-party product packaging/brands visible"
+    },
+    {
+      "source": "https://prompolu.com/assets/products/cuisine-profil-ouvrant.jpg",
+      "reason": "excluded at the client's request"
+    }
+  ],
+  "other": {
+    "gsap": "assets/vendor/gsap.min.js — GSAP 3.14.2 (standard GSAP license)"
+  }
+}

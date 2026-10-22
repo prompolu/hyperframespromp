@@ -1,0 +1,2904 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 9,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "duplicate_media_discovery_risk",
+        "severity": "warning",
+        "message": "Detected 3 matching img entries with the same source/start/duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 565 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"stage\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#stage",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"stage\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-hook\"> is a timeline element that contains nested <div id=\"hook-line\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-hook",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-hook\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-gallery\"> is a timeline element that contains nested <div id=\"gallery\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-gallery",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-gallery\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-hero\"> is a timeline element that contains nested <div id=\"cta-glow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-hero",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-hero\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-final\"> is a timeline element that contains nested <div id=\"final-reveal\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-final",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-final\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-brand\"> is a timeline element that contains nested <div id=\"brand-field\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-brand",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-brand\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-sphere\"> is a timeline element that contains nested <div id=\"sphere\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-sphere",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/hyperframespromp/videos/prompolu-motion-20s/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-sphere\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 67,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 0.5,
+        "selector": "#hook-line > span:nth-of-type(81)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1092.15,
+          "top": 438.35,
+          "right": 1144.6,
+          "bottom": 544.68,
+          "width": 52.45,
+          "height": 106.33
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(84)",
+        "text": "h",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1092.15,
+          "y": 438.35,
+          "width": 52.45,
+          "height": 106.33
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 0.625,
+        "occurrences": 2,
+        "heldMs": 125,
+        "times": [
+          0.5,
+          0.625
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.25,
+        "selector": "#hook-line > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 385.67,
+          "top": 483.98,
+          "right": 428.93,
+          "bottom": 588.1,
+          "width": 43.26,
+          "height": 104.12
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(4)",
+        "text": "L",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 385.67,
+          "y": 483.98,
+          "width": 43.26,
+          "height": 104.12
+        },
+        "firstSeen": 0.25,
+        "lastSeen": 0.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.25,
+        "selector": "#hook-line > span:nth-of-type(5)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 429.15,
+          "top": 475.29,
+          "right": 475.71,
+          "bottom": 579.39,
+          "width": 46.56,
+          "height": 104.1
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(8)",
+        "text": "e",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 429.15,
+          "y": 475.29,
+          "width": 46.56,
+          "height": 104.1
+        },
+        "firstSeen": 0.25,
+        "lastSeen": 0.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.25,
+        "selector": "#hook-line > span:nth-of-type(13)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 490.21,
+          "top": 466.66,
+          "right": 542.18,
+          "bottom": 571.22,
+          "width": 51.97,
+          "height": 104.56
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(16)",
+        "text": "b",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 490.21,
+          "y": 466.66,
+          "width": 51.97,
+          "height": 104.56
+        },
+        "firstSeen": 0.25,
+        "lastSeen": 0.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.25,
+        "selector": "#hook-line > span:nth-of-type(17)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 546.74,
+          "top": 453.3,
+          "right": 600.43,
+          "bottom": 559.83,
+          "width": 53.69,
+          "height": 106.53
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(20)",
+        "text": "o",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 546.74,
+          "y": 453.3,
+          "width": 53.69,
+          "height": 106.53
+        },
+        "firstSeen": 0.25,
+        "lastSeen": 0.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.25,
+        "selector": "#hook-line > span:nth-of-type(21)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 598.62,
+          "top": 433.37,
+          "right": 650.06,
+          "bottom": 539.31,
+          "width": 51.44,
+          "height": 105.94
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(24)",
+        "text": "n",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 598.62,
+          "y": 433.37,
+          "width": 51.44,
+          "height": 105.94
+        },
+        "firstSeen": 0.25,
+        "lastSeen": 0.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.375,
+        "selector": "#hook-line > span:nth-of-type(29)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 641.47,
+          "top": 489.03,
+          "right": 692.33,
+          "bottom": 593.06,
+          "width": 50.86,
+          "height": 104.03
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(32)",
+        "text": "p",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 641.47,
+          "y": 489.03,
+          "width": 50.86,
+          "height": 104.03
+        },
+        "firstSeen": 0.375,
+        "lastSeen": 0.375,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.375
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.375,
+        "selector": "#hook-line > span:nth-of-type(33)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 693.76,
+          "top": 484.64,
+          "right": 724.52,
+          "bottom": 588.7,
+          "width": 30.76,
+          "height": 104.06
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(36)",
+        "text": "r",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 693.76,
+          "y": 484.64,
+          "width": 30.76,
+          "height": 104.06
+        },
+        "firstSeen": 0.375,
+        "lastSeen": 0.375,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.375
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.375,
+        "selector": "#hook-line > span:nth-of-type(37)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 721.88,
+          "top": 476.97,
+          "right": 770.25,
+          "bottom": 581.18,
+          "width": 48.37,
+          "height": 104.21
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(40)",
+        "text": "o",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 721.88,
+          "y": 476.97,
+          "width": 48.37,
+          "height": 104.21
+        },
+        "firstSeen": 0.375,
+        "lastSeen": 0.375,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.375
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.375,
+        "selector": "#hook-line > span:nth-of-type(41)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 773.33,
+          "top": 464.58,
+          "right": 804.51,
+          "bottom": 569.39,
+          "width": 31.18,
+          "height": 104.81
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(44)",
+        "text": "f",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 773.33,
+          "y": 464.58,
+          "width": 31.18,
+          "height": 104.81
+        },
+        "firstSeen": 0.375,
+        "lastSeen": 0.375,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.375
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.375,
+        "selector": "#hook-line > span:nth-of-type(45)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 808.28,
+          "top": 457.43,
+          "right": 830.32,
+          "bottom": 561.8,
+          "width": 22.04,
+          "height": 104.37
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(48)",
+        "text": "i",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 808.28,
+          "y": 457.43,
+          "width": 22.04,
+          "height": 104.37
+        },
+        "firstSeen": 0.375,
+        "lastSeen": 0.375,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.375
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.375,
+        "selector": "#hook-line > span:nth-of-type(48)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 802.84,
+          "top": 468.35,
+          "right": 824.19,
+          "bottom": 572.6,
+          "width": 21.35,
+          "height": 104.25
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(52)",
+        "text": "i",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 802.84,
+          "y": 468.35,
+          "width": 21.35,
+          "height": 104.25
+        },
+        "firstSeen": 0.375,
+        "lastSeen": 0.375,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.375
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.375,
+        "selector": "#hook-line > span:nth-of-type(49)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 822.07,
+          "top": 447.37,
+          "right": 846.88,
+          "bottom": 552.28,
+          "width": 24.81,
+          "height": 104.91
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(52)",
+        "text": "l",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 822.07,
+          "y": 447.37,
+          "width": 24.81,
+          "height": 104.91
+        },
+        "firstSeen": 0.375,
+        "lastSeen": 0.375,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.375
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.5,
+        "selector": "#hook-line > span:nth-of-type(57)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 844.38,
+          "top": 489.23,
+          "right": 895.23,
+          "bottom": 593.25,
+          "width": 50.85,
+          "height": 104.02
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(60)",
+        "text": "p",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 844.38,
+          "y": 489.23,
+          "width": 50.85,
+          "height": 104.02
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 0.5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.5
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.5,
+        "selector": "#hook-line > span:nth-of-type(61)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 895.39,
+          "top": 485.02,
+          "right": 943.43,
+          "bottom": 589.07,
+          "width": 48.04,
+          "height": 104.05
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(64)",
+        "text": "o",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 895.39,
+          "y": 485.02,
+          "width": 48.04,
+          "height": 104.05
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 0.5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.5
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.5,
+        "selector": "#hook-line > span:nth-of-type(65)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 942.75,
+          "top": 476.06,
+          "right": 991.71,
+          "bottom": 580.94,
+          "width": 48.96,
+          "height": 104.88
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(68)",
+        "text": "u",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 942.75,
+          "y": 476.06,
+          "width": 48.96,
+          "height": 104.88
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 0.5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.5
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.5,
+        "selector": "#hook-line > span:nth-of-type(69)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 995.82,
+          "top": 465.77,
+          "right": 1027.55,
+          "bottom": 570.1,
+          "width": 31.73,
+          "height": 104.33
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(72)",
+        "text": "r",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 995.82,
+          "y": 465.77,
+          "width": 31.73,
+          "height": 104.33
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 0.5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.5
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.5,
+        "selector": "#hook-line > span:nth-of-type(77)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1035.57,
+          "top": 460.45,
+          "right": 1087.66,
+          "bottom": 566.78,
+          "width": 52.09,
+          "height": 106.33
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(80)",
+        "text": "c",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1035.57,
+          "y": 460.45,
+          "width": 52.09,
+          "height": 106.33
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 0.5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.5
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.625,
+        "selector": "#hook-line > span:nth-of-type(85)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1122.12,
+          "top": 481.05,
+          "right": 1168.18,
+          "bottom": 585.68,
+          "width": 46.06,
+          "height": 104.63
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(88)",
+        "text": "a",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1122.12,
+          "y": 481.05,
+          "width": 46.06,
+          "height": 104.63
+        },
+        "firstSeen": 0.625,
+        "lastSeen": 0.625,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.625
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.625,
+        "selector": "#hook-line > span:nth-of-type(89)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1170.54,
+          "top": 476.69,
+          "right": 1221.85,
+          "bottom": 580.89,
+          "width": 51.31,
+          "height": 104.2
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(92)",
+        "text": "q",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1170.54,
+          "y": 476.69,
+          "width": 51.31,
+          "height": 104.2
+        },
+        "firstSeen": 0.625,
+        "lastSeen": 0.625,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.625
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.625,
+        "selector": "#hook-line > span:nth-of-type(93)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1224.13,
+          "top": 458.07,
+          "right": 1272.01,
+          "bottom": 562.48,
+          "width": 47.88,
+          "height": 104.41
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(96)",
+        "text": "u",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1224.13,
+          "y": 458.07,
+          "width": 47.88,
+          "height": 104.41
+        },
+        "firstSeen": 0.625,
+        "lastSeen": 0.625,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.625
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.625,
+        "selector": "#hook-line > span:nth-of-type(97)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1267.59,
+          "top": 449.81,
+          "right": 1322.53,
+          "bottom": 557.35,
+          "width": 54.94,
+          "height": 107.54
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(100)",
+        "text": "e",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1267.59,
+          "y": 449.81,
+          "width": 54.94,
+          "height": 107.54
+        },
+        "firstSeen": 0.625,
+        "lastSeen": 0.625,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.625
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.625,
+        "selector": "#hook-line > span:nth-of-type(105)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1345.32,
+          "top": 431.72,
+          "right": 1403.25,
+          "bottom": 539.01,
+          "width": 57.93,
+          "height": 107.29
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(108)",
+        "text": "p",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1345.32,
+          "y": 431.72,
+          "width": 57.93,
+          "height": 107.29
+        },
+        "firstSeen": 0.625,
+        "lastSeen": 0.625,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.625
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.75,
+        "selector": "#hook-line > span:nth-of-type(109)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1366.81,
+          "top": 487.7,
+          "right": 1397.5,
+          "bottom": 591.74,
+          "width": 30.69,
+          "height": 104.04
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(112)",
+        "text": "r",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1366.81,
+          "y": 487.7,
+          "width": 30.69,
+          "height": 104.04
+        },
+        "firstSeen": 0.75,
+        "lastSeen": 0.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.75
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.75,
+        "selector": "#hook-line > span:nth-of-type(113)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1399.66,
+          "top": 483.01,
+          "right": 1448.89,
+          "bottom": 587.61,
+          "width": 49.23,
+          "height": 104.6
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(116)",
+        "text": "o",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1399.66,
+          "y": 483.01,
+          "width": 49.23,
+          "height": 104.6
+        },
+        "firstSeen": 0.75,
+        "lastSeen": 0.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.75
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.75,
+        "selector": "#hook-line > span:nth-of-type(117)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1447.36,
+          "top": 473.68,
+          "right": 1470.23,
+          "bottom": 578.17,
+          "width": 22.87,
+          "height": 104.49
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(120)",
+        "text": "j",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1447.36,
+          "y": 473.68,
+          "width": 22.87,
+          "height": 104.49
+        },
+        "firstSeen": 0.75,
+        "lastSeen": 0.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.75
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.75,
+        "selector": "#hook-line > span:nth-of-type(121)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1466.87,
+          "top": 464.11,
+          "right": 1518.53,
+          "bottom": 570.37,
+          "width": 51.66,
+          "height": 106.26
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(124)",
+        "text": "e",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1466.87,
+          "y": 464.11,
+          "width": 51.66,
+          "height": 106.26
+        },
+        "firstSeen": 0.75,
+        "lastSeen": 0.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.75
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 0.75,
+        "selector": "#hook-line > span:nth-of-type(125)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1524.15,
+          "top": 447.87,
+          "right": 1558.24,
+          "bottom": 552.38,
+          "width": 34.09,
+          "height": 104.51
+        },
+        "containerSelector": "#hook-line > span:nth-of-type(128)",
+        "text": "t",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1524.15,
+          "y": 447.87,
+          "width": 34.09,
+          "height": 104.51
+        },
+        "firstSeen": 0.75,
+        "lastSeen": 0.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.75
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "containerSelector": "#cols",
+        "text": "Coulissants",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": -1976.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(4)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": -702.16,
+          "right": 608,
+          "bottom": -372.16,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s70p.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": -702.16,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(5)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": -344.16,
+          "right": 608,
+          "bottom": -104.16,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "battant-teaser.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": -344.16,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(6)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": -76.16,
+          "right": 608,
+          "bottom": 253.84,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "volets-roulants.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": -76.16,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(7)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": 281.84,
+          "right": 608,
+          "bottom": 521.84,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s125rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": 281.84,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(8)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": 549.84,
+          "right": 608,
+          "bottom": 989.84,
+          "width": 310,
+          "height": 440
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "dressing-profil.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": 549.84,
+          "width": 310,
+          "height": 440
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(9)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": 1017.84,
+          "right": 608,
+          "bottom": 1347.84,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s90rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": 1017.84,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(10)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": 1375.84,
+          "right": 608,
+          "bottom": 1615.84,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "garde-corps.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": 1375.84,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(11)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 298,
+          "top": 1643.84,
+          "right": 608,
+          "bottom": 1973.84,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1976.16,
+          "right": 1920,
+          "bottom": -896.16,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s53rp-plus.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": 1643.84,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "containerSelector": "#cols",
+        "text": "Fenêtres & portes",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": -1900.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(4)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": -686.15,
+          "right": 946,
+          "bottom": -446.15,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "coulissant-teaser.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": -686.15,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(5)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": -418.15,
+          "right": 946,
+          "bottom": -88.15,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s86rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": -418.15,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(6)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": -60.15,
+          "right": 946,
+          "bottom": 379.85,
+          "width": 310,
+          "height": 440
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "porte-a400k.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": -60.15,
+          "width": 310,
+          "height": 440
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(7)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": 407.85,
+          "right": 946,
+          "bottom": 647.85,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "window-original.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": 407.85,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(8)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": 675.85,
+          "right": 946,
+          "bottom": 1005.85,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s140rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": 675.85,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(9)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": 1033.85,
+          "right": 946,
+          "bottom": 1473.85,
+          "width": 310,
+          "height": 440
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "garde-corps.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": 1033.85,
+          "width": 310,
+          "height": 440
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(10)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": 1501.85,
+          "right": 946,
+          "bottom": 1741.85,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s88rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": 1501.85,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(2) > div:nth-of-type(11)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 636,
+          "top": 1769.85,
+          "right": 946,
+          "bottom": 2099.85,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(2)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1900.15,
+          "right": 1920,
+          "bottom": -820.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "bardage-villa.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 636,
+          "y": 1769.85,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "containerSelector": "#cols",
+        "text": "Agencement",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": -1833.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(4)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": -519.64,
+          "right": 1284,
+          "bottom": -279.64,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "garde-corps-teaser.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": -519.64,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(5)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": -251.64,
+          "right": 1284,
+          "bottom": 78.36,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s88rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": -251.64,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(6)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": 106.36,
+          "right": 1284,
+          "bottom": 546.36,
+          "width": 310,
+          "height": 440
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "pergola.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": 106.36,
+          "width": 310,
+          "height": 440
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(7)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": 574.36,
+          "right": 1284,
+          "bottom": 814.36,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s70p.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": 574.36,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(8)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": 842.36,
+          "right": 1284,
+          "bottom": 1282.36,
+          "width": 310,
+          "height": 440
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "volets-roulants.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": 842.36,
+          "width": 310,
+          "height": 440
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(9)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": 1310.36,
+          "right": 1284,
+          "bottom": 1640.36,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s125rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": 1310.36,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(10)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": 1668.36,
+          "right": 1284,
+          "bottom": 1908.36,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "battants.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": 1668.36,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(11)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 974,
+          "top": 1936.36,
+          "right": 1284,
+          "bottom": 2266.36,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(3)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1833.64,
+          "right": 1920,
+          "bottom": -753.64,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s110p.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": 1936.36,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "containerSelector": "#cols",
+        "text": "Extérieur",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": -1938.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(4)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": -694.15,
+          "right": 1622,
+          "bottom": -454.15,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s86rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": -694.15,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(5)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": -426.15,
+          "right": 1622,
+          "bottom": -96.15,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "battants.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": -426.15,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(6)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": -68.15,
+          "right": 1622,
+          "bottom": 171.85,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s53rp-plus.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": -68.15,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(7)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": 199.85,
+          "right": 1622,
+          "bottom": 639.85,
+          "width": 310,
+          "height": 440
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "agencement.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": 199.85,
+          "width": 310,
+          "height": 440
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(8)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": 667.85,
+          "right": 1622,
+          "bottom": 907.85,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "coulissant-teaser.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": 667.85,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(9)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": 935.85,
+          "right": 1622,
+          "bottom": 1265.85,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s140rp.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": 935.85,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(10)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": 1293.85,
+          "right": 1622,
+          "bottom": 1733.85,
+          "width": 310,
+          "height": 440
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "porte-a400k.jpg"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": 1293.85,
+          "width": 310,
+          "height": 440
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(11)",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 1312,
+          "top": 1761.85,
+          "right": 1622,
+          "bottom": 2001.85,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#cols > div:nth-of-type(4)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -1938.15,
+          "right": 1920,
+          "bottom": -858.15,
+          "width": 1920,
+          "height": 1080
+        },
+        "dataAttributes": {
+          "data-image": "cutouts/s88r.webp"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": 1761.85,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(1) > div:nth-of-type(9) > div:nth-of-type(1)",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 298,
+          "top": 1017.84,
+          "right": 608,
+          "bottom": 1347.84,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "bottom": 267.84
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 298,
+          "y": 1017.84,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(3) > div:nth-of-type(5) > div:nth-of-type(1)",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 974,
+          "top": -251.64,
+          "right": 1284,
+          "bottom": 78.36,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "top": 251.64
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 974,
+          "y": -251.64,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(6) > div:nth-of-type(1)",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 1312,
+          "top": -68.15,
+          "right": 1622,
+          "bottom": 171.85,
+          "width": 310,
+          "height": 240
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "top": 68.15
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": -68.15,
+          "width": 310,
+          "height": 240
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 10,
+        "selector": "#cols > div:nth-of-type(4) > div:nth-of-type(9) > div:nth-of-type(1)",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 1312,
+          "top": 935.85,
+          "right": 1622,
+          "bottom": 1265.85,
+          "width": 310,
+          "height": 330
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "bottom": 185.85
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1312,
+          "y": 935.85,
+          "width": 310,
+          "height": 330
+        },
+        "firstSeen": 10,
+        "lastSeen": 10,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10
+        ]
+      }
+    ],
+    "duration": 20,
+    "samples": [
+      1.111,
+      3.333,
+      5.556,
+      7.778,
+      10,
+      12.222,
+      14.444,
+      16.667,
+      18.889
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 68,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.111,
+      5.556,
+      10,
+      14.444,
+      18.889
+    ],
+    "checked": 44,
+    "passed": 44
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 160
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "0938443b-6534-4eee-a4b6-5a954dd9fe3a",
+    "revision": null,
+    "report": "/home/user/hyperframespromp/videos/prompolu-motion-20s/.hyperframes/artifacts/checks/0938443b-6534-4eee-a4b6-5a954dd9fe3a.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.8.186",
+    "latestVersion": "0.8.186",
+    "updateAvailable": false
+  }
+}

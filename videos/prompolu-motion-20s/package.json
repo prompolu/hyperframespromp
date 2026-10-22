@@ -1,0 +1,12 @@
+{
+  "name": "prompolu-motion-20s",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bash scripts/hyperframes.sh preview",
+    "check": "bash scripts/hyperframes.sh check",
+    "audio": "python3 scripts/compose-soundtrack.py && python3 scripts/master-audio.py",
+    "render": "bash scripts/hyperframes.sh render --fps 30 --quality delivery --strict --workers 3 --output renders/PROMPOLU_Motion_20s_FR.mp4",
+    "snapshot": "bash scripts/hyperframes.sh snapshot"
+  }
+}

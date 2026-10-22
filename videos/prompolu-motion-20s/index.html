@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="fr" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>PROMPOLU — film motion 20 s</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "DM Sans";
+        src: url("assets/fonts/DMSans-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "DM Sans";
+        src: url("assets/fonts/DMSans-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: block;
+      }
+      :root {
+        --charcoal: #15171a;
+        --off: #f1f0ec;
+        --bronze: #8c6a45;
+        --warm: #d9d6d0;
+        --muted: #77736d;
+        --bronze-deep: #5a432d;
+        --bronze-hi: #b28d65;
+        --white: #ffffff;
+        --surface: #f8f7f4;
+        --card-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--off);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 500;
+        color: var(--charcoal);
+        font-variant-ligatures: none;
+      }
+      .clip,
+      .layer {
+        position: absolute;
+        inset: 0;
+      }
+      #filters {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+      .stage-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 60% 55% at 30% 28%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%),
+          linear-gradient(180deg, #dcd9d3 0%, #e8e6e1 13%, var(--off) 32%, var(--off) 72%, #e8e6e1 89%, #dedbd5 100%);
+      }
+
+      /* ---------- kinetic type ---------- */
+      .kline {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: 1080px;
+        white-space: pre;
+        color: transparent;
+      }
+      .glyph,
+      .ghost {
+        position: absolute;
+        display: block;
+        white-space: pre;
+        transform-origin: 50% 62%;
+      }
+      .glyph {
+        color: var(--charcoal);
+      }
+      .ghost {
+        color: var(--bronze-hi);
+        opacity: 0;
+      }
+      .on-dark .glyph {
+        color: var(--off);
+      }
+      #hook-dot {
+        position: absolute;
+        left: -190px; /* 960 - 1150 */
+        top: -610px; /* 540 - 1150 */
+        width: 2300px;
+        height: 2300px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 36% 32%, #a07c55 0%, var(--bronze) 45%, #7d5e3d 100%);
+      }
+
+      /* ---------- bronze brand field ---------- */
+      #brand-field {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 60% 70% at 34% 30%, rgba(178, 141, 101, 0.28), rgba(178, 141, 101, 0) 70%),
+          radial-gradient(ellipse 80% 90% at 50% 48%, var(--bronze) 0%, #7f603e 52%, #6a5035 80%, var(--bronze-deep) 100%);
+      }
+      #brand-panel {
+        position: absolute;
+        left: 260px;
+        top: 335px;
+        width: 1400px;
+        height: 330px;
+        border-radius: 40px;
+        background: linear-gradient(160deg, #f6f5f1 0%, var(--off) 55%, #ebe9e4 100%);
+        box-shadow: 0 18px 40px rgba(40, 26, 12, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #brand-panel img {
+        width: 1100px;
+        height: auto;
+        display: block;
+      }
+      #sphere {
+        position: absolute;
+        left: -290px; /* 960 - 1250 */
+        top: -710px; /* 540 - 1250 */
+        width: 2500px;
+        height: 2500px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 34% 30%, #ffffff 0%, #f8f7f3 20%, #eeece7 45%, #dcd9d3 70%, #c9c5be 90%, #bdb8b0 100%);
+        box-shadow: 210px 260px 380px rgba(40, 26, 12, 0.32);
+      }
+
+      /* ---------- product gallery ---------- */
+      #mini-logo {
+        position: absolute;
+        left: 160px;
+        top: 121px;
+        width: 420px;
+        height: auto;
+        display: block;
+      }
+      .card {
+        position: absolute;
+        border-radius: 26px;
+        overflow: hidden;
+        background: var(--surface);
+        box-shadow: var(--card-shadow);
+      }
+      .card-img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      .card-img img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+      .card.cutout .card-img {
+        background: radial-gradient(ellipse 80% 80% at 40% 35%, #fbfaf7 0%, #efede8 70%, #e5e2dc 100%);
+      }
+      .card.cutout .card-img img {
+        object-fit: contain;
+        inset: 9%;
+        width: 82%;
+        height: 82%;
+      }
+      .card.render .card-img {
+        background: #e6e5e0;
+      }
+      .card.render .card-img img {
+        object-fit: contain;
+      }
+      .card-band {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 84px;
+        background: var(--surface);
+        border-top: 1px solid rgba(21, 23, 26, 0.06);
+      }
+      .card-band span {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 38px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: var(--charcoal);
+        white-space: nowrap;
+      }
+      .card-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 26px;
+        border: 2px solid var(--bronze);
+        opacity: 0;
+        pointer-events: none;
+      }
+      .col-scroll {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: 1080px;
+      }
+
+      /* ---------- navigation rail ---------- */
+      #rail {
+        position: absolute;
+        top: 112px;
+        height: 76px;
+        border-radius: 38px;
+        background: var(--surface);
+        box-shadow: var(--card-shadow), inset 0 0 0 1px rgba(21, 23, 26, 0.05);
+      }
+      #rail-pill {
+        position: absolute;
+        top: 8px;
+        height: 60px;
+        border-radius: 30px;
+        background: linear-gradient(160deg, #9a7650 0%, var(--bronze) 60%, #7e5f3e 100%);
+      }
+      .rail-label {
+        position: absolute;
+        top: 0;
+        height: 76px;
+        display: flex;
+        align-items: center;
+        font-size: 36px;
+        font-weight: 500;
+        white-space: nowrap;
+        color: var(--charcoal);
+      }
+
+      /* ---------- hero + visualisation + CTA ---------- */
+      #hero {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 310px;
+        height: 240px;
+        border-radius: 26px;
+        overflow: hidden;
+        background: #d9d6d0;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+        opacity: 0;
+      }
+      #hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 46%;
+        display: block;
+      }
+      #hero-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 26px;
+        border: 2px solid var(--bronze);
+      }
+      .chip {
+        position: absolute;
+        height: 76px;
+        border-radius: 38px;
+        background: var(--surface);
+        box-shadow: var(--card-shadow), inset 0 0 0 1px rgba(21, 23, 26, 0.05);
+        display: flex;
+        align-items: center;
+        padding: 0 32px 0 28px;
+        gap: 16px;
+        font-size: 36px;
+        font-weight: 500;
+        white-space: nowrap;
+        color: var(--charcoal);
+      }
+      .chip i {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--bronze);
+        flex: none;
+      }
+      #viz-wrap {
+        position: absolute;
+        inset: 0;
+        filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.14));
+      }
+      #viz-panel {
+        position: absolute;
+        inset: 0;
+        background: var(--surface);
+        clip-path: inset(180px 510px 220px 310px round 26px);
+      }
+      #viz-bronze {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 22% 14% at 47% 46%, rgba(178, 141, 101, 0.55), rgba(178, 141, 101, 0) 100%),
+          radial-gradient(ellipse 70% 70% at 50% 50%, var(--bronze) 0%, #82633f 55%, #6f5436 100%);
+        opacity: 0;
+      }
+      #viz-frame {
+        position: absolute;
+        left: 860px;
+        top: 225px;
+        width: 840px;
+        height: 630px;
+        border-radius: 22px;
+        overflow: hidden;
+        background: #e6e5e0;
+      }
+      #viz-frame img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+      #wipe-edge {
+        position: absolute;
+        left: 0;
+        top: 180px;
+        width: 2px;
+        height: 680px;
+        background: var(--bronze);
+        opacity: 0;
+      }
+      #cta-glow {
+        position: absolute;
+        left: 600px;
+        top: 440px;
+        width: 720px;
+        height: 200px;
+        border-radius: 50%;
+        background: var(--bronze-hi);
+        filter: blur(46px);
+        opacity: 0;
+      }
+      #cta-arrow {
+        position: absolute;
+        left: 1146px;
+        top: 524px;
+        width: 40px;
+        height: 32px;
+        overflow: visible;
+      }
+
+      /* ---------- final frame ---------- */
+      #final-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 42% 46% at 100% 100%, rgba(140, 106, 69, 0.26), rgba(140, 106, 69, 0) 100%),
+          radial-gradient(ellipse 60% 55% at 30% 26%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%),
+          linear-gradient(180deg, #e3e1dc 0%, var(--off) 22%, var(--off) 78%, #e6e3de 100%);
+      }
+      #final-reveal {
+        clip-path: circle(0px at 960px 540px);
+      }
+      #final-logo {
+        position: absolute;
+        left: 410px;
+        top: 259px; /* centre y = 335 */
+        width: 1100px;
+        height: auto;
+        display: block;
+      }
+      #final-loc .glyph {
+        color: var(--bronze);
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="prompolu"
+      data-start="0"
+      data-duration="20"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <svg id="filters" aria-hidden="true">
+        <defs>
+          <filter id="f-hblur" x="-12%" y="0%" width="124%" height="100%" color-interpolation-filters="sRGB">
+            <feGaussianBlur id="f-hblur-g" stdDeviation="0 0" />
+          </filter>
+          <filter id="f-vblur" x="0%" y="-4%" width="100%" height="108%" color-interpolation-filters="sRGB">
+            <feGaussianBlur id="f-vblur-g" stdDeviation="0 0" />
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- Off-white stage for the whole film -->
+      <section id="stage" class="clip" data-start="0" data-duration="20" data-track-index="0">
+        <div class="stage-bg"></div>
+      </section>
+
+      <!-- 00.00–02.00 Opening hook -->
+      <section id="scene-hook" class="clip" data-start="0" data-duration="2.6" data-track-index="1">
+        <div id="hook-line" class="kline">Le bon profil pour chaque projet.</div>
+      </section>
+
+      <!-- 04.10–10.40 Product families, selection, masonry -->
+      <section id="scene-gallery" class="clip" data-start="4" data-duration="7.2" data-track-index="3">
+        <div id="gallery" class="layer">
+          <div id="cols" class="layer"></div>
+        </div>
+        <img id="mini-logo" src="assets/brand/logo-prompolu.png" alt="PROMPOLU ALUMINIUM" />
+        <div id="rail"></div>
+        <div id="explore" class="kline">Explorez nos solutions.</div>
+      </section>
+
+      <!-- 10.10–17.00 Hero card -> visualisation panel -> quotation capsule -->
+      <section id="scene-hero" class="clip" data-start="10" data-duration="7.4" data-track-index="4">
+        <div id="cta-glow"></div>
+        <div id="viz-wrap">
+          <div id="viz-panel">
+            <div id="viz-bronze"></div>
+            <div id="viz-frame"><img src="assets/images/visualisation-3d-teaser.jpg" alt="Pergola présentée en visualisation 3D" /></div>
+            <div id="viz-label" class="kline">Visualisation 3D</div>
+            <div id="viz-title-1" class="kline">Visualisez</div>
+            <div id="viz-title-2" class="kline">votre projet.</div>
+            <div id="cta-label" class="kline on-dark">Demander un devis</div>
+            <svg id="cta-arrow" viewBox="-37 -16 40 32" aria-hidden="true">
+              <!-- 34 px shaft, two 14 px diagonal strokes, 3 px stroke -->
+              <line x1="-34" y1="0" x2="0" y2="0" stroke="#F1F0EC" stroke-width="3" stroke-linecap="round" />
+              <line x1="0" y1="0" x2="-9.9" y2="-9.9" stroke="#F1F0EC" stroke-width="3" stroke-linecap="round" />
+              <line x1="0" y1="0" x2="-9.9" y2="9.9" stroke="#F1F0EC" stroke-width="3" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+        <div id="hero">
+          <img src="assets/images/window-original.webp" alt="Baie coulissante noire, visuel fourni par PROMPOLU" />
+          <div id="hero-ring"></div>
+        </div>
+        <div id="wipe-edge"></div>
+        <div id="hero-title" class="kline">Systèmes coulissants</div>
+        <div id="chip-1" class="chip"><i></i><span>Pour les ateliers</span></div>
+        <div id="chip-2" class="chip"><i></i><span>Fès • Sefrou</span></div>
+        <div id="chip-3" class="chip"><i></i><span>Conseil &amp; devis</span></div>
+      </section>
+
+      <!-- 16.85–20.00 Final brand frame -->
+      <section id="scene-final" class="clip" data-start="16.8" data-duration="3.2" data-track-index="5">
+        <div id="final-reveal" class="layer">
+          <div id="final-bg"></div>
+          <img id="final-logo" src="assets/brand/logo-prompolu.png" alt="PROMPOLU ALUMINIUM" />
+          <div id="final-slogan" class="kline">La qualité, notre meilleur profil.</div>
+          <div id="final-loc" class="kline">Fès • Sefrou</div>
+          <div id="final-web" class="kline">prompolu.com</div>
+        </div>
+      </section>
+
+      <!-- 01.65–04.10 Bronze dot -> bronze field -> brand panel -> sphere wipe -->
+      <section id="scene-brand" class="clip" data-start="1.6" data-duration="2.45" data-track-index="2">
+        <div id="brand-field"></div>
+        <div id="hook-dot"></div>
+        <div id="brand-panel"><img src="assets/brand/logo-prompolu.png" alt="PROMPOLU ALUMINIUM" /></div>
+        <div id="brand-sub" class="kline on-dark">Profilés &amp; systèmes aluminium</div>
+      </section>
+      <section id="scene-sphere" class="clip" data-start="3.2" data-duration="1.1" data-track-index="6">
+        <div id="sphere"></div>
+      </section>
+
+      <audio
+        id="soundtrack"
+        src="assets/audio/prompolu-soundtrack.wav"
+        data-start="0"
+        data-duration="20"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </div>
+
+    <script>
+      /* =====================================================================
+         PROMPOLU — 20 s motion film, one master GSAP timeline ("prompolu").
+         Timings, coordinates and image choices live in CFG / GALLERY below.
+         Canvas 1920x1080; coordinates are object centres unless noted.
+         The original logo PNG is only ever moved, uniformly scaled or faded.
+         ===================================================================== */
+      const CFG = {
+        track: { statement: -0.025, ui: -0.01 },
+        hook: { text: "Le bon profil pour chaque projet.", cx: 960, cy: 540, size: 80, start: 0.1, stagger: 0.022, dur: 0.3,
+          dotAt: 1.65, dotR: 13, exitAt: 1.72, exitDur: 0.28 },
+        brand: { expandAt: 2.0, expandDur: 0.42, coverR: 1150, panelAt: 2.24, subAt: 2.62, sphereAt: 3.25 },
+        sphere: { from: [205, 780], d0: 110, d1: 2500, move: 3.5, moveDur: 0.55 },
+        gallery: { logoAt: 4.12, cardsAt: 4.25, stagger: 0.09, travel: 50, dur: 0.62, bandH: 84,
+          cards: [ // centre x, centre y, w, h
+            [340, 560, 360, 570], [750, 520, 360, 490], [1160, 560, 360, 570], [1570, 520, 360, 490]] },
+        select: { railAt: 6.6, railCx: 1180, railCy: 150, pillAt: 6.78, cardAt: 6.86, textAt: 7.0, textCy: 925 },
+        masonry: { morphAt: 8.3, morphDur: 0.5, colX: [298, 636, 974, 1312], colW: 310, gutter: 28, tops: [180, 120, 220, 150],
+          scrollAt: 8.8, accel: 0.35, fast: 0.45, decel: 0.5, mult: [1.04, 1.0, 0.965, 1.02], selected: [1, 5], selectedCy: 520, peakBlur: 11 },
+        hero: { detachAt: 10.1, flyAt: 10.4, frontalBy: 11.0, cx: 860, cy: 520, w: 1100, h: 680, rotZ: -6, rotY: 8,
+          titleAt: 10.95, chipsAt: 11.2, chipStagger: 0.1 },
+        viz: { at: 13.1, panel: [180, 170, 1740, 910], wipeAt: 13.32, wipeDur: 0.5, textAt: 13.72 },
+        cta: { at: 15.5, w: 560, h: 120, r: 60, labelAt: 15.86, expandAt: 16.7 },
+        final: { revealAt: 16.86, logoAt: 17.02, sloganAt: 17.16, locAt: 17.4, webAt: 17.44, settleBy: 17.8 },
+      };
+
+      // Website images (assets/images, all downloaded from prompolu.com — see assets/sources.json).
+      // kind: photo = cover crop, cutout = isolated profile (contain), render = 3D teaser (contain)
+      const IMG = {
+        window: ["photo", "window-original.webp"], battants: ["photo", "battants.webp"],
+        agencement: ["photo", "agencement.webp"], villa: ["photo", "bardage-villa.webp"],
+        pergola: ["photo", "pergola.jpg"], gardecorps: ["photo", "garde-corps.jpg"],
+        volets: ["photo", "volets-roulants.jpg"], porte: ["photo", "porte-a400k.jpg"], dressing: ["photo", "dressing-profil.jpg"],
+        rCoul: ["render", "coulissant-teaser.jpg"], rBatt: ["render", "battant-teaser.jpg"], rGarde: ["render", "garde-corps-teaser.jpg"],
+        s110p: ["cutout", "cutouts/s110p.webp"], s125rp: ["cutout", "cutouts/s125rp.webp"], s140rp: ["cutout", "cutouts/s140rp.webp"],
+        s70p: ["cutout", "cutouts/s70p.webp"], s86rp: ["cutout", "cutouts/s86rp.webp"], s88r: ["cutout", "cutouts/s88r.webp"],
+        s88rp: ["cutout", "cutouts/s88rp.webp"], s90rp: ["cutout", "cutouts/s90rp.webp"], s53: ["cutout", "cutouts/s53rp-plus.webp"],
+      };
+      // Category cards (become the first card of each masonry column).
+      const CATEGORIES = [
+        { label: "Coulissants", img: "window", pos: "55% 50%", h: 330 },
+        { label: "Fenêtres & portes", img: "battants", pos: "50% 50%", h: 330 },
+        { label: "Agencement", img: "agencement", pos: "40% 50%", h: 440 },
+        { label: "Extérieur", img: "villa", pos: "55% 50%", h: 240 },
+      ];
+      // Masonry continuation per column: [image, height, object-position]
+      const COLUMNS = [
+        [["s88r", 240], ["pergola", 440, "45% 50%"], ["s70p", 330], ["rBatt", 240], ["volets", 330, "40% 50%"], ["s125rp", 240],
+         ["dressing", 440, "50% 50%"], ["s90rp", 330], ["gardecorps", 240, "50% 60%"], ["s53", 330]],
+        [["s110p", 240], ["dressing", 440, "50% 50%"], ["rCoul", 240], ["s86rp", 330], ["porte", 440, "60% 50%"],
+         ["window", 240, "50% 50%"], ["s140rp", 330], ["gardecorps", 440, "35% 50%"], ["s88rp", 240], ["villa", 330, "40% 50%"]],
+        [["s90rp", 240], ["villa", 330, "60% 50%"], ["rGarde", 240], ["s88rp", 330], ["pergola", 440, "60% 50%"],
+         ["s70p", 240], ["volets", 440, "55% 50%"], ["s125rp", 330], ["battants", 240, "50% 50%"], ["s110p", 330]],
+        [["s125rp", 330], ["gardecorps", 440, "40% 55%"], ["s86rp", 240], ["battants", 330, "50% 45%"], ["s53", 240],
+         ["agencement", 440, "45% 50%"], ["rCoul", 240], ["s140rp", 330], ["porte", 440, "50% 50%"], ["s88r", 240]],
+      ];
+
+      // ---------- helpers ----------
+      function rng(seed) {
+        let a = seed >>> 0;
+        return () => {
+          a = (a + 0x6d2b79f5) >>> 0;
+          let t = a;
+          t = Math.imul(t ^ (t >>> 15), t | 1);
+          t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+      const el = (tag, cls, parent) => {
+        const n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (parent) parent.appendChild(n);
+        return n;
+      };
+      const mctx = document.createElement("canvas").getContext("2d");
+      const measure = (text, size, weight = 500, track = 0) => {
+        mctx.font = `${weight} ${size}px "DM Sans"`;
+        mctx.fontKerning = "normal";
+        return mctx.measureText(text).width + track * size * (text.length - 1);
+      };
+
+      // Kerned glyph layout: one absolutely positioned span per character, placed
+      // at the advance the full kerned string gives it. Baseline is explicit.
+      function setGlyphs(host, opt) {
+        const text = opt.text ?? host.textContent;
+        const weight = opt.weight || 500;
+        mctx.font = `${weight} ${opt.size}px "DM Sans"`;
+        mctx.fontKerning = "normal";
+        const ls = (opt.track ?? 0) * opt.size;
+        const W = (s) => mctx.measureText(s).width;
+        const xs = [];
+        for (let i = 0; i < text.length; i++) xs.push(W(text.slice(0, i + 1)) - W(text[i]) + i * ls);
+        const width = W(text) + (text.length - 1) * ls;
+        const capH = mctx.measureText("H").actualBoundingBoxAscent;
+        const fm = mctx.measureText(text);
+        const asc = fm.fontBoundingBoxAscent;
+        const desc = fm.fontBoundingBoxDescent;
+        const left = opt.align === "left" ? opt.x : opt.cx - width / 2;
+        const baseline = opt.baseline ?? opt.cy + capH / 2;
+        host.textContent = "";
+        host.setAttribute("aria-label", text);
+        const glyphs = [], ghosts = [];
+        for (let i = 0; i < text.length; i++) {
+          const mk = (cls) => {
+            const g = el("span", cls, host);
+            g.textContent = text[i];
+            g.style.left = `${left + xs[i]}px`;
+            g.style.top = `${baseline - asc}px`;
+            g.style.lineHeight = `${asc + desc}px`;
+            g.style.fontSize = `${opt.size}px`;
+            g.style.fontWeight = weight;
+            g.setAttribute("aria-hidden", "true");
+            return g;
+          };
+          for (let k = 0; k < (opt.ghosts || 0); k++) ghosts.push(mk("ghost"));
+          glyphs.push(mk("glyph"));
+        }
+        return { glyphs, ghosts, width, left, right: left + width, baseline, capH, text };
+      }
+      const wordIndex = (text) => {
+        let w = 0;
+        return [...text].map((c, i) => (i > 0 && text[i - 1] === " " ? ++w : w));
+      };
+
+      function makeCard(parent, rect, spec) {
+        const [key, , pos] = spec;
+        const [kind, file] = IMG[key];
+        const c = el("div", `card ${kind}`, parent);
+        Object.assign(c.style, { left: `${rect.x}px`, top: `${rect.y}px`, width: `${rect.w}px`, height: `${rect.h}px` });
+        const box = el("div", "card-img", c);
+        box.style.height = `${rect.imgH ?? rect.h}px`;
+        const img = el("img", "", box);
+        img.src = `assets/images/${file}`;
+        img.alt = "";
+        if (pos) img.style.objectPosition = pos;
+        c.dataset.image = file;
+        return { card: c, box };
+      }
+
+      // Velocity profile (accelerate / fast / decelerate) -> normalised position, used as a GSAP ease.
+      function scrollEase(accel, fast, decel) {
+        const ss = (x) => (x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x));
+        const T = accel + fast + decel;
+        const v = (t) => (t < accel ? ss(t / accel) : t < accel + fast ? 1 : 1 - ss((t - accel - fast) / decel));
+        const N = 4000, table = [0];
+        let s = 0;
+        for (let i = 0; i < N; i++) {
+          const t0 = (i / N) * T, t1 = ((i + 1) / N) * T;
+          s += 0.5 * (v(t0) + v(t1)) * (t1 - t0);
+          table.push(s);
+        }
+        const total = table[N];
+        return {
+          vmaxPerPx: 1 / total, // peak speed = distance * vmaxPerPx (px/s)
+          ease: (p) => {
+            const f = Math.min(N, Math.max(0, p * N)), i = Math.floor(f), fr = f - i;
+            return (table[i] + (table[Math.min(N, i + 1)] - table[i]) * fr) / total;
+          },
+        };
+      }
+
+      async function build() {
+        await Promise.all([document.fonts.load('500 80px "DM Sans"'), document.fonts.load('400 44px "DM Sans"')]);
+        await document.fonts.ready;
+        const tl = gsap.timeline({ paused: true });
+        const TS = CFG.track.statement;
+
+        // ================= 00.00–02.00 OPENING HOOK =================
+        const HK = CFG.hook;
+        const hook = setGlyphs(document.getElementById("hook-line"), { cx: HK.cx, cy: HK.cy, size: HK.size, track: TS, ghosts: 3 });
+        const r1 = rng(11);
+        let n = 0;
+        hook.glyphs.forEach((g, i) => {
+          if (hook.text[i] === " ") return;
+          const t0 = HK.start + n++ * HK.stagger;
+          const dx = 24 + r1() * 26, dy = -(60 + r1() * 30), rot = -10 + r1() * 20;
+          const motion = (t, at) => {
+            tl.fromTo(t, { x: dx }, { x: 0, duration: HK.dur, ease: "power2.out" }, at);
+            tl.fromTo(t, { y: dy }, { y: 0, duration: HK.dur, ease: "back.out(1.2)" }, at);
+            tl.fromTo(t, { rotation: rot }, { rotation: 0, duration: HK.dur, ease: "back.out(1.15)" }, at);
+          };
+          motion(g, t0);
+          tl.fromTo(g, { opacity: 0 }, { opacity: 1, duration: 0.07, ease: "none" }, t0);
+          // restrained bronze trail, only while the letter travels
+          [0.3, 0.18, 0.09].forEach((a, k) => {
+            const gh = hook.ghosts[i * 3 + k];
+            const lag = 0.02 * (k + 1);
+            motion(gh, t0 + lag);
+            tl.fromTo(gh, { opacity: 0 }, { opacity: a, duration: 0.04, ease: "none" }, t0);
+            tl.to(gh, { opacity: 0, duration: HK.dur * 0.5, ease: "power1.in" }, t0 + lag + HK.dur * 0.18);
+          });
+        });
+        // bronze accent point appears after the full stop, then travels to centre
+        const dotX = hook.right + 34, dotY = hook.baseline - 14;
+        const dotScale = HK.dotR / CFG.brand.coverR;
+        tl.fromTo("#hook-dot", { x: dotX - 960, y: dotY - 540, scale: 0, transformOrigin: "50% 50%" },
+          { scale: dotScale, duration: 0.2, ease: "back.out(1.3)" }, HK.dotAt);
+        tl.to("#hook-dot", { x: 0, y: 0, duration: 2.0 - HK.exitAt, ease: "power2.inOut" }, HK.exitAt);
+        const hookLine = document.getElementById("hook-line");
+        tl.set(hookLine, { filter: "url(#f-hblur)" }, HK.exitAt);
+        tl.fromTo(hookLine, { x: 0 }, { x: -110, duration: HK.exitDur, ease: "power2.in" }, HK.exitAt);
+        tl.fromTo(hookLine, { opacity: 1 }, { opacity: 0, duration: HK.exitDur * 0.8, ease: "power1.in" }, HK.exitAt + HK.exitDur * 0.2);
+        tl.fromTo("#f-hblur-g", { attr: { stdDeviation: "0 0" } }, { attr: { stdDeviation: "7 0" }, duration: HK.exitDur, ease: "power2.in" }, HK.exitAt);
+        tl.set(hookLine, { filter: "none" }, HK.exitAt + HK.exitDur + 0.01);
+
+        // ================= 02.00–03.50 ORIGINAL BRAND REVEAL =================
+        const BR = CFG.brand;
+        tl.to("#hook-dot", { scale: 1, duration: BR.expandDur, ease: "power3.inOut" }, BR.expandAt);
+        tl.fromTo("#brand-field", { opacity: 0 }, { opacity: 1, duration: 0.01 }, BR.expandAt + BR.expandDur);
+        tl.to("#hook-dot", { opacity: 0, duration: 0.25, ease: "power1.inOut" }, BR.expandAt + BR.expandDur);
+        tl.fromTo("#brand-panel", { scale: 0.94, opacity: 0, transformOrigin: "50% 50%" },
+          { scale: 1, duration: 0.62, ease: "back.out(1.2)" }, BR.panelAt);
+        tl.to("#brand-panel", { opacity: 1, duration: 0.18, ease: "none" }, BR.panelAt);
+        tl.fromTo("#brand-panel img", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, BR.panelAt + 0.12);
+        const sub = setGlyphs(document.getElementById("brand-sub"), { cx: 960, baseline: 742, size: 44, weight: 400, track: 0 });
+        const subW = wordIndex(sub.text);
+        sub.glyphs.forEach((g, i) => {
+          const t0 = BR.subAt + subW[i] * 0.07;
+          tl.fromTo(g, { y: 22, opacity: 0 }, { y: 0, duration: 0.42, ease: "power3.out" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.24, ease: "none" }, t0);
+        });
+
+        // ================= 03.25–04.10 SPHERE WIPE =================
+        const SP = CFG.sphere;
+        tl.fromTo("#sphere", { x: SP.from[0] - 960, y: SP.from[1] - 540, scale: 0, transformOrigin: "50% 50%" },
+          { scale: SP.d0 / SP.d1, duration: 0.22, ease: "back.out(1.3)" }, BR.sphereAt);
+        tl.to("#sphere", { x: 0, y: 0, scale: 1, duration: SP.moveDur, ease: "power2.inOut" }, SP.move);
+        tl.fromTo("#sphere", { opacity: 1 }, { opacity: 0, duration: 0.24, ease: "power1.inOut" }, SP.move + SP.moveDur - 0.04);
+
+        // ================= 04.10–06.60 PRODUCT FAMILIES =================
+        const G = CFG.gallery;
+        tl.fromTo("#mini-logo", { y: 14, scale: 0.96, opacity: 0, transformOrigin: "0% 50%" },
+          { y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, G.logoAt);
+        tl.to("#mini-logo", { opacity: 1, duration: 0.25, ease: "none" }, G.logoAt);
+
+        const cols = document.getElementById("cols");
+        const colLayers = CFG.masonry.colX.map(() => el("div", "col-scroll", cols));
+        const catCards = CATEGORIES.map((cat, i) => {
+          const [cx, cy, w, h] = G.cards[i];
+          const rect = { x: cx - w / 2, y: cy - h / 2, w, h, imgH: h - G.bandH };
+          const { card, box } = makeCard(colLayers[i], rect, [cat.img, h, cat.pos]);
+          const band = el("div", "card-band", card);
+          const lab = el("span", "", band);
+          lab.textContent = cat.label;
+          const ring = el("div", "card-ring", card);
+          card.style.zIndex = 2;
+          const t0 = G.cardsAt + i * G.stagger;
+          tl.fromTo(card, { y: G.travel, scale: 0.96, opacity: 0, transformOrigin: "50% 50%" },
+            { y: 0, scale: 1, duration: G.dur, ease: "back.out(1.15)" }, t0);
+          tl.to(card, { opacity: 1, duration: 0.2, ease: "none" }, t0);
+          tl.fromTo(lab, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, t0 + 0.2);
+          // subtle ambient drift while the families are held
+          tl.to(card, { y: i % 2 ? 5 : -5, duration: CFG.select.cardAt - 5.2, ease: "sine.inOut" }, 5.2);
+          return { card, box, band, ring, rect, cat };
+        });
+
+        // ================= 06.60–08.30 PRODUCT FAMILY SELECTION =================
+        const SL = CFG.select;
+        const rail = document.getElementById("rail");
+        const labels = CATEGORIES.map((c) => c.label);
+        const padX = 26, inset = 8, gap = 4;
+        const widths = labels.map((l) => measure(l, 36));
+        const railW = widths.reduce((a, b) => a + b + 2 * padX, 0) + gap * (labels.length - 1) + inset * 2;
+        Object.assign(rail.style, { left: `${SL.railCx - railW / 2}px`, width: `${railW}px` });
+        const pill = el("div", "", rail);
+        pill.id = "rail-pill";
+        let lx = inset;
+        const railLabels = labels.map((l, i) => {
+          const s = el("div", "rail-label", rail);
+          s.textContent = l;
+          s.style.left = `${lx + padX}px`;
+          if (i === 0) Object.assign(pill.style, { left: `${lx}px`, width: `${widths[i] + 2 * padX}px` });
+          lx += widths[i] + 2 * padX + gap;
+          return s;
+        });
+        tl.fromTo(rail, { y: -26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.42, ease: "power3.out" }, SL.railAt);
+        railLabels.forEach((s, i) =>
+          tl.fromTo(s, { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" }, SL.railAt + 0.08 + i * 0.05));
+        tl.fromTo(pill, { scaleX: 0.55, opacity: 0, transformOrigin: "50% 50%" },
+          { scaleX: 1, opacity: 1, duration: 0.34, ease: "back.out(1.2)" }, SL.pillAt);
+        tl.fromTo(railLabels[0], { color: "#15171A" }, { color: "#F1F0EC", duration: 0.2, ease: "none" }, SL.pillAt + 0.06);
+
+        const sel = catCards[0];
+        tl.to(sel.card, { scale: 1.045, y: -10, boxShadow: "rgba(0, 0, 0, 0.2) 0px 24px 44px 0px", duration: 0.45, ease: "power3.out" }, SL.cardAt);
+        tl.fromTo(sel.ring, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, SL.cardAt);
+        catCards.slice(1).forEach((c) =>
+          tl.to(c.card, { scale: 0.97, opacity: 0.78, duration: 0.45, ease: "power2.out" }, SL.cardAt));
+        const ex = setGlyphs(document.getElementById("explore"), { cx: 960, cy: SL.textCy, size: 64, track: TS });
+        const exW = wordIndex(ex.text);
+        ex.glyphs.forEach((g, i) => {
+          const t0 = SL.textAt + exW[i] * 0.08 + i * 0.008;
+          tl.fromTo(g, { y: 30, opacity: 0 }, { y: 0, duration: 0.46, ease: "back.out(1.15)" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.2, ease: "none" }, t0);
+        });
+
+        // ================= 08.30–10.40 FLOWING PRODUCT GALLERY =================
+        const M = CFG.masonry;
+        tl.to(rail, { y: -40, opacity: 0, duration: 0.3, ease: "power2.in" }, M.morphAt);
+        tl.to("#explore", { y: 40, opacity: 0, duration: 0.3, ease: "power2.in" }, M.morphAt);
+        tl.to("#mini-logo", { y: -30, opacity: 0, duration: 0.3, ease: "power2.in" }, M.morphAt);
+
+        let selected = null;
+        catCards.forEach((c, i) => {
+          const tx = M.colX[i], ty = M.tops[i], th = c.cat.h;
+          tl.to(c.card, { x: tx - c.rect.x, y: ty - c.rect.y, width: M.colW, height: th, scale: 1, opacity: 1,
+            boxShadow: "rgba(0, 0, 0, 0.14) 0px 14px 28px 0px", duration: M.morphDur, ease: "power3.inOut" }, M.morphAt);
+          tl.to(c.box, { height: th, duration: M.morphDur, ease: "power3.inOut" }, M.morphAt);
+          tl.to(c.band, { opacity: 0, duration: 0.22, ease: "power1.in" }, M.morphAt);
+          tl.to(c.ring, { opacity: 0, duration: 0.25, ease: "power1.in" }, M.morphAt);
+          // the rest of the column rises in beneath
+          let y = ty + th + M.gutter;
+          COLUMNS[i].forEach((spec, k) => {
+            const { card } = makeCard(colLayers[i], { x: tx, y, w: M.colW, h: spec[1] }, spec);
+            if (i === M.selected[0] && k === M.selected[1]) selected = { card, y, h: spec[1] };
+            y += spec[1] + M.gutter;
+            const t0 = M.morphAt + 0.16 + i * 0.05 + Math.min(k, 3) * 0.04;
+            tl.fromTo(card, { y: 420, opacity: 0 }, { y: 0, duration: 0.6, ease: "power3.out" }, t0);
+            tl.to(card, { opacity: 1, duration: 0.2, ease: "none" }, t0 + 0.06);
+          });
+        });
+
+        // accelerate 0.35 s, fast 0.45 s, decelerate 0.50 s
+        const travel = selected.y + selected.h / 2 - M.selectedCy;
+        const sc = scrollEase(M.accel, M.fast, M.decel);
+        const scrollDur = M.accel + M.fast + M.decel;
+        colLayers.forEach((layer, i) =>
+          tl.fromTo(layer, { y: 0 }, { y: -travel * M.mult[i], duration: scrollDur, ease: sc.ease }, M.scrollAt));
+        // vertical blur only around peak speed
+        const vp = document.getElementById("cols");
+        tl.set(vp, { filter: "url(#f-vblur)" }, M.scrollAt + M.accel * 0.4);
+        tl.to("#f-vblur-g", { attr: { stdDeviation: `0 ${M.peakBlur}` }, duration: M.accel * 0.6, ease: "power2.in" }, M.scrollAt + M.accel * 0.4);
+        tl.to("#f-vblur-g", { attr: { stdDeviation: "0 0" }, duration: M.decel * 0.55, ease: "power2.out" }, M.scrollAt + M.accel + M.fast);
+        tl.set(vp, { filter: "none" }, M.scrollAt + M.accel + M.fast + M.decel * 0.56);
+
+        // ================= 10.10–13.10 HERO ALUMINIUM SYSTEM =================
+        const HR = CFG.hero;
+        const hero = document.getElementById("hero");
+        const sx = M.colX[M.selected[0]] + M.colW / 2;
+        const sy = M.selectedCy;
+        gsap.set(hero, { xPercent: -50, yPercent: -50, x: sx, y: sy, transformPerspective: 1400 });
+        tl.set(hero, { opacity: 1 }, HR.detachAt);
+        tl.set(selected.card, { opacity: 0 }, HR.detachAt);
+        tl.fromTo("#hero-ring", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "none" }, HR.detachAt);
+        tl.to(hero, { scale: 1.08, rotation: HR.rotZ, rotationY: HR.rotY, x: sx + 14, y: sy - 10,
+          boxShadow: "rgba(0, 0, 0, 0.22) 0px 30px 52px 0px", duration: HR.flyAt - HR.detachAt, ease: "power2.out" }, HR.detachAt);
+        tl.fromTo("#gallery", { filter: "blur(0px)", scale: 1, transformOrigin: "50% 50%" },
+          { filter: "blur(9px)", scale: 0.97, duration: 0.36, ease: "power2.out" }, HR.detachAt + 0.04);
+        tl.to("#gallery", { opacity: 0, y: 36, duration: 0.5, ease: "power2.in" }, HR.flyAt + 0.1);
+        const flyDur = HR.frontalBy - HR.flyAt;
+        tl.to(hero, { x: HR.cx, y: HR.cy, width: HR.w, height: HR.h, scale: 1, boxShadow: "rgba(0, 0, 0, 0.18) 0px 22px 44px 0px",
+          duration: flyDur, ease: "expo.out" }, HR.flyAt);
+        tl.to(hero, { rotation: 0, rotationY: 0, duration: flyDur, ease: "back.out(1.2)" }, HR.flyAt);
+        tl.to("#hero-ring", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, HR.flyAt + 0.3);
+
+        const heroL = HR.cx - HR.w / 2, heroT = HR.cy - HR.h / 2, heroR = HR.cx + HR.w / 2;
+        const ht = setGlyphs(document.getElementById("hero-title"), { align: "left", x: heroL, baseline: heroT - 34, size: 56, track: TS });
+        const htW = wordIndex(ht.text);
+        ht.glyphs.forEach((g, i) => {
+          const t0 = HR.titleAt + htW[i] * 0.09 + i * 0.012;
+          tl.fromTo(g, { y: 34, opacity: 0 }, { y: 0, duration: 0.44, ease: "power3.out" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.22, ease: "none" }, t0);
+        });
+        const chipY = [330, 520, 710];
+        const chipX = [heroR - 40, heroR - 4, heroR - 40];
+        ["#chip-1", "#chip-2", "#chip-3"].forEach((sel, i) => {
+          const c = document.querySelector(sel);
+          Object.assign(c.style, { left: `${chipX[i]}px`, top: `${chipY[i] - 38}px` });
+          const t0 = HR.chipsAt + i * HR.chipStagger;
+          tl.fromTo(c, { x: -90, scale: 0.9, opacity: 0, transformOrigin: "0% 50%" },
+            { x: 0, scale: 1, duration: 0.46, ease: "back.out(1.2)" }, t0);
+          tl.to(c, { opacity: 1, duration: 0.18, ease: "none" }, t0);
+        });
+
+        // ================= 13.10–15.50 VISUALISATION FEATURE =================
+        const V = CFG.viz;
+        const [pl, pt, pr, pb] = V.panel;
+        const insetOf = (l, t, r, b, rad) => `inset(${t}px ${1920 - r}px ${1080 - b}px ${l}px round ${rad}px)`;
+        gsap.set("#viz-panel", { clipPath: insetOf(heroL, heroT, heroR, heroT + HR.h, 26) });
+        tl.fromTo("#viz-wrap", { opacity: 0 }, { opacity: 1, duration: 0.01 }, V.at);
+        tl.to(["#chip-1", "#chip-2", "#chip-3"], { x: -70, opacity: 0, duration: 0.24, ease: "power2.in", stagger: 0.04 }, V.at);
+        tl.to("#hero-title", { y: -24, opacity: 0, duration: 0.24, ease: "power2.in" }, V.at);
+        const heroInset = insetOf(heroL, heroT, heroR, heroT + HR.h, 26), panelInset = insetOf(pl, pt, pr, pb, 32);
+        tl.fromTo("#viz-panel", { clipPath: heroInset }, { clipPath: panelInset, duration: 0.52, ease: "power3.inOut", immediateRender: false }, V.at);
+        // the frame's moving edge sweeps across the photo, revealing the teaser beneath
+        tl.fromTo(hero, { clipPath: "inset(0% 0% 0% 0% round 26px)" },
+          { clipPath: "inset(0% 100% 0% 0% round 26px)", duration: V.wipeDur, ease: "power2.inOut" }, V.wipeAt);
+        tl.to(hero, { boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px", duration: 0.2, ease: "none" }, V.wipeAt);
+        tl.fromTo("#wipe-edge", { x: heroR - 1, opacity: 0 }, { x: heroL - 1, duration: V.wipeDur, ease: "power2.inOut" }, V.wipeAt);
+        tl.to("#wipe-edge", { opacity: 1, duration: 0.06, ease: "none" }, V.wipeAt);
+        tl.to("#wipe-edge", { opacity: 0, duration: 0.1, ease: "none" }, V.wipeAt + V.wipeDur - 0.08);
+        tl.fromTo("#viz-frame", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.03, duration: 1.8, ease: "sine.inOut" }, V.at + 0.5);
+        const vl = setGlyphs(document.getElementById("viz-label"), { align: "left", x: 262, baseline: 452, size: 40, track: CFG.track.ui });
+        vl.glyphs.forEach((g) => (g.style.color = "#8C6A45"));
+        const v1 = setGlyphs(document.getElementById("viz-title-1"), { align: "left", x: 258, baseline: 552, size: 70, track: TS });
+        const v2 = setGlyphs(document.getElementById("viz-title-2"), { align: "left", x: 258, baseline: 636, size: 70, track: TS });
+        [vl, v1, v2].forEach((line, li) =>
+          line.glyphs.forEach((g, i) => {
+            const t0 = V.textAt + li * 0.1 + i * 0.016;
+            tl.fromTo(g, { y: 30, opacity: 0 }, { y: 0, duration: 0.42, ease: "power3.out" }, t0);
+            tl.to(g, { opacity: 1, duration: 0.2, ease: "none" }, t0);
+          }));
+
+        // ================= 15.50–17.00 QUOTATION CALL TO ACTION =================
+        const C = CFG.cta;
+        const capL = 960 - C.w / 2, capT = 540 - C.h / 2;
+        tl.to(["#viz-frame", "#viz-label", "#viz-title-1", "#viz-title-2"], { opacity: 0, scale: 0.98, duration: 0.2, ease: "power1.in" }, C.at);
+        const capInset = insetOf(capL, capT, capL + C.w, capT + C.h, C.r);
+        tl.fromTo("#viz-panel", { clipPath: panelInset }, { clipPath: capInset, duration: 0.5, ease: "power3.inOut", immediateRender: false }, C.at);
+        tl.fromTo("#viz-bronze", { opacity: 0 }, { opacity: 1, duration: 0.36, ease: "power1.inOut" }, C.at + 0.06);
+        tl.fromTo("#viz-wrap", { scale: 1, transformOrigin: "50% 50%" }, { scale: 0.96, duration: 0.1, ease: "none" }, C.at + 0.4);
+        tl.to("#viz-wrap", { scale: 1, duration: 0.36, ease: "back.out(1.25)" }, C.at + 0.5);
+        tl.fromTo("#cta-glow", { opacity: 0 }, { opacity: 0.32, duration: 0.5, ease: "power1.out" }, C.at + 0.4);
+        const cl = setGlyphs(document.getElementById("cta-label"), { cx: 942, cy: 540, size: 36, track: CFG.track.ui });
+        const arrowTip = capL + C.w - 50;
+        document.getElementById("cta-arrow").style.left = `${arrowTip - 37}px`;
+        cl.glyphs.forEach((g, i) => {
+          const t0 = C.labelAt + i * 0.014;
+          tl.fromTo(g, { y: 16, opacity: 0 }, { y: 0, duration: 0.32, ease: "power3.out" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.16, ease: "none" }, t0);
+        });
+        tl.fromTo("#cta-arrow", { x: -14, opacity: 0 }, { x: 0, opacity: 1, duration: 0.34, ease: "back.out(1.2)" }, C.labelAt + 0.18);
+
+        // ================= 16.70–17.80 FINAL BRAND TRANSFORMATION =================
+        tl.to(["#cta-label", "#cta-arrow"], { opacity: 0, duration: 0.16, ease: "power1.in" }, C.expandAt + 0.04);
+        tl.to("#cta-glow", { opacity: 0, duration: 0.2, ease: "none" }, C.expandAt);
+        tl.fromTo("#viz-panel", { clipPath: capInset }, { clipPath: insetOf(-520, -330, 2440, 1410, 870), duration: 0.36, ease: "power2.in", immediateRender: false }, C.expandAt);
+        const F = CFG.final;
+        tl.fromTo("#final-reveal", { clipPath: "circle(0px at 960px 540px)" }, { clipPath: "circle(1160px at 960px 540px)", duration: 0.42, ease: "power2.inOut" }, F.revealAt);
+
+        tl.fromTo("#final-logo", { y: 16, scale: 0.97, opacity: 0, transformOrigin: "50% 50%" },
+          { y: 0, scale: 1, duration: 0.6, ease: "power3.out" }, F.logoAt);
+        tl.to("#final-logo", { opacity: 1, duration: 0.32, ease: "none" }, F.logoAt);
+        const fs = setGlyphs(document.getElementById("final-slogan"), { cx: 960, baseline: 565, size: 62, track: TS });
+        fs.glyphs.forEach((g, i) => {
+          const t0 = F.sloganAt + i * 0.006;
+          tl.fromTo(g, { y: 26, opacity: 0 }, { y: 0, duration: 0.4, ease: "back.out(1.1)" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.2, ease: "none" }, t0);
+        });
+        const fl = setGlyphs(document.getElementById("final-loc"), { cx: 960, baseline: 665, size: 36, weight: 400, track: 0 });
+        fl.glyphs.forEach((g) => tl.fromTo(g, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.34, ease: "power3.out" }, F.locAt));
+        const fw = setGlyphs(document.getElementById("final-web"), { cx: 960, baseline: 790, size: 42, track: CFG.track.ui });
+        fw.glyphs.forEach((g, i) =>
+          tl.fromTo(g, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, F.webAt + i * 0.004));
+
+        window.__prompolu = { travel: Math.round(travel), peakSpeed: Math.round(travel * sc.vmaxPerPx), hookWidth: Math.round(hook.width) };
+        window.__timelines["prompolu"] = tl;
+        if (window.__hfForceTimelineRebind) window.__hfForceTimelineRebind();
+      }
+
+      build();
+    </script>
+  </body>
+</html>

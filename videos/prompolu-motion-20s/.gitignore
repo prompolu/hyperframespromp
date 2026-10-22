@@ -1,0 +1,6 @@
+.hyperframes/
+node_modules/
+*.log
+renders/work-*/
+renders/.*
+assets/audio/mix-unmastered.wav
