@@ -2,3 +2,4 @@ node_modules/
 renders/work-*/
 *.log
 renders/stills/
+__pycache__/

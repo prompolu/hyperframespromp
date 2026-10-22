@@ -4,10 +4,10 @@ All 21 official HyperFrames skills are vendored as real files under `.agents/ski
 
 ## Latest video — PROMPOLU — Nos gammes (10 s, 16:9)
 
-A cut-free morph-chain website promo: the P mark becomes an app tile, a button, the prompolu.com address bar, a product grid, range cards (Coulissants · Battants · Extérieur) and finally the PROMPOLU ALUMINIUM logo. 1920 × 1080, 30 FPS, exactly 300 frames. It is built as one GSAP-driven HTML page and rendered frame by frame with Playwright and FFmpeg. It is silent; a sound-design cue sheet is included.
+A cut-free morph-chain website promo: the P mark becomes an app tile, a button, the prompolu.com address bar, a product grid, range cards (Coulissants · Battants · Extérieur) and finally the PROMPOLU ALUMINIUM logo. 1920 × 1080, 30 FPS, exactly 300 frames. It is built as one GSAP-driven HTML page and rendered frame by frame with Playwright and FFmpeg. The soundtrack is original and synthesised: a 125 BPM pop-house bed, with pops and swooshes that follow the motion of each transition.
 
-- [1920 × 1080 MP4](videos/prompolu-nos-gammes/renders/prompolu-nos-gammes-1920x1080.mp4)
-- [Contact sheet](videos/prompolu-nos-gammes/evidence/contact-sheet.jpg) · [sound cues](videos/prompolu-nos-gammes/cues.txt)
+- [1920 × 1080 MP4 with sound](videos/prompolu-nos-gammes/renders/prompolu-nos-gammes-1920x1080.mp4)
+- [Contact sheet](videos/prompolu-nos-gammes/evidence/contact-sheet.jpg) · [sound cues](videos/prompolu-nos-gammes/cues.txt) · [audio analysis](videos/prompolu-nos-gammes/evidence/soundtrack-analysis.png)
 - [Source, choices and rendering instructions](videos/prompolu-nos-gammes/README.md)
 
 ## 60-second photographic version

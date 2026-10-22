@@ -2,11 +2,13 @@
 // Frame-accurate renderer for index.html.
 // Headless Chromium (Playwright) seeks the paused GSAP timeline to t = frame / 30, screenshots each
 // frame as PNG and pipes it to FFmpeg (libx264, yuv420p, CRF 16, +faststart, BT.709 tagged).
+// assets/audio/soundtrack.wav (scripts/compose-soundtrack.py) is muxed in as AAC when present.
 //
 //   node scripts/render.mjs                         → renders/prompolu-nos-gammes-1920x1080.mp4
 //   node scripts/render.mjs --out renders/x.mp4     → custom output path
 //   node scripts/render.mjs --stills 0.5,2.3,9.97   → PNG stills in renders/stills/ (no video)
 //   node scripts/render.mjs --frames 60-120         → render only that frame range (inclusive)
+//   node scripts/render.mjs --no-audio              → video only
 import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
 import http from 'node:http';
@@ -23,6 +25,7 @@ for (let i = 2; i < process.argv.length; i++) {
   if (a.startsWith('--')) opts[a.slice(2)] = process.argv[i + 1] && !process.argv[i + 1].startsWith('--') ? process.argv[++i] : true;
 }
 const OUT = path.resolve(ROOT, opts.out || 'renders/prompolu-nos-gammes-1920x1080.mp4');
+const AUDIO = path.resolve(ROOT, typeof opts.audio === 'string' ? opts.audio : 'assets/audio/soundtrack.wav');
 
 /* Static file server, so the page loads over http:// exactly like a browser preview. */
 const MIME = {
@@ -74,9 +77,17 @@ if (opts.stills) {
   let [first, last] = [0, total - 1];
   if (opts.frames) [first, last] = String(opts.frames).split('-').map(Number);
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
+  const withAudio = !opts['no-audio'] && fs.existsSync(AUDIO);
+  const audioArgs = withAudio
+    ? ['-ss', (first / FPS).toFixed(6), '-t', ((last - first + 1) / FPS).toFixed(6), '-i', AUDIO]
+    : [];
+  const audioOut = withAudio ? ['-map', '0:v:0', '-map', '1:a:0', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-ac', '2'] : [];
+  console.log(withAudio ? `audio: ${path.relative(ROOT, AUDIO)}` : 'audio: none (video only)');
   const ff = spawn('ffmpeg', [
     '-y', '-loglevel', 'error',
     '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'png', '-i', '-',
+    ...audioArgs,
+    ...audioOut,
     '-vf', 'scale=out_color_matrix=bt709:out_range=tv,format=yuv420p',
     '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p',
     '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-color_range', 'tv',
