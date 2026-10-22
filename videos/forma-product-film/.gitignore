@@ -1,0 +1,5 @@
+.hyperframes/
+node_modules/
+*.log
+renders/work-*/
+assets/audio/forma-score.wav

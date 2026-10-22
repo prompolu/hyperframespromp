@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>FORMA — 20-second product film</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url("assets/fonts/Inter-Regular.otf") format("opentype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("assets/fonts/Inter-Medium.otf") format("opentype");
+        font-weight: 500;
+        font-style: normal;
+        font-display: block;
+      }
+      :root {
+        --stage-center: #fcfafb;
+        --stage-top: #cccacb;
+        --stage-bottom: #d6d4d5;
+        --ink: #242020;
+        --red: #d92508;
+        --red-deep: #971906;
+        --close-dark: #320601;
+        --close-bright: #d62300;
+        --white: #ffffff;
+        --disc: #303033;
+        --card-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+        --disc-shadow: 0 14px 26px rgba(0, 0, 0, 0.22);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--stage-center);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: var(--ink);
+        font-variant-ligatures: none;
+        font-feature-settings: "calt" 0;
+      }
+      .clip,
+      .layer {
+        position: absolute;
+        inset: 0;
+      }
+      #filters {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+
+      /* ---------- stage ---------- */
+      #stage-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 70% 60% at 38% 40%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 70%),
+          linear-gradient(
+            180deg,
+            var(--stage-top) 0%,
+            #e6e4e5 16%,
+            var(--stage-center) 40%,
+            var(--stage-center) 60%,
+            #ebe9ea 84%,
+            var(--stage-bottom) 100%
+          );
+      }
+
+      /* ---------- kinetic type ---------- */
+      .kline {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: 1080px;
+        white-space: pre;
+        color: transparent;
+      }
+      .glyph,
+      .ghost {
+        position: absolute;
+        display: block;
+        white-space: pre;
+        transform-origin: 50% 62%;
+      }
+      .glyph {
+        color: var(--ink);
+      }
+      .ghost {
+        color: #b4473a;
+        opacity: 0;
+      }
+
+      /* ---------- red field + symbol ---------- */
+      #red-field {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 75% 85% at 50% 50%, #d92508 0%, #d02307 38%, #b31e07 70%, #971906 100%);
+      }
+      #red-dot {
+        position: absolute;
+        left: -220px; /* 960 - 1180 */
+        top: -690px; /* 490 - 1180 */
+        width: 2360px;
+        height: 2360px;
+        border-radius: 50%;
+        background: var(--red);
+      }
+      .spk-wrap {
+        position: absolute;
+      }
+      .spk-shadow-blur,
+      .spk-3d,
+      .spk-layer,
+      .spk-face,
+      .spk-shadow {
+        position: absolute;
+        inset: 0;
+      }
+      .spk-layer,
+      .spk-face,
+      .spk-shadow {
+        clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
+      }
+      .spk-3d {
+        transform-style: preserve-3d;
+      }
+      #spark-hero {
+        left: 720px;
+        top: 300px;
+        width: 480px;
+        height: 480px;
+        perspective: 1500px;
+      }
+
+      /* ---------- white sphere ---------- */
+      #sphere {
+        position: absolute;
+        left: -240px; /* 960 - 1200 */
+        top: -660px; /* 540 - 1200 */
+        width: 2400px;
+        height: 2400px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 34% 30%,
+          #ffffff 0%,
+          #fcfafb 20%,
+          #efeced 44%,
+          #d9d5d6 68%,
+          #bfbbbc 88%,
+          #b1adae 100%
+        );
+        box-shadow: 220px 280px 420px rgba(40, 2, 0, 0.34);
+      }
+
+      /* ---------- discovery board ---------- */
+      .ui {
+        position: absolute;
+      }
+      #ui-spark {
+        left: 305px;
+        top: 150px;
+        width: 90px;
+        height: 90px;
+      }
+      #ui-profile {
+        left: 1542px;
+        top: 157px;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #b2d68f 0%, #9bc574 55%, #86b25e 100%);
+        box-shadow: var(--card-shadow);
+        font-size: 40px;
+        letter-spacing: -0.015em;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+      #ui-thumb {
+        left: 407px;
+        top: 282px;
+        width: 96px;
+        height: 96px;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        background:
+          radial-gradient(circle at 70% 72%, #943927 0 18px, rgba(148, 57, 39, 0) 19px),
+          radial-gradient(circle at 30% 30%, #ffffff 0%, rgba(255, 255, 255, 0) 45%),
+          linear-gradient(140deg, #bcd9e3 0%, #c8a58e 58%, #633c4d 100%);
+      }
+      .ui-tile {
+        top: 280px;
+        width: 250px;
+        height: 100px;
+        border-radius: 20px;
+        box-shadow: var(--card-shadow);
+      }
+      #tile-1 {
+        left: 555px;
+        background: radial-gradient(ellipse 85% 120% at 28% 30%, #a2ac3f 0%, #7a8510 45%, #596600 78%, #444e00 100%);
+      }
+      #tile-2 {
+        left: 840px;
+        background: radial-gradient(ellipse 85% 120% at 28% 30%, #f8dc7e 0%, #eab73a 45%, #d79b12 78%, #b77f06 100%);
+      }
+      #tile-3 {
+        left: 1125px;
+        background: radial-gradient(ellipse 85% 120% at 28% 30%, #f2664a 0%, #e03a1a 45%, #d92508 72%, #971906 100%);
+      }
+      .card {
+        position: absolute;
+        width: 270px;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+      }
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(155deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 42%, rgba(0, 0, 0, 0.07) 100%);
+        pointer-events: none;
+      }
+      .card img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .dots {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        width: 26px;
+        height: 6px;
+        z-index: 2;
+      }
+      .dots i {
+        position: absolute;
+        top: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.92);
+      }
+      .dots.dark i {
+        background: #303033;
+      }
+      .dots i:nth-child(1) {
+        left: 0;
+      }
+      .dots i:nth-child(2) {
+        left: 10px;
+      }
+      .dots i:nth-child(3) {
+        left: 20px;
+      }
+
+      /* ---------- search field ---------- */
+      #search {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 990px;
+        height: 76px;
+        border-radius: 24px;
+        background: linear-gradient(180deg, #ffffff 0%, #fdfcfc 100%);
+        box-shadow: var(--card-shadow);
+      }
+      #search-text {
+        position: absolute;
+        left: 60px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        font-size: 50px;
+        letter-spacing: -0.015em;
+      }
+      #search-mag {
+        position: absolute;
+        top: 50%;
+        right: 55px;
+        width: 0;
+        height: 0;
+      }
+      #search-mag svg {
+        position: absolute;
+        left: -32px;
+        top: -32px;
+        width: 64px;
+        height: 64px;
+        overflow: visible;
+      }
+
+      /* ---------- results masonry ---------- */
+      #cols-viewport {
+        overflow: hidden;
+      }
+      .col-scroll,
+      .col-enter {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: 1080px;
+      }
+
+      /* ---------- hero card ---------- */
+      #hero {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 270px;
+        height: 380px;
+        --rx: 22px;
+        --ry: 22px;
+        border-radius: var(--rx) / var(--ry);
+        overflow: hidden;
+        background: #5a4b2d;
+        box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+      }
+      #hero-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 42%;
+        display: block;
+        opacity: 0;
+      }
+      #hero-scrim {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 34%;
+        background: linear-gradient(180deg, rgba(20, 14, 10, 0) 0%, rgba(20, 14, 10, 0.42) 100%);
+        opacity: 0;
+      }
+      #hero-tint {
+        position: absolute;
+        inset: 0;
+        background: #d92508;
+        opacity: 0;
+      }
+      #hero-closing {
+        position: absolute;
+        left: calc(50% - 960px);
+        top: calc(50% - 540px);
+        width: 1920px;
+        height: 1080px;
+        background: linear-gradient(to bottom right, var(--close-dark) 0%, var(--close-bright) 100%);
+        opacity: 0;
+      }
+      #hero-capsule {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, var(--red-deep) 0%, var(--red) 100%);
+        opacity: 0;
+      }
+      #hero-saved {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        font-size: 42px;
+        letter-spacing: -0.015em;
+      }
+      #hero-saved .glyph {
+        color: var(--white);
+      }
+      #hero-lens {
+        position: absolute;
+        left: 50%;
+        bottom: 58px;
+        width: 0;
+        height: 0;
+      }
+      #hero-lens svg {
+        position: absolute;
+        left: -32px;
+        top: -32px;
+        width: 64px;
+        height: 64px;
+        overflow: visible;
+      }
+
+      /* ---------- floating controls ---------- */
+      .disc {
+        position: absolute;
+        border-radius: 50%;
+        background: var(--disc);
+        box-shadow: var(--disc-shadow), 0 0 26px 0px rgba(217, 37, 8, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .disc::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 55%);
+      }
+      .disc svg {
+        position: relative;
+        overflow: visible;
+      }
+      #btn-edit {
+        left: 1112px;
+        top: 387px;
+        width: 126px;
+        height: 126px;
+      }
+      #btn-pin {
+        left: 1262px;
+        top: 562px;
+        width: 116px;
+        height: 116px;
+      }
+      #btn-heart {
+        left: 1206px;
+        top: 771px;
+        width: 108px;
+        height: 108px;
+      }
+      #btn-share {
+        left: 1000px;
+        top: 840px;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* ---------- closing brand frame ---------- */
+      #final-bg {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom right, var(--close-dark) 0%, var(--close-bright) 100%);
+        opacity: 0;
+      }
+      #final-spark {
+        left: 875px;
+        top: 265px;
+        width: 170px;
+        height: 170px;
+      }
+      #wordmark .glyph {
+        color: var(--white);
+        font-weight: 500;
+      }
+      #tagline .glyph {
+        color: var(--white);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="forma"
+      data-start="0"
+      data-duration="20"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <svg id="filters" aria-hidden="true">
+        <defs>
+          <filter id="f-hblur" x="-15%" y="0%" width="130%" height="100%" color-interpolation-filters="sRGB">
+            <feGaussianBlur id="f-hblur-g" stdDeviation="0 0" edgeMode="none" />
+          </filter>
+          <filter id="f-vblur" x="0%" y="-5%" width="100%" height="110%" color-interpolation-filters="sRGB">
+            <feGaussianBlur id="f-vblur-g" stdDeviation="0 0" edgeMode="none" />
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- 0. Light stage: present for the whole film -->
+      <section id="stage" class="clip" data-start="0" data-duration="20" data-track-index="0">
+        <div id="stage-bg"></div>
+      </section>
+
+      <!-- 1. Opening question and answer -->
+      <section id="scene-text" class="clip" data-start="0" data-duration="4" data-track-index="1">
+        <div id="line-q" class="kline">Looking for inspiration?</div>
+        <div id="line-a" class="kline">Find your next idea.</div>
+      </section>
+
+      <!-- 3. Discovery board (header, categories, first masonry) -->
+      <section id="scene-board" class="clip" data-start="5.2" data-duration="2.3" data-track-index="3">
+        <div id="board" class="layer">
+          <div id="ui-spark" class="ui spk-wrap"></div>
+          <div id="ui-thumb" class="ui"></div>
+          <div id="tile-1" class="ui ui-tile"></div>
+          <div id="tile-2" class="ui ui-tile"></div>
+          <div id="tile-3" class="ui ui-tile"></div>
+          <div id="board-cards" class="layer"></div>
+          <div id="ui-profile" class="ui">F</div>
+        </div>
+      </section>
+
+      <!-- 5. Result masonry, accelerated scroll -->
+      <section id="scene-results" class="clip" data-start="8.2" data-duration="4.8" data-track-index="5">
+        <div id="results" class="layer">
+          <div id="cols-viewport" class="layer"></div>
+        </div>
+      </section>
+
+      <!-- 4. Search field: board header -> focus -> results header -->
+      <section id="scene-search" class="clip" data-start="5.2" data-duration="5.7" data-track-index="4">
+        <div id="search-scroll" class="layer">
+          <div id="search">
+            <div id="search-text" class="kline-host">creative inspiration</div>
+            <div id="search-mag">
+              <svg viewBox="-32 -32 64 64" aria-hidden="true">
+                <!-- ring: radius 20, 6 px stroke; handle: 24 px at 45 degrees down-right -->
+                <g transform="translate(-6.0 -6.0)">
+                  <circle cx="0" cy="0" r="20" fill="none" stroke="#242020" stroke-width="6" />
+                  <line x1="14.14" y1="14.14" x2="31.11" y2="31.11" stroke="#242020" stroke-width="6" stroke-linecap="round" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Floating action controls (behind the hero card) -->
+      <section id="scene-controls" class="clip" data-start="12.3" data-duration="2.8" data-track-index="7">
+        <div id="btn-edit" class="disc">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <path
+              d="M22 3 H12 A9 9 0 0 0 3 12 V30 A9 9 0 0 0 12 39 H30 A9 9 0 0 0 39 30 V20"
+              fill="none"
+              stroke="#fff"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <line x1="20.2" y1="21.8" x2="36" y2="6" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+            <path d="M14 28 L16.6 20.4 L21.6 25.4 Z" fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div id="btn-pin" class="disc">
+          <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+            <g transform="rotate(40 22 22)" fill="#fff">
+              <rect x="14.5" y="3.5" width="15" height="6" rx="2.6" />
+              <path d="M17 9 H27 L28.6 21.5 H15.4 Z" />
+              <rect x="9.5" y="20.5" width="25" height="6" rx="2.8" />
+              <line x1="22" y1="26" x2="22" y2="38" stroke="#fff" stroke-width="3.6" stroke-linecap="round" />
+            </g>
+          </svg>
+        </div>
+        <div id="btn-heart" class="disc">
+          <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+            <path
+              d="M22 37 C12 30 4 23.5 4 15 C4 9.6 8.4 5.5 13.6 5.5 C17.4 5.5 20.4 7.8 22 11.2 C23.6 7.8 26.6 5.5 30.4 5.5 C35.6 5.5 40 9.6 40 15 C40 23.5 32 30 22 37 Z"
+              fill="none"
+              stroke="#fff"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div id="btn-share" class="disc">
+          <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+            <line x1="11" y1="22" x2="32" y2="9" stroke="#fff" stroke-width="6" />
+            <line x1="11" y1="22" x2="32" y2="35" stroke="#fff" stroke-width="6" />
+            <circle cx="32" cy="9" r="6.5" fill="#fff" />
+            <circle cx="11" cy="22" r="6.5" fill="#fff" />
+            <circle cx="32" cy="35" r="6.5" fill="#fff" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- 6. Hero card: brown tile -> photo card -> capsule -> closing field -->
+      <section id="scene-hero" class="clip" data-start="11.5" data-duration="5.2" data-track-index="6">
+        <div id="hero">
+          <img id="hero-photo" src="assets/photos/hero-medina-portrait.jpg" alt="Old-city towers and carved stone facades seen through an aluminium sliding window" />
+          <div id="hero-scrim"></div>
+          <div id="hero-tint"></div>
+          <div id="hero-closing"></div>
+          <div id="hero-capsule"></div>
+          <div id="hero-lens">
+            <svg viewBox="-32 -32 64 64" aria-hidden="true">
+              <circle cx="0" cy="0" r="30" fill="rgba(18,14,12,0.34)" />
+              <circle cx="0" cy="0" r="13" fill="none" stroke="#fff" stroke-width="5" />
+              <circle cx="0" cy="0" r="4" fill="#fff" />
+              <path
+                id="lens-spark"
+                transform="translate(19 -19) scale(7)"
+                d="M0 -1 L0.22 -0.22 L1 0 L0.22 0.22 L0 1 L-0.22 0.22 L-1 0 L-0.22 -0.22 Z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
+          <div id="hero-saved">Saved</div>
+        </div>
+      </section>
+
+      <!-- 8. Closing brand frame -->
+      <section id="scene-final" class="clip" data-start="16" data-duration="4" data-track-index="8">
+        <div id="final-bg"></div>
+        <div id="final-spark" class="spk-wrap"></div>
+        <div id="wordmark" class="kline">FORMA</div>
+        <div id="tagline" class="kline">Find it. Save it. Make it.</div>
+      </section>
+
+      <!-- 2. Red circle -> red field -> brand symbol -->
+      <section id="scene-red" class="clip" data-start="3.2" data-duration="2.05" data-track-index="2">
+        <div id="red-field"></div>
+        <div id="red-dot"></div>
+        <div id="spark-hero" class="spk-wrap"></div>
+      </section>
+
+      <!-- 2b. White sphere wipe -->
+      <section id="scene-sphere" class="clip" data-start="4.4" data-duration="1.15" data-track-index="9">
+        <div id="sphere"></div>
+      </section>
+
+      <audio
+        id="score"
+        src="assets/audio/forma-score.wav"
+        data-start="0"
+        data-duration="20"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </div>
+
+    <script>
+      /* =====================================================================
+         FORMA — master timeline.
+         Every timing, coordinate and colour lives in CFG; the build code below
+         reads it, so beats can be retimed or re-laid-out in one place.
+         All coordinates are 1920x1080 canvas pixels, object centres unless
+         noted. One paused GSAP timeline is registered as "forma".
+         ===================================================================== */
+      const CFG = {
+        palette: {
+          navy: "#34364F", olive: "#596600", palegray: "#D8D6D6", gray: "#858585",
+          lightgreen: "#9BC574", teal: "#557B70", rust: "#943927", paleblue: "#BCD9E3",
+          brown: "#5A4B2D", burgundy: "#633C4D", bluegray: "#30434F", peach: "#C8A58E",
+        },
+        light: ["palegray", "lightgreen", "paleblue", "peach"],
+        photos: "assets/photos/source/",
+        type: { headline: -0.025, ui: -0.015 },
+        // 00.00–02.00 opening question
+        question: { text: "Looking for inspiration?", cx: 960, cy: 540, size: 78,
+          start: 0.10, stagger: 0.022, dur: 0.34, exitAt: 1.70, exitDur: 0.30, exitX: -150 },
+        // 02.00–03.50 answer
+        answer: { cx: 960, cy: 540, size: 78, start: 1.97, stagger: 0.021, dur: 0.26 },
+        dot: { cx: 960, cy: 490, r: 16, appear: 3.25, expandAt: 3.50, expandDur: 0.45, coverR: 1180 },
+        // 03.50–04.70 symbol
+        symbol: { cx: 960, cy: 540, size: 480, start: 3.78, dur: 0.66, rotY: -18, rotZ: -10, depth: 24 },
+        sphere: { appear: 4.45, from: [490, 350], d0: 130, to: [960, 540], d1: 2400, move: 4.70, moveDur: 0.60 },
+        // 05.30–06.80 board
+        board: { start: 5.30, colX: [350, 645, 940, 1235], colW: 270, gutter: 22, tops: [425, 452, 425, 466] },
+        searchBoard: { cx: 1000, cy: 195, w: 990, h: 76, r: 24, magRight: 55, magScale: 0.72 },
+        searchFocus: { at: 6.80, cx: 960, cy: 500, w: 1420, h: 116, r: 30, magRight: 75, typeStart: 6.95, typeStagger: 0.032, typeDur: 0.18 },
+        searchTop: { at: 8.60, cx: 960, cy: 150, w: 1150, h: 96, r: 28 },
+        // 08.60–11.55 results + scroll
+        results: { peekAt: 8.30, enterAt: 8.60, colStagger: 0.08, enterDur: 0.72, tops: [255, 330, 280, 300],
+          driftFrom: 9.25, driftV: 55, accelAt: 10.00, accelDur: 0.35, cruiseEnd: 11.05, stopAt: 11.55,
+          mult: [0.965, 1.0, 1.035, 0.985], selected: [1, 10], selectedCenterY: 540, peakBlur: 15 },
+        // 11.55–14.00 hero card
+        hero: { cx: 900, cy: 500, w: 490, h: 640, r: 52, liftAt: 11.55, flyAt: 11.80, settleBy: 12.55, tiltZ: -12, tiltY: 10 },
+        buttons: { start: 12.35, stagger: 0.09, dur: 0.34 },
+        // 14.00–16.00 save -> capsule
+        save: { at: 14.00, morphAt: 14.22, morphEnd: 14.95, capsule: { cx: 960, cy: 540, w: 360, h: 120, r: 60 },
+          savedStart: 14.92, savedStagger: 0.03, savedDur: 0.16, expandAt: 15.75 },
+        // 16.00–17.60 closing frame
+        final: { spark: { cx: 960, cy: 350, size: 170 }, word: { cx: 960, cy: 565, size: 100 },
+          tag: { cx: 960, cy: 695, size: 40, opacity: 0.92 } },
+      };
+
+      // Board masonry (05.30). Photos come from prompolu.com (see CREDITS.md).
+      const BOARD_COLS = [
+        [["peach", 220], ["photo:bardage-villa.webp", 300, "dots", "50% 55%"], ["olive", 380]],
+        [["navy", 300, "dots"], ["paleblue", 220], ["photo:pergola.jpg", 380, null, "50% 50%"]],
+        [["photo:agencement.webp", 380, "dots", "45% 50%"], ["rust", 220], ["bluegray", 300]],
+        [["lightgreen", 150], ["burgundy", 300, "dots"], ["teal", 220], ["gray", 380]],
+      ];
+      // Result masonry (08.60). First three cards per column follow the brief exactly.
+      const RESULT_COLS = [
+        [["navy", 300, "dots"], ["lightgreen", 220], ["brown", 380], ["photo:garde-corps.jpg", 300, null, "50% 50%"],
+         ["bluegray", 150], ["peach", 220], ["photo:pergola.jpg", 380, "dots", "50% 50%"], ["olive", 220], ["rust", 300],
+         ["palegray", 150], ["photo:volets-roulants.jpg", 300, null, "40% 50%"], ["teal", 220], ["burgundy", 380],
+         ["gray", 220], ["navy", 300], ["peach", 220]],
+        [["olive", 220], ["teal", 380, "dots"], ["palegray", 150], ["photo:agencement.webp", 300, null, "45% 50%"],
+         ["navy", 220], ["peach", 300], ["photo:bardage-villa.webp", 380, null, "62% 50%"], ["bluegray", 150], ["rust", 220],
+         ["gray", 220], ["brown", 380], ["lightgreen", 220], ["photo:dressing-profil.jpg", 300, null, "50% 50%"],
+         ["olive", 220], ["paleblue", 300], ["burgundy", 220]],
+        [["palegray", 380], ["rust", 220, "dots"], ["gray", 300], ["photo:battants.webp", 380, null, "70% 50%"],
+         ["lightgreen", 150], ["burgundy", 300], ["navy", 220], ["photo:porte-a400k.jpg", 380, null, "62% 50%"],
+         ["peach", 220], ["teal", 300, "dots"], ["photo:garde-corps.jpg", 300, null, "35% 50%"], ["olive", 220],
+         ["bluegray", 380], ["palegray", 150], ["rust", 300], ["navy", 220]],
+        [["gray", 150], ["paleblue", 300, "dots"], ["burgundy", 380], ["photo:volets-roulants.jpg", 300, null, "60% 50%"],
+         ["olive", 220], ["navy", 380], ["peach", 150], ["photo:agencement.webp", 300, "dots", "30% 50%"], ["rust", 300],
+         ["teal", 220], ["lightgreen", 380], ["photo:bardage-villa.webp", 220, null, "30% 50%"], ["brown", 300],
+         ["bluegray", 220], ["palegray", 300], ["burgundy", 220]],
+      ];
+
+      const SPARK_POLY = [[0, -1], [0.22, -0.22], [1, 0], [0.22, 0.22], [0, 1], [-0.22, 0.22], [-1, 0], [-0.22, -0.22]];
+
+      // ---------- helpers ----------
+      function rng(seed) {
+        let a = seed >>> 0;
+        return () => {
+          a = (a + 0x6d2b79f5) >>> 0;
+          let t = a;
+          t = Math.imul(t ^ (t >>> 15), t | 1);
+          t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+      const el = (tag, cls, parent) => {
+        const n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (parent) parent.appendChild(n);
+        return n;
+      };
+      const mctx = document.createElement("canvas").getContext("2d");
+
+      // Kerned glyph layout: each character becomes its own absolutely positioned
+      // span at the advance the full, kerned string would give it.
+      function setGlyphs(host, opt) {
+        const text = opt.text ?? host.textContent;
+        const font = `${opt.weight || 400} ${opt.size}px Inter`;
+        mctx.font = font;
+        mctx.fontKerning = "normal";
+        const ls = (opt.track ?? CFG.type.headline) * opt.size;
+        const W = (s) => mctx.measureText(s).width;
+        const xs = [];
+        for (let i = 0; i < text.length; i++) xs.push(W(text.slice(0, i + 1)) - W(text[i]) + i * ls);
+        const width = W(text) + (text.length - 1) * ls;
+        const capH = mctx.measureText("H").actualBoundingBoxAscent;
+        const fm = mctx.measureText(text);
+        const asc = fm.fontBoundingBoxAscent;
+        const desc = fm.fontBoundingBoxDescent;
+        const left = opt.align === "left" ? opt.x : opt.cx - width / 2;
+        const baseline = opt.cy + capH / 2;
+        host.textContent = "";
+        host.setAttribute("aria-label", text);
+        const glyphs = [];
+        const ghosts = [];
+        for (let i = 0; i < text.length; i++) {
+          const mk = (cls) => {
+            const g = el("span", cls, host);
+            g.textContent = text[i];
+            g.style.left = `${left + xs[i]}px`;
+            g.style.top = `${baseline - asc}px`;
+            g.style.lineHeight = `${asc + desc}px`;
+            g.style.fontSize = `${opt.size}px`;
+            g.style.fontWeight = opt.weight || 400;
+            g.setAttribute("aria-hidden", "true");
+            return g;
+          };
+          for (let k = 0; k < (opt.ghosts || 0); k++) ghosts.push(mk("ghost"));
+          glyphs.push(mk("glyph"));
+        }
+        return { glyphs, ghosts, width, left, text };
+      }
+
+      // Four-point sparkle: optional extrusion stack (2.5D offset + true depth),
+      // soft lower-right shadow, white (or red) front face.
+      function buildSparkle(host, o) {
+        const shadowBlur = el("div", "spk-shadow-blur", host);
+        shadowBlur.style.filter = `blur(${o.shadow.blur}px)`;
+        shadowBlur.style.transform = `translate(${o.shadow.dx}px, ${o.shadow.dy}px)`;
+        const sh = el("div", "spk-shadow", shadowBlur);
+        sh.style.background = o.shadow.color;
+        const g = el("div", "spk-3d", host);
+        for (let k = o.layers; k >= 1; k--) {
+          const L = el("div", "spk-layer", g);
+          const t = (k - 1) / Math.max(1, o.layers - 1);
+          L.style.background = o.layerColor(t);
+          L.style.transform = `translate3d(${(k * o.step[0]).toFixed(2)}px, ${(k * o.step[1]).toFixed(2)}px, ${(-k * o.step[2]).toFixed(2)}px)`;
+        }
+        const f = el("div", "spk-face", g);
+        f.style.background = o.face;
+        return { group: g, shadow: shadowBlur };
+      }
+      const mixHex = (a, b, t) => {
+        const p = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+        const A = p(a), B = p(b);
+        return `rgb(${A.map((v, i) => Math.round(v + (B[i] - v) * t)).join(",")})`;
+      };
+
+      function makeCard(parent, x, y, spec) {
+        const [kind, h, dots, pos] = spec;
+        const c = el("div", "card", parent);
+        c.style.left = `${x}px`;
+        c.style.top = `${y}px`;
+        c.style.height = `${h}px`;
+        let light = false;
+        if (kind.startsWith("photo:")) {
+          c.style.background = "#8d8a87";
+          const img = el("img", "", c);
+          img.src = CFG.photos + kind.slice(6);
+          img.alt = "";
+          if (pos) img.style.objectPosition = pos;
+        } else {
+          c.style.background = CFG.palette[kind];
+          light = CFG.light.includes(kind);
+        }
+        if (dots) {
+          const d = el("div", light ? "dots dark" : "dots", c);
+          el("i", "", d); el("i", "", d); el("i", "", d);
+        }
+        c.dataset.kind = kind;
+        return c;
+      }
+
+      // Scroll velocity profile (px/s) -> normalised position table, used as a GSAP ease.
+      function buildScroll(totalDistance) {
+        const R = CFG.results;
+        const ss = (x) => (x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x));
+        const shape = (t, vmax) => {
+          if (t < R.accelAt) return R.driftV * ss((t - R.driftFrom) / 0.25);
+          if (t < R.accelAt + R.accelDur) return R.driftV + (vmax - R.driftV) * ss((t - R.accelAt) / R.accelDur);
+          if (t < R.cruiseEnd) return vmax;
+          return vmax * (1 - ss((t - R.cruiseEnd) / (R.stopAt - R.cruiseEnd)));
+        };
+        const dt = 0.0005;
+        const integrate = (vmax) => {
+          const pos = [0];
+          let s = 0;
+          for (let t = R.driftFrom; t < R.stopAt - 1e-9; t += dt) {
+            s += 0.5 * (shape(t, vmax) + shape(t + dt, vmax)) * dt;
+            pos.push(s);
+          }
+          return pos;
+        };
+        // Solve vmax so the selected card stops exactly where CFG says.
+        const base = integrate(0).at(-1);
+        const unit = integrate(1000).at(-1) - base;
+        const vmax = ((totalDistance - base) / unit) * 1000;
+        const table = integrate(vmax);
+        const total = table.at(-1);
+        const n = table.length - 1;
+        const ease = (p) => {
+          const f = Math.min(n, Math.max(0, p * n));
+          const i = Math.floor(f);
+          const fr = f - i;
+          return (table[i] + (table[Math.min(n, i + 1)] - table[i]) * fr) / total;
+        };
+        return { ease, vmax, total };
+      }
+
+      async function build() {
+        await Promise.all([
+          document.fonts.load('400 78px "Inter"'),
+          document.fonts.load('500 100px "Inter"'),
+        ]);
+        await document.fonts.ready;
+
+        const tl = gsap.timeline({ paused: true, defaults: { overwrite: false } });
+        const H = CFG.type.headline;
+
+        // ================= 00.00–02.00 OPENING QUESTION =================
+        const Q = CFG.question;
+        const q = setGlyphs(document.getElementById("line-q"), { text: Q.text, cx: Q.cx, cy: Q.cy, size: Q.size, track: H, ghosts: 3 });
+        const r1 = rng(7);
+        q.glyphs.forEach((g, i) => {
+          const t0 = Q.start + i * Q.stagger;
+          const dx = 40 + r1() * 40;
+          const dy = -(70 + r1() * 40);
+          const rot = -12 + r1() * 24;
+          const motion = (target, at) => {
+            tl.fromTo(target, { x: dx }, { x: 0, duration: Q.dur, ease: "power2.out" }, at);
+            tl.fromTo(target, { y: dy }, { y: 0, duration: Q.dur, ease: "back.out(1.25)" }, at);
+            tl.fromTo(target, { rotation: rot }, { rotation: 0, duration: Q.dur, ease: "back.out(1.2)" }, at);
+          };
+          motion(g, t0);
+          tl.fromTo(g, { opacity: 0 }, { opacity: 1, duration: 0.08, ease: "none" }, t0);
+          tl.fromTo(g, { color: "#b4473a" }, { color: "#242020", duration: Q.dur * 0.9, ease: "power1.in" }, t0);
+          // Muted red trail: three echoes following the same path a beat behind.
+          [0.34, 0.2, 0.1].forEach((a, k) => {
+            const gh = q.ghosts[i * 3 + k];
+            const lag = 0.022 * (k + 1);
+            motion(gh, t0 + lag);
+            tl.fromTo(gh, { opacity: 0 }, { opacity: a, duration: 0.05, ease: "none" }, t0);
+            tl.to(gh, { opacity: 0, duration: Q.dur * 0.55, ease: "power1.in" }, t0 + lag + Q.dur * 0.2);
+          });
+        });
+        // Exit left with restrained horizontal motion blur.
+        const lineQ = document.getElementById("line-q");
+        tl.set(lineQ, { filter: "url(#f-hblur)" }, Q.exitAt);
+        tl.fromTo(lineQ, { x: 0 }, { x: Q.exitX, duration: Q.exitDur, ease: "power2.in" }, Q.exitAt);
+        tl.fromTo(lineQ, { opacity: 1 }, { opacity: 0, duration: Q.exitDur * 0.75, ease: "power1.in" }, Q.exitAt + Q.exitDur * 0.25);
+        tl.fromTo("#f-hblur-g", { attr: { stdDeviation: "0 0" } }, { attr: { stdDeviation: "9 0" }, duration: Q.exitDur, ease: "power2.in" }, Q.exitAt);
+        tl.set(lineQ, { filter: "none" }, Q.exitAt + Q.exitDur + 0.01);
+
+        // ================= 02.00–03.50 ANSWER =================
+        const A = CFG.answer;
+        const a = setGlyphs(document.getElementById("line-a"), { cx: A.cx, cy: A.cy, size: A.size, track: H });
+        a.glyphs.forEach((g, i) => {
+          const t0 = A.start + i * A.stagger;
+          const wave = Math.sin(i * 0.75);
+          tl.fromTo(g, { x: 56 }, { x: 0, duration: A.dur, ease: "power3.out" }, t0);
+          tl.fromTo(g, { y: 34 + 16 * wave }, { y: 0, duration: A.dur, ease: "back.out(1.25)" }, t0);
+          tl.fromTo(g, { rotation: 5 * Math.cos(i * 0.75) }, { rotation: 0, duration: A.dur, ease: "power2.out" }, t0);
+          tl.fromTo(g, { opacity: 0 }, { opacity: 1, duration: 0.09, ease: "none" }, t0);
+        });
+
+        // Red source circle above the line.
+        const D = CFG.dot;
+        const dotScale = D.r / D.coverR;
+        tl.fromTo("#red-dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: dotScale, duration: 0.2, ease: "back.out(1.25)" }, D.appear);
+
+        // ================= 03.50–04.70 BRAND SYMBOL REVEAL =================
+        tl.to("#red-dot", { scale: 1, duration: D.expandDur, ease: "power3.inOut" }, D.expandAt);
+        tl.fromTo("#red-field", { opacity: 0 }, { opacity: 1, duration: 0.01 }, D.expandAt + D.expandDur);
+        tl.to("#red-dot", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, D.expandAt + D.expandDur);
+
+        const S = CFG.symbol;
+        const spk = buildSparkle(document.getElementById("spark-hero"), {
+          layers: S.depth,
+          step: [0.6, 0.7, 1],
+          layerColor: (t) => mixHex("#d9d4d5", "#a39d9e", t),
+          face: "linear-gradient(135deg, #ffffff 0%, #ffffff 52%, #f2eff0 100%)",
+          shadow: { dx: 34, dy: 42, blur: 26, color: "rgba(52, 4, 0, 0.42)" },
+        });
+        tl.fromTo(spk.group,
+          { scale: 0.58, rotationY: S.rotY, rotationZ: S.rotZ, rotationX: 6, opacity: 0, transformOrigin: "50% 50%" },
+          { scale: 1, rotationY: 0, rotationZ: 0, rotationX: 0, duration: S.dur, ease: "power3.out" }, S.start);
+        tl.to(spk.group, { opacity: 1, duration: 0.12, ease: "none" }, S.start);
+        tl.fromTo(spk.shadow, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" },
+          { opacity: 1, scale: 1, duration: S.dur, ease: "power3.out" }, S.start + 0.05);
+        // brief elastic settle on the face (≈5%)
+        tl.to(spk.group, { scale: 1.05, duration: 0.18, ease: "power2.out" }, S.start + S.dur * 0.55);
+        tl.to(spk.group, { scale: 1, duration: 0.22, ease: "power2.inOut" }, S.start + S.dur * 0.55 + 0.18);
+
+        // ================= 04.45–05.30 WHITE SPHERE WIPE =================
+        const SP = CFG.sphere;
+        const sx0 = SP.from[0] - 960, sy0 = SP.from[1] - 540;
+        tl.fromTo("#sphere", { x: sx0, y: sy0, scale: 0, transformOrigin: "50% 50%" },
+          { scale: SP.d0 / SP.d1, duration: 0.2, ease: "back.out(1.3)" }, SP.appear);
+        tl.to("#sphere", { x: SP.to[0] - 960, y: SP.to[1] - 540, scale: 1, duration: SP.moveDur, ease: "power2.inOut" }, SP.move);
+        // the sphere's bright centre becomes the stage; fade the remaining shading away
+        tl.fromTo("#sphere", { opacity: 1 }, { opacity: 0, duration: 0.24, ease: "power1.inOut" }, SP.move + SP.moveDur - 0.06);
+
+        // ================= 05.30–06.80 DISCOVERY BOARD =================
+        const B = CFG.board;
+        const uiSpark = buildSparkle(document.getElementById("ui-spark"), {
+          layers: 5, step: [0.7, 0.8, 0],
+          layerColor: (t) => mixHex("#a81d06", "#8a1705", t),
+          face: "linear-gradient(135deg, #e5391b 0%, #d92508 55%, #c92206 100%)",
+          shadow: { dx: 5, dy: 7, blur: 6, color: "rgba(0,0,0,0.18)" },
+        });
+        tl.fromTo("#ui-spark", { scale: 0, rotation: -45, transformOrigin: "50% 50%" },
+          { scale: 1, rotation: 0, duration: 0.42, ease: "back.out(1.3)" }, B.start);
+
+        const SB = CFG.searchBoard;
+        const search = document.getElementById("search");
+        gsap.set(search, { xPercent: -50, yPercent: -50 });
+        tl.fromTo(search,
+          { x: SB.cx + 40, y: SB.cy + 18, width: SB.w * 0.86, height: SB.h, borderRadius: SB.r, opacity: 0 },
+          { x: SB.cx, y: SB.cy, width: SB.w, duration: 0.46, ease: "power3.out" }, B.start + 0.06);
+        tl.to(search, { opacity: 1, duration: 0.14, ease: "none" }, B.start + 0.06);
+        const mag = document.getElementById("search-mag");
+        tl.fromTo(mag, { x: 0, scale: 0, transformOrigin: "50% 50%" },
+          { scale: SB.magScale, duration: 0.34, ease: "back.out(1.3)" }, B.start + 0.18);
+        tl.fromTo("#ui-profile", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.36, ease: "back.out(1.3)" }, B.start + 0.22);
+
+        const cats = ["#ui-thumb", "#tile-1", "#tile-2", "#tile-3"];
+        cats.forEach((sel, i) => {
+          const t0 = B.start + 0.30 + i * 0.07;
+          tl.fromTo(sel, { y: 34, scale: 0.9, opacity: 0, transformOrigin: "50% 50%" },
+            { y: 0, scale: 1, duration: 0.4, ease: "back.out(1.2)" }, t0);
+          tl.to(sel, { opacity: 1, duration: 0.12, ease: "none" }, t0);
+        });
+
+        const boardCards = document.getElementById("board-cards");
+        BOARD_COLS.forEach((col, ci) => {
+          let y = B.tops[ci];
+          col.forEach((spec, ri) => {
+            const c = makeCard(boardCards, B.colX[ci], y, spec);
+            y += spec[1] + B.gutter;
+            const t0 = B.start + 0.55 + ri * 0.16 + ci * 0.05;
+            tl.fromTo(c, { y: 64, scale: 0.94, opacity: 0, transformOrigin: "50% 40%" },
+              { y: 0, scale: 1, duration: 0.44, ease: "back.out(1.15)" }, t0);
+            tl.to(c, { opacity: 1, duration: 0.14, ease: "none" }, t0);
+          });
+        });
+
+        // ================= 06.80–08.60 SEARCH FOCUS =================
+        const SF = CFG.searchFocus;
+        tl.fromTo("#board", { filter: "blur(0px)", opacity: 1 },
+          { filter: "blur(12px)", opacity: 0, duration: 0.35, ease: "power2.in" }, SF.at);
+        tl.to(search, { x: SF.cx, y: SF.cy, width: SF.w, height: SF.h, borderRadius: SF.r,
+          boxShadow: "0 18px 34px rgba(0,0,0,0.13)", duration: 0.46, ease: "power3.inOut" }, SF.at);
+        tl.to(mag, { x: SB.magRight - SF.magRight, scale: 1, duration: 0.46, ease: "power3.inOut" }, SF.at);
+
+        const st = setGlyphs(document.getElementById("search-text"), { align: "left", x: 0, cy: 0, size: 50, track: CFG.type.ui });
+        st.glyphs.forEach((g, i) => {
+          const t0 = SF.typeStart + i * SF.typeStagger;
+          tl.fromTo(g, { y: 26, rotationX: -80, transformPerspective: 360, opacity: 0, transformOrigin: "50% 100%" },
+            { y: 0, rotationX: 0, duration: SF.typeDur, ease: "back.out(1.3)" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.07, ease: "none" }, t0);
+        });
+
+        // ================= 08.60–10.00 RESULTS ENTER =================
+        const R = CFG.results;
+        const ST = CFG.searchTop;
+        tl.to(search, { y: ST.cy, width: ST.w, height: ST.h, borderRadius: ST.r,
+          boxShadow: "0 12px 22px rgba(0,0,0,0.15)", duration: 0.5, ease: "power3.inOut" }, ST.at);
+
+        const viewport = document.getElementById("cols-viewport");
+        const colScroll = [];
+        let selectedCard = null;
+        let selectedTop = 0;
+        RESULT_COLS.forEach((col, ci) => {
+          const cs = el("div", "col-scroll", viewport);
+          const ce = el("div", "col-enter", cs);
+          colScroll.push(cs);
+          let y = R.tops[ci];
+          col.forEach((spec, ri) => {
+            const c = makeCard(ce, B.colX[ci], y, spec);
+            if (ci === R.selected[0] && ri === R.selected[1]) { selectedCard = c; selectedTop = y; }
+            y += spec[1] + B.gutter;
+          });
+          const t0 = R.enterAt + ci * R.colStagger;
+          tl.fromTo(ce, { y: 820 }, { y: 700, duration: R.enterAt - R.peekAt, ease: "power2.out" }, R.peekAt);
+          tl.to(ce, { y: 0, duration: R.enterDur, ease: "back.out(1.1)" }, t0);
+        });
+        tl.set(viewport, { filter: "url(#f-vblur)" }, R.enterAt);
+        tl.fromTo("#f-vblur-g", { attr: { stdDeviation: "0 11" } },
+          { attr: { stdDeviation: "0 0" }, duration: 0.5, ease: "power2.out" }, R.enterAt);
+        tl.set(viewport, { filter: "none" }, R.enterAt + 0.51);
+
+        // ================= 09.25–11.55 DRIFT + ACCELERATED SCROLL =================
+        const selH = RESULT_COLS[R.selected[0]][R.selected[1]][1];
+        const travel = selectedTop + selH / 2 - R.selectedCenterY; // column-2 travel
+        const scroll = buildScroll(travel);
+        colScroll.forEach((cs, ci) => {
+          tl.fromTo(cs, { y: 0 }, { y: -travel * R.mult[ci], duration: R.stopAt - R.driftFrom, ease: scroll.ease }, R.driftFrom);
+        });
+        tl.fromTo("#search-scroll", { y: 0 }, { y: -travel, duration: R.stopAt - R.driftFrom, ease: scroll.ease }, R.driftFrom);
+        // vertical motion blur tracks the speed profile
+        tl.set(viewport, { filter: "url(#f-vblur)" }, R.accelAt);
+        tl.to("#f-vblur-g", { attr: { stdDeviation: `0 ${R.peakBlur}` }, duration: R.accelDur, ease: "power2.in" }, R.accelAt);
+        tl.to("#f-vblur-g", { attr: { stdDeviation: "0 0" }, duration: R.stopAt - R.cruiseEnd - 0.06, ease: "power2.out" }, R.cruiseEnd);
+        tl.set(viewport, { filter: "none" }, R.stopAt - 0.04);
+
+        // ================= 11.55–12.55 SELECTED CARD -> HERO =================
+        const HC = CFG.hero;
+        const hero = document.getElementById("hero");
+        const startCx = B.colX[R.selected[0]] + CFG.board.colW / 2;
+        const startCy = R.selectedCenterY;
+        gsap.set(hero, { xPercent: -50, yPercent: -50, x: startCx, y: startCy, transformPerspective: 1300 });
+        tl.set(hero, { opacity: 1 }, HC.liftAt);
+        tl.set(selectedCard, { opacity: 0 }, HC.liftAt);
+        // lift forward
+        tl.to(hero, { scale: 1.1, rotation: HC.tiltZ, rotationY: HC.tiltY, x: startCx + 18, y: startCy - 8,
+          boxShadow: "0 34px 54px rgba(0,0,0,0.24)", duration: HC.flyAt - HC.liftAt, ease: "power2.out" }, HC.liftAt);
+        tl.fromTo("#results", { filter: "blur(0px)", scale: 1, transformOrigin: "50% 50%" },
+          { filter: "blur(10px)", scale: 0.965, duration: 0.32, ease: "power2.out" }, HC.liftAt);
+        tl.fromTo("#results", { opacity: 1 }, { opacity: 0, duration: 0.62, ease: "power1.inOut" }, HC.liftAt + 0.48);
+        // fly to hero size, settle almost frontal by 12.55
+        const flyDur = HC.settleBy - HC.flyAt;
+        tl.to(hero, { x: HC.cx, y: HC.cy, width: HC.w, height: HC.h, "--rx": `${HC.r}px`, "--ry": `${HC.r}px`, scale: 1,
+          boxShadow: "0 20px 40px rgba(0,0,0,0.20)", duration: flyDur, ease: "expo.out" }, HC.flyAt);
+        tl.to(hero, { rotation: 0, rotationY: 0, duration: flyDur, ease: "back.out(1.3)" }, HC.flyAt);
+        tl.fromTo("#hero-photo", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.42, ease: "power2.out" }, HC.flyAt - 0.06);
+        tl.fromTo("#hero-scrim", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "none" }, HC.flyAt + 0.3);
+
+        // ================= 12.35–12.80 FLOATING ACTION CONTROLS =================
+        const BT = CFG.buttons;
+        const btns = [["#btn-edit", 1175, 450], ["#btn-pin", 1320, 620], ["#btn-heart", 1260, 825], ["#btn-share", 1050, 890]];
+        btns.forEach(([sel, bx, by], i) => {
+          const t0 = BT.start + i * BT.stagger;
+          const k = 0.55;
+          tl.fromTo(sel, { x: (HC.cx - bx) * k, y: (HC.cy - by) * k, scale: 0.6, transformOrigin: "50% 50%" },
+            { x: 0, y: 0, scale: 1, duration: BT.dur, ease: "back.out(1.3)" }, t0);
+        });
+        tl.fromTo("#hero-lens", { scale: 0, opacity: 0, transformOrigin: "50% 50%" },
+          { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.3)" }, BT.start + 0.3);
+
+        // ================= 14.00–14.80 SAVE ACTION =================
+        const SV = CFG.save;
+        tl.to("#btn-pin", { backgroundColor: "#D92508",
+          boxShadow: "0 14px 26px rgba(0,0,0,0.22), 0 0 26px 10px rgba(217,37,8,0.20)", duration: 0.12, ease: "power2.out" }, SV.at);
+        tl.to("#btn-pin", { scale: 1.07, duration: 0.12, ease: "power2.out" }, SV.at);
+        tl.to("#btn-pin", { scale: 1, duration: 0.2, ease: "power2.inOut" }, SV.at + 0.12);
+        tl.fromTo("#hero-tint", { opacity: 0 }, { opacity: 0.22, duration: 0.12, ease: "power2.out" }, SV.at + 0.02);
+        tl.to("#hero-tint", { opacity: 0.06, duration: 0.26, ease: "power1.inOut" }, SV.at + 0.14);
+        tl.to("#hero-lens", { opacity: 0, scale: 0.6, duration: 0.18, ease: "power2.in" }, SV.at + 0.1);
+
+        // controls drift inward, then retract behind the forming capsule
+        const cap = SV.capsule;
+        [["#btn-edit", 1175, 450], ["#btn-heart", 1260, 825], ["#btn-share", 1050, 890]].forEach(([sel, bx, by], i) => {
+          tl.to(sel, { x: (HC.cx - bx) * 0.28, y: (HC.cy - by) * 0.28, scale: 0.86, duration: 0.42, ease: "power2.inOut" }, SV.at + 0.18 + i * 0.04);
+          tl.to(sel, { x: cap.cx - bx, y: cap.cy - by, scale: 0.3, duration: 0.42, ease: "power3.in" }, SV.at + 0.56 + i * 0.03);
+        });
+        tl.to("#btn-pin", { x: cap.cx - 1320, y: cap.cy - 620, scale: 0.34, duration: 0.5, ease: "power3.inOut" }, SV.at + 0.42);
+        tl.set(["#btn-edit", "#btn-heart", "#btn-share", "#btn-pin"], { opacity: 0 }, SV.morphEnd + 0.02);
+
+        // card compresses into the capsule
+        const morphDur = SV.morphEnd - SV.morphAt;
+        tl.to(hero, { x: cap.cx, y: cap.cy, width: cap.w, height: cap.h, "--rx": `${cap.r}px`, "--ry": `${cap.r}px`,
+          boxShadow: "0 12px 24px rgba(90,6,0,0.22)", duration: morphDur, ease: "power3.inOut" }, SV.morphAt);
+        tl.fromTo("#hero-capsule", { opacity: 0 }, { opacity: 1, duration: 0.42, ease: "power1.inOut" }, SV.morphAt + 0.2);
+        tl.set(["#hero-photo", "#hero-scrim", "#hero-tint"], { opacity: 0 }, SV.morphEnd);
+        tl.set("#hero-closing", { opacity: 1 }, SV.morphEnd);
+        // capsule lands with a brief elastic settle (~5%)
+        tl.to(hero, { scaleX: 1.05, scaleY: 0.96, duration: 0.1, ease: "power2.out" }, SV.morphEnd - 0.04);
+        tl.to(hero, { scaleX: 1, scaleY: 1, duration: 0.22, ease: "power2.inOut" }, SV.morphEnd + 0.06);
+
+        // ================= 14.80–16.00 CONFIRMATION =================
+        const sv = setGlyphs(document.getElementById("hero-saved"), { cx: 0, cy: 0, size: 42, track: CFG.type.ui });
+        sv.glyphs.forEach((g, i) => {
+          const t0 = SV.savedStart + i * SV.savedStagger;
+          tl.fromTo(g, { y: 24 + 8 * Math.sin(i * 1.1), opacity: 0 },
+            { y: 0, duration: SV.savedDur, ease: "back.out(1.25)" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.06, ease: "none" }, t0);
+        });
+
+        // ================= 15.75–17.20 FINAL BRAND TRANSFORMATION =================
+        tl.to(hero, { width: 560, height: 320, "--rx": "280px", "--ry": "160px", boxShadow: "0 12px 24px rgba(90,6,0,0)",
+          duration: 0.3, ease: "power2.inOut" }, SV.expandAt);
+        tl.to(hero, { width: 3000, height: 1700, "--rx": "1500px", "--ry": "850px", duration: 0.45, ease: "power2.in" }, SV.expandAt + 0.3);
+        tl.to("#hero-capsule", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, SV.expandAt + 0.1);
+        tl.set("#final-bg", { opacity: 1 }, SV.expandAt + 0.75);
+        // "Saved" letters leave on short curved paths
+        sv.glyphs.forEach((g, i) => {
+          const dir = i - (sv.glyphs.length - 1) / 2;
+          const t0 = 15.95 + Math.abs(dir) * 0.02;
+          tl.to(g, { x: dir * 46, duration: 0.42, ease: "power2.in" }, t0);
+          tl.to(g, { y: -46 - 14 * Math.abs(dir), duration: 0.42, ease: "power3.in" }, t0);
+          tl.to(g, { opacity: 0, duration: 0.3, ease: "power1.in" }, t0 + 0.08);
+        });
+
+        const F = CFG.final;
+        const fs = buildSparkle(document.getElementById("final-spark"), {
+          layers: 9, step: [0.62, 0.72, 0],
+          layerColor: (t) => mixHex("#dcd6d7", "#aaa4a5", t),
+          face: "linear-gradient(135deg, #ffffff 0%, #ffffff 55%, #f3f0f1 100%)",
+          shadow: { dx: 12, dy: 15, blur: 11, color: "rgba(40, 2, 0, 0.38)" },
+        });
+        tl.fromTo("#final-spark", { x: 0, y: 540 - F.spark.cy, scale: 0.16, rotation: -45, opacity: 0, transformOrigin: "50% 50%" },
+          { y: 0, scale: 1, rotation: 0, duration: 0.72, ease: "back.out(1.2)" }, 16.15);
+        tl.to("#final-spark", { opacity: 1, duration: 0.12, ease: "none" }, 16.15);
+
+        const wm = setGlyphs(document.getElementById("wordmark"), { cx: F.word.cx, cy: F.word.cy, size: F.word.size, weight: 500, track: H });
+        wm.glyphs.forEach((g, i) => {
+          const t0 = 16.42 + i * 0.03;
+          tl.fromTo(g, { y: 42, scale: 0.9, opacity: 0, transformOrigin: "50% 80%" },
+            { y: 0, scale: 1, duration: 0.42, ease: "back.out(1.2)" }, t0);
+          tl.to(g, { opacity: 1, duration: 0.12, ease: "none" }, t0);
+        });
+        const tg = setGlyphs(document.getElementById("tagline"), { cx: F.tag.cx, cy: F.tag.cy, size: F.tag.size, track: H });
+        // tagline arrives word by word
+        let w = 0;
+        tg.glyphs.forEach((g, i) => {
+          if (i > 0 && tg.text[i - 1] === " ") w++;
+          const t0 = 16.95 + w * 0.07;
+          tl.fromTo(g, { y: 18, opacity: 0 }, { y: 0, duration: 0.42, ease: "power3.out" }, t0);
+          tl.to(g, { opacity: F.tag.opacity, duration: 0.3, ease: "power1.out" }, t0);
+        });
+
+        window.__formaScroll = { vmax: Math.round(scroll.vmax), travel: Math.round(travel) };
+        window.__timelines["forma"] = tl;
+        if (window.__hfForceTimelineRebind) window.__hfForceTimelineRebind();
+      }
+
+      build();
+    </script>
+  </body>
+</html>
