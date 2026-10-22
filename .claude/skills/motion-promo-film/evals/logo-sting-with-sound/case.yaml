@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: logo-sting-with-sound
+expected_outcome: |
+  A 5-second, 1920×1080, 30 fps MP4 (150 frames) with an AAC soundtrack of the same length. The film is a
+  deterministic animation rendered frame by frame: the letters of MAISON LUNE drop in one by one, a gold
+  crescent swings and settles above the word, a gold shine sweeps across, and the logo holds to the end.
+  Only the three given colours are used. Pops and swooshes land on the matching motion events over a quiet
+  music bed, the master is around -15 LUFS with true peak at or below -1 dBTP, and the response reports the
+  checks that were run on the file.

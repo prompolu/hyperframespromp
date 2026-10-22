@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Halden — product card</title>
+<style>
+  html, body { margin: 0; background: #E9E4DA; }
+  #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #E9E4DA; font-family: Georgia, 'Times New Roman', serif; }
+  .card { position: absolute; left: 560px; top: 190px; width: 800px; height: 700px; border-radius: 40px; background: #FBF8F2; box-shadow: 0 30px 80px rgba(43, 36, 27, 0.18); }
+  .lamp { position: absolute; left: 320px; top: 50px; width: 160px; height: 240px; }
+  .title { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font-size: 60px; line-height: 72px; color: #2B241B; }
+  .feature { position: absolute; top: 420px; width: 160px; text-align: center; }
+  .feature .icon { width: 96px; height: 96px; margin: 0 auto; border-radius: 50%; background: #2F4B3A; display: grid; place-items: center; }
+  .feature .icon svg { width: 44px; height: 44px; stroke: #FBF8F2; stroke-linecap: round; stroke-linejoin: round; }
+  .feature .label { margin-top: 12px; font: 22px/28px Arial, Helvetica, sans-serif; color: #6B5F50; }
+  .btn { position: absolute; left: 290px; top: 592px; width: 220px; height: 72px; border-radius: 36px; background: #C2683E; color: #FBF8F2; font: 600 26px/72px Arial, Helvetica, sans-serif; text-align: center; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="card" id="card">
+    <svg class="lamp" id="lamp" viewBox="0 0 160 240" aria-hidden="true">
+      <path d="M40 20h80l30 90H10z" fill="#C2683E"/>
+      <rect x="74" y="110" width="12" height="96" fill="#2B241B"/>
+      <ellipse cx="80" cy="214" rx="56" ry="14" fill="#8A6A48"/>
+    </svg>
+    <div class="title" id="title">Halden table lamp</div>
+    <div class="feature" style="left: 140px">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="7"/><path d="M12 5a7 7 0 0 1 0 14z" fill="#FBF8F2"/></svg></div>
+      <div class="label">Dimmable</div>
+    </div>
+    <div class="feature" style="left: 320px">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/></svg></div>
+      <div class="label">Oak base</div>
+    </div>
+    <div class="feature" style="left: 500px">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 17h6M10 20h4M12 3a6 6 0 0 0-3.5 10.9V15h7v-1.1A6 6 0 0 0 12 3z"/></svg></div>
+      <div class="label">Warm 2700 K</div>
+    </div>
+    <div class="btn" id="btn">Shop now</div>
+  </div>
+</div>
+<script src="gsap.min.js"></script>
+<script>
+  // Plays once on load; 6 s in total.
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  tl.from('#card', { y: 900, rotation: 6, duration: 0.9 }, 0)
+    .from('#lamp', { scale: 0.4, autoAlpha: 0, duration: 0.6, ease: 'back.out(2)', transformOrigin: '50% 100%' }, 0.7)
+    .from('#title', { y: 30, autoAlpha: 0, duration: 0.6 }, 1.3)
+    .from('.feature', { scale: 0, autoAlpha: 0, duration: 0.45, ease: 'back.out(3)', stagger: 0.25 }, 2.1)
+    .from('#btn', { y: -140, autoAlpha: 0, duration: 0.8, ease: 'bounce.out' }, 3.3)
+    .to('#card', { x: -1400, rotation: -8, duration: 0.7, ease: 'power3.in' }, 5.1)
+    .set({}, {}, 6.0);
+</script>
+</body>
+</html>

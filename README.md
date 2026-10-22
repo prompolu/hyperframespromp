@@ -10,6 +10,21 @@ A cut-free morph-chain website promo: the P mark becomes an app tile, a button, 
 - [Contact sheet](videos/prompolu-nos-gammes/evidence/contact-sheet.jpg) · [sound cues](videos/prompolu-nos-gammes/cues.txt) · [audio analysis](videos/prompolu-nos-gammes/evidence/soundtrack-analysis.png)
 - [Source, choices and rendering instructions](videos/prompolu-nos-gammes/README.md)
 
+## Skill — motion-promo-film
+
+The workflow behind *Nos gammes* is saved as a Claude Code project skill in [`.claude/skills/motion-promo-film/`](.claude/skills/motion-promo-film/SKILL.md). In this repository it loads by itself when you ask for a promo film, a logo reveal or sound design for an animation. It contains:
+
+- **A project template.**
+  - A deterministic GSAP page with motion blur, typography and logo helpers.
+  - A frame-accurate Playwright and FFmpeg renderer.
+  - A motion export for the soundtrack.
+- **A sound engine.** It synthesises pops, swooshes, hits and a music bed that follow the motion on screen, and masters them to −15 LUFS.
+- **Review and verification tools:** contact sheets, audio analysis, last-frame comparison and final-file checks.
+- **References:** the engine, sound design, a review checklist and the PROMPOLU worked example.
+- **Three test cases** in `evals/`.
+
+Start a new film with `bash .claude/skills/motion-promo-film/scripts/new_film.sh videos/<name> <name>`.
+
 ## 60-second photographic version
 
 Rebuilt with real photographic imagery, the website's light ivory/dark ink/bronze identity, French voiceover and original music. 1080 × 1920, 30 FPS, 60 seconds. Photos are credited illustrative stock, not claims of PROMPOLU installations.

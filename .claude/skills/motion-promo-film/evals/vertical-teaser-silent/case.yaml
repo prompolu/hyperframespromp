@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: vertical-teaser-silent
+expected_outcome: |
+  A silent 6-second vertical MP4, 1080 px wide by 1920 px tall at 30 fps (180 frames), with no audio stream,
+  plus a contact sheet of frames across the film. The beats follow the brief: the icon bounces in, grows and
+  morphs into a phone-screen card with three note rows sliding in, the card leaves upward while the French
+  line types in letter by letter, and the icon and Fieldnote wordmark settle with « Disponible le 12 novembre »
+  underneath. Only the three palette colours are used.

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Motion film</title>
+<!--
+  Built from the motion-promo-film skill template. One paused GSAP 3 timeline drives everything, and
+  window.seek(t) renders time t deterministically (no clocks, no randomness at render time).
+  Preview: npm run preview (loops; ?t=1.2 freezes a time). Render: npm run render (?render, t = frame / fps).
+  Replace the demo film (CSS "demo", markup inside #camera, build()); keep the runtime as is.
+-->
+<style>
+/* Brand fonts: bundle them in assets/fonts (check the licence) and list them in FONT_FACES below. */
+@font-face{font-family:"Inter Display";src:url("assets/fonts/InterDisplay-Regular.otf") format("opentype");font-weight:400;font-style:normal}
+@font-face{font-family:"Inter Display";src:url("assets/fonts/InterDisplay-SemiBold.otf") format("opentype");font-weight:600;font-style:normal}
+
+/* Brand tokens: the only colours on screen (photos excepted). Replace with the brief's palette. */
+:root{--ink:#15171A;--paper:#F1F0EC;--accent:#8C6A45;--ink2:#2B2D2F;--gray:#838483;--paper2:#E4E3DF}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--ink);overflow:hidden}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--paper);transform-origin:0 0;
+  font-family:"Inter Display",system-ui,sans-serif;letter-spacing:-.01em;color:var(--ink);font-kerning:normal;-webkit-font-smoothing:antialiased}
+.layer{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.pc{position:absolute;left:0;top:0}               /* placed by its centre: GSAP x/y are the centre point */
+svg,img{display:block}
+.ch{position:absolute;top:0;display:inline-block;white-space:pre;transform-origin:50% 80%}
+.fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;
+  background:var(--paper);color:var(--ink);font-weight:600;font-size:24px;line-height:1.15}
+
+/* ── demo film (replace) ── */
+#bg{background:var(--paper)}
+#icon{width:280px;height:280px}
+#tile{position:absolute;inset:0;border-radius:34%;corner-shape:squircle;
+  background:linear-gradient(180deg,var(--paper) 0%,var(--paper2) 100%);
+  box-shadow:inset 0 1px 0 rgba(241,240,236,.9),0 20px 40px rgba(21,23,26,.18)}
+#markWrap{position:absolute;left:65px;top:65px;width:150px;height:150px}
+#mark,#mark svg{width:100%;height:100%}
+#title{position:absolute;left:740px;top:466px;white-space:nowrap;font-weight:600;font-size:96px;line-height:116px;color:var(--ink)}
+#subtitle{position:absolute;left:745px;top:592px;white-space:nowrap;font-weight:400;font-size:34px;line-height:44px;color:var(--gray);opacity:0}
+#card{width:420px;height:150px;border-radius:999px;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;
+  font-weight:600;font-size:40px;visibility:hidden;box-shadow:0 24px 44px rgba(21,23,26,.22)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg id="fx" width="0" height="0" style="position:absolute;left:0;top:0" aria-hidden="true"><defs id="fxDefs"></defs></svg>
+  <div id="bg" class="layer"></div>
+  <!-- Backgrounds go above, outside the camera; overlays (flash, bloom, vignette) and an exact end frame go after it. -->
+  <div id="camera" class="layer">
+    <div id="icon" class="pc">
+      <div id="tile"></div>
+      <div id="markWrap"><div id="mark">
+        <svg id="markSvg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="33" fill="none" stroke="#15171A" stroke-width="14"/><circle cx="50" cy="50" r="10" fill="#8C6A45"/></svg>
+      </div></div>
+    </div>
+    <div id="title">Votre marque</div>
+    <div id="subtitle">Une phrase qui donne envie.</div>
+    <div id="card" class="pc">Découvrir</div>
+  </div>
+</div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/MotionPathPlugin.min.js"></script>
+<script>
+(() => {
+'use strict';
+
+/* ───────────────────────── film constants ───────────────────────── */
+const W = 1920, H = 1080, DUR = 4.0, FPS = 30;
+const C = { ink: '#15171A', paper: '#F1F0EC', accent: '#8C6A45', ink2: '#2B2D2F', gray: '#838483', paper2: '#E4E3DF' };
+const FONT_FACES = ['400 32px "Inter Display"', '600 32px "Inter Display"'];
+// What scripts/export-motion.mjs samples for the soundtrack: [channel, selector, GSAP property].
+const MOTION_CHANNELS = [
+  ['camera.x', '#camera', 'x'], ['camera.y', '#camera', 'y'], ['camera.scale', '#camera', 'scale'],
+  ['mark.y', '#markWrap', 'y'], ['icon.x', '#icon', 'x'], ['icon.y', '#icon', 'y'], ['tile.scale', '#tile', 'scale'],
+  ['card.x', '#card', 'x'], ['card.y', '#card', 'y'],
+];
+
+/* ───────────────────────── runtime (keep) ───────────────────────── */
+const SVGNS = 'http://www.w3.org/2000/svg';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const gp = (el, p) => gsap.getProperty(el, p);
+const params = new URLSearchParams(location.search);
+const RENDER = params.has('render');
+
+gsap.registerPlugin(MotionPathPlugin);
+gsap.config({ force3D: false, nullTargetWarn: false });   // 2D transforms re-rasterise crisply every frame
+gsap.ticker.lagSmoothing(0);
+const tl = gsap.timeline({ paused: true, defaults: { ease: 'none' } });
+
+// Damped-spring ease with an exact first overshoot (fraction of the move) that lands on 1 at t = 1.
+function spring(overshoot, settle = 5.2) {
+  const L = Math.log(overshoot);
+  const z = -L / Math.sqrt(Math.PI * Math.PI + L * L);
+  const w = settle / z, wd = w * Math.sqrt(1 - z * z), c = z / Math.sqrt(1 - z * z);
+  const x = t => 1 - Math.exp(-z * w * t) * (Math.cos(wd * t) + c * Math.sin(wd * t));
+  const e1 = x(1);
+  return t => (t <= 0 ? 0 : t >= 1 ? 1 : x(t) + (1 - e1) * t);
+}
+
+// Split a single-line text element into absolutely placed letters at their kerned positions.
+// Call before any transform is applied to the element or its ancestors.
+function split(el) {
+  el = typeof el === 'string' ? $(el) : el;
+  const text = el.textContent, node = el.firstChild;
+  const box = el.getBoundingClientRect(), r = document.createRange();
+  const xs = [];
+  for (let i = 0; i < text.length; i++) {
+    r.setStart(node, i); r.setEnd(node, i + 1);
+    xs.push(r.getBoundingClientRect().left - box.left);
+  }
+  el.style.width = box.width + 'px';
+  el.style.height = box.height + 'px';
+  el.textContent = '';
+  return Array.from(text).map((ch, i) => {
+    const s = document.createElement('span');
+    s.className = 'ch';
+    s.textContent = ch;
+    s.style.left = xs[i] + 'px';
+    el.appendChild(s);
+    return s;
+  });
+}
+
+// Letter settle: enter offset at 70 % in an accent colour, settle to the final colour and place.
+// Transform, opacity and colour are separate tweens so back.out never overshoots a colour off-palette.
+function settle(chars, at, o) {
+  const { final, from = C.accent, stagger = 0.04, dur = 0.26, dy = 14, dir = 1, s0 = 0.7, wave = 4 } = o;
+  gsap.set(chars, { opacity: 0, color: from, scale: s0, y: i => dir * (dy + wave * Math.sin(i * 1.3 + 0.6)) });
+  tl.to(chars, { y: 0, scale: 1, duration: dur, ease: 'back.out(1.8)', stagger }, at);
+  tl.to(chars, { opacity: 1, duration: Math.min(0.12, dur * 0.5), ease: 'power1.out', stagger }, at);
+  tl.to(chars, { color: final, duration: dur, ease: 'sine.inOut', stagger }, at);
+}
+
+// Same settle for SVG logo letter paths (k = stage px per SVG user unit).
+function settleSvg(paths, at, { final, k, from = C.accent, stagger = 0.04, dur = 0.26 }) {
+  gsap.set(paths, { opacity: 0, fill: from, scale: 0.7, transformOrigin: '50% 100%', y: i => (14 + 4 * Math.sin(i * 1.3 + 0.6)) / k });
+  tl.to(paths, { y: 0, scale: 1, duration: dur, ease: 'back.out(1.8)', stagger }, at);
+  tl.to(paths, { opacity: 1, duration: 0.12, ease: 'power1.out', stagger }, at);
+  tl.to(paths, { fill: final, duration: dur, ease: 'sine.inOut', stagger }, at);
+}
+
+function svgEl(tag, attrs, parent) {
+  const n = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(n);
+  return n;
+}
+
+// Gaussian blur filter whose stdDeviation the timeline can tween with { attr: { stdDeviation } } (SVG letters).
+function blurFilter(id, std, parent = $('#fxDefs')) {
+  const f = svgEl('filter', { id, x: '-60%', y: '-60%', width: '220%', height: '220%', 'color-interpolation-filters': 'sRGB' }, parent);
+  return svgEl('feGaussianBlur', { stdDeviation: std }, f);
+}
+
+/* Velocity motion blur: each tracked element gets its own SVG feGaussianBlur. At each seek the timeline is also
+   sampled half a frame either side; the per-frame displacement (≈180° shutter) sets stdDeviation "sx sy",
+   capped per element and removed when still. Never tween `filter` on a tracked element (use a wrapper). */
+const MB = [];
+function mblur(el, { pos, windows, max = 14, gain = 0.18, scale = () => 1, outer = () => 1, rx = 0.6, ry = 0.6 }) {
+  el = typeof el === 'string' ? $(el) : el;
+  const id = 'mb' + MB.length;
+  const f = svgEl('filter', {
+    id, x: `${-rx * 100}%`, y: `${-ry * 100}%`, width: `${100 + rx * 200}%`, height: `${100 + ry * 200}%`,
+    'color-interpolation-filters': 'sRGB',
+  }, $('#fxDefs'));
+  const g = svgEl('feGaussianBlur', { stdDeviation: '0 0' }, f);
+  MB.push({ el, pos, windows, max, gain, scale, outer, g, id, on: false, dx: 0, dy: 0 });
+}
+const xy = sel => () => ({ x: gp(sel, 'x'), y: gp(sel, 'y') });      // position in the parent's space
+const own = sel => () => gp(sel, 'scale');                           // the element's own scale
+const cam = () => gp('#camera', 'scale');                            // ancestors' scale
+
+const HALF = 1 / (FPS * 2);
+function seek(t) {
+  t = Math.min(Math.max(+t || 0, 0), DUR);
+  const active = MB.filter(m => m.windows.some(([a, b]) => t >= a && t <= b));
+  if (active.length) {
+    const ta = Math.max(0, t - HALF), tb = Math.min(DUR, t + HALF);
+    tl.seek(ta, false); const A = active.map(m => m.pos());
+    tl.seek(tb, false); const B = active.map(m => m.pos());
+    const k = (1 / FPS) / (tb - ta);
+    active.forEach((m, i) => { m.dx = Math.abs(B[i].x - A[i].x) * k; m.dy = Math.abs(B[i].y - A[i].y) * k; });
+  }
+  tl.seek(t, false);
+  for (const m of MB) {
+    let sx = 0, sy = 0;
+    if (active.includes(m)) {
+      const s = Math.max(0.05, m.scale()), o = Math.max(0.05, m.outer());
+      sx = Math.min(m.max, m.gain * m.dx * o) / (s * o);
+      sy = Math.min(m.max, m.gain * m.dy * o) / (s * o);
+    }
+    if (sx < 0.35 && sy < 0.35) {
+      if (m.on) { m.el.style.filter = ''; m.on = false; }
+    } else {
+      m.g.setAttribute('stdDeviation', `${sx.toFixed(2)} ${sy.toFixed(2)}`);
+      if (!m.on) { m.el.style.filter = `url(#${m.id})`; m.on = true; }
+    }
+  }
+  return t;
+}
+
+function fallback(img) {
+  const d = document.createElement('div');
+  d.className = 'fallback';
+  d.textContent = img.dataset.name || img.alt || '';
+  img.replaceWith(d);
+}
+
+async function loadAssets() {
+  await Promise.all(FONT_FACES.map(f => document.fonts.load(f, 'AaÉéèç0123456789–•·›')));
+  await document.fonts.ready;
+  await Promise.all($$('img').map(async img => {
+    try {
+      if (!img.complete) {
+        await new Promise((res, rej) => {
+          img.addEventListener('load', res, { once: true });
+          img.addEventListener('error', rej, { once: true });
+        });
+      }
+      if (!img.naturalWidth) throw new Error('empty image');
+      await img.decode();
+    } catch (e) {
+      fallback(img);
+    }
+  }));
+}
+
+/* ───────────────────────── the film (replace) ───────────────────────── */
+function build() {
+  const title = split('#title');                         // measure letters before any transform
+
+  // initial state
+  gsap.set('.pc', { xPercent: -50, yPercent: -50 });
+  gsap.set('#camera', { transformOrigin: `${W / 2}px ${H / 2}px` });
+  gsap.set('#icon', { x: 960, y: 540 });
+  gsap.set('#tile', { scale: 0.4, opacity: 0 });
+  gsap.set('#markWrap', { y: 470 });
+  gsap.set('#mark', { rotation: -25, scale: 0.85 });
+  gsap.set('#card', { x: 2300, y: 820, autoAlpha: 0 });
+
+  // 0.00–0.60 the mark rises (expo.out, motion-blurred)
+  tl.to('#markWrap', { y: 0, duration: 0.6, ease: 'expo.out' }, 0);
+  tl.to('#mark', { rotation: 0, duration: 0.6, ease: 'expo.out' }, 0);
+  // 0.60 the tile springs in behind it, overshooting 12 %
+  tl.to('#tile', { opacity: 1, duration: 0.05 }, 0.6);
+  tl.to('#tile', { scale: 1, duration: 0.32, ease: spring(0.12, 5) }, 0.6);
+  tl.to('#mark', { scale: 1.25, duration: 0.1, ease: 'power2.out' }, 0.6);
+  tl.to('#mark', { scale: 1, duration: 0.22, ease: spring(0.08, 5) }, 0.7);
+  // 1.00–1.40 the icon glides left while the camera pushes in
+  tl.to('#icon', { x: 560, duration: 0.4, ease: 'sine.inOut' }, 1.0);
+  tl.to('#camera', { scale: 1.04, duration: 0.6, ease: 'sine.inOut' }, 1.0);
+  // 1.25 title letters settle, 1.70 subtitle
+  settle(title, 1.25, { final: C.ink, stagger: 0.035 });
+  tl.fromTo('#subtitle', { y: 10 }, { y: 0, duration: 0.3, ease: 'power2.out', immediateRender: false }, 1.7);
+  tl.to('#subtitle', { opacity: 1, duration: 0.25, ease: 'power1.out' }, 1.7);
+  // 2.20 a card slides in from the right
+  tl.set('#card', { autoAlpha: 1 }, 2.2);
+  tl.to('#card', { x: 1440, duration: 0.45, ease: 'expo.out' }, 2.2);
+  // 3.00 camera eases back, hold to the end
+  tl.to('#camera', { scale: 1, duration: 0.6, ease: 'sine.inOut' }, 3.0);
+  tl.set({}, {}, DUR);
+
+  // motion blur on the fast moves only
+  mblur('#markWrap', { pos: xy('#markWrap'), windows: [[0, 0.7]], rx: 0.9, ry: 0.9 });
+  mblur('#icon', { pos: xy('#icon'), windows: [[0.98, 1.45]], scale: own('#icon'), outer: cam });
+  mblur('#card', { pos: xy('#card'), windows: [[2.18, 2.7]], outer: cam, rx: 0.4, ry: 0.8 });
+}
+
+/* ───────────────────────── boot (keep) ───────────────────────── */
+function startPreview() {
+  const stage = $('#stage');
+  const fit = () => {
+    const s = Math.min(innerWidth / W, innerHeight / H);
+    stage.style.transform = `translate(${(innerWidth - W * s) / 2}px, ${(innerHeight - H * s) / 2}px) scale(${s})`;
+  };
+  fit();
+  addEventListener('resize', fit);
+  if (params.has('t')) { seek(parseFloat(params.get('t'))); return; }
+  const t0 = performance.now();                           // preview only: render mode never reads a clock
+  const loop = now => { seek(((now - t0) / 1000) % (DUR + 1)); requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+}
+
+window.seek = seek;
+window.__duration = DUR;
+window.__fps = FPS;
+window.__width = W;
+window.__height = H;
+window.__timeline = tl;
+window.__motionChannels = MOTION_CHANNELS;
+window.__ready = (async () => {
+  await loadAssets();
+  build();
+  seek(0);
+  if (!RENDER) startPreview();
+  return true;
+})();
+})();
+</script>
+</body>
+</html>

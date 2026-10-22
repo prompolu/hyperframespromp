@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: add-sound-to-existing-animation
+expected_outcome: |
+  A 1920×1080 MP4 of the user's unchanged 6-second animation with an AAC soundtrack of the same length.
+  The page is only adapted for rendering (timeline paused and seeked frame by frame), and its tweens, timing
+  and look stay as they were. The soundtrack follows the animation's own timing: swooshes for the card's
+  entrance and exit, a pop for each of the three icons at their staggered times, a cue for the button's
+  bounce, and a soft bed underneath. Loudness and sync of the final file are measured and reported.
+context:
+  scaffold_script: place-files.sh

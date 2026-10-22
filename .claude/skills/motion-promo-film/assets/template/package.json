@@ -1,0 +1,15 @@
+{
+  "name": "motion-film",
+  "private": true,
+  "type": "module",
+  "description": "Motion-graphics film: one deterministic GSAP page rendered frame by frame (Playwright + FFmpeg), with a synthesised soundtrack.",
+  "scripts": {
+    "soundtrack": "python3 scripts/compose-soundtrack.py",
+    "render": "node scripts/render.mjs",
+    "stills": "node scripts/render.mjs --stills 0.3,0.6,0.9,1.2,1.6,2.3,2.6,3.9",
+    "preview": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}
