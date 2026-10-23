@@ -1,0 +1,54 @@
+{
+  "note": "French voiceover script. 'text' is what is said (and shown in the README); 'say' is the same sentence respelled only where a TTS voice needs help (brand names, standards, the web address). Every line comes from saraprocmaroc.com or from the brief.",
+  "lines": [
+    { "id": "ouv1", "section": "ouverture", "text": "SARAPROC MAROC : des solutions pour chaque besoin professionnel.",
+      "say": "Saraproc Maroc : des solutions pour chaque besoin professionnel." },
+    { "id": "ouv2", "section": "ouverture", "text": "Hygiène, produits chimiques industriels, agriculture et traitement des eaux." },
+
+    { "id": "his1", "section": "histoire", "text": "Depuis 2002, à Fès, dans le quartier industriel Sidi Brahim, SARAPROC fabrique et distribue plus de trois cents produits.",
+      "say": "Depuis deux mille deux, à Fès, dans le quartier industriel Sidi Brahim, Saraproc fabrique et distribue plus de trois cents produits." },
+    { "id": "his2", "section": "histoire", "text": "Pour de nombreux secteurs : nettoyage industriel, élevage, textile, cuir, automobile et agriculture." },
+    { "id": "his3", "section": "histoire", "text": "Une expertise en hygiène ménagère et industrielle, en produits agricoles, et en matières premières chimiques et cosmétiques." },
+    { "id": "his4", "section": "histoire", "text": "Au Maroc et au-delà, notamment sur les marchés africains en pleine croissance." },
+    { "id": "his5", "section": "histoire", "text": "Importateur et distributeur exclusif au Maroc des fertilisants italiens PUCCIONI.",
+      "say": "Importateur et distributeur exclusif au Maroc des fertilisants italiens Poutchoni." },
+    { "id": "his6", "section": "histoire", "text": "Notre mission : concevoir, produire et distribuer des solutions innovantes, sûres et durables." },
+    { "id": "his7", "section": "histoire", "text": "Nos valeurs : transparence, indépendance, fiabilité, efficacité, et engagement pour le bien-être." },
+
+    { "id": "med1", "section": "medical", "text": "Hygiène en milieu médical : la lutte contre les infections nosocomiales et les contaminations croisées." },
+    { "id": "med2", "section": "medical", "text": "Hygiène des mains, des sols et des surfaces, traitement des instruments et des endoscopes, gel de transmission ultrasonique, et hygiène des générateurs d'hémodialyse." },
+
+    { "id": "ind1", "section": "industriel", "text": "Produits chimiques industriels : matières premières, produits de base et intermédiaires, pour de nombreux secteurs." },
+    { "id": "ind2", "section": "industriel", "text": "Innovation, sécurité et performance durable." },
+
+    { "id": "ins1", "section": "institutionnel", "text": "Hygiène professionnelle et institutionnelle : sols et surfaces, sanitaires, linge et hygiène du personnel." },
+    { "id": "ins2", "section": "institutionnel", "text": "Pour les hôtels, les écoles et les espaces publics." },
+
+    { "id": "eau1", "section": "eaux", "text": "Traitement des eaux : chaudières, circuits de refroidissement, osmose inverse, eaux usées et piscines." },
+    { "id": "eau2", "section": "eaux", "text": "Des solutions fiables contre le tartre et la corrosion." },
+
+    { "id": "bat1", "section": "batiments", "text": "Bâtiments industriels et d'élevage : installations, zones de production, équipements et bâtiments d'élevage." },
+
+    { "id": "cui1", "section": "cuisines", "text": "En cuisine professionnelle : fours, vaisselle, trempage, surfaces, hygiène des mains, et assainissement des fruits et légumes." },
+
+    { "id": "cos1", "section": "cosmetique", "text": "Pour la cosmétique, des matières premières de haute qualité : huiles, beurres, cires, tensioactifs, parfums, huiles essentielles, argiles et vitamines." },
+
+    { "id": "bas1", "section": "bases", "text": "Et des bases cosmétiques : neutres et naturelles, savon glycérine Melt and Pour, et bases auto-émulsifiantes.",
+      "say": "Et des bases cosmétiques : neutres et naturelles, savon glycérine Melt and Pour, et bases auto-émulsifiantes." },
+
+    { "id": "ea21", "section": "eaux2", "text": "Nos protocoles sur mesure combinent prévention et correction." },
+    { "id": "ea22", "section": "eaux2", "text": "Pour les usines agroalimentaires, les centrales énergétiques, les complexes hôteliers et les piscines." },
+
+    { "id": "ele1", "section": "elevage", "text": "Compléments alimentaires pour animaux d'élevage : minéraux et oligo-éléments, vitamines, probiotiques et prébiotiques, et énergétiques." },
+    { "id": "ele2", "section": "elevage", "text": "Pour améliorer la santé et la rentabilité de l'élevage." },
+
+    { "id": "agr1", "section": "agriculture", "text": "Nutrition des plantes et fertilisation : engrais organiques et minéraux, biostimulants et correcteurs de carence." },
+    { "id": "agr2", "section": "agriculture", "text": "Des grandes cultures aux vergers et au maraîchage." },
+
+    { "id": "cer1", "section": "certifications", "text": "Nos certifications : ISO 9001, ISO 13485, BPF cosmétique, COSMOS Organic, ECOCERT Inputs, ONSSA, et Made in Morocco.",
+      "say": "Nos certifications : iso neuf mille un, iso treize mille quatre cent quatre-vingt-cinq, bé pé effe cosmétique, cosmosse organique, éco-cert inpoute, onssa, et made in Morocco." },
+
+    { "id": "fin1", "section": "final", "text": "SARAPROC MAROC. saraprocmaroc.com",
+      "say": "Saraproc Maroc. saraproc maroc point com." }
+  ]
+}
