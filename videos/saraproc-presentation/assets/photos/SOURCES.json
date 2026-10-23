@@ -1,0 +1,362 @@
+{
+ "story-production.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/801f94ca5d2bfaf7c997dfde267bf119.webp",
+  "page": "a-propos.html",
+  "alt": ""
+ },
+ "story-hall.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/ed2fe90e8ce310abf6cc1d43f9c6f53d.webp",
+  "page": "a-propos.html",
+  "alt": " brand logo"
+ },
+ "story-tanks.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/fa3583439ad758e0ae4745c875a651d6.webp",
+  "page": "a-propos.html",
+  "alt": "brand logo"
+ },
+ "story-lab.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/56f26750633a7704b7df1b42740f5564.webp",
+  "page": "a-propos.html",
+  "alt": "brand logo"
+ },
+ "story-plant.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/85625ca9c12dd7d3b94118efe50e6657.webp",
+  "page": "home.html",
+  "alt": "Saraproc Maroc"
+ },
+ "story-products.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/a416c104398504d5645672a07d9b1159.webp",
+  "page": "home.html",
+  "alt": "brand logo"
+ },
+ "story-chem.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/0680880c1145fd2cf514810da20834d5.webp",
+  "page": "a-propos.html",
+  "alt": "Produits chimiques"
+ },
+ "med-ward.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/8427f98c8b8277d710d08146d17e23dd.webp",
+  "page": "categories_hygiene-en-milieu-medicale.html",
+  "alt": "HYGIENE EN MILIEU MEDICALE"
+ },
+ "med-corridor.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/4b19665a42a959e1c7a2aea096a0884b.webp",
+  "page": "a-propos.html",
+  "alt": "Hygiène hospitalière"
+ },
+ "med-bloc.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/f0135c04e6ab434aacd2db89f095f50e.webp",
+  "page": "catalogues.html",
+  "alt": ""
+ },
+ "med-mains.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/748e2af9672ff25a69c45e4682f34fad.webp",
+  "page": "categories_hygiene-en-milieu-medicale.html",
+  "alt": "HYGIENE DES MAINS"
+ },
+ "med-sols.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/d214a5274a3df5432ab281cbcb362ac9.webp",
+  "page": "categories_hygiene-en-milieu-medicale.html",
+  "alt": "HYGIENE DES SOLS, SURFACES ET MATERIEL MEDICAL"
+ },
+ "med-instruments.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/7666214093ceda4a6a3225eed6e46cf2.webp",
+  "page": "categories_hygiene-en-milieu-medicale.html",
+  "alt": "TRAITEMENT DES INSTRUMENTS MEDICO-CHIRURGICAUX"
+ },
+ "med-endoscopes.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/2458e9db02ce3f18a98894bb21da91af.webp",
+  "page": "categories_hygiene-en-milieu-medicale.html",
+  "alt": "TRAITEMENT DES ENDOSCOPES "
+ },
+ "med-gel.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/faca20a5605684428c8e6d3e7878351e.webp",
+  "page": "categories_hygiene-en-milieu-medicale.html",
+  "alt": "GEL DE TRANSMISSION ULTRASONIQUE"
+ },
+ "med-dialyse.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/a95e72ba7b4c77345cc77ad83106b35b.webp",
+  "page": "categories_hygiene-en-milieu-medicale.html",
+  "alt": "HYGIENE DES GENERATEURS D’HEMODIALYSE ET DE LA BOUCLE D'EAU"
+ },
+ "ind-drums.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/dc373fea1a6843dad21e66f9cf0ac606.webp",
+  "page": "categories_produits-chimiques-industriels.html",
+  "alt": "PRODUITS CHIMIQUES INDUSTRIELS"
+ },
+ "ind-plant.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/6edb47f25c2119131ddd03cdc742ea8d.webp",
+  "page": "boutique.html",
+  "alt": "Image représentant la spécialisation sectorielle de Saraproc"
+ },
+ "inst-sols.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/2e9a4a753986766d2e7103172effdaf1.webp",
+  "page": "categories_hygiene-professionnelle-et-institutionnelle.html",
+  "alt": "HYGIENE ET TRAITEMENT DES SOLS ET SURFACES"
+ },
+ "inst-linge.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/e74b3130b060eca5bd27afc008b26267.webp",
+  "page": "categories_hygiene-professionnelle-et-institutionnelle.html",
+  "alt": "HYGIENE ET ENTRETIEN DU TEXTILE ET LINGE PROFESSIONNEL"
+ },
+ "inst-laundry.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/7421c918c42179be4d437081771d9373.webp",
+  "page": "catalogues.html",
+  "alt": ""
+ },
+ "inst-spray.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/65b7ef8de4f4060ca9f6a664fd1f1e30.webp",
+  "page": "categories_hygiene-professionnelle-ecologique.html",
+  "alt": "HYGIENE PROFESSIONNELLE ECOLOGIQUE "
+ },
+ "inst-products.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/2aa10d45717f368b3b2547d7ed22cf8b.webp",
+  "page": "boutique.html",
+  "alt": " faq image"
+ },
+ "eau-chaudiere.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/a26697eb28bc3ded4e839ef5297e90c0.webp",
+  "page": "categories_traitement-des-eaux.html",
+  "alt": "PRODUITS POUR LE TRAITEMENT DE L'EAU DE CHAUDIERE"
+ },
+ "eau-refroid.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/6077df1c1f0f51e631c92acbb37a389d.webp",
+  "page": "categories_traitement-des-eaux.html",
+  "alt": "PRODUITS POUR LE TRAITEMENT DES CIRUITS  DE REFROIDISSEMENT"
+ },
+ "eau-osmose.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/557c45db839e591bf316587b190ad374.webp",
+  "page": "categories_traitement-des-eaux.html",
+  "alt": "PRODUITS  SPECIFIQUES POUR LES SYSTEMES D’OSMOSE INVERSE"
+ },
+ "eau-usees.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/f6599d219dafb9dc7af5d642c2e114e0.webp",
+  "page": "categories_traitement-des-eaux.html",
+  "alt": "PRODUITS CHIMIQUES POUR LE TRAITEMENT DES EAUX USEES "
+ },
+ "eau-piscine.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/8ad8a9b851c6aa4ac53190c5c494dbe9.webp",
+  "page": "categories_traitement-des-eaux.html",
+  "alt": "PRODUITS POUR L'ENTRETIENT ET TRAITEMENT D'EAU DES PISCINES"
+ },
+ "eau-salle.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/52ec77b3e0da37482ca81887b2655ac0.webp",
+  "page": "categories_traitement-des-eaux.html",
+  "alt": "TRAITEMENT DES EAUX "
+ },
+ "eau-sous.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/9a093cae89b2d6af5be7f5f1dac68daf.webp",
+  "page": "a-propos.html",
+  "alt": "Traitement des eaux"
+ },
+ "bat-agro.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/1b60b13c06dde2e844d0baa55fb4c7fa.webp",
+  "page": "categories_hygiene-professionnelle-et-institutionnelle.html",
+  "alt": "L'HYGIENE EN INDUSTRIE DE TRANSFORMATION AGRO-ALIMENTAIRE"
+ },
+ "bat-agro2.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/326a5b0e913d45c5cb4c9736dea36e21.webp",
+  "page": "catalogues.html",
+  "alt": ""
+ },
+ "bat-worker.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/8d100b1da895ad6fe769886ce12f1062.webp",
+  "page": "categories_hygiene-professionnelle-ecologique.html",
+  "alt": "Sols, Surfaces et Équipements Professionnels"
+ },
+ "bat-elevage.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/33bdb7cc6d3703225b389fffc92e5d1c.webp",
+  "page": "catalogues.html",
+  "alt": ""
+ },
+ "bat-volaille.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/30fdf460809c441bc0277cdb99046781.webp",
+  "page": "categories_hygiene-professionnelle-et-institutionnelle.html",
+  "alt": "HYGIENE DES BATIMENTS D'ELEVAGE"
+ },
+ "bat-agro3.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/331c9839b3a028128807afa4824c722e.webp",
+  "page": "home.html",
+  "alt": "HYGIENE PROFESSIONNELLE ET INSTITUTIONNELLE"
+ },
+ "cui-cuisine.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/970573c8168932c67b311d1aca969006.webp",
+  "page": "catalogues.html",
+  "alt": ""
+ },
+ "cui-cuisine2.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/9c6cc0519e651a52f7fbde744fd43b2a.webp",
+  "page": "categories_hygiene-professionnelle-et-institutionnelle.html",
+  "alt": "HYGIENE DES CUISINES PROFESSIONNELLES"
+ },
+ "cos-hero.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/454bde8658875b285b8ae050129d4c57.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "MATIERE PREMIERE COSMETIQUE"
+ },
+ "cos-bases.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/529278a365d53dcf29b053df18ee8945.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "LES BASES COSMETIQUES NEUTRES ET NATURELLES"
+ },
+ "cos-hv.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/874db5e6dad04bcc267a72abbb320f37.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "LES HUILES VEGETALES GRADE COSMETIQUE"
+ },
+ "cos-hm.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/80cc1a967ad4f79e967abf6e94823738.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "LES HUILES MINERALES GRADE COSMETIQUE"
+ },
+ "cos-silicone.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/13bf2399026d3c5d601791d7e14475bf.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "LES HUILES DE SILICONE GRADE COSMETIQUE"
+ },
+ "cos-meltpour.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/f0b09ccebca99527c6577c90d9c3af16.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "BASE DE SAVON GLYCERINE MELT and POUR"
+ },
+ "cos-tensio.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/1d67d9067c55c5ed5b5461b1a8cb193b.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "TENSIO-ACTIFS POUR LA COSMETIQUE"
+ },
+ "cos-alcools.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/2f5cc737242681d1b3aeee2f8c3ba21a.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "LES ALCOOLS GRAS POUR LA COSMETIQUE"
+ },
+ "cos-acides.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/5f15d54306685ac5704065b4cd7db899.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Acides gras pour formulations cosmétiques"
+ },
+ "cos-beurres.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/5e668497fca27f10a8f6f87d2b7e50a6.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Beurres cosmétiques pour soins nourrissants"
+ },
+ "cos-cires.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/a99120295023c89566ef45adc25613c9.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "CIRES NATURELLES POUR FORMULATIONS COSMETIQUES"
+ },
+ "cos-ciresyn.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/5858c456cd1a79696f8307dbd0ca7d03.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Cires synthétiques pour formulations cosmétiques"
+ },
+ "cos-parfums.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/827959fd72c3e9c391be05f2c54af1bd.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Parfums et fragrances pour cosmétiques"
+ },
+ "cos-parfconv.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/3cf558fd9d01f6467fe13b58863358df.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Parfums conventionnels pour cosmétiques"
+ },
+ "cos-he.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/2ff9b3ce3c3b09d1dc28807678f37fe7.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Huiles essentielles pour cosmétiques naturels"
+ },
+ "cos-colorants.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/ab518cf0eacfd9d54773e56cb955f65c.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Colorants pour formulations cosmétiques"
+ },
+ "cos-conserv.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/af4582bb2a5deacf794acb71ce45147c.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Conservateurs pour cosmétiques"
+ },
+ "cos-antiox.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/db16342db70bb610954a65ce488614fc.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Antioxydants pour cosmétiques"
+ },
+ "cos-emuls.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/1ba0d2807f38fc83bd108ea4910482f6.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "ÉMULSIFIANTS, CO-EMULSIFIANTS ET BASES AUTO-EMULSIFIANTES"
+ },
+ "cos-epaiss.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/f7d93800cca669df84e8db86d694865b.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Épaississants pour formulations cosmétiques"
+ },
+ "cos-argiles.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/3628fb0eb4d72aea5405cff6de254eb7.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Argiles pour soins cosmétiques"
+ },
+ "cos-charbon.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/95d74182983f6c94d6128e15be3c53ca.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Charbon actif en cosmétique"
+ },
+ "cos-vitamines.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/4683da6cb380cccf4887f5752337a035.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Les vitamines en cosmétique"
+ },
+ "cos-microbilles.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/7f52416e70de0bd9e94cce06abc55109.webp",
+  "page": "categories_matiere-premiere-cosmetique.html",
+  "alt": "Microbilles & gommage"
+ },
+ "ani-vache.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/aaf499171faccafe99140ac8e66cbf8d.webp",
+  "page": "categories_complements-alimentaires-pour-animaux-delevage.html",
+  "alt": "COMPLEMENTS ALIMENTAIRES POUR ANIMAUX D'ELEVAGE"
+ },
+ "ani-aliment.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/26d44ab7335e235b0e1f57cc25ea32ed.webp",
+  "page": "categories_complements-alimentaires-pour-animaux-delevage.html",
+  "alt": "COMPLEMENTS ALIMENTAIRES POUR ANIMEAUX D'ELEVAGE"
+ },
+ "ani-volaille.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/30fdf460809c441bc0277cdb99046781.webp",
+  "page": "categories_hygiene-professionnelle-et-institutionnelle.html",
+  "alt": "HYGIENE DES BATIMENTS D'ELEVAGE"
+ },
+ "agr-plantes.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/8081e5a52062983753e05cd16afb8e73.webp",
+  "page": "a-propos.html",
+  "alt": "Nutrition des plantes"
+ },
+ "agr-fruits.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/9abb6ed6db2455cb2638444c626ee072.webp",
+  "page": "categories_nutrition-des-plantes-et-fertilisation.html",
+  "alt": "NUTRITION DES PLANTES ET FERTILISATION"
+ },
+ "agr-humia.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/3254520a74d30797c0523914e7451abb.webp",
+  "page": "categories_nutrition-des-plantes-et-fertilisation.html",
+  "alt": "Engrais organiques"
+ },
+ "agr-rooting.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/a65564a78a867eb83aea7d8d8b864503.webp",
+  "page": "categories_nutrition-des-plantes-et-fertilisation.html",
+  "alt": "Biostimulants"
+ },
+ "agr-brixer.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/f4516efef202c809fb291f25b396d96f.webp",
+  "page": "categories_nutrition-des-plantes-et-fertilisation.html",
+  "alt": "Engrais foliaires hydrosoluble"
+ },
+ "agr-biomagri.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/55b80b7df87d4c7bc3a5d2ad9c1915b6.webp",
+  "page": "categories_nutrition-des-plantes-et-fertilisation.html",
+  "alt": "Engrais foliaires liquides"
+ },
+ "agr-humia2.webp": {
+  "source": "https://saraprocmaroc.com/storage/manipulated/7231acfa5ea6dc9b2b7f92ed0be73307.webp",
+  "page": "categories_nutrition-des-plantes-et-fertilisation.html",
+  "alt": "Engrais organomineraux "
+ }
+}

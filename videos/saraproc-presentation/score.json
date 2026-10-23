@@ -1,0 +1,23 @@
+{
+  "bpm": 120,
+  "fps": 30,
+  "duration": 225,
+  "note": "One bar = 2 s. A section with stop=true ends on a silent breath: the music stops on beat 3 of its last bar (end - 1.0 s) and resumes on the next downbeat; card=true shows the LAB card during that breath.",
+  "sections": [
+    { "id": "ouverture",      "bar": 0,   "bars": 6,  "stop": false, "card": false },
+    { "id": "histoire",       "bar": 6,   "bars": 16, "stop": true,  "card": true },
+    { "id": "medical",        "bar": 22,  "bars": 11, "stop": true,  "card": true },
+    { "id": "industriel",     "bar": 33,  "bars": 7,  "stop": true,  "card": true },
+    { "id": "institutionnel", "bar": 40,  "bars": 8,  "stop": true,  "card": true },
+    { "id": "eaux",           "bar": 48,  "bars": 7,  "stop": true,  "card": true },
+    { "id": "batiments",      "bar": 55,  "bars": 6,  "stop": true,  "card": true },
+    { "id": "cuisines",       "bar": 61,  "bars": 6,  "stop": true,  "card": true },
+    { "id": "cosmetique",     "bar": 67,  "bars": 8,  "stop": true,  "card": true },
+    { "id": "bases",          "bar": 75,  "bars": 5,  "stop": true,  "card": true },
+    { "id": "eaux2",          "bar": 80,  "bars": 6,  "stop": true,  "card": true },
+    { "id": "elevage",        "bar": 86,  "bars": 6,  "stop": true,  "card": true },
+    { "id": "agriculture",    "bar": 92,  "bars": 8,  "stop": true,  "card": true },
+    { "id": "certifications", "bar": 100, "bars": 7,  "stop": true,  "card": false },
+    { "id": "final",          "bar": 107, "bars": 5,  "stop": false, "card": false }
+  ]
+}
