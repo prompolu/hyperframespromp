@@ -4,3 +4,5 @@ stills/
 .cache/
 *.log
 probe*
+out-partial.mp4
+soundtrack.wav

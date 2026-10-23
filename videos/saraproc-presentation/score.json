@@ -1,23 +1,144 @@
 {
-  "bpm": 120,
-  "fps": 30,
-  "duration": 225,
-  "note": "One bar = 2 s. A section with stop=true ends on a silent breath: the music stops on beat 3 of its last bar (end - 1.0 s) and resumes on the next downbeat; card=true shows the LAB card during that breath.",
-  "sections": [
-    { "id": "ouverture",      "bar": 0,   "bars": 6,  "stop": false, "card": false },
-    { "id": "histoire",       "bar": 6,   "bars": 16, "stop": true,  "card": true },
-    { "id": "medical",        "bar": 22,  "bars": 11, "stop": true,  "card": true },
-    { "id": "industriel",     "bar": 33,  "bars": 7,  "stop": true,  "card": true },
-    { "id": "institutionnel", "bar": 40,  "bars": 8,  "stop": true,  "card": true },
-    { "id": "eaux",           "bar": 48,  "bars": 7,  "stop": true,  "card": true },
-    { "id": "batiments",      "bar": 55,  "bars": 6,  "stop": true,  "card": true },
-    { "id": "cuisines",       "bar": 61,  "bars": 6,  "stop": true,  "card": true },
-    { "id": "cosmetique",     "bar": 67,  "bars": 8,  "stop": true,  "card": true },
-    { "id": "bases",          "bar": 75,  "bars": 5,  "stop": true,  "card": true },
-    { "id": "eaux2",          "bar": 80,  "bars": 6,  "stop": true,  "card": true },
-    { "id": "elevage",        "bar": 86,  "bars": 6,  "stop": true,  "card": true },
-    { "id": "agriculture",    "bar": 92,  "bars": 8,  "stop": true,  "card": true },
-    { "id": "certifications", "bar": 100, "bars": 7,  "stop": true,  "card": false },
-    { "id": "final",          "bar": 107, "bars": 5,  "stop": false, "card": false }
-  ]
+ "bpm": 120,
+ "fps": 30,
+ "duration": 228,
+ "note": "One bar = 2 s. A section with stop=true ends on a silent breath: the music stops on beat 3 of its last bar (end - 1.0 s) and resumes on the next downbeat; card=true shows the LAB card during that breath. voice: when each narration line starts (s).",
+ "sections": [
+  {
+   "id": "ouverture",
+   "bar": 0,
+   "bars": 6,
+   "stop": false,
+   "card": false
+  },
+  {
+   "id": "histoire",
+   "bar": 6,
+   "bars": 25,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "medical",
+   "bar": 31,
+   "bars": 11,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "industriel",
+   "bar": 42,
+   "bars": 7,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "institutionnel",
+   "bar": 49,
+   "bars": 7,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "eaux",
+   "bar": 56,
+   "bars": 6,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "batiments",
+   "bar": 62,
+   "bars": 5,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "cuisines",
+   "bar": 67,
+   "bars": 5,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "cosmetique",
+   "bar": 72,
+   "bars": 6,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "bases",
+   "bar": 78,
+   "bars": 5,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "eaux2",
+   "bar": 83,
+   "bars": 6,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "elevage",
+   "bar": 89,
+   "bars": 7,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "agriculture",
+   "bar": 96,
+   "bars": 6,
+   "stop": true,
+   "card": true
+  },
+  {
+   "id": "certifications",
+   "bar": 102,
+   "bars": 7,
+   "stop": true,
+   "card": false
+  },
+  {
+   "id": "final",
+   "bar": 109,
+   "bars": 5,
+   "stop": false,
+   "card": false
+  }
+ ],
+ "voice": {
+  "ouv1": 2.5,
+  "ouv2": 7.0,
+  "his1": 12.5,
+  "his2": 20.5,
+  "his3": 28.5,
+  "his4": 36.5,
+  "his5": 42.25,
+  "his6": 48.0,
+  "his7": 54.0,
+  "med1": 62.75,
+  "med2": 70.25,
+  "ind1": 84.5,
+  "ind2": 93.0,
+  "ins1": 98.5,
+  "ins2": 105.5,
+  "eau1": 112.5,
+  "eau2": 119.0,
+  "bat1": 124.5,
+  "cui1": 134.5,
+  "cos1": 144.5,
+  "bas1": 156.5,
+  "ea21": 166.5,
+  "ea22": 170.5,
+  "ele1": 178.5,
+  "ele2": 187.0,
+  "agr1": 192.5,
+  "agr2": 200.0,
+  "cer1": 204.5,
+  "fin1": 219.5
+ }
 }

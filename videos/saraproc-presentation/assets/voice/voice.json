@@ -1,0 +1,447 @@
+{
+ "voice": "Kokoro v1.0 (onnx, timed export) · ff_siwis",
+ "speed": 0.94,
+ "sr": 24000,
+ "lines": {
+  "ouv1": {
+   "dur": 3.841,
+   "chunks": [
+    "Saraproc Maroc :",
+    "des solutions pour chaque besoin professionnel."
+   ],
+   "starts": [
+    0.0,
+    1.534
+   ],
+   "aligned": true
+  },
+  "ouv2": {
+   "dur": 4.234,
+   "chunks": [
+    "Hygiène,",
+    "produits chimiques industriels,",
+    "agriculture et traitement des eaux."
+   ],
+   "starts": [
+    0.0,
+    0.678,
+    2.578
+   ],
+   "aligned": true
+  },
+  "his1": {
+   "dur": 7.596,
+   "chunks": [
+    "Depuis deux mille deux,",
+    "à Fèss,",
+    "dans le quartier industriel Sidi Brahim,",
+    "Saraproc fabrique et distribue plus de trois cents produits."
+   ],
+   "starts": [
+    0.0,
+    1.412,
+    2.012,
+    4.512
+   ],
+   "aligned": true
+  },
+  "his2": {
+   "dur": 6.623,
+   "chunks": [
+    "Pour de nombreux secteurs :",
+    "nettoyage industriel,",
+    "élevage,",
+    "textile,",
+    "cuir,",
+    "automobile et agriculture."
+   ],
+   "starts": [
+    0.0,
+    1.51,
+    2.945,
+    3.58,
+    4.38,
+    4.965
+   ],
+   "aligned": true
+  },
+  "his3": {
+   "dur": 7.409,
+   "chunks": [
+    "Une expertise en hygiène ménagère et industrielle,",
+    "en produits agricoles,",
+    "et en matières premières chimiques et cosmétiques."
+   ],
+   "starts": [
+    0.0,
+    3.505,
+    5.005
+   ],
+   "aligned": true
+  },
+  "his4": {
+   "dur": 4.435,
+   "chunks": [
+    "Au Maroc et au-delà,",
+    "notamment sur les marchés africains en pleine croissance."
+   ],
+   "starts": [
+    0.0,
+    1.604
+   ],
+   "aligned": true
+  },
+  "his5": {
+   "dur": 5.149,
+   "chunks": [
+    "Importateur et distributeur exclusif au Maroc des fertilisants italiens Poutchoni."
+   ],
+   "starts": [
+    0.0
+   ],
+   "aligned": true
+  },
+  "his6": {
+   "dur": 5.646,
+   "chunks": [
+    "Notre mission :",
+    "concevoir,",
+    "produire et distribuer des solutions innovantes,",
+    "sûres et durables."
+   ],
+   "starts": [
+    0.0,
+    1.16,
+    1.945,
+    4.625
+   ],
+   "aligned": true
+  },
+  "his7": {
+   "dur": 6.053,
+   "chunks": [
+    "Nos valeurs :",
+    "transparence,",
+    "indépendance,",
+    "fiabilité,",
+    "efficacité,",
+    "et engagement pour le bien-être."
+   ],
+   "starts": [
+    0.0,
+    1.009,
+    1.834,
+    2.609,
+    3.424,
+    4.474
+   ],
+   "aligned": true
+  },
+  "med1": {
+   "dur": 5.993,
+   "chunks": [
+    "Hygiène en milieu médical :",
+    "la lutte contre les infections nosocomiales et les contaminations croisées."
+   ],
+   "starts": [
+    0.0,
+    2.102
+   ],
+   "aligned": true
+  },
+  "med2": {
+   "dur": 9.806,
+   "chunks": [
+    "Hygiène des mains,",
+    "des sols et des surfaces,",
+    "traitement des instruments et des endoscopes,",
+    "gel de transmission ultrasonique,",
+    "et hygiène des générateurs d'hémodialyse."
+   ],
+   "starts": [
+    0.0,
+    1.225,
+    2.745,
+    5.445,
+    7.52
+   ],
+   "aligned": true
+  },
+  "ind1": {
+   "dur": 6.303,
+   "chunks": [
+    "Produits chimiques industriels :",
+    "matières premières,",
+    "produits de base et intermédiaires,",
+    "pour de nombreux secteurs."
+   ],
+   "starts": [
+    0.0,
+    2.158,
+    3.248,
+    5.078
+   ],
+   "aligned": true
+  },
+  "ind2": {
+   "dur": 2.888,
+   "chunks": [
+    "Innovation,",
+    "sécurité et performance durable."
+   ],
+   "starts": [
+    0.0,
+    1.017
+   ],
+   "aligned": true
+  },
+  "ins1": {
+   "dur": 6.498,
+   "chunks": [
+    "Hygiène professionnelle et institutionnelle :",
+    "sols et surfaces,",
+    "sanitaires,",
+    "linge et hygiène du personnel."
+   ],
+   "starts": [
+    0.0,
+    2.791,
+    3.911,
+    4.756
+   ],
+   "aligned": true
+  },
+  "ins2": {
+   "dur": 2.936,
+   "chunks": [
+    "Pour les hôtels,",
+    "les écoles et les espaces publics."
+   ],
+   "starts": [
+    0.0,
+    1.178
+   ],
+   "aligned": true
+  },
+  "eau1": {
+   "dur": 5.586,
+   "chunks": [
+    "Traitement des eaux :",
+    "chaudières,",
+    "circuits de refroidissement,",
+    "osmose inverse,",
+    "eaux usées et piscines."
+   ],
+   "starts": [
+    0.0,
+    1.181,
+    1.956,
+    3.256,
+    4.441
+   ],
+   "aligned": true
+  },
+  "eau2": {
+   "dur": 3.177,
+   "chunks": [
+    "Des solutions fiables contre le tartre et la corrosion."
+   ],
+   "starts": [
+    0.0
+   ],
+   "aligned": true
+  },
+  "bat1": {
+   "dur": 6.262,
+   "chunks": [
+    "Bâtiments industriels et d'élevage :",
+    "installations,",
+    "zones de production,",
+    "équipements et bâtiments d'élevage."
+   ],
+   "starts": [
+    0.0,
+    2.315,
+    3.39,
+    4.56
+   ],
+   "aligned": true
+  },
+  "cui1": {
+   "dur": 7.096,
+   "chunks": [
+    "En cuisine professionnelle :",
+    "fours,",
+    "vaisselle,",
+    "trempage,",
+    "surfaces,",
+    "hygiène des mains,",
+    "et assainissement des fruits et légumes."
+   ],
+   "starts": [
+    0.0,
+    1.895,
+    2.43,
+    2.955,
+    3.555,
+    4.295,
+    5.37
+   ],
+   "aligned": true
+  },
+  "cos1": {
+   "dur": 8.671,
+   "chunks": [
+    "Pour la cosmétique,",
+    "des matières premières de haute qualité :",
+    "huiles,",
+    "beurres,",
+    "cires,",
+    "tensioactifs,",
+    "parfums,",
+    "huiles essentielles,",
+    "argiles et vitamines."
+   ],
+   "starts": [
+    0.0,
+    1.253,
+    3.378,
+    3.803,
+    4.228,
+    4.683,
+    5.578,
+    6.293,
+    7.503
+   ],
+   "aligned": true
+  },
+  "bas1": {
+   "dur": 6.585,
+   "chunks": [
+    "Et des bases cosmétiques :",
+    "neutres et naturelles,",
+    "savon glycérine Melte ène Pore,",
+    "et bases auto-émulsifiantes."
+   ],
+   "starts": [
+    0.0,
+    1.647,
+    2.952,
+    4.952
+   ],
+   "aligned": true
+  },
+  "ea21": {
+   "dur": 3.382,
+   "chunks": [
+    "Nos protocoles sur mesure combinent prévention et correction."
+   ],
+   "starts": [
+    0.0
+   ],
+   "aligned": true
+  },
+  "ea22": {
+   "dur": 5.923,
+   "chunks": [
+    "Pour les usines agroalimentaires,",
+    "les centrales énergétiques,",
+    "les complexes hôteliers et les piscines."
+   ],
+   "starts": [
+    0.0,
+    2.201,
+    3.951
+   ],
+   "aligned": true
+  },
+  "ele1": {
+   "dur": 7.754,
+   "chunks": [
+    "Compléments alimentaires pour animaux d'élevage :",
+    "minéraux et oligo-éléments,",
+    "vitamines,",
+    "probiotiques et prébiotiques,",
+    "et énergétiques."
+   ],
+   "starts": [
+    0.0,
+    2.773,
+    4.398,
+    5.208,
+    6.813
+   ],
+   "aligned": true
+  },
+  "ele2": {
+   "dur": 3.273,
+   "chunks": [
+    "Pour améliorer la santé et la rentabilité de l'élevage."
+   ],
+   "starts": [
+    0.0
+   ],
+   "aligned": true
+  },
+  "agr1": {
+   "dur": 6.618,
+   "chunks": [
+    "Nutrition des plantes et fertilisation :",
+    "engrais organiques et minéraux,",
+    "biostimulants et correcteurs de carence."
+   ],
+   "starts": [
+    0.0,
+    2.584,
+    4.484
+   ],
+   "aligned": true
+  },
+  "agr2": {
+   "dur": 2.477,
+   "chunks": [
+    "Des grandes cultures aux vergers et au maraîchage."
+   ],
+   "starts": [
+    0.0
+   ],
+   "aligned": true
+  },
+  "cer1": {
+   "dur": 11.009,
+   "chunks": [
+    "Nos certifications :",
+    "iso neuf mille un,",
+    "iso treize mille quatre cent quatre-vingt-cinq,",
+    "bé pé effe cosmétique,",
+    "cosmosse organique,",
+    "éco-cert inpoute,",
+    "onssa,",
+    "et Méïde ine Morocco."
+   ],
+   "starts": [
+    0.0,
+    1.444,
+    2.794,
+    5.369,
+    6.749,
+    7.994,
+    9.194,
+    9.834
+   ],
+   "aligned": true
+  },
+  "fin1": {
+   "dur": 3.149,
+   "chunks": [
+    "Saraproc Maroc.",
+    "saraproc maroc point com."
+   ],
+   "starts": [
+    0.0,
+    1.601
+   ],
+   "aligned": true
+  }
+ }
+}

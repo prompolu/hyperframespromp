@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>SARAPROC MAROC — Présentation</title>
+<meta name="viewport" content="width=1920">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=block">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<style>
+/* Navy, blue, white and silver. Logos are only ever shown as supplied: no recolouring, no effects. */
+:root {
+  --ink: #040B1C; --navy: #071533; --navy2: #0C2150; --blue: #3A74F0; --sky: #8EB4FF; --ice: #DCE8FF;
+  --mist: rgba(214,226,245,.80);
+  --sil: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 38%, #C6D0DE 74%, #9DABC1 100%);
+  --deep: #0B1E45; --royal: #2B5BB8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: var(--ink); color: #fff;
+  font-family: 'Inter', sans-serif; font-optical-sizing: auto; transform-origin: 0 0; -webkit-font-smoothing: antialiased; }
+.full { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.abs { position: absolute; }
+.ctr { position: absolute; left: 0; width: 1920px; text-align: center; }
+.scene { position: absolute; inset: 0; display: none; overflow: hidden; }
+.cam, .rig, .panel { position: absolute; inset: 0; transform-origin: 50% 50%; }
+.cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.eyebrow { font: 600 24px/1.2 Inter; letter-spacing: .3em; text-transform: uppercase; color: var(--sky); }
+.h0 { font: 800 220px/1 Inter; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.h1 { font: 700 92px/1.06 Inter; letter-spacing: -.035em; }
+.h2 { font: 700 64px/1.1 Inter; letter-spacing: -.03em; }
+.h3 { font: 700 46px/1.16 Inter; letter-spacing: -.02em; }
+.lead { font: 400 36px/1.4 Inter; letter-spacing: -.01em; color: var(--mist); }
+.w { display: inline-block; padding: .1em 0 .16em; margin: -.1em 0 -.16em; }
+.split .w, .rv { opacity: 0; }
+.sil:not(.split), .sil.split .w { background: var(--sil); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.pill { display: inline-block; height: 80px; padding: 0 34px; margin: 0 9px; border-radius: 40px; font: 600 32px/80px Inter; color: #EAF1FF;
+  background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.04));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.17), inset 0 1px 0 rgba(255,255,255,.24), 0 16px 34px rgba(0,0,0,.25); white-space: nowrap; }
+.pill.solid { background: linear-gradient(180deg, #4A82F6, #2F62D8); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 16px 34px rgba(20,60,160,.35); color: #fff; }
+.glass { position: absolute; border-radius: 28px; background: linear-gradient(160deg, rgba(255,255,255,.11), rgba(255,255,255,.03));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), inset 0 1px 0 rgba(255,255,255,.22), 0 30px 60px rgba(0,0,0,.28); }
+.card { position: absolute; border-radius: 28px; overflow: hidden; background: #0A1A3A;
+  box-shadow: 0 50px 100px -24px rgba(0,0,0,.65), 0 18px 36px rgba(0,0,0,.28); }
+.card > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.12), inset 0 1px 0 rgba(255,255,255,.28); }
+.card.light { background: #EEF1F5; }
+.refl { -webkit-box-reflect: below 18px linear-gradient(transparent 74%, rgba(255,255,255,.17)); }
+.sheen { position: absolute; top: -10%; bottom: -10%; left: -40%; width: 180%; pointer-events: none; transform: translateX(-100%);
+  background: linear-gradient(100deg, rgba(255,255,255,0) 42%, rgba(255,255,255,.24) 50%, rgba(255,255,255,0) 58%); }
+.plate { position: absolute; border-radius: 40px; background: linear-gradient(180deg, #FFFFFF 0%, #F3F6FA 100%); overflow: hidden;
+  box-shadow: 0 50px 110px -16px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.6) inset; }
+.plate > img { position: absolute; }
+svg.ico { overflow: visible; }
+.ico path, .ico circle, .ico rect, .ico line { fill: none; stroke: var(--sky); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Global navy stage with slow light */
+#bg { background: radial-gradient(ellipse 1500px 950px at 50% 28%, #0E2655 0%, #081838 46%, #040B1C 100%); }
+.glow { position: absolute; left: 0; top: 0; border-radius: 50%; }
+#g1 { width: 1500px; height: 1500px; margin: -750px 0 0 -750px; background: radial-gradient(closest-side, rgba(58,116,240,.22), rgba(58,116,240,0)); }
+#g2 { width: 1300px; height: 1300px; margin: -650px 0 0 -650px; background: radial-gradient(closest-side, rgba(175,200,245,.10), rgba(175,200,245,0)); }
+#horizon { position: absolute; left: 0; top: 690px; width: 1920px; height: 390px; background: linear-gradient(180deg, rgba(120,160,230,0), rgba(120,160,230,.05) 28%, rgba(4,11,28,0)); }
+#vig { background: radial-gradient(ellipse 1250px 800px at 50% 50%, rgba(0,0,0,0) 58%, rgba(0,0,0,.42) 100%); }
+
+/* 1 · Ouverture */
+#oStreak { position: absolute; left: 210px; top: 539px; width: 1500px; height: 2px; transform: scaleX(0); opacity: 0;
+  background: linear-gradient(90deg, rgba(160,195,255,0), rgba(225,238,255,.95) 50%, rgba(160,195,255,0)); box-shadow: 0 0 26px 5px rgba(90,140,255,.42); }
+#oTitle { transform-origin: 960px 505px; }
+#oSara, #oSheen { top: 400px; font: 800 210px/1 Inter; letter-spacing: .03em; padding-left: .03em; font-kerning: none; white-space: pre; }
+#oSara .L { display: inline-block; opacity: 0; background: var(--sil); -webkit-background-clip: text; background-clip: text; color: transparent; padding: .06em 0 .1em; margin: -.06em 0 -.1em; }
+#oSheen { color: transparent; opacity: 0; background: linear-gradient(100deg, rgba(255,255,255,0) 44%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 56%) no-repeat;
+  background-size: 300% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; }
+#oMaroc { top: 628px; font: 500 46px/1 Inter; letter-spacing: .9em; padding-left: .9em; color: #C9D3E3; }
+
+/* 2 · Histoire */
+.digits { position: absolute; height: 250px; overflow: hidden; white-space: nowrap; }
+.digits .D { display: inline-block; }
+.chipgrid { position: absolute; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.chip { position: relative; height: 118px; border-radius: 26px; font: 600 32px/118px Inter; text-align: center; color: #EAF1FF; letter-spacing: -.01em; }
+.pillar { position: absolute; top: 280px; width: 500px; text-align: center; }
+.pillar svg { width: 120px; height: 120px; }
+.pillar .eyebrow { margin-top: 34px; font-size: 20px; letter-spacing: .16em; }
+.pillar .h3 { margin-top: 18px; }
+#hMap .arc { fill: none; stroke: url(#arcGrad); stroke-width: 2.4; stroke-linecap: round; }
+#hMap .end { fill: #CFE0FF; }
+.vtext { font: 600 42px/1.32 Inter; letter-spacing: -.015em; color: #F2F6FC; }
+.val { font: 700 84px/1 Inter; letter-spacing: -.03em; }
+
+/* 3 · Médical */
+#mShade { background: radial-gradient(ellipse 1200px 800px at 50% 50%, rgba(4,11,28,.55), rgba(4,11,28,.9)); }
+#mRail { position: absolute; left: 600px; top: 150px; width: 4720px; height: 460px; transform-origin: 2360px 230px; }
+#mRail .card { top: 0; width: 720px; height: 460px; }
+.mcap { position: absolute; left: 0; top: 660px; width: 1920px; text-align: center; }
+.mcap .h2 { margin-top: 18px; font-size: 58px; }
+.mcap .lead { margin-top: 14px; font-size: 32px; }
+
+/* 4 · Industriel */
+.itile { position: relative; height: 170px; border-radius: 24px; }
+.itile .num { position: absolute; left: 28px; top: 24px; font: 600 22px/1 Inter; letter-spacing: .2em; color: var(--sky); }
+.itile .lbl { position: absolute; left: 28px; right: 20px; bottom: 26px; font: 700 36px/1.1 Inter; letter-spacing: -.02em; }
+.gamme { font: 700 80px/1.05 Inter; letter-spacing: -.035em; }
+
+/* 5 · Institutionnel (bento) */
+.tile { position: absolute; border-radius: 26px; overflow: hidden; background: linear-gradient(160deg, rgba(255,255,255,.11), rgba(255,255,255,.03));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.13), inset 0 1px 0 rgba(255,255,255,.2), 0 30px 60px rgba(0,0,0,.3); }
+.tile > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tile .grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,11,28,0) 42%, rgba(4,11,28,.9) 100%); }
+.tile .lbl { position: absolute; left: 28px; right: 24px; bottom: 26px; font: 700 38px/1.12 Inter; letter-spacing: -.02em; }
+.tile .ico { position: absolute; left: 28px; top: 28px; width: 70px; height: 70px; }
+.tile .sheen { opacity: .8; }
+
+/* 6 · Eaux (liste + photo) */
+.witem { position: absolute; left: 170px; font: 700 54px/1.1 Inter; letter-spacing: -.03em; }
+#wBar { position: absolute; left: 132px; width: 6px; height: 62px; border-radius: 3px; background: linear-gradient(180deg, #8EB4FF, #3A74F0); box-shadow: 0 0 18px rgba(80,140,255,.6); opacity: 0; }
+#wFrame { left: 980px; top: 200px; width: 800px; height: 510px; }
+#wFrame img { opacity: 0; }
+.wcap { position: absolute; left: 980px; top: 770px; width: 800px; font: 400 32px/1.4 Inter; color: var(--mist); }
+
+/* 7 · Bâtiments (accordéon) */
+.acc { position: absolute; top: 270px; height: 690px; border-radius: 26px; overflow: hidden; background: #0A1A3A;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.1); }
+.acc > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.acc .grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,11,28,.2) 0%, rgba(4,11,28,0) 30%, rgba(4,11,28,.88) 100%); }
+.acc .num { position: absolute; left: 28px; top: 26px; font: 600 24px/1 Inter; letter-spacing: .2em; color: var(--ice); }
+.acc .lblS { position: absolute; left: 28px; bottom: 30px; width: 340px; font: 700 34px/1.12 Inter; letter-spacing: -.02em; }
+.acc .lblL { position: absolute; left: 36px; bottom: 36px; width: 860px; opacity: 0; }
+.acc .lblL .h2 { font-size: 60px; }
+.acc .lblL .lead { margin-top: 10px; font-size: 32px; }
+
+/* 8 · Cuisines */
+.kitem { position: absolute; width: 440px; height: 110px; display: flex; align-items: center; gap: 22px; font: 600 34px/1.15 Inter; letter-spacing: -.015em; }
+.kitem svg { flex: none; width: 50px; height: 50px; }
+
+/* 9 · Cosmétique (mur) */
+#cWallWrap { perspective: 2200px; perspective-origin: 960px 540px; }
+#cWall { position: absolute; left: 87px; top: 7px; width: 1746px; height: 1066px; transform-origin: 873px 533px; }
+.ctile { position: absolute; width: 420px; height: 250px; border-radius: 22px; overflow: hidden; background: #0C1F46;
+  box-shadow: 0 26px 50px -14px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.1); }
+.ctile > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ctile .grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,11,28,0) 38%, rgba(4,11,28,.86) 100%); }
+.ctile .lbl { position: absolute; left: 24px; right: 20px; bottom: 20px; font: 700 36px/1.08 Inter; letter-spacing: -.02em; }
+.ctile.txt { background: linear-gradient(160deg, #183A7A, #0B1E45); }
+.ctile.txt .lbl { bottom: auto; top: 50%; transform: translateY(-50%); font-size: 40px; }
+.ctile.txt .eyebrow { position: absolute; left: 24px; top: 22px; font-size: 18px; }
+
+/* 10 · Bases (carrousel 3D) */
+#dFlow { perspective: 1800px; perspective-origin: 960px 560px; }
+.dcard { position: absolute; left: 660px; top: 320px; width: 600px; height: 560px; border-radius: 30px; overflow: hidden;
+  background: linear-gradient(170deg, #12306A, #0A1B40); box-shadow: 0 50px 100px -20px rgba(0,0,0,.65), inset 0 0 0 1px rgba(255,255,255,.14); }
+.dcard .ph { position: absolute; left: 0; top: 0; width: 600px; height: 340px; background: #EEF2F7; overflow: hidden; }
+.dcard .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.dcard .ph img.contain { object-fit: contain; }
+.dcard .lbl { position: absolute; left: 36px; right: 36px; top: 372px; font: 700 38px/1.15 Inter; letter-spacing: -.02em; }
+
+/* 11 · Eaux 2 (monde clair) */
+#e2Bg { background: linear-gradient(180deg, #F7FAFF 0%, #E6F0FC 55%, #CFE1F6 100%); }
+.beam { position: absolute; top: -300px; width: 260px; height: 1700px; transform-origin: 50% 0; filter: blur(18px);
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,0)); }
+.bub { position: absolute; border-radius: 50%; border: 1.5px solid rgba(43,91,184,.28); background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.9), rgba(255,255,255,.1) 60%); }
+#sc-eaux2 .eyebrow { color: var(--royal); }
+.navy { color: var(--deep); }
+.lpill { display: inline-flex; align-items: center; gap: 16px; height: 84px; padding: 0 30px 0 22px; margin: 0 14px 18px 0; border-radius: 42px;
+  font: 600 32px/84px Inter; color: var(--deep); background: #fff; box-shadow: 0 14px 34px rgba(30,70,140,.14), inset 0 0 0 1px rgba(43,91,184,.12); }
+.lpill svg { width: 40px; height: 40px; }
+.lpill path, .lpill circle, .ltile path, .ltile circle, .ltile rect { stroke: var(--royal); }
+.ltile { position: absolute; width: 490px; height: 104px; border-radius: 22px; background: #fff; display: flex; align-items: center; gap: 20px; padding: 0 26px;
+  font: 600 34px/1 Inter; color: var(--deep); box-shadow: 0 16px 36px rgba(30,70,140,.13), inset 0 0 0 1px rgba(43,91,184,.1); }
+.ltile svg { flex: none; width: 50px; height: 50px; }
+
+/* 12 · Élevage */
+.acard { position: absolute; top: 290px; width: 400px; height: 440px; padding: 40px 34px; }
+.acard .num { font: 600 22px/1 Inter; letter-spacing: .2em; color: var(--sky); }
+.acard .h3 { margin-top: 26px; font-size: 42px; }
+.acard .lead { margin-top: 18px; font-size: 29px; line-height: 1.36; }
+
+/* 13 · Agriculture */
+#gChips { line-height: 100px; }
+#gChips .pill { margin: 0 8px; }
+
+/* 14 · Certifications */
+.qtile { position: absolute; width: 400px; height: 220px; padding: 34px 32px; overflow: hidden; }
+.qtile .name { font: 800 50px/1.05 Inter; letter-spacing: -.03em; }
+.qtile .fn { margin-top: 14px; font: 500 24px/1.32 Inter; color: rgba(220,230,245,.78); }
+
+/* 15 · Final (blanc nacré) */
+#fBg { background: radial-gradient(ellipse 1300px 900px at 50% 42%, #FFFFFF 0%, #F4F7FB 48%, #DCE4EE 100%); }
+#fBloom { position: absolute; left: 0; top: 0; width: 1400px; height: 900px; margin: -450px 0 0 -700px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255,255,255,.95), rgba(255,255,255,0)); }
+#fLogo { position: absolute; left: 708px; top: 300px; width: 504px; height: 226.8px; opacity: 0; }
+#fName { top: 600px; font: 600 46px/1 Inter; letter-spacing: .42em; padding-left: .42em; color: #0E2350; }
+#fLine { position: absolute; left: 860px; top: 682px; width: 200px; height: 2px; background: linear-gradient(90deg, rgba(43,91,184,0), #2B5BB8, rgba(43,91,184,0)); transform: scaleX(0); }
+#fUrl { top: 712px; font: 500 38px/1 Inter; letter-spacing: .02em; color: var(--royal); }
+
+/* LAB card (PDF page 2), shown in the silent breath between sections */
+#lab { position: absolute; inset: 0; z-index: 50; display: none; clip-path: inset(0px 0px 0px 0px round 0px);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F5F9 55%, #DCE3ED 100%); }
+#labGlow { position: absolute; left: 460px; top: 140px; width: 1000px; height: 800px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,255,255,1), rgba(255,255,255,0)); }
+#labSheen { position: absolute; top: 0; left: -40%; width: 180%; height: 100%; transform: translateX(-100%);
+  background: linear-gradient(100deg, rgba(255,255,255,0) 44%, rgba(214,226,245,.55) 50%, rgba(255,255,255,0) 56%); }
+#labLogo { position: absolute; left: 750px; top: 342.2px; width: 420px; height: 395.6px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg" class="full"><div id="g1" class="glow"></div><div id="g2" class="glow"></div><div id="horizon"></div><div id="vig" class="full"></div></div>
+
+  <!-- 1 · Ouverture -->
+  <section class="scene" id="sc-ouverture"><div class="cam"><div class="rig" id="oRig">
+    <div id="oStreak"></div>
+    <div class="ctr eyebrow rv" id="oEye" style="top:300px">Solutions B2B · Maroc</div>
+    <div class="full" id="oTitle">
+      <div class="ctr" id="oSara"></div>
+      <div class="ctr" id="oSheen">SARAPROC</div>
+      <div class="ctr rv" id="oMaroc">MAROC</div>
+    </div>
+    <div class="ctr h1 sil split" id="oLine" style="top:520px;padding:0 160px">Des solutions pour chaque besoin professionnel</div>
+    <div class="ctr" id="oChips" style="top:780px"><span class="pill rv">Hygiène</span><span class="pill rv">Produits chimiques industriels</span><span class="pill rv">Agriculture</span><span class="pill rv">Traitement des eaux</span></div>
+  </div></div></section>
+
+  <!-- 2 · Histoire -->
+  <section class="scene" id="sc-histoire"><div class="cam">
+    <div class="panel" id="hA">
+      <div class="abs eyebrow rv" style="left:150px;top:236px">Notre histoire</div>
+      <div class="abs rv" id="hA1" style="left:152px;top:292px;font:600 44px/1 Inter;color:#DCE5F4">Depuis</div>
+      <div class="digits h0" style="left:140px;top:338px"><span class="D sil">2</span><span class="D sil">0</span><span class="D sil">0</span><span class="D sil">2</span></div>
+      <div class="abs h3 rv" id="hA2" style="left:150px;top:612px;font-size:54px">Fondée à Fès,</div>
+      <div class="abs lead rv" id="hA3" style="left:150px;top:686px;width:900px">dans le quartier industriel Sidi Brahim.</div>
+      <div class="card refl rv" id="hAcard" style="left:1170px;top:180px;width:600px;height:600px"><img src="assets/photos/story-hall.webp"><div class="sheen"></div></div>
+    </div>
+    <div class="panel" id="hB">
+      <div class="abs rv" id="hB1" style="left:152px;top:292px;font:600 44px/1 Inter;color:#DCE5F4">Plus de</div>
+      <div class="abs h0 sil rv" id="hCount" style="left:140px;top:338px">300</div>
+      <div class="abs h2 split" id="hB2" style="left:150px;top:612px;width:920px">produits fabriqués et distribués</div>
+      <div class="card refl rv" id="hBcard" style="left:1170px;top:180px;width:600px;height:600px"><img src="assets/photos/story-products.webp"><div class="sheen"></div></div>
+    </div>
+    <div class="panel" id="hC">
+      <div class="ctr h2 sil split" id="hC1" style="top:176px">Des produits pour de nombreux secteurs</div>
+      <div class="chipgrid" style="left:60px;top:360px;width:1800px">
+        <div class="chip glass rv">Nettoyage et entretien industriel</div><div class="chip glass rv">Élevage</div><div class="chip glass rv">Textile</div>
+        <div class="chip glass rv">Cuir</div><div class="chip glass rv">Automobile</div><div class="chip glass rv">Agriculture</div>
+        <div class="chip glass rv">Hygiène corporelle naturelle</div><div class="chip glass rv">Droguerie</div><div class="chip glass rv">Produits spéciaux</div>
+      </div>
+    </div>
+    <div class="panel" id="hD">
+      <div class="full rv" id="hDbg"><img class="cover" src="assets/photos/story-lab.webp" style="filter:blur(4px);opacity:.22"><div class="full" style="background:linear-gradient(180deg,rgba(4,11,28,.3),rgba(4,11,28,.7))"></div></div>
+      <div class="pillar rv" style="left:150px"><svg class="ico" viewBox="0 0 48 48" data-icon="drop"></svg><div class="eyebrow">Expertise</div><div class="h3">Hygiène ménagère et industrielle</div></div>
+      <div class="pillar rv" style="left:710px"><svg class="ico" viewBox="0 0 48 48" data-icon="leaf"></svg><div class="eyebrow">Production et commercialisation</div><div class="h3">Produits agricoles</div></div>
+      <div class="pillar rv" style="left:1270px"><svg class="ico" viewBox="0 0 48 48" data-icon="flask"></svg><div class="eyebrow">Revente</div><div class="h3">Matières premières chimiques et cosmétiques</div></div>
+    </div>
+    <div class="panel" id="hE">
+      <svg id="hMap" class="full" viewBox="0 0 1920 1080">
+        <defs><linearGradient id="arcGrad" x1="0" x2="1"><stop offset="0" stop-color="#8EB4FF" stop-opacity=".95"/><stop offset="1" stop-color="#DCE8FF" stop-opacity=".55"/></linearGradient>
+          <radialGradient id="dotGlow"><stop offset="0" stop-color="#BFD3FF" stop-opacity=".9"/><stop offset="1" stop-color="#3A74F0" stop-opacity="0"/></radialGradient></defs>
+        <g id="hArcs"></g>
+        <g id="hRings"></g>
+        <circle cx="960" cy="700" r="70" fill="url(#dotGlow)" id="hDotGlow" opacity="0"/>
+        <circle cx="960" cy="700" r="11" fill="#FFFFFF" id="hDot" opacity="0"/>
+      </svg>
+      <div class="ctr rv" id="hFes" style="top:738px;font:600 34px/1 Inter;letter-spacing:.06em;color:#EAF1FF">Fès</div>
+      <div class="ctr h1 sil split" id="hE1" style="top:150px">Au Maroc et au-delà</div>
+      <div class="ctr lead split" id="hE2" style="top:282px">notamment sur les marchés africains en pleine croissance.</div>
+    </div>
+    <div class="panel" id="hF">
+      <div class="abs eyebrow rv" id="hF0" style="left:150px;top:250px">Distribution exclusive</div>
+      <div class="abs h2 sil split" id="hF1" style="left:150px;top:300px;width:940px">Importateur et distributeur exclusif au Maroc des fertilisants italiens PUCCIONI</div>
+      <div class="abs" id="hF2" style="left:141px;top:650px;width:980px"><span class="pill rv">Engrais liquides</span><span class="pill rv">Insecticides naturels</span><span class="pill rv" style="margin-top:18px">Fongicides naturels</span></div>
+      <div class="card light refl rv" id="hFcard" style="left:1140px;top:300px;width:680px;height:437px"><img src="assets/photos/agr-brixer.webp"><div class="sheen"></div></div>
+    </div>
+    <div class="panel" id="hG">
+      <div class="glass rv" id="hG1" style="left:150px;top:290px;width:790px;height:470px">
+        <div class="eyebrow" style="position:absolute;left:56px;top:60px">Notre mission</div>
+        <div class="vtext split" style="position:absolute;left:56px;top:122px;width:680px">Concevoir, produire et distribuer des solutions innovantes, sûres et durables.</div>
+      </div>
+      <div class="glass rv" id="hG2" style="left:980px;top:290px;width:790px;height:470px">
+        <div class="eyebrow" style="position:absolute;left:56px;top:60px">Notre vision</div>
+        <div class="vtext split" style="position:absolute;left:56px;top:122px;width:690px">Devenir un acteur de référence au Maroc dans la fabrication et la distribution de solutions industrielles sûres, durables et conformes.</div>
+      </div>
+    </div>
+    <div class="panel" id="hH">
+      <div class="ctr eyebrow rv" id="hH0" style="top:180px">Nos valeurs</div>
+      <div class="ctr val sil rv" style="top:252px">Transparence</div>
+      <div class="ctr val sil rv" style="top:377px">Indépendance</div>
+      <div class="ctr val sil rv" style="top:502px">Fiabilité</div>
+      <div class="ctr val sil rv" style="top:627px">Efficacité</div>
+      <div class="ctr val sil rv" style="top:752px">Engagement pour le bien-être</div>
+    </div>
+  </div></section>
+
+  <!-- 3 · Médical (logo 1) -->
+  <section class="scene" id="sc-medical"><div class="cam">
+    <img class="cover" id="mBg" src="assets/photos/med-bloc.webp" style="opacity:0">
+    <div class="full" id="mShade"></div>
+    <div class="panel" id="mIntro">
+      <div class="ctr eyebrow rv" style="top:128px">Secteur médical</div>
+      <div class="ctr h1 sil split" id="mTitle" style="top:808px">Hygiène en milieu médical</div>
+    </div>
+    <div class="panel" id="mHead"><div class="abs h1 sil split" style="left:210px;top:330px;width:1500px;text-align:center;font-size:86px">Lutte contre les infections nosocomiales et les contaminations croisées.</div></div>
+    <div class="full" id="mRailWrap"><div id="mRail"></div></div>
+    <div id="mCaps"></div>
+    <div class="plate rv" id="mPlate" style="left:400px;top:185px;width:1120px;height:560px"><img src="assets/logos/saraproc-medical.svg" style="left:60px;top:16px;width:1000px;height:527px"><div class="sheen"></div></div>
+  </div></section>
+
+  <!-- 4 · Industriel (logo 2 = LAB, carried by the transition card) -->
+  <section class="scene" id="sc-industriel"><div class="cam">
+    <div class="panel" id="iA">
+      <div class="abs eyebrow rv" style="left:880px;top:300px">Secteur industriel</div>
+      <div class="abs h1 sil split" id="iA1" style="left:880px;top:350px;width:960px">Produits chimiques industriels</div>
+      <div class="abs lead split" id="iA2" style="left:880px;top:600px;width:900px">Solutions chimiques innovantes et fiables pour divers secteurs industriels.</div>
+    </div>
+    <div class="panel" id="iB">
+      <div class="card refl rv" id="iBcard" style="left:140px;top:290px;width:760px;height:545px"><img src="assets/photos/ind-drums.webp"><div class="sheen"></div></div>
+      <div class="abs eyebrow rv" style="left:1010px;top:300px">Notre gamme</div>
+      <div class="abs gamme sil rv" style="left:1010px;top:352px">Matières premières</div>
+      <div class="abs gamme sil rv" style="left:1010px;top:452px">Produits de base</div>
+      <div class="abs gamme sil rv" style="left:1010px;top:552px">Intermédiaires</div>
+    </div>
+    <div class="panel" id="iC">
+      <div class="full rv" id="iCbg"><img class="cover" src="assets/photos/ind-plant.webp" style="filter:blur(3px);opacity:.24"><div class="full" style="background:linear-gradient(180deg,rgba(4,11,28,.35),rgba(4,11,28,.75))"></div></div>
+      <div class="ctr h2 sil split" id="iC1" style="top:200px">Pour de nombreux secteurs</div>
+      <div class="abs" id="iTiles" style="left:124px;top:350px;width:1672px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px"></div>
+      <div class="ctr" id="iC2" style="top:800px;font:700 44px/1 Inter;letter-spacing:-.02em"><span class="rv" style="display:inline-block">Innovation</span><span class="rv" style="display:inline-block;color:var(--sky);margin:0 26px">·</span><span class="rv" style="display:inline-block">Sécurité</span><span class="rv" style="display:inline-block;color:var(--sky);margin:0 26px">·</span><span class="rv" style="display:inline-block">Performance durable</span></div>
+    </div>
+  </div></section>
+
+  <!-- 5 · Hygiène professionnelle et institutionnelle -->
+  <section class="scene" id="sc-institutionnel"><div class="cam">
+    <div class="panel" id="bA">
+      <div class="ctr eyebrow rv" style="top:330px">Bâtiments et collectivités</div>
+      <div class="ctr h1 sil split" style="top:384px;padding:0 260px">Hygiène professionnelle et institutionnelle</div>
+    </div>
+    <div class="panel" id="bB">
+      <div class="abs eyebrow rv" id="bB0" style="left:80px;top:96px">Hygiène professionnelle et institutionnelle</div>
+      <div class="tile rv" style="left:80px;top:170px;width:692px;height:800px"><img src="assets/photos/inst-sols.webp"><div class="grad"></div><div class="lbl" style="font-size:50px">Sols et surfaces</div><div class="sheen"></div></div>
+      <div class="tile rv" style="left:792px;top:170px;width:336px;height:390px"><img src="assets/photos/inst-products.webp"><div class="grad"></div><div class="lbl">Sanitaires</div><div class="sheen"></div></div>
+      <div class="tile rv" style="left:1148px;top:170px;width:336px;height:390px"><img src="assets/photos/inst-linge.webp"><div class="grad"></div><div class="lbl">Linge</div><div class="sheen"></div></div>
+      <div class="tile rv" style="left:1504px;top:170px;width:336px;height:390px"><svg class="ico" viewBox="0 0 48 48" data-icon="hand"></svg><div class="lbl">Hygiène du personnel</div><div class="sheen"></div></div>
+      <div class="tile rv" style="left:792px;top:580px;width:336px;height:390px"><svg class="ico" viewBox="0 0 48 48" data-icon="bed"></svg><div class="lbl">Hôtels</div><div class="sheen"></div></div>
+      <div class="tile rv" style="left:1148px;top:580px;width:336px;height:390px"><svg class="ico" viewBox="0 0 48 48" data-icon="school"></svg><div class="lbl">Écoles</div><div class="sheen"></div></div>
+      <div class="tile rv" style="left:1504px;top:580px;width:336px;height:390px"><svg class="ico" viewBox="0 0 48 48" data-icon="columns"></svg><div class="lbl">Espaces publics</div><div class="sheen"></div></div>
+    </div>
+  </div></section>
+
+  <!-- 6 · Traitement des eaux -->
+  <section class="scene" id="sc-eaux"><div class="cam">
+    <div class="panel" id="wA">
+      <div class="ctr eyebrow rv" style="top:360px">Optimisation des traitements des eaux industrielles</div>
+      <div class="ctr h1 sil split" style="top:412px;font-size:120px">Traitement des eaux</div>
+    </div>
+    <div class="panel" id="wB">
+      <div class="abs eyebrow rv" id="wB0" style="left:170px;top:150px">Traitement des eaux</div>
+      <div id="wBar"></div>
+      <div class="witem rv" style="top:250px">Chaudières</div>
+      <div class="witem rv" style="top:376px">Circuits de refroidissement</div>
+      <div class="witem rv" style="top:502px">Osmose inverse</div>
+      <div class="witem rv" style="top:628px">Eaux usées</div>
+      <div class="witem rv" style="top:754px">Piscines</div>
+      <div class="card refl rv" id="wFrame"><img src="assets/photos/eau-salle.webp"><img src="assets/photos/story-tanks.webp"><img src="assets/photos/eau-osmose.webp"><img src="assets/photos/eau-usees.webp"><img src="assets/photos/eau-piscine.webp"><div class="sheen"></div></div>
+      <div class="wcap rv">Entretien préventif et curatif, pour un rendement énergétique optimal.</div>
+      <div class="wcap rv">Contre l'entartrage, la corrosion et la contamination microbiologique.</div>
+      <div class="wcap rv">Prévenir l'encrassement et le blocage des membranes.</div>
+      <div class="wcap rv">Un traitement efficace et optimal des eaux usées.</div>
+      <div class="wcap rv">Entretien et traitement de l'eau des piscines.</div>
+      <div class="wcap h3 rv" style="font-size:42px;color:#fff">Des solutions fiables contre le tartre et la corrosion.</div>
+    </div>
+  </div></section>
+
+  <!-- 7 · Bâtiments industriels et d'élevage -->
+  <section class="scene" id="sc-batiments"><div class="cam">
+    <div class="abs eyebrow rv" id="tE" style="left:140px;top:110px">Hygiène des bâtiments</div>
+    <div class="abs h2 sil split" id="tT" style="left:140px;top:150px;width:1700px">Bâtiments industriels et d'élevage</div>
+    <div id="tAcc"></div>
+  </div></section>
+
+  <!-- 8 · Cuisines professionnelles -->
+  <section class="scene" id="sc-cuisines"><div class="cam">
+    <div class="card refl rv" id="kCard" style="left:140px;top:190px;width:660px;height:660px"><img src="assets/photos/cui-cuisine.webp"><div class="sheen"></div></div>
+    <div class="abs eyebrow rv" style="left:900px;top:216px">Cuisines professionnelles</div>
+    <div class="abs h1 sil split" style="left:900px;top:266px;width:920px;font-size:84px">Hygiène des cuisines professionnelles</div>
+    <div id="kList"></div>
+    <div class="abs lead rv" id="kAud" style="left:900px;top:880px;width:960px;font-size:28px">Collectivités · Établissements de santé · EHPAD · Hôtellerie-restauration</div>
+  </div></section>
+
+  <!-- 9 · Matières premières cosmétiques -->
+  <section class="scene" id="sc-cosmetique"><div class="cam">
+    <div class="panel" id="cA">
+      <div class="ctr eyebrow rv" style="top:320px">Matières premières cosmétiques</div>
+      <div class="ctr h1 sil split" style="top:372px;padding:0 260px">Des matières premières de haute qualité</div>
+      <div class="ctr lead split" style="top:612px">Certifiées pour des soins naturels, peau et cheveux.</div>
+    </div>
+    <div class="panel" id="cB">
+      <div class="full" id="cWallWrap"><div id="cWall"></div></div>
+      <div class="abs eyebrow rv" id="cB0" style="left:60px;top:40px">Matières premières cosmétiques</div>
+    </div>
+  </div></section>
+
+  <!-- 10 · Bases cosmétiques -->
+  <section class="scene" id="sc-bases"><div class="cam">
+    <div class="ctr eyebrow rv" style="top:110px">Matières premières cosmétiques</div>
+    <div class="ctr h1 sil split" style="top:156px">Bases cosmétiques</div>
+    <div class="full" id="dFlow">
+      <div class="dcard rv"><div class="ph"><img src="assets/photos/cos-bases.webp"></div><div class="lbl">Bases cosmétiques neutres et naturelles</div></div>
+      <div class="dcard rv"><div class="ph"><img class="contain" src="assets/photos/cos-meltpour.webp"></div><div class="lbl">Bases de savon glycérine Melt &amp; Pour</div></div>
+      <div class="dcard rv"><div class="ph"><img src="assets/photos/cos-emuls.webp"></div><div class="lbl">Émulsifiants, co-émulsifiants et bases auto-émulsifiantes</div></div>
+    </div>
+  </div></section>
+
+  <!-- 11 · Traitement des eaux (2) — monde clair -->
+  <section class="scene" id="sc-eaux2">
+    <div class="full" id="e2Bg"></div>
+    <div class="full" id="e2Beams"></div>
+    <div class="full" id="e2Bubbles"></div>
+    <div class="cam">
+      <div class="card rv" id="e2Card" style="left:1240px;top:150px;width:520px;height:780px;box-shadow:0 50px 100px -24px rgba(20,60,130,.45)"><img src="assets/photos/eau-sous.webp"><div class="sheen"></div></div>
+      <div class="abs eyebrow rv" style="left:140px;top:206px">Traitement des eaux</div>
+      <div class="abs h1 navy split" style="left:140px;top:226px;width:1040px;font-size:84px">Des protocoles sur mesure</div>
+      <div class="abs lead split" id="e2L" style="left:140px;top:336px;width:1040px;color:#33507F">qui combinent prévention et correction.</div>
+      <div class="panel" id="e2P">
+        <div class="abs eyebrow rv" style="left:140px;top:470px">Neutraliser les problèmes récurrents</div>
+        <div class="abs" style="left:140px;top:526px;width:1060px">
+          <span class="lpill rv"><svg viewBox="0 0 48 48" data-icon="shield"></svg>Tartre</span><span class="lpill rv"><svg viewBox="0 0 48 48" data-icon="shield"></svg>Corrosion</span><br>
+          <span class="lpill rv"><svg viewBox="0 0 48 48" data-icon="shield"></svg>Prolifération bactérienne</span><span class="lpill rv"><svg viewBox="0 0 48 48" data-icon="shield"></svg>Déséquilibres chimiques</span>
+        </div>
+      </div>
+      <div class="panel" id="e2A">
+        <div class="abs eyebrow rv" style="left:140px;top:470px">Pour chaque installation</div>
+        <div class="ltile rv" style="left:140px;top:526px"><svg viewBox="0 0 48 48" data-icon="factory"></svg>Usine agroalimentaire</div>
+        <div class="ltile rv" style="left:650px;top:526px"><svg viewBox="0 0 48 48" data-icon="bolt"></svg>Centrale énergétique</div>
+        <div class="ltile rv" style="left:140px;top:650px"><svg viewBox="0 0 48 48" data-icon="hotel"></svg>Complexe hôtelier</div>
+        <div class="ltile rv" style="left:650px;top:650px"><svg viewBox="0 0 48 48" data-icon="waves"></svg>Piscine municipale</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 · Compléments alimentaires pour animaux d'élevage -->
+  <section class="scene" id="sc-elevage"><div class="cam">
+    <img class="cover" id="aBg" src="assets/photos/ani-aliment.webp" style="opacity:0;filter:blur(4px)">
+    <div class="full" id="aShade" style="background:linear-gradient(180deg,rgba(4,11,28,.62),rgba(4,11,28,.9))"></div>
+    <div class="panel" id="aA">
+      <div class="card refl rv" style="left:140px;top:200px;width:720px;height:540px"><img src="assets/photos/ani-vache.webp"><div class="sheen"></div></div>
+      <div class="abs eyebrow rv" style="left:940px;top:226px">Élevage</div>
+      <div class="abs h1 sil split" style="left:940px;top:276px;width:900px;font-size:84px">Compléments alimentaires pour animaux d'élevage</div>
+      <div class="abs" style="left:940px;top:610px"><span class="pill solid rv" style="margin:0">Gamme destinée aux animaux d'élevage</span></div>
+    </div>
+    <div class="panel" id="aB">
+      <div class="ctr eyebrow rv" style="top:150px">Compléments alimentaires pour animaux d'élevage</div>
+      <div class="acard glass rv" style="left:121px"><div class="num">01</div><div class="h3">Minéraux et oligo-éléments</div><div class="lead">Immunité, croissance et fonctions vitales.</div></div>
+      <div class="acard glass rv" style="left:547px"><div class="num">02</div><div class="h3">Vitamines</div><div class="lead">Soutien du métabolisme et des défenses.</div></div>
+      <div class="acard glass rv" style="left:973px"><div class="num">03</div><div class="h3">Probiotiques et prébiotiques</div><div class="lead">Un microbiote intestinal sain, pour une meilleure digestion.</div></div>
+      <div class="acard glass rv" style="left:1399px"><div class="num">04</div><div class="h3">Énergétiques</div><div class="lead">Réduire les déficits énergétiques, surtout en périodes critiques.</div></div>
+      <div class="ctr h3 split" id="aB1" style="top:808px;font-size:42px">Optimiser la production, améliorer la santé et la rentabilité.</div>
+      <div class="ctr" style="top:900px"><span class="pill rv" id="aB2" style="height:64px;line-height:64px;font-size:26px">Gamme destinée aux animaux d'élevage</span></div>
+    </div>
+  </div></section>
+
+  <!-- 13 · Nutrition des plantes et fertilisation -->
+  <section class="scene" id="sc-agriculture"><div class="cam">
+    <img class="cover" id="gBg" src="assets/photos/agr-plantes.webp" style="opacity:0;filter:blur(5px)">
+    <div class="full" style="background:linear-gradient(180deg,rgba(4,11,28,.55),rgba(4,11,28,.88))"></div>
+    <div class="panel" id="gA">
+      <div class="ctr eyebrow rv" style="top:320px">Agriculture</div>
+      <div class="ctr h1 sil split" style="top:372px;padding:0 220px">Nutrition des plantes et fertilisation</div>
+      <div class="ctr lead split" style="top:612px;padding:0 330px">Des formules innovantes pour nourrir les plantes, renforcer les sols et garantir des récoltes saines et durables.</div>
+    </div>
+    <div class="panel" id="gB">
+      <div class="ctr eyebrow rv" style="top:92px">Nutrition des plantes et fertilisation</div>
+      <div class="card light refl rv" style="left:140px;top:170px;width:520px;height:334px"><img src="assets/photos/agr-humia.webp"><div class="sheen"></div></div>
+      <div class="card light refl rv" style="left:700px;top:170px;width:520px;height:334px"><img src="assets/photos/agr-rooting.webp"><div class="sheen"></div></div>
+      <div class="card light refl rv" style="left:1260px;top:170px;width:520px;height:334px"><img src="assets/photos/agr-brixer.webp"><div class="sheen"></div></div>
+      <div class="ctr" id="gChips" style="top:660px;padding:0 120px">
+        <span class="pill rv">Engrais organiques</span><span class="pill rv">Engrais minéraux</span><span class="pill rv">Engrais organo-minéraux</span><span class="pill rv">Biostimulants</span><br>
+        <span class="pill rv">Correcteurs de carence</span><span class="pill rv">Engrais foliaires</span><span class="pill rv">Amendements du sol</span><span class="pill rv">Agriculture biologique</span>
+      </div>
+    </div>
+    <div class="panel" id="gC">
+      <div class="card refl rv" style="left:460px;top:190px;width:1000px;height:376px"><img src="assets/photos/agr-fruits.webp"><div class="sheen"></div></div>
+      <div class="ctr h2 sil split" style="top:680px">Grandes cultures · Vergers · Maraîchage</div>
+      <div class="ctr" style="top:810px"><span class="pill solid rv">Distributeur exclusif PUCCIONI au Maroc</span></div>
+    </div>
+  </div></section>
+
+  <!-- 14 · Certifications (texte seul) -->
+  <section class="scene" id="sc-certifications"><div class="cam">
+    <div class="ctr eyebrow rv" id="qE" style="top:376px">Qualité et conformité</div>
+    <div class="full" id="qTitleWrap" style="transform-origin:960px 500px"><div class="ctr sil rv" id="qTitle" style="top:420px;font:800 160px/1 Inter;letter-spacing:-.04em">Certifications</div></div>
+    <div id="qTiles"></div>
+    <div class="ctr rv" id="qNote" style="top:862px;font:400 30px/1.3 Inter;color:rgba(214,226,245,.7)">Selon le périmètre couvert par chaque certification.</div>
+  </div></section>
+
+  <!-- 15 · Final : logo officiel de saraprocmaroc.com -->
+  <section class="scene" id="sc-final">
+    <div class="full" id="fBg"></div>
+    <div id="fBloom"></div>
+    <img id="fLogo" src="assets/logos/saraproc-maroc.png" alt="SARAPROC MAROC">
+    <div class="ctr rv" id="fName">SARAPROC MAROC</div>
+    <div id="fLine"></div>
+    <div class="ctr rv" id="fUrl">saraprocmaroc.com</div>
+  </section>
+
+  <div id="lab"><div id="labGlow"></div><div id="labSheen"></div><img id="labLogo" src="assets/logos/saraproc-lab.svg" alt="Les laboratoires SARAPROC d'hygiène professionnelle"></div>
+</div>
+
+<script>
+/*
+   SARAPROC MAROC — presentation film (1920×1080, 30 fps, 3:48).
+   One paused GSAP timeline, built from score.json (bars, sections, voice placement) and assets/voice/voice.json
+   (when each clause of the narration is spoken). window.seek(t) renders time t exactly.
+   ?render: renderer mode · ?play: real-time preview with the soundtrack · ?t=63.2: freeze one moment.
+*/
+(() => {
+const W = 1920, H = 1080;
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.has('render'), PLAY = Q.has('play'), FREEZE = Q.has('t') ? +Q.get('t') : null;
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const tl = gsap.timeline({ paused: true });
+let SC, VO, DUR; const S = {}, E = {};
+
+/* ---------- timing helpers ---------- */
+const V = (id, k = 0) => SC.voice[id] + VO.lines[id].starts[k];        // when clause k of a line is spoken
+const q = t => Math.round((t - 0.08) * 4) / 4;                           // snap a reveal to the 16th-note grid just before the word
+const els = x => (typeof x === 'string' ? $$(x) : x instanceof Element ? [x] : [...x]);
+const words = x => els(x).flatMap(e => $$('.w', e));
+function rise(t, x, o = {}) {
+  const T = els(x); if (!T.length) return;
+  const { y = 34, xx = 0, blur = 12, dur = 0.9, stagger = 0.045, ease = 'power3.out', scale = 1 } = o;
+  tl.fromTo(T, { opacity: 0, y, x: xx, scale, filter: `blur(${blur}px)` },
+    { opacity: 1, y: 0, x: 0, scale: 1, filter: 'blur(0px)', duration: dur, stagger, ease, immediateRender: false }, t);
+}
+const riseW = (t, x, o = {}) => rise(t, words(x), { stagger: 0.04, ...o });
+function sink(t, x, o = {}) {
+  const T = els(x); if (!T.length) return;
+  const { y = -26, blur = 10, dur = 0.45, ease = 'power2.in', scale = 1 } = o;
+  tl.fromTo(T, { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }, { opacity: 0, y, scale, filter: `blur(${blur}px)`, duration: dur, ease, immediateRender: false }, t);
+}
+function cardIn(t, x, o = {}) {        // photo card: lifts in, then a sheen crosses it
+  const T = els(x); rise(t, T, { y: 70, blur: 0, scale: 0.94, dur: 1.1, ease: 'power3.out', stagger: o.stagger ?? 0.08, ...o });
+  T.forEach((c, i) => { const s = $('.sheen', c); if (s) tl.fromTo(s, { xPercent: -100 }, { xPercent: 100, duration: 1.3, ease: 'power2.inOut', immediateRender: false }, t + 0.45 + i * (o.stagger ?? 0.08)); });
+}
+function kb(t0, dur, x, from = 1.12, to = 1.0) { tl.fromTo(els(x), { scale: from }, { scale: to, duration: dur, ease: 'none', immediateRender: false }, t0); }
+function fade(t, x, a, b, dur = 0.8, ease = 'power2.inOut') { tl.fromTo(els(x), { opacity: a }, { opacity: b, duration: dur, ease, immediateRender: false }, t); }
+function sceneWindow(id, t0, t1) { const sc = $('#sc-' + id); tl.set(sc, { display: 'block' }, t0); tl.set(sc, { display: 'none' }, t1); }
+function drift(id, t0, t1, to = 1.035) { tl.fromTo($('.cam', $('#sc-' + id)), { scale: 1 }, { scale: to, duration: t1 - t0, ease: 'none', immediateRender: false }, t0); }
+
+/* ---------- icons (simple line glyphs) ---------- */
+const ICONS = {
+  drop: '<path d="M24 5C24 5 11 20 11 29a13 13 0 0 0 26 0C37 20 24 5 24 5Z"/><path d="M18 31a6 6 0 0 0 6 6"/>',
+  leaf: '<path d="M9 39C9 21 21 9 40 9c0 19-11 30-29 30Z"/><path d="M9 39 29 19"/>',
+  flask: '<path d="M18 5h12M20 5v13L9 38a3 3 0 0 0 3 5h24a3 3 0 0 0 3-5L28 18V5"/><path d="M14 30h20"/>',
+  hand: '<path d="M15 25V13a2.6 2.6 0 0 1 5.2 0v9M20.2 11a2.6 2.6 0 0 1 5.2 0v11M25.4 12.5a2.6 2.6 0 0 1 5.2 0V23M30.6 16a2.6 2.6 0 0 1 5.2 0v12c0 8-5 13-12 13-5 0-8-3-10-7l-4.5-7.5a2.7 2.7 0 0 1 4.5-3l1.9 2.9"/>',
+  bed: '<path d="M5 38V12M5 29h38v9M43 29v-5a5 5 0 0 0-5-5H21v10"/><circle cx="13.5" cy="22" r="4.5"/>',
+  school: '<path d="M4 18 24 9l20 9-20 9Z"/><path d="M12 22v9c0 3 6 6 12 6s12-3 12-6v-9M44 18v11"/>',
+  columns: '<path d="M6 41h36M8 18h32L24 7Z"/><path d="M12 21v16M20 21v16M28 21v16M36 21v16"/>',
+  check: '<circle cx="24" cy="24" r="19"/><path d="M15.5 24.5l6 6 11-12.5"/>',
+  shield: '<path d="M24 5 39 11v12c0 10-7 17-15 20C16 40 9 33 9 23V11Z"/><path d="M17 24l5 5 9-10"/>',
+  factory: '<path d="M5 41V21l10 6v-6l10 6V11h9v30Z"/><path d="M5 41h38M38 41V25"/>',
+  bolt: '<path d="M27 4 11 27h11l-3 17 18-24H26Z"/>',
+  hotel: '<path d="M10 43V7h20v36M30 17h9v26M5 43h38"/><path d="M15 13h3M22 13h3M15 20h3M22 20h3M15 27h3M22 27h3"/>',
+  waves: '<path d="M4 20q5-5 10 0t10 0 10 0 10 0M4 30q5-5 10 0t10 0 10 0 10 0M4 40q5-5 10 0t10 0 10 0 10 0"/>',
+};
+
+/* ---------- DOM built from data ---------- */
+const MED = [
+  ['med-mains', 'Hygiène des mains', 'Traitement hygiénique et désinfection chirurgicale des mains.'],
+  ['med-sols', 'Sols, surfaces et matériel médical', 'Une hygiène quotidienne des environnements sensibles.'],
+  ['med-instruments', 'Instruments médico-chirurgicaux', 'Désinfection de haut niveau des dispositifs médicaux.'],
+  ['med-endoscopes', 'Endoscopes', 'Maîtrise du risque infectieux et des transmissions croisées.'],
+  ['med-gel', 'Gel de transmission ultrasonique', 'Haute qualité, hypoallergénique, excellente conductivité.'],
+  ['med-dialyse', "Générateurs d'hémodialyse et boucle d'eau", 'Sécurité du patient et maîtrise du biofilm.'],
+];
+const IND = ['Agroalimentaire', 'Agriculture', 'Traitement des eaux', 'Cuir', 'Textile', 'Plastique', 'Industrie métallique', 'Peinture'];
+const BAT = [
+  ['bat-worker', 'Installations', 'Pour un environnement sain et sécurisé.'],
+  ['bat-agro2', 'Zones de production', "L'hygiène en industrie de transformation agroalimentaire."],
+  ['bat-agro', 'Équipements', 'Sols, surfaces et matériel.'],
+  ['bat-elevage', "Bâtiments d'élevage", 'Nettoyage, désinfection et vide sanitaire.'],
+];
+const CUI = ['Fours', 'Lavage de la vaisselle', 'Trempage', 'Sols, surfaces et équipements', 'Hygiène des mains', 'Fruits et légumes'];
+const COS = [
+  ['cos-hm', 'Huiles'], ['cos-beurres', 'Beurres'], ['cos-cires', 'Cires'], ['cos-tensio', 'Tensioactifs'],
+  ['cos-alcools', 'Alcools gras'], ['cos-parfums', 'Parfums et fragrances'], ['cos-he', 'Huiles essentielles'], ['cos-emuls', 'Émulsifiants'],
+  ['cos-epaiss', 'Épaississants'], ['cos-colorants', 'Colorants'], [null, 'Conservateurs'], ['cos-antiox', 'Antioxydants'],
+  ['cos-argiles', 'Argiles'], ['cos-charbon', 'Charbon actif'], ['cos-vitamines', 'Vitamines'], [null, 'Microbilles et gommage'],
+];
+const CERT = [
+  ['ISO 9001', 'NM ISO 9001 V 2015'], ['ISO 13485', 'NM ISO 13485 V 2016'], ['BPF Cosmétique', 'Bonnes Pratiques de Fabrication Cosmétique'],
+  ['COSMOS Organic', 'COSMetic Organic and Natural Standard'], ['ECOCERT Inputs', 'Approved by ECOCERT Inputs'],
+  ['ONSSA', 'Office National de Sécurité Sanitaire des Produits Alimentaires'], ['Made in Morocco', 'Label'],
+];
+function build() {
+  for (const el of $$('.split')) {                   // words → spans (regular spaces only, so non-breaking spaces stay inside a word)
+    const parts = el.textContent.trim().split(/ +/); el.textContent = '';
+    parts.forEach((w, i) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; el.append(s); if (i < parts.length - 1) el.append(' '); });
+  }
+  for (const svg of $$('svg[data-icon]')) svg.innerHTML = ICONS[svg.dataset.icon];
+  $('#oSara').innerHTML = [...'SARAPROC'].map(c => `<span class="L">${c}</span>`).join('');
+  $('#mRail').innerHTML = MED.map(([p], i) => `<div class="card rv" style="left:${i * 800}px"><img src="assets/photos/${p}.webp" style="object-position:50% 40%"><div class="sheen"></div></div>`).join('');
+  $('#mCaps').innerHTML = MED.map(([, t, s], i) => `<div class="mcap"><div class="eyebrow rv">0${i + 1} / 06</div><div class="h2 sil rv">${t}</div><div class="lead rv">${s}</div></div>`).join('');
+  $('#iTiles').innerHTML = IND.map((t, i) => `<div class="itile glass rv"><div class="num">0${i + 1}</div><div class="lbl">${t}</div></div>`).join('');
+  $('#tAcc').innerHTML = BAT.map(([p, t, s], i) => `<div class="acc rv"><img src="assets/photos/${p}.webp"><div class="grad"></div><div class="num">0${i + 1}</div><div class="lblS">${t}</div><div class="lblL"><div class="h2">${t}</div><div class="lead">${s}</div></div></div>`).join('');
+  $('#kList').innerHTML = CUI.map((t, i) => `<div class="kitem rv" style="left:${900 + (i >= 3 ? 470 : 0)}px;top:${500 + (i % 3) * 120}px"><svg class="ico" viewBox="0 0 48 48">${ICONS.check}</svg><span>${t}</span></div>`).join('');
+  $('#cWall').innerHTML = COS.map(([p, t], i) => {
+    const x = (i % 4) * 442, y = Math.floor(i / 4) * 272;
+    return p ? `<div class="ctile rv" style="left:${x}px;top:${y}px"><img src="assets/photos/${p}.webp"><div class="grad"></div><div class="lbl">${t}</div></div>`
+             : `<div class="ctile txt rv" style="left:${x}px;top:${y}px"><div class="eyebrow">Cosmétique</div><div class="lbl">${t}</div></div>`;
+  }).join('');
+  $('#qTiles').innerHTML = CERT.map(([n, f], i) => {
+    const row = i < 4 ? 0 : 1, col = row ? i - 4 : i, x = (row ? 332 : 118) + col * 428, y = row ? 560 : 312;
+    return `<div class="qtile glass rv" style="left:${x}px;top:${y}px"><div class="name sil">${n}</div><div class="fn">${f}</div><div class="sheen"></div></div>`;
+  }).join('');
+  // Fès: arcs outwards
+  const ends = [[220, 600], [400, 900], [740, 1010], [1180, 1010], [1520, 900], [1700, 600]];
+  $('#hArcs').innerHTML = ends.map(([x, y]) => { const mx = (960 + x) / 2, my = (700 + y) / 2 - 230; return `<path class="arc" d="M960 700 Q${mx} ${my} ${x} ${y}"/><circle class="end" cx="${x}" cy="${y}" r="6" opacity="0"/>`; }).join('');
+  $('#hRings').innerHTML = [0, 1, 2].map(() => '<circle cx="960" cy="700" r="20" fill="none" stroke="#8EB4FF" stroke-width="2" opacity="0"/>').join('');
+  // water 2: light beams and bubbles
+  $('#e2Beams').innerHTML = [0, 1, 2, 3, 4].map(i => `<div class="beam" style="left:${180 + i * 360}px;opacity:${0.35 + 0.1 * (i % 2)}"></div>`).join('');
+  $('#e2Bubbles').innerHTML = Array.from({ length: 26 }, () => '<div class="bub"></div>').join('');
+}
+
+/* ---------- the film ---------- */
+function film() {
+  /* LAB card in the silent breath (music stops at end - 1.0 s and resumes on the next downbeat) */
+  const lab = $('#lab'), logo = $('#labLogo'), sheenL = $('#labSheen');
+  const FULL = 'inset(0px 0px 0px 0px round 0px)', PLATE = 'inset(240px 1160px 240px 160px round 44px)', BADGE = 'inset(40px 1650px 830px 50px round 28px)';
+  const AT_PLATE = { x: -500, y: 0, scale: 1.05 }, AT_BADGE = { x: -800, y: -395, scale: 0.405 }, AT_CENTER = { x: 0, y: 0, scale: 1 };
+  function labIn(t) {
+    tl.set(lab, { display: 'block' }, t);
+    tl.fromTo(lab, { opacity: 0, scale: 1.03, clipPath: FULL }, { opacity: 1, scale: 1, clipPath: FULL, duration: 0.22, ease: 'power2.out', immediateRender: false }, t);
+    tl.fromTo(logo, { ...AT_CENTER, scale: 0.9, opacity: 0 }, { ...AT_CENTER, opacity: 1, duration: 0.75, ease: 'power3.out', immediateRender: false }, t);
+    tl.fromTo(sheenL, { xPercent: -100 }, { xPercent: 100, duration: 1.0, ease: 'power1.inOut', immediateRender: false }, t + 0.05);
+  }
+  function labOut(t) {
+    tl.fromTo(lab, { opacity: 1, scale: 1 }, { opacity: 0, scale: 1.16, duration: 0.5, ease: 'power2.out', immediateRender: false }, t);
+    tl.set(lab, { display: 'none' }, t + 0.5);
+  }
+  for (const s of SC.sections) {
+    if (!s.card) continue;
+    const e = E[s.id];
+    if (s.id === 'industriel') {          // the corner badge opens back into the full card
+      tl.fromTo(lab, { clipPath: BADGE }, { clipPath: FULL, duration: 0.45, ease: 'power3.inOut', immediateRender: false }, e - 1.0);
+      tl.fromTo(logo, { ...AT_BADGE }, { ...AT_CENTER, duration: 0.55, ease: 'power3.inOut', immediateRender: false }, e - 1.0);
+      tl.fromTo(sheenL, { xPercent: -100 }, { xPercent: 100, duration: 1.0, ease: 'power1.inOut', immediateRender: false }, e - 0.95);
+    } else labIn(e - 1.0);
+    if (s.id === 'medical') {             // logo 2 stays: the card becomes the industrial sector's plate, then its badge
+      tl.fromTo(lab, { clipPath: FULL }, { clipPath: PLATE, duration: 0.9, ease: 'power3.inOut', immediateRender: false }, e);
+      tl.fromTo(logo, { ...AT_CENTER }, { ...AT_PLATE, duration: 0.9, ease: 'power3.inOut', immediateRender: false }, e);
+      const b = q(V('ind1', 1)) - 0.25;
+      tl.fromTo(lab, { clipPath: PLATE }, { clipPath: BADGE, duration: 0.8, ease: 'power3.inOut', immediateRender: false }, b);
+      tl.fromTo(logo, { ...AT_PLATE }, { ...AT_BADGE, duration: 0.8, ease: 'power3.inOut', immediateRender: false }, b);
+    } else labOut(e);
+  }
+
+  /* scene windows: a scene appears under the card (end - 0.8 s of the previous one) */
+  const order = SC.sections.map(s => s.id);
+  order.forEach((id, i) => {
+    const prev = SC.sections[i - 1];
+    const t0 = id === 'final' ? E.certifications - 1.75 : prev && prev.card ? E[prev.id] - 0.8 : S[id];
+    const sec = SC.sections[i];
+    const t1 = id === 'certifications' ? E[id] - 0.5 : sec.card ? E[id] - 0.8 : E[id];
+    sceneWindow(id, t0, t1);
+    if (id !== 'ouverture' && id !== 'final') drift(id, t0, t1);
+  });
+
+  /* 1 · Ouverture */
+  const o = S.ouverture;
+  tl.fromTo('#oStreak', { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 1.5, ease: 'power3.out', immediateRender: false }, o + 0.25);
+  tl.fromTo('#oStreak', { opacity: 1 }, { opacity: 0, duration: 0.7, ease: 'power1.in', immediateRender: false }, o + 1.95);
+  rise(o + 0.8, '#oEye');
+  rise(o + 1.9, '#oSara .L', { y: 90, blur: 22, dur: 1.1, stagger: 0.055 });
+  tl.set('#oSheen', { opacity: 1 }, o + 3.0);
+  tl.fromTo('#oSheen', { backgroundPosition: '100% 0%' }, { backgroundPosition: '0% 0%', duration: 1.2, ease: 'power2.inOut', immediateRender: false }, o + 3.0);
+  tl.set('#oSheen', { opacity: 0 }, o + 4.25);
+  tl.fromTo('#oMaroc', { opacity: 0, letterSpacing: '1.6em', paddingLeft: '1.6em' }, { opacity: 1, letterSpacing: '0.9em', paddingLeft: '0.9em', duration: 1.4, ease: 'power3.out', immediateRender: false }, o + 2.6);
+  const tMove = q(V('ouv1', 1)) - 0.35;
+  sink(tMove - 0.1, '#oEye');
+  tl.fromTo('#oTitle', { y: 0, scale: 1 }, { y: -205, scale: 0.6, duration: 1.0, ease: 'power3.inOut', immediateRender: false }, tMove);
+  riseW(q(V('ouv1', 1)), '#oLine', { stagger: 0.05 });
+  const chipT = [q(V('ouv2', 0)), q(V('ouv2', 1)), q(V('ouv2', 2)), q(V('ouv2', 2) + 0.9)];
+  $$('#oChips .pill').forEach((p, i) => rise(chipT[i], p, { y: 26, blur: 8, dur: 0.7 }));
+  tl.fromTo('#oRig', { scale: 1, opacity: 1, filter: 'blur(0px)' }, { scale: 1.9, opacity: 0, filter: 'blur(18px)', duration: 0.75, ease: 'power2.in', immediateRender: false }, E.ouverture - 0.75);
+
+  /* 2 · Histoire */
+  const h = S.histoire;
+  const hAt = { A: h, B: h + 4.5, C: h + 8, D: h + 16, E: h + 24, F: h + 30, G: h + 36, H: h + 42 };
+  sink(hAt.B - 0.4, '#hA'); sink(hAt.C - 0.4, '#hB'); sink(hAt.D - 0.4, '#hC'); sink(hAt.E - 0.4, '#hD');
+  sink(hAt.F - 0.4, '#hE'); sink(hAt.G - 0.4, '#hF'); sink(hAt.H - 0.4, '#hG');
+  // A · Depuis 2002, Fès
+  rise(h + 0.1, '#hA .eyebrow'); rise(h + 0.3, '#hA1');
+  rise(h + 0.35, '#hA .D', { y: 250, blur: 0, dur: 1.0, ease: 'power4.out', stagger: 0.08 });
+  rise(q(V('his1', 1)), '#hA2'); rise(q(V('his1', 2)), '#hA3');
+  cardIn(h + 0.5, '#hAcard'); kb(h, 5, '#hAcard img');
+  // B · plus de 300 produits (the counter is drawn in draw())
+  rise(hAt.B + 0.1, '#hB1'); rise(hAt.B + 0.15, '#hCount', { blur: 0, y: 20 });
+  riseW(q(V('his1', 3)) + 1.25, '#hB2');
+  cardIn(hAt.B + 0.2, '#hBcard', { xx: 80 }); kb(hAt.B, 4, '#hBcard img');
+  // C · secteurs
+  riseW(hAt.C + 0.1, '#hC1');
+  const chips = $$('#hC .chip'), cT = [1, 2, 3, 4, 5].map(k => q(V('his2', k))).concat([q(V('his2', 5) + 0.9)]);
+  chips.slice(0, 6).forEach((c, i) => rise(cT[i], c, { y: 30, blur: 8, dur: 0.7 }));
+  rise(cT[5] + 0.25, chips.slice(6), { y: 30, blur: 8, dur: 0.7, stagger: 0.12 });
+  // D · trois métiers
+  fade(hAt.D, '#hDbg', 0, 1, 1.2);
+  const pil = $$('#hD .pillar'), pT = [q(V('his3', 0)), q(V('his3', 1)), q(V('his3', 2))];
+  pil.forEach((p, i) => { rise(pT[i], p, { y: 40 }); const paths = $$('path, circle', p); paths.forEach(pp => { const L = 160; tl.fromTo(pp, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: 1.1, ease: 'power2.out', immediateRender: false }, pT[i] + 0.1); }); });
+  // E · Maroc et au-delà
+  riseW(hAt.E + 0.15, '#hE1'); riseW(q(V('his4', 1)), '#hE2', { stagger: 0.03 });
+  tl.fromTo(['#hDot', '#hDotGlow'], { opacity: 0, scale: 0, transformOrigin: '960px 700px' }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, hAt.E + 0.3);
+  rise(hAt.E + 0.5, '#hFes', { y: 14, blur: 6 });
+  $$('#hArcs .arc').forEach((a, i) => {
+    const L = a.getTotalLength(), t = q(V('his4', 1)) + 0.12 * i;
+    gsap.set(a, { strokeDasharray: L, strokeDashoffset: L });
+    tl.fromTo(a, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.inOut', immediateRender: false }, t);
+    tl.fromTo(a.nextElementSibling, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, t + 1.1);
+  });
+  // F · PUCCIONI
+  rise(hAt.F + 0.1, '#hF0'); riseW(SC.voice.his5, '#hF1', { stagger: 0.05 });
+  rise(SC.voice.his5 + 2.4, '#hF2 .pill', { stagger: 0.3, y: 24, blur: 8 });
+  cardIn(hAt.F + 0.3, '#hFcard', { xx: 80 });
+  // G · mission, vision
+  rise(hAt.G, '#hG1', { y: 50, blur: 0 }); riseW(q(V('his6', 1)), '#hG1 .vtext', { stagger: 0.05 });
+  rise(hAt.G + 2.75, '#hG2', { y: 50, blur: 0 }); riseW(hAt.G + 3.0, '#hG2 .vtext', { stagger: 0.04 });
+  // H · valeurs
+  rise(hAt.H + 0.05, '#hH0');
+  $$('#hH .val').forEach((v, i) => rise(q(V('his7', i + 1)), v, { y: 40, blur: 14 }));
+
+  /* 3 · Médical (logo 1 on its white plate, then kept as the corner badge) */
+  const m = S.medical;
+  tl.fromTo('#mPlate', { opacity: 0, y: 70, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'power3.out', immediateRender: false }, m + 0.05);
+  tl.fromTo('#mPlate .sheen', { xPercent: -100 }, { xPercent: 100, duration: 1.4, ease: 'power2.inOut', immediateRender: false }, m + 0.9);
+  rise(m + 0.25, '#mIntro .eyebrow'); riseW(SC.voice.med1, '#mTitle');
+  const mHead = q(V('med1', 1));
+  sink(mHead - 0.3, ['#mIntro .eyebrow', '#mTitle']);
+  tl.fromTo('#mPlate', { x: 0, y: 0, scale: 1 }, { x: -760, y: -350, scale: 0.268, duration: 0.9, ease: 'power3.inOut', immediateRender: false }, mHead - 0.3);
+  fade(mHead - 0.3, '#mBg', 0, 0.42, 1.2); kb(mHead - 0.3, 6, '#mBg');
+  riseW(mHead, '#mHead .h1', { stagger: 0.045 });
+  const mT = [q(V('med2', 0)), q(V('med2', 1)), q(V('med2', 2)), q(V('med2', 2) + 1.75), q(V('med2', 3)), q(V('med2', 4))];
+  sink(mT[0] - 0.75, '#mHead'); fade(mT[0] - 0.75, '#mBg', 0.42, 0.14, 0.8);
+  const mCards = $$('#mRail .card');
+  tl.fromTo(mCards, { opacity: 0, y: 80 }, { opacity: (i) => (i === 0 ? 1 : 0.4), y: 0, scale: (i) => (i === 0 ? 1 : 0.84), duration: 1.0, stagger: 0.06, ease: 'power3.out', immediateRender: false }, mT[0] - 0.6);
+  const caps = $$('#mCaps .mcap');
+  mT.forEach((t, i) => {
+    if (i > 0) {
+      tl.fromTo('#mRail', { x: -800 * (i - 1) }, { x: -800 * i, duration: 0.7, ease: 'power3.inOut', immediateRender: false }, t - 0.15);
+      tl.fromTo(mCards[i - 1], { scale: 1, opacity: 1 }, { scale: 0.84, opacity: 0.4, duration: 0.7, ease: 'power3.inOut', immediateRender: false }, t - 0.15);
+      tl.fromTo(mCards[i], { scale: 0.84, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'power3.inOut', immediateRender: false }, t - 0.15);
+    }
+    tl.fromTo($('.sheen', mCards[i]), { xPercent: -100 }, { xPercent: 100, duration: 1.1, ease: 'power2.inOut', immediateRender: false }, t + 0.2);
+    rise(t + 0.05, $$('.rv', caps[i]), { y: 22, blur: 8, dur: 0.6, stagger: 0.06 });
+    const tEnd = i < 5 ? mT[i + 1] - 0.2 : VE('med2') + 0.3;
+    sink(tEnd, caps[i], { dur: 0.3 });
+  });
+  const ov = VE('med2') + 0.45;
+  tl.fromTo('#mRail', { x: -4000, y: 0, scale: 1 }, { x: -2000, y: 160, scale: 0.36, duration: 1.0, ease: 'power3.inOut', immediateRender: false }, ov);
+  tl.fromTo(mCards.slice(0, 5), { opacity: 0.4, scale: 0.84 }, { opacity: 1, scale: 1, duration: 1.0, ease: 'power3.inOut', immediateRender: false }, ov);
+
+  /* 4 · Industriel (logo 2 = the LAB plate, then the badge) */
+  const n = S.industriel;
+  rise(n + 0.3, '#iA .eyebrow'); riseW(SC.voice.ind1, '#iA1'); riseW(n + 1.2, '#iA2', { stagger: 0.03 });
+  const nB = q(V('ind1', 1)) - 0.25; sink(nB - 0.1, '#iA');
+  cardIn(nB + 0.1, '#iBcard'); kb(nB, 4, '#iBcard img'); rise(nB + 0.2, '#iB .eyebrow');
+  const gam = $$('#iB .gamme'), gT = [q(V('ind1', 1)), q(V('ind1', 2)), q(V('ind1', 2) + 1.0)];
+  gam.forEach((g, i) => rise(gT[i], g, { y: 40, blur: 12 }));
+  const nC = q(V('ind1', 3)); sink(nC - 0.4, '#iB');
+  fade(nC - 0.3, '#iCbg', 0, 1, 1.0); kb(nC - 0.3, 8, '#iCbg img');
+  riseW(nC, '#iC1'); rise(nC + 0.5, '#iTiles .itile', { y: 40, blur: 8, dur: 0.8, stagger: 0.25 });
+  const iw = $$('#iC2 .rv');
+  rise(q(V('ind2', 0)), iw[0], { y: 20, blur: 8 }); rise(q(V('ind2', 1)) - 0.25, [iw[1]], { y: 20, blur: 8 });
+  rise(q(V('ind2', 1)), iw[2], { y: 20, blur: 8 }); rise(q(V('ind2', 1)) + 0.5, iw[3], { y: 20, blur: 8 }); rise(q(V('ind2', 1)) + 0.75, iw[4], { y: 20, blur: 8 });
+
+  /* 5 · Institutionnel (bento) */
+  const b = S.institutionnel;
+  rise(b + 0.2, '#bA .eyebrow'); riseW(SC.voice.ins1, '#bA .h1');
+  const bB = q(V('ins1', 1)) - 0.5; sink(bB - 0.3, '#bA');
+  rise(bB, '#bB0');
+  const tiles = $$('#bB .tile');
+  const bT = [bB + 0.05, q(V('ins1', 2)), q(V('ins1', 3)), q(V('ins1', 3) + 0.75), q(V('ins2', 0) + 0.5), q(V('ins2', 1)), q(V('ins2', 1) + 0.9)];
+  tiles.forEach((t, i) => cardIn(bT[i], t, { stagger: 0 }));
+  tiles.slice(0, 3).forEach(t => kb(bB, 13, $('img', t), 1.1, 1.0));
+
+  /* 6 · Traitement des eaux */
+  const w = S.eaux;
+  rise(w + 0.2, '#wA .eyebrow'); riseW(SC.voice.eau1, '#wA .h1');
+  const wT = [1, 2, 3, 4].map(k => q(V('eau1', k))).concat([q(V('eau1', 4) + 0.9)]);
+  sink(wT[0] - 0.55, '#wA'); rise(wT[0] - 0.3, '#wB0');
+  const witems = $$('#wB .witem'), wimgs = $$('#wFrame img'), wcaps = $$('#wB .wcap');
+  cardIn(wT[0] - 0.2, '#wFrame');
+  tl.fromTo('#wBar', { opacity: 0, y: 250 }, { opacity: 1, y: 250, duration: 0.3, immediateRender: false }, wT[0]);
+  witems.forEach((it, i) => {
+    rise(wT[i], it, { y: 24, blur: 8, dur: 0.6 });
+    if (i > 0) {
+      tl.fromTo(witems[i - 1], { opacity: 1 }, { opacity: 0.36, duration: 0.5, immediateRender: false }, wT[i]);
+      tl.fromTo('#wBar', { y: 250 + 126 * (i - 1) }, { y: 250 + 126 * i, duration: 0.5, ease: 'power3.inOut', immediateRender: false }, wT[i] - 0.05);
+      sink(wT[i] - 0.1, wcaps[i - 1], { dur: 0.25 });
+    }
+    tl.fromTo(wimgs[i], { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1.0, duration: 0.7, ease: 'power2.out', immediateRender: false }, wT[i]);
+    rise(wT[i] + 0.1, wcaps[i], { y: 16, blur: 6, dur: 0.5 });
+  });
+  const w2 = q(SC.voice.eau2);
+  sink(w2 - 0.25, wcaps[4], { dur: 0.25 }); rise(w2, wcaps[5], { y: 18, blur: 8 });
+  tl.fromTo(witems.slice(0, 4), { opacity: 0.36 }, { opacity: 1, duration: 0.6, stagger: 0.05, immediateRender: false }, w2);
+  fade(w2, '#wBar', 1, 0, 0.4);
+  kb(w2, 4, wimgs[4], 1.0, 1.08);
+
+  /* 7 · Bâtiments (accordéon) */
+  const tb = S.batiments;
+  rise(tb + 0.2, '#tE'); riseW(SC.voice.bat1, '#tT');
+  const acc = $$('#tAcc .acc'), GAP = 16, X0 = 140, WT = 1640;
+  const layout = act => { const ws = acc.map((_, i) => (act == null ? (WT - 3 * GAP) / 4 : i === act ? WT - 3 * 220 - 3 * GAP : 220)); let x = X0; return ws.map(wi => { const r = { left: x, width: wi }; x += wi + GAP; return r; }); };
+  layout(null).forEach((r, i) => gsap.set(acc[i], r));
+  rise(tb + 1.0, acc, { y: 60, blur: 0, scale: 0.97, dur: 1.0, stagger: 0.1 });
+  const aT = [1, 2, 3].map(k => q(V('bat1', k))).concat([q(V('bat1', 3) + 1.0)]), aEnd = E.batiments - 2.25;
+  let prev = null;
+  [...aT, aEnd].forEach((t, k) => {
+    const act = k < 4 ? k : null, from = layout(prev), to = layout(act);
+    acc.forEach((a, i) => {
+      tl.fromTo(a, from[i], { ...to[i], duration: 0.8, ease: 'power3.inOut', immediateRender: false }, t - 0.1);
+      const wasL = prev === i, isL = act === i, wasS = prev == null, isS = act == null;
+      if (wasL !== isL) tl.fromTo($('.lblL', a), { opacity: wasL ? 1 : 0, y: wasL ? 0 : 20 }, { opacity: isL ? 1 : 0, y: isL ? 0 : 20, duration: 0.5, immediateRender: false }, isL ? t + 0.3 : t - 0.1);
+      if (wasS !== isS) tl.fromTo($('.lblS', a), { opacity: wasS ? 1 : 0 }, { opacity: isS ? 1 : 0, duration: 0.35, immediateRender: false }, isS ? t + 0.45 : t - 0.1);
+    });
+    prev = act;
+  });
+
+  /* 8 · Cuisines */
+  const k0 = S.cuisines;
+  cardIn(k0 + 0.1, '#kCard'); kb(k0, 10, '#kCard img');
+  rise(k0 + 0.2, '#sc-cuisines .eyebrow'); riseW(SC.voice.cui1, '#sc-cuisines .h1');
+  $$('#kList .kitem').forEach((it, i) => {
+    const t = q(V('cui1', i + 1)); rise(t, it, { y: 20, blur: 8, dur: 0.6, xx: -16 });
+    tl.fromTo($$('path, circle', it), { strokeDasharray: 130, strokeDashoffset: 130 }, { strokeDashoffset: 0, duration: 0.6, ease: 'power2.out', immediateRender: false }, t + 0.05);
+  });
+  rise(VE('cui1') + 0.15, '#kAud', { y: 16, blur: 8 });
+
+  /* 9 · Matières premières cosmétiques (mur) */
+  const c = S.cosmetique;
+  rise(c + 0.2, '#cA .eyebrow'); riseW(q(V('cos1', 1)), '#cA .h1'); riseW(q(V('cos1', 1)) + 0.9, '#cA .lead', { stagger: 0.03 });
+  const cW = q(V('cos1', 2)) - 0.35;
+  sink(cW - 0.35, '#cA'); rise(cW, '#cB0');
+  tl.fromTo('#cWall', { scale: 0.8, rotationY: -5, rotationX: 2, x: 40, y: 14 }, { scale: 0.86, rotationY: 4, rotationX: 0, x: -40, y: 18, duration: E.cosmetique - 1 - cW, ease: 'sine.inOut', immediateRender: false }, cW);
+  rise(cW + 0.1, '#cWall .ctile', { y: 40, blur: 0, scale: 0.9, dur: 0.8, stagger: 0.25 });
+
+  /* 10 · Bases cosmétiques (carrousel) */
+  const d = S.bases;
+  rise(d + 0.2, '#sc-bases .eyebrow'); riseW(SC.voice.bas1, '#sc-bases .h1');
+  const dc = $$('#dFlow .dcard'), pose = (i, a) => { const k = i - a; return { x: k * 600, z: -Math.abs(k) * 320, rotationY: -k * 40, zIndex: 10 - Math.abs(k), opacity: Math.abs(k) > 1 ? 0 : 1 - 0.4 * Math.abs(k) }; };
+  const dT = [q(V('bas1', 1)), q(V('bas1', 2)), q(V('bas1', 3))];
+  dc.forEach((card, i) => tl.fromTo(card, { ...pose(i, 0), opacity: 0, y: 80 }, { ...pose(i, 0), y: 0, duration: 1.0, ease: 'power3.out', immediateRender: false }, dT[0] - 0.75 + 0.08 * i));
+  [1, 2].forEach(a => dc.forEach((card, i) => tl.fromTo(card, pose(i, a - 1), { ...pose(i, a), duration: 0.9, ease: 'power3.inOut', immediateRender: false }, dT[a] - 0.15)));
+
+  /* 11 · Eaux 2 (monde clair) */
+  const e2 = S.eaux2;
+  cardIn(e2 + 0.2, '#e2Card'); kb(e2, 11, '#e2Card img', 1.15, 1.0);
+  rise(e2 + 0.2, '#sc-eaux2 > .cam > .eyebrow'); riseW(SC.voice.ea21 + 0.4, '#sc-eaux2 .h1'); riseW(SC.voice.ea21 + 1.6, '#e2L', { stagger: 0.04 });
+  const eP = SC.voice.ea21 + 0.9; rise(eP, '#e2P .eyebrow'); rise(eP + 0.25, '#e2P .lpill', { y: 20, blur: 6, dur: 0.6, stagger: 0.3 });
+  const eA = q(V('ea22', 0)); sink(eA - 0.45, '#e2P');
+  rise(eA - 0.1, '#e2A .eyebrow');
+  const lt = $$('#e2A .ltile'), lT = [eA, q(V('ea22', 1)), q(V('ea22', 2)), q(V('ea22', 2) + 1.15)];
+  lt.forEach((x, i) => rise(lT[i], x, { y: 24, blur: 6, dur: 0.7 }));
+
+  /* 12 · Élevage */
+  const a = S.elevage;
+  cardIn(a + 0.1, '#aA .card'); kb(a, 4, '#aA .card img');
+  rise(a + 0.2, '#aA .eyebrow'); riseW(SC.voice.ele1, '#aA .h1'); rise(a + 1.9, '#aA .pill', { y: 20, blur: 6 });
+  const aBt = q(V('ele1', 1)) - 0.25; sink(aBt - 0.4, '#aA');
+  fade(aBt - 0.3, '#aBg', 0, 0.22, 1.0); kb(aBt - 0.3, 11, '#aBg');
+  rise(aBt, '#aB .eyebrow');
+  $$('#aB .acard').forEach((x, i) => rise(q(V('ele1', i + 1)), x, { y: 50, blur: 0, dur: 0.9 }));
+  riseW(SC.voice.ele2, '#aB1', { stagger: 0.04 }); rise(SC.voice.ele2 + 1.6, '#aB2', { y: 14, blur: 6 });
+
+  /* 13 · Agriculture */
+  const g = S.agriculture;
+  fade(g, '#gBg', 0, 0.38, 1.2); kb(g, 12, '#gBg', 1.12, 1.0);
+  rise(g + 0.2, '#gA .eyebrow'); riseW(SC.voice.agr1, '#gA .h1'); riseW(SC.voice.agr1 + 0.9, '#gA .lead', { stagger: 0.025 });
+  const gB = q(V('agr1', 1)) - 0.25; sink(gB - 0.4, '#gA'); fade(gB - 0.4, '#gBg', 0.38, 0.16, 0.8);
+  rise(gB, '#gB .eyebrow'); cardIn(gB, '#gB .card', { stagger: 0.25 });
+  const gc = $$('#gChips .pill'), gcT = [q(V('agr1', 1)), q(V('agr1', 1) + 1.25), q(V('agr1', 1) + 1.5), q(V('agr1', 2)), q(V('agr1', 2) + 1.0), q(V('agr1', 2) + 1.5), q(V('agr1', 2) + 1.75), q(V('agr1', 2) + 2.0)];
+  gc.forEach((x, i) => rise(gcT[i], x, { y: 20, blur: 6, dur: 0.6 }));
+  const gC = q(SC.voice.agr2) - 0.25; sink(gC - 0.4, '#gB');
+  cardIn(gC, '#gC .card'); kb(gC, 4, '#gC .card img'); riseW(SC.voice.agr2, '#gC .h2', { stagger: 0.12 }); rise(SC.voice.agr2 + 1.5, '#gC .pill', { y: 16, blur: 6 });
+
+  /* 14 · Certifications (text labels only) */
+  const qc = S.certifications;
+  rise(qc + 0.1, '#qE'); rise(SC.voice.cer1, '#qTitle', { y: 40, blur: 16, dur: 1.0 });
+  const qMove = q(V('cer1', 1)) - 0.5;
+  sink(qMove - 0.1, '#qE');
+  tl.fromTo('#qTitleWrap', { y: 0, scale: 1 }, { y: -330, scale: 0.5, duration: 0.9, ease: 'power3.inOut', immediateRender: false }, qMove);
+  const qt = $$('#qTiles .qtile');
+  qt.forEach((x, i) => {
+    const t = q(V('cer1', i + 1) + (i === 6 ? 0.2 : 0));
+    rise(t, x, { y: 40, blur: 0, scale: 0.95, dur: 0.8 });
+    tl.fromTo($('.sheen', x), { xPercent: -100 }, { xPercent: 100, duration: 1.1, ease: 'power2.inOut', immediateRender: false }, t + 0.25);
+  });
+  rise(VE('cer1') + 0.2, '#qNote', { y: 14, blur: 6 });
+
+  /* 15 · Final: white, then the official logo, the name and the address */
+  const f = S.final;
+  tl.fromTo('#sc-final', { opacity: 0 }, { opacity: 1, duration: 0.65, ease: 'power2.inOut', immediateRender: false }, E.certifications - 1.75);
+  tl.fromTo('#fLogo', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 1.8, ease: 'power2.out', immediateRender: false }, f + 0.15);
+  tl.fromTo('#fName', { opacity: 0, letterSpacing: '0.9em', paddingLeft: '0.9em' }, { opacity: 1, letterSpacing: '0.42em', paddingLeft: '0.42em', duration: 1.5, ease: 'power3.out', immediateRender: false }, q(SC.voice.fin1));
+  tl.fromTo('#fLine', { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: 'power3.inOut', immediateRender: false }, q(V('fin1', 1)) - 0.4);
+  rise(q(V('fin1', 1)), '#fUrl', { y: 14, blur: 6, dur: 1.0 });
+
+  tl.set({}, {}, DUR);
+}
+const VE = id => SC.voice[id] + VO.lines[id].dur;
+
+/* ---------- per-frame drawing (pure functions of t) ---------- */
+let G1, G2, COUNT, RINGS, BEAMS, BUBS, BLOOM;
+const ease3 = u => 1 - (1 - u) ** 3;
+function draw(t) {
+  G1.style.transform = `translate(${960 + 430 * Math.sin(t * 0.07)}px, ${360 + 150 * Math.cos(t * 0.053)}px)`;
+  G2.style.transform = `translate(${960 + 620 * Math.cos(t * 0.045 + 1)}px, ${800 + 120 * Math.sin(t * 0.061)}px)`;
+  // story: "plus de 300" counts up as the voice reaches it
+  const c0 = S.histoire + 4.65, u = Math.min(1, Math.max(0, (t - c0) / 2.2));
+  COUNT.textContent = String(Math.round(300 * ease3(u)));
+  // Fès: rings pulse on the beat
+  const r0 = S.histoire + 24.3;
+  RINGS.forEach((r, k) => { const p = ((((t - r0) / 1.5 + k / 3) % 1) + 1) % 1, on = t > r0 ? 1 : 0; r.setAttribute('r', 16 + 150 * p); r.setAttribute('opacity', (on * 0.55 * (1 - p) ** 1.6).toFixed(3)); });
+  // water 2: light shafts sway, bubbles rise
+  if (t > S.eaux2 - 2 && t < E.eaux2 + 1) {
+    BEAMS.forEach((b, i) => { b.style.transform = `rotate(${16 + 5 * Math.sin(t * 0.5 + i * 1.3)}deg)`; });
+    BUBS.forEach((b, i) => {
+      const sp = 60 + 40 * ((i * 37) % 7) / 7, sz = 10 + ((i * 53) % 9) * 3, x0 = 80 + ((i * 271) % 1760);
+      const y = 1120 - ((t * sp + i * 97) % 1250), x = x0 + 18 * Math.sin(t * 1.3 + i);
+      b.style.cssText = `left:${x}px;top:${y}px;width:${sz}px;height:${sz}px`;
+    });
+  }
+  // final: a soft bloom drifting behind the logo
+  BLOOM.style.transform = `translate(${960 + 60 * Math.sin(t * 0.3)}px, ${420 + 30 * Math.cos(t * 0.23)}px)`;
+}
+function seek(t) { tl.time(Math.min(Math.max(t, 0), DUR), false); draw(t); return Promise.resolve(); }
+
+/* motion samples for the soundtrack script (the music ducks under the voice; no motion-driven effects) */
+window.__ready = (async () => {
+  SC = await (await fetch('score.json')).json();
+  VO = await (await fetch('assets/voice/voice.json')).json();
+  DUR = SC.duration;
+  for (const s of SC.sections) { S[s.id] = s.bar * 2; E[s.id] = (s.bar + s.bars) * 2; }
+  await Promise.all([document.fonts.load('800 100px Inter'), document.fonts.load('700 100px Inter'), document.fonts.load('600 100px Inter'),
+    document.fonts.load('500 100px Inter'), document.fonts.load('400 100px Inter')]);
+  await document.fonts.ready;
+  build();
+  G1 = $('#g1'); G2 = $('#g2'); COUNT = $('#hCount'); RINGS = $$('#hRings circle'); BEAMS = $$('#e2Beams .beam'); BUBS = $$('#e2Bubbles .bub'); BLOOM = $('#fBloom');
+  await Promise.all([...document.images].map(i => i.decode().catch(() => { throw new Error('image failed: ' + i.src); })));
+  film();
+  window.seek = seek; window.DURATION = DUR;
+  await seek(FREEZE ?? 0);
+  if (!RENDER) {
+    const st = $('#stage'), fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); st.style.transform = `scale(${k})`; };
+    fit(); addEventListener('resize', fit);
+    if (PLAY) {
+      const audio = new Audio('soundtrack.wav'); let t0 = null;
+      const loop = now => { if (t0 == null) t0 = now; const t = audio.currentTime || (now - t0) / 1000; seek(t % DUR); requestAnimationFrame(loop); };
+      addEventListener('click', () => audio.play(), { once: true }); requestAnimationFrame(loop);
+    }
+  }
+  return true;
+})();
+})();
+</script>
+</body>
+</html>

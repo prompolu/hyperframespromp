@@ -2,7 +2,30 @@
 
 All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. The first editable PROMPOLU technical animation is available below.
 
-## Latest video — PROMPOLU — « La qualité, notre meilleur profil. » (9:16 for prompolu.com)
+## Latest video — SARAPROC MAROC — Présentation (16:9, French voiceover, 3:48)
+
+A premium presentation film for an international cleaning and hygiene meeting. It is Apple-keynote style in navy, blue, white and silver, and all its content and photos come from saraprocmaroc.com.
+
+**Content, in order:**
+- SARAPROC's story;
+- the medical sector, with the supplied medical logo;
+- the industrial sector, with the LAB logo;
+- buildings and institutions, water treatment, industrial and livestock buildings, and professional kitchens;
+- cosmetic raw materials and cosmetic bases;
+- a second, light-themed water section;
+- livestock feed supplements and plant nutrition;
+- certifications, shown as text labels;
+- the official SARAPROC MAROC logo.
+
+**Sound:**
+- a French voiceover;
+- an original energetic 120 BPM soundtrack;
+- a 0.71 s silence with the LAB card between sections, with the music resuming on the downbeat.
+
+- [Master MP4](videos/saraproc-presentation/out.mp4) · [lighter MP4](videos/saraproc-presentation/out-web.mp4) · [poster](videos/saraproc-presentation/poster.jpg)
+- [Storyboard](videos/saraproc-presentation/STORYBOARD.md) · [contact sheet](videos/saraproc-presentation/evidence/contact-sheet.jpg) · [sources, choices and rebuild](videos/saraproc-presentation/README.md)
+
+## PROMPOLU — « La qualité, notre meilleur profil. » (9:16 for prompolu.com)
 
 A vertical website video (1080 × 1920, 60 fps, 15 s) in the motion-reel style, built from the site's own content:
 - the slogan, with the O of PROFIL becoming the bronze window frame;
