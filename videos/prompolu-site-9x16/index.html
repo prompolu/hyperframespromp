@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>PROMPOLU — La qualité, notre meilleur profil (9:16)</title>
+<meta name="viewport" content="width=1080">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Inter:wght@100..900&family=JetBrains+Mono:wght@400;600&display=block">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<style>
+/* PROMPOLU palette (prompolu.com) — no other colours are used. */
+:root {
+  --bronze: #765333; --cream: #F1F0EC; --ink: #17120D;
+  --b-2: #6A4A2D; --b-3: #8A6845; --b-mid: #A8784A; --b-warm: #C08F57; --b-light: #D9A86C; --b-hi: #EBCB97;
+  --g-1: #C9C3BA; --g-2: #A39B92; --g-3: #8F877E; --g-4: #7A7168; --g-6: #4F4740; --paper: #F8F7F4;
+  --polished: radial-gradient(circle at 30% 25%, #EBCB97 0%, #D9A86C 30%, #A8784A 65%, #765333 100%);
+}
+html, body { margin: 0; background: #17120D; overflow: hidden; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--g-6); transform-origin: 0 0; }
+.full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.abs { position: absolute; left: 0; top: 0; }
+svg.full { overflow: visible; }
+.ctr { position: absolute; left: 0; width: 1080px; text-align: center; white-space: pre; }
+
+/* Dark studio (opener) */
+#dark { overflow: hidden; }
+#darkBg { background: linear-gradient(180deg, #7A7168 0%, #4F4740 50%, #17120D 100%); }
+#floorGlow { opacity: 0; background: radial-gradient(ellipse 560px 260px at 540px 2050px, #D9A86C 0%, #A8784A 45%, rgba(168,120,74,0) 100%); }
+#flatCover { background: var(--g-6); }
+.speck { position: absolute; border-radius: 50%; background: rgba(241,240,236,.6); }
+#pushCam, #letterPunch, #outlinePunch { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+#word { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; perspective: 1300px; }
+.L { position: absolute; top: 0; white-space: pre; font-weight: 800; font-family: 'Archivo', sans-serif; font-stretch: 125%; line-height: 1; opacity: 0; }
+.L .face { position: absolute; left: 0; top: 0; color: transparent; -webkit-background-clip: text; background-clip: text; }
+.L .alu { background-image: linear-gradient(180deg, #F1F0EC var(--capTop), #C9C3BA var(--base)); }
+.L .bronzeFace { opacity: 0; }
+#outlines text { font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: 125%; fill: none; stroke: rgba(241,240,236,.35); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.ember { position: absolute; width: 2px; height: 12px; border-radius: 1px; background: linear-gradient(180deg, #F1F0EC, #D9A86C); opacity: 0; }
+.opl { font: 600 68px/84px 'Inter', sans-serif; letter-spacing: -0.015em; }
+.opl span { display: inline-block; opacity: 0; }
+
+/* Cream paper world */
+#bgCream { background: var(--cream); }
+#creamGlow { opacity: 0; background: radial-gradient(ellipse 620px 360px at 540px 900px, #F8F7F4 0%, rgba(248,247,244,0) 100%); }
+
+/* Page sections (scrolled like the website) */
+#page { position: absolute; left: 0; top: 0; width: 1080px; height: 5760px; }
+.sec { position: absolute; left: 0; width: 1080px; height: 1920px; }
+.cap { font: 600 52px/64px 'Inter', sans-serif; letter-spacing: -0.015em; color: var(--ink); }
+.mono { font: 400 26px/32px 'JetBrains Mono', monospace; color: var(--g-3); letter-spacing: 0; }
+#idx { color: var(--g-2); font-size: 26px; }
+#win { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; perspective: 1600px; perspective-origin: 540px 940px; }
+.photo { position: absolute; left: 132px; top: 412px; width: 816px; height: 1056px; overflow: hidden; background: var(--g-1); }
+.photo .img { position: absolute; inset: 0; background-size: cover; background-position: center; transform-origin: 50% 50%; }
+.photo .shade { position: absolute; inset: 0; background: #17120D; opacity: 0; }
+#mullion { position: absolute; top: 412px; width: 18px; height: 1056px; left: 0; background: linear-gradient(90deg, #765333 0%, #C08F57 35%, #D9A86C 50%, #A8784A 70%, #765333 100%); filter: url(#puffy); opacity: 0; }
+#louvres { position: absolute; left: 132px; top: 412px; width: 816px; height: 1056px; perspective: 1400px; }
+.slat { position: absolute; left: 0; width: 816px; height: 88px; background: linear-gradient(180deg, #EBCB97 0%, #C08F57 22%, #A8784A 60%, #765333 100%); transform: rotateX(90deg); box-shadow: 0 6px 10px rgba(23,18,13,.25); }
+.lab { font: 700 84px/96px 'Inter', sans-serif; letter-spacing: -0.02em; color: var(--ink); }
+.labs, .specs { opacity: 0; }
+
+/* Section 3: Pourquoi PROMPOLU */
+#card3 { position: absolute; left: 70px; top: 420px; width: 940px; height: 600px; border-radius: 32px; background: var(--paper); box-shadow: 0 30px 80px rgba(23,18,13,.08); }
+.reel { position: absolute; top: 520px; height: 300px; overflow: hidden; filter: url(#puffy); }
+.strip { position: absolute; left: 0; top: 0; width: 100%; font: 800 300px/300px 'Inter', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; text-align: center; color: var(--ink); }
+.strip.bz { color: var(--bronze); }
+.strip div { height: 300px; }
+#plus { position: absolute; top: 520px; height: 300px; font: 800 300px/300px 'Inter', sans-serif; color: var(--ink); filter: url(#puffy); }
+#ans { font: 700 64px/76px 'Inter', sans-serif; letter-spacing: -0.02em; color: var(--ink); opacity: 0; }
+#distrib { font: 600 44px/54px 'Inter', sans-serif; letter-spacing: -0.01em; color: var(--ink); opacity: 0; }
+#badge { position: absolute; left: 345px; top: 1203px; width: 390px; height: 120px; border-radius: 26px; background: #FFFFFF; box-shadow: 0 14px 34px rgba(23,18,13,.08); transform: scale(0); }
+#strugal { position: absolute; left: 46px; top: 22px; width: 298px; height: 76px; }
+#norms { color: var(--g-3); font-size: 30px; }
+
+/* Section 4: Fès & Sefrou */
+.pin { position: absolute; width: 96px; height: 128px; left: -48px; top: -128px; overflow: visible; filter: url(#puffy); }
+.pinShadow { position: absolute; width: 70px; height: 18px; left: -35px; top: -9px; border-radius: 50%; background: radial-gradient(closest-side, rgba(23,18,13,.4), rgba(23,18,13,0)); }
+.city { font: 700 64px/72px 'Inter', sans-serif; letter-spacing: -0.02em; color: var(--ink); white-space: pre; position: absolute; opacity: 0; }
+.city .mono { display: block; font-size: 26px; line-height: 36px; font-weight: 400; }
+#livraison { font: 600 48px/58px 'Inter', sans-serif; letter-spacing: -0.015em; color: var(--bronze); opacity: 0; }
+
+/* Global overlays (never over the logo layer) */
+#grain { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; opacity: 0; }
+#vig { background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(23,18,13,0) 62%, rgba(23,18,13,1) 100%); opacity: .18; }
+#endVig { opacity: 0; background: radial-gradient(ellipse 520px 340px at 540px 960px,
+  rgba(23,18,13,0) 100%, rgba(23,18,13,.08) 118%, rgba(23,18,13,.3) 140%, rgba(23,18,13,.62) 175%, rgba(23,18,13,.86) 210%, rgba(23,18,13,1) 245%); }
+#spark { position: absolute; width: 10px; height: 10px; left: -5px; top: -5px; border-radius: 50%; background: #A8784A; box-shadow: 0 0 10px 3px rgba(168,120,74,.45); opacity: 0; }
+#url { font: 600 52px/62px 'Inter', sans-serif; letter-spacing: -0.01em; color: var(--bronze); opacity: 0; }
+.win { position: absolute; overflow: hidden; opacity: 0; }
+.win img { position: absolute; display: block; width: 903px; height: 124.5px; }
+#logoFinal { position: absolute; left: 88px; top: 838px; width: 903px; height: 124.5px; display: block; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <!-- PUFFY MATERIAL (shared): blur(SourceAlpha) → specular → in → add → drop shadow. Never on the logo. -->
+      <filter id="puffy" x="-30%" y="-30%" width="160%" height="175%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+        <feSpecularLighting in="blur" surfaceScale="7" specularConstant=".9" specularExponent="22" lighting-color="#FFFFFF" result="spec"><fePointLight x="-400" y="-600" z="500"/></feSpecularLighting>
+        <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
+        <feComposite in="SourceGraphic" in2="specIn" operator="arithmetic" k1="0" k2="1" k3=".8" k4="0" result="lit"/>
+        <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#17120D" flood-opacity=".25"/>
+      </filter>
+      <filter id="puffyAlu" x="-30%" y="-30%" width="160%" height="175%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+        <feSpecularLighting in="blur" surfaceScale="7" specularConstant=".9" specularExponent="22" lighting-color="#FFFFFF" result="spec"><fePointLight x="-400" y="-600" z="500"/></feSpecularLighting>
+        <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
+        <feSpecularLighting in="blur" surfaceScale="7" specularConstant=".9" specularExponent="14" lighting-color="#D9A86C" result="rim"><fePointLight x="120" y="520" z="120"/></feSpecularLighting>
+        <feComposite in="rim" in2="SourceAlpha" operator="in" result="rimIn"/>
+        <feComposite in="SourceGraphic" in2="specIn" operator="arithmetic" k1="0" k2="1" k3=".8" k4="0" result="lit"/>
+        <feComposite in="lit" in2="rimIn" operator="arithmetic" k1="0" k2="1" k3=".5" k4="0" result="lit2"/>
+        <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#17120D" flood-opacity=".25"/>
+      </filter>
+      <radialGradient id="bronzeGrad" cx=".3" cy=".25" r=".95" fx=".3" fy=".25">
+        <stop offset="0" stop-color="#EBCB97"/><stop offset=".3" stop-color="#D9A86C"/><stop offset=".65" stop-color="#A8784A"/><stop offset="1" stop-color="#765333"/>
+      </radialGradient>
+      <linearGradient id="pinGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#EBCB97"/><stop offset=".35" stop-color="#D9A86C"/><stop offset=".7" stop-color="#A8784A"/><stop offset="1" stop-color="#765333"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- 1. Dark studio: "La qualité, notre meilleur PROFIL." -->
+  <div id="dark" class="full">
+    <div id="darkBg" class="full"></div>
+    <div id="floorGlow" class="full"></div>
+    <div id="dust" class="full"></div>
+    <div id="pushCam">
+      <div id="outlinePunch"><svg id="outlines" class="full" viewBox="0 0 1080 1920"></svg></div>
+      <div id="letterPunch">
+        <div id="lines" class="full">
+          <div class="ctr opl" style="top:598px;color:#F1F0EC"><span id="w1">La</span> <span id="w2">qualité,</span></div>
+          <div class="ctr opl" style="top:693px;color:#D9A86C"><span id="w3">notre</span> <span id="w4">meilleur</span></div>
+        </div>
+        <div id="word"></div>
+        <div id="embers" class="full"></div>
+      </div>
+    </div>
+    <div id="flatCover" class="full"></div>
+  </div>
+
+  <!-- 2–4. Cream paper world: the page scrolls through three sections -->
+  <div id="bgCream" class="full"><div id="creamGlow" class="full"></div></div>
+  <div id="pageAll" class="full">
+    <div id="page">
+      <div class="sec" id="sec2" style="top:0">
+        <div class="ctr cap" id="cap2" style="top:198px;opacity:0">À chaque projet, son profil.</div>
+        <div class="ctr mono" id="idx" style="top:284px;opacity:0">01 / 04</div>
+        <div id="win">
+          <div class="photo" id="p4"><div class="img" style="background-image:url(assets/photos/exterieur.webp)"></div></div>
+          <div class="photo" id="p3"><div class="img" style="background-image:url(assets/photos/agencement.webp)"></div><div class="shade"></div></div>
+          <div class="photo" id="p2"><div class="img" style="background-image:url(assets/photos/battants.webp)"></div><div class="shade"></div></div>
+          <div class="photo" id="p1"><div class="img" style="background-image:url(assets/photos/coulissants.webp);background-position:38% center"></div></div>
+          <div id="mullion"></div>
+          <div id="louvres"></div>
+        </div>
+        <svg id="frameSvg" class="full" viewBox="0 0 1080 1920"><g id="frameG"><path id="framePath" fill="url(#bronzeGrad)" fill-rule="evenodd" filter="url(#puffy)"/></g></svg>
+        <div id="labels"></div>
+      </div>
+      <div class="sec" id="sec3" style="top:1920px">
+        <div class="ctr cap" style="top:173px">Pourquoi PROMPOLU</div>
+        <div id="card3"></div>
+        <div id="plus">+</div>
+        <div class="reel" id="reel0"><div class="strip" id="strip0"></div></div>
+        <div class="reel" id="reel1"><div class="strip bz" id="strip1"></div></div>
+        <div class="ctr" id="ans" style="top:862px">ans d’expérience.</div>
+        <div class="ctr" id="distrib" style="top:1143px">Distributeur officiel</div>
+        <div id="badge"><img id="strugal" src="assets/logo-strugal.png" width="298" height="76" alt="STRUGAL"></div>
+        <div class="ctr mono" id="norms" style="top:1380px"></div>
+      </div>
+      <div class="sec" id="sec4" style="top:3840px">
+        <div class="ctr" style="top:250px;font:700 96px/110px 'Inter',sans-serif;letter-spacing:-0.025em;color:#17120D">Fès &amp; Sefrou</div>
+        <div id="map" class="full" style="transform:scale(1.3);transform-origin:535px 1020px">
+        <svg id="route" class="full" viewBox="0 0 1080 1920"></svg>
+        <div class="abs" id="pinF"><div class="pinShadow"></div><svg class="pin" viewBox="0 0 96 128"><path d="M48 128 C 40 104 6 82 6 46 A 42 42 0 1 1 90 46 C 90 82 56 104 48 128 Z M48 30 A 16 16 0 1 0 48.01 30 Z" fill="url(#pinGrad)" fill-rule="evenodd"/></svg></div>
+        <div class="abs" id="pinS"><div class="pinShadow"></div><svg class="pin" viewBox="0 0 96 128"><path d="M48 128 C 40 104 6 82 6 46 A 42 42 0 1 1 90 46 C 90 82 56 104 48 128 Z M48 30 A 16 16 0 1 0 48.01 30 Z" fill="url(#pinGrad)" fill-rule="evenodd"/></svg></div>
+        <div class="city" id="cityF" style="left:396px;top:760px">Fès<span class="mono">Magasin historique</span></div>
+        <div class="city" id="cityS" style="right:420px;top:1040px;text-align:right">Sefrou<span class="mono">Showroom STRUGAL</span></div>
+        </div>
+        <div class="ctr" id="livraison" style="top:1560px">Livraison partout au Maroc.</div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="grain" width="1080" height="1920"></canvas>
+  <div id="vig" class="full"></div>
+  <div id="spark"></div>
+  <div class="ctr" id="url" style="top:1031px">prompolu.com</div>
+  <div id="endVig" class="full"></div>
+
+  <div id="logoLayer" class="full">
+    <img id="logoFinal" src="assets/logo-prompolu.png" width="903" height="124.5" alt="PROMPOLU ALUMINIUM">
+  </div>
+</div>
+
+<script>
+(() => {
+'use strict';
+/* ============================================================================================
+   PROMPOLU — "La qualité, notre meilleur profil." 9:16 website video. 1080×1920, 60 fps, 15.000 s.
+   One paused GSAP master timeline drives draw(t); every state is a pure function of t.
+   window.seek(t) renders time t exactly (and resolves once that frame's grain is drawn).
+   ?render: renderer mode · ?play: real-time preview loop · ?t=4.55: freeze one moment.
+   ============================================================================================ */
+const W = 1080, H = 1920, FPS = 60, DURATION = 15;
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.has('render'), FREEZE = Q.has('t') ? +Q.get('t') : null, PLAY = Q.has('play') || (!RENDER && FREEZE === null);
+const $ = s => document.querySelector(s);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x, in2: x => x * x, out2: x => 1 - (1 - x) * (1 - x), io2: x => (x < .5 ? 2 * x * x : 1 - (-2 * x + 2) ** 2 / 2),
+  in3: x => x ** 3, out3: x => 1 - (1 - x) ** 3, io3: x => (x < .5 ? 4 * x ** 3 : 1 - (-2 * x + 2) ** 3 / 2),
+  out4: x => 1 - (1 - x) ** 4, sine: x => -(Math.cos(Math.PI * x) - 1) / 2,
+  outBack: (x, s = 1.70158) => 1 + (s + 1) * (x - 1) ** 3 + s * (x - 1) ** 2,
+};
+const seg = (t, a, b, e = E.lin) => e(clamp((t - a) / (b - a)));
+function spring(overshoot, settle = 5.2) {      // exact-overshoot spring ease: x(1) = 1, peak = 1 + overshoot
+  const L = Math.log(overshoot), z = -L / Math.sqrt(Math.PI * Math.PI + L * L);
+  const w = settle / z, wd = w * Math.sqrt(1 - z * z), c = z / Math.sqrt(1 - z * z);
+  const x = u => 1 - Math.exp(-z * w * u) * (Math.cos(wd * u) + c * Math.sin(wd * u));
+  const e1 = x(1);
+  return u => (u <= 0 ? 0 : u >= 1 ? 1 : x(u) + (1 - e1) * u);
+}
+const SPR04 = spring(0.04, 4.6), SPR06 = spring(0.06, 4.6), SPR10 = spring(0.10, 4.6), SPR12 = spring(0.12, 4.2);
+function mulberry32(a) {                          // seeded PRNG for dust, embers and grain (no Math.random)
+  return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+}
+const frameOf = t => Math.floor(t * FPS + 1e-6);     // the 4 sub-frames t + k/240 share one frame
+const frameT = t => frameOf(t) / FPS;
+const SUBF = 240;                                     // sub-frame rate of the renderer (4 × 60)
+const css = (el, o) => { for (const k in o) el.style[k] = o[k]; };
+const px = v => v.toFixed(3) + 'px';
+const show = (el, on) => { el.style.display = on ? '' : 'none'; };
+const blurIn = (el, k, d = 10, dy = 18) => css(el, { opacity: k.toFixed(3), filter: k < 1 ? `blur(${(d * (1 - k)).toFixed(2)}px)` : 'none', transform: `translateY(${px(dy * (1 - k))})` });
+const vel = (f, t, d = 0.002) => (f(t + d) - f(t - d)) / (2 * d);
+const MB = {};
+const setBlur = (id, sx, sy) => MB[id].setAttribute('stdDeviation', `${sx.toFixed(2)} ${sy.toFixed(2)}`);
+
+/* ============================================================================================
+   Layout
+   ============================================================================================ */
+const G = {};
+const WC = { x: 540, y: 820 };                 // push-in origin (the opener block)
+const CAP = 118, CAPC = 900, BASE = CAPC + CAP / 2;    // "PROFIL." cap height 118, cap centre y 900
+const FR = { x: 540, y: 940, w: 860, h: 1100, r: 28, t: 22, ir: 12 };   // the window frame (aluminium profile)
+const IN = { x: FR.x - FR.w / 2 + FR.t, y: FR.y - FR.h / 2 + FR.t, w: FR.w - 2 * FR.t, h: FR.h - 2 * FR.t };   // 132,372 816×1056
+const LOGO = { x: 88, y: 838, w: 903, h: 124.5, s: 1.5 };
+const WINS = [[0, 70], [70, 146], [146, 224], [224, 308], [308, 384], [384, 460], [460, 529], [529, 602]];
+const RANGES = [
+  ['Coulissants', 'Du S70P au S140RP Infinity'],
+  ['Battants', 'S53RP+ · S46 · portes ALUDOORS'],
+  ['Agencement', 'Cuisines & dressings sur-mesure'],
+  ['Extérieur', 'Pergolas · garde-corps · bardage'],
+];
+const LAB_IN = [2.98, 4.47, 5.92, 7.30], LAB_OUT = [4.40, 5.86, 7.24, 9.40];
+const PIN_F = { x: 330, y: 880, t0: 11.84 }, PIN_S = { x: 740, y: 1160, t0: 11.99 };
+
+function measure() {
+  const cv = document.createElement('canvas').getContext('2d');
+  cv.font = '800 1000px Archivo'; cv.fontStretch = 'expanded';
+  const capRatio = cv.measureText('H').actualBoundingBoxAscent / 1000;
+  let FS = CAP / capRatio;
+  const word = $('#word');
+  const lay = fs => {
+    const m = document.createElement('span');
+    m.style.cssText = `position:absolute;left:0;top:0;white-space:pre;font-weight:800;font-family:Archivo;font-stretch:125%;font-size:${fs}px;line-height:1;letter-spacing:0.02em`;
+    m.innerHTML = 'PROFIL.<i style="display:inline-block;width:0;height:0"></i>';
+    word.appendChild(m);
+    const box = m.getBoundingClientRect(), r = document.createRange(), tn = m.firstChild, xs = [], adv = [];
+    for (let i = 0; i < 7; i++) { r.setStart(tn, i); r.setEnd(tn, i + 1); const b = r.getBoundingClientRect(); xs.push(b.left - box.left); adv.push(b.width); }
+    const baseIn = m.querySelector('i').getBoundingClientRect().top - box.top;
+    word.removeChild(m);
+    cv.font = `800 ${fs}px Archivo`;
+    const ink = [...'PROFIL.'].map(ch => cv.measureText(ch));
+    return { xs, adv, baseIn, ink, L: xs[0] - ink[0].actualBoundingBoxLeft, R: xs[6] + ink[6].actualBoundingBoxRight };
+  };
+  let m = lay(FS);
+  if (m.R - m.L > 960) { FS *= 960 / (m.R - m.L); m = lay(FS); }      // keep 60 px side margins
+  const shift = 540 - (m.L + m.R) / 2;
+  G.FS = FS; G.baseIn = m.baseIn; G.wordInk = [m.L + shift, m.R + shift]; G.capH = capRatio * FS;
+  G.letters = [...'PROFIL.'].map((ch, i) => {
+    const k = m.ink[i], x = m.xs[i] + shift;
+    return { ch, x, adv: m.adv[i], top: BASE - m.baseIn, cx: x + (k.actualBoundingBoxRight - k.actualBoundingBoxLeft) / 2,
+      cy: BASE - (k.actualBoundingBoxAscent - k.actualBoundingBoxDescent) / 2, w: k.actualBoundingBoxLeft + k.actualBoundingBoxRight, h: k.actualBoundingBoxAscent + k.actualBoundingBoxDescent };
+  });
+  // The O: ink box and counter (hole), scanned from a canvas rendering.
+  const O = G.letters[2];
+  const c2 = document.createElement('canvas'); c2.width = 500; c2.height = 400;
+  const x2 = c2.getContext('2d'); x2.font = `800 ${FS}px Archivo`; x2.fontStretch = 'expanded'; x2.fillStyle = '#000';
+  const ox = 80, oy = 300; x2.fillText('O', ox, oy);
+  const d = x2.getImageData(0, 0, 500, 400).data, A = (a, b) => d[(b * 500 + a) * 4 + 3], mo = x2.measureText('O');
+  const l = ox - mo.actualBoundingBoxLeft, rr = ox + mo.actualBoundingBoxRight, tt = oy - mo.actualBoundingBoxAscent, bb = oy + mo.actualBoundingBoxDescent;
+  const mx = Math.round((l + rr) / 2), my = Math.round((tt + bb) / 2);
+  let i = Math.round(l); while (i < mx && A(i, my) < 128) i++; while (i < mx && A(i, my) >= 128) i++; const hl = i;
+  i = Math.round(rr); while (i > mx && A(i, my) < 128) i--; while (i > mx && A(i, my) >= 128) i--; const hr = i;
+  i = Math.round(tt); while (i < my && A(mx, i) < 128) i++; while (i < my && A(mx, i) >= 128) i++; const ht = i;
+  i = Math.round(bb); while (i > my && A(mx, i) < 128) i--; while (i > my && A(mx, i) >= 128) i--; const hb = i;
+  G.O = { cx: O.cx, cy: O.cy, w: O.w, h: O.h, hw: (hr - hl) / O.w, hh: (hb - ht) / O.h };
+  G.Op = { x: WC.x + 1.03 * (O.cx - WC.x), y: WC.y + 1.03 * (O.cy - WC.y) };
+  // Odometer: tabular digit advance and the "+" width (Inter 800, 300 px, −2 % tracking).
+  const s = document.createElement('span');
+  s.style.cssText = 'position:absolute;visibility:hidden;font:800 300px Inter;font-variant-numeric:tabular-nums;letter-spacing:-0.02em;white-space:pre';
+  s.textContent = '0000000000'; document.body.appendChild(s); G.digit = s.getBoundingClientRect().width / 10;
+  s.textContent = '+'; G.plus = s.getBoundingClientRect().width; document.body.removeChild(s);
+}
+
+/* ============================================================================================
+   Build
+   ============================================================================================ */
+const EL = {};
+const svgNS = 'http://www.w3.org/2000/svg';
+function addBlurFilter(id, region = 'x="-40%" y="-40%" width="180%" height="180%"') {
+  $('svg defs').insertAdjacentHTML('beforeend', `<filter id="${id}" ${region}><feGaussianBlur stdDeviation="0" edgeMode="none"/></filter>`);
+  MB[id] = $(`#${id} feGaussianBlur`);
+}
+function build() {
+  for (let i = 0; i < 7; i++) addBlurFilter('mbL' + i);
+  ['mbFrame', 'mbP1', 'mbP3', 'mbPinF', 'mbPinS', 'mbR0', 'mbR1'].forEach(id => addBlurFilter(id));
+  addBlurFilter('mbScroll', 'x="-24" y="-24" width="1128" height="5808" filterUnits="userSpaceOnUse"');
+  for (let k = 0; k < 9; k++) addBlurFilter('mbW' + k, 'x="-10%" y="-30%" width="120%" height="160%"');
+  // "PROFIL." letters (kerned positions, puffy aluminium, bronze rim)
+  const word = $('#word');
+  word.style.perspectiveOrigin = `${WC.x}px ${CAPC}px`;
+  EL.letters = G.letters.map((L, i) => {
+    const el = document.createElement('div'); el.className = 'L';
+    css(el, { left: px(L.x), top: px(L.top), width: px(L.adv), height: px(G.FS), fontSize: px(G.FS), transformOrigin: `${(L.cx - L.x).toFixed(2)}px ${(L.cy - L.top).toFixed(2)}px` });
+    const face = document.createElement('div'); face.className = 'face alu'; face.textContent = L.ch;
+    css(face, { width: px(L.adv), height: px(G.FS), filter: `url(#puffyAlu) url(#mbL${i})` });
+    face.style.setProperty('--capTop', ((G.baseIn - G.capH) / G.FS * 100).toFixed(2) + '%'); face.style.setProperty('--base', (G.baseIn / G.FS * 100).toFixed(2) + '%');
+    el.appendChild(face);
+    let bronze = null;
+    if (i === 2) {
+      bronze = document.createElement('div'); bronze.className = 'face bronzeFace'; bronze.textContent = L.ch;
+      const gx = L.cx - L.x - 0.2 * L.w, gy = L.cy - L.top - 0.25 * L.h;
+      css(bronze, { width: px(L.adv), height: px(G.FS), filter: `url(#puffy) url(#mbL${i})`,
+        backgroundImage: `radial-gradient(ellipse ${(0.8 * L.w).toFixed(1)}px ${(0.8 * L.h).toFixed(1)}px at ${gx.toFixed(1)}px ${gy.toFixed(1)}px, #EBCB97 0%, #D9A86C 30%, #A8784A 65%, #765333 100%)` });
+      el.appendChild(bronze);
+    }
+    word.appendChild(el);
+    return { el, face, bronze };
+  });
+  $('#outlines').innerHTML = G.letters.map(L => `<text x="${L.x.toFixed(2)}" y="${BASE}" font-size="${G.FS.toFixed(2)}" opacity="0">${L.ch}</text>`).join('');
+  EL.outlines = [...document.querySelectorAll('#outlines text')];
+  $('#outlinePunch').style.transformOrigin = $('#letterPunch').style.transformOrigin = `${G.O.cx}px ${G.O.cy}px`;
+  $('#pushCam').style.transformOrigin = `${WC.x}px ${WC.y}px`;
+  const re = mulberry32(0xE4BE5);
+  EL.embers = Array.from({ length: 9 }, () => {
+    const e = document.createElement('div'); e.className = 'ember'; $('#embers').appendChild(e);
+    return { el: e, x: lerp(G.wordInk[0] + 30, G.wordInk[1] - 30, re()), y: BASE - 6 + 10 * re(), t0: 1.92 + 0.09 * re(), fall: 110 + 80 * re(), rot: -8 + 16 * re() };
+  });
+  const rd = mulberry32(0xD057);
+  EL.dust = Array.from({ length: 14 }, () => {
+    const e = document.createElement('div'); e.className = 'speck'; const sz = 3 + rd(); css(e, { width: px(sz), height: px(sz) }); $('#dust').appendChild(e);
+    return { el: e, x: 80 + 920 * rd(), y: 260 + 1500 * rd(), v: 22 + 30 * rd(), ph: 6.28 * rd() };
+  });
+  // Range labels
+  $('#labels').innerHTML = RANGES.map(([n, s], i) => `<div class="ctr lab labs" id="lab${i}" style="top:1538px">${n}</div><div class="ctr mono specs" id="spec${i}" style="top:1650px;font-size:30px">${s.replace(/&/g, '&amp;')}</div>`).join('');
+  EL.labs = RANGES.map((_, i) => [$('#lab' + i), $('#spec' + i)]);
+  // Pergola louvres: 12 slats
+  $('#louvres').innerHTML = Array.from({ length: 12 }, (_, k) => `<div class="slat" style="top:${k * 88}px"></div>`).join('');
+  EL.slats = [...document.querySelectorAll('.slat')];
+  // Odometer "+18"
+  const total = G.plus + 2 * G.digit, x0 = 540 - total / 2;
+  css($('#plus'), { left: px(x0) });
+  EL.strips = [[0, 3, 6, 9, 2, 5, 8, 4, 7, 1], [0, 7, 2, 9, 4, 1, 6, 3, 5, 0, 2, 4, 8]].map((digits, k) => {
+    const s = $(`#strip${k}`); s.innerHTML = digits.map(n => `<div>${n}</div>`).join('');
+    const reel = $(`#reel${k}`); css(reel, { left: px(x0 + G.plus + k * G.digit), width: px(G.digit), filter: `url(#puffy) url(#mbR${k})` });
+    return { s, reel };
+  });
+  // Route Fès → Sefrou (dots along a gentle arc)
+  const P0 = [PIN_F.x, PIN_F.y], P1 = [700, 860], P2 = [PIN_S.x, PIN_S.y];
+  const pts = []; let prev = null, acc = 0;
+  for (let u = 0; u <= 1.0001; u += 0.002) {
+    const x = (1 - u) ** 2 * P0[0] + 2 * (1 - u) * u * P1[0] + u * u * P2[0], y = (1 - u) ** 2 * P0[1] + 2 * (1 - u) * u * P1[1] + u * u * P2[1];
+    if (prev) acc += Math.hypot(x - prev[0], y - prev[1]);
+    if (!prev || acc >= 22) { pts.push([x, y]); acc = 0; }
+    prev = [x, y];
+  }
+  const route = pts.slice(1, -1);
+  $('#route').innerHTML = route.map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" fill="#A8784A" opacity="0"/>`).join('');
+  EL.route = [...document.querySelectorAll('#route circle')];
+  // Logo reveal windows (source px × 1.5), each holding the full logo offset into place.
+  const layer = $('#logoLayer');
+  EL.wins = [...WINS.map(([c0, c1]) => [c0, c1, 0, 61]), [0, 602, 61, 83]].map(([c0, c1, r0, r1], k) => {
+    const w = document.createElement('div'); w.className = 'win';
+    css(w, { left: px(LOGO.x + LOGO.s * c0), top: px(LOGO.y + LOGO.s * r0), width: px(LOGO.s * (c1 - c0)), height: px(LOGO.s * (r1 - r0)) });
+    const img = document.createElement('img'); img.src = 'assets/logo-prompolu.png'; img.width = 903; img.alt = '';
+    css(img, { left: px(-LOGO.s * c0), top: px(-LOGO.s * r0) });
+    w.appendChild(img); layer.insertBefore(w, $('#logoFinal'));
+    return { w, img, h: LOGO.s * (r1 - r0), k };
+  });
+}
+
+/* ============================================================================================
+   Motion functions (pure; also sampled by sfx.mjs through window.motionAt)
+   ============================================================================================ */
+const sPush = t => 1 + 0.03 * seg(t, 1.45, 1.75, E.sine);
+const sPunch = t => 1 + 2.2 * seg(t, 2.10, 2.30, E.io3);
+const sOutline = t => 1 + 1.15 * seg(t, 2.10, 2.36, E.io3);
+const DIRS = [
+  { dx: -380, dy: 0, rx: 0, ry: -90, b: 'x' }, { dx: -380, dy: 0, rx: 0, ry: -90, b: 'x' },
+  { dx: 0, dy: -380, rx: 90, ry: 0, b: 'y' }, { dx: 0, dy: -380, rx: -90, ry: 0, b: 'y' },
+  { dx: 380, dy: 0, rx: 0, ry: 90, b: 'x' }, { dx: 380, dy: 0, rx: 0, ry: 90, b: 'x' }, { dx: 380, dy: 0, rx: 0, ry: 90, b: 'x' },
+];
+function letterState(i, t) {
+  const D = DIRS[i], t0 = 0.85 + 0.06 * i, u = clamp((t - t0) / 0.22), rem = 1 - SPR04(u);
+  const f = seg(t, 1.75 + 0.012 * i, 1.84 + 0.012 * i, E.io2), g = SPR06(clamp((t - (1.90 + 0.012 * i)) / 0.14));
+  const tb = 14 * (1 - clamp(u / 0.55)) ** 2;
+  return { dx: D.dx * rem, dy: D.dy * rem, z: 600 * rem, rx: D.rx * rem + 180 * f + 180 * g, ry: D.ry * rem, s: 1 - 0.12 * f + 0.24 * g,
+    op: seg(t, t0, t0 + 0.035), bx: D.b === 'x' ? tb : 0, by: D.b === 'y' ? tb : 0 };
+}
+// The bronze O → aluminium profile → the window frame (2.30–2.95)
+function frameState(t) {
+  const sc0 = 1.12 * 1.03 * 3.2, w0 = G.O.w * sc0, h0 = G.O.h * sc0, k = seg(t, 2.30, 2.95, E.io3);
+  const w = lerp(w0, FR.w, k), h = lerp(h0, FR.h, k);
+  const hw0 = w0 * G.O.hw, hh0 = h0 * G.O.hh;
+  return { k, x: lerp(G.Op.x, FR.x, k), y: lerp(G.Op.y, FR.y, k), w, h, r: lerp(0.44 * Math.min(w0, h0), FR.r, k),
+    hw: lerp(hw0, IN.w, k), hh: lerp(hh0, IN.h, k), hr: lerp(0.48 * Math.min(hw0, hh0), FR.ir, k), sc: lerp(sc0, 1, k) };
+}
+const rrect = (x, y, w, h, r) => { r = Math.max(0, Math.min(r, w / 2, h / 2)); return `M${x + r} ${y}H${x + w - r}A${r} ${r} 0 0 1 ${x + w} ${y + r}V${y + h - r}A${r} ${r} 0 0 1 ${x + w - r} ${y + h}H${x + r}A${r} ${r} 0 0 1 ${x} ${y + h - r}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}Z`; };
+const slide1 = t => seg(t, 4.30, 4.65, E.io3);              // Coulissants: the pane slides away
+const swing2 = t => seg(t, 5.70, 6.10, E.io2);              // Battants: the sash swings on its hinge
+const drawer3 = t => seg(t, 7.10, 7.45, E.io3);             // Agencement: pulled out like a drawer
+const slat4 = (j, t) => seg(t, 8.45 + 0.022 * j, 8.63 + 0.022 * j, E.out3);   // Extérieur: pergola louvres close
+const scrollY = t => -1920 * seg(t, 9.00, 9.40, E.io3) - 1920 * seg(t, 11.40, 11.80, E.io3);
+// Odometer "+18": reel "1" lands at 9.95, the bronze "8" at 10.10 with one 6 % bounce.
+const REEL = [{ n: 9, t1: 9.95, m: 0 }, { n: 12, t1: 10.10, m: 0.28 }], R0 = 9.45;
+const BW = 2 * Math.PI / 0.16, BZ = 0.55; let BK = 1;
+function reelPos(k, t) {
+  const R = REEL[k];
+  if (t <= R0) return 0;
+  if (t < R.t1) { const u = (t - R0) / (R.t1 - R0); return R.n * ((1 - R.m) * E.out3(u) + R.m * u); }
+  if (!R.m) return R.n;
+  const v = R.n * R.m / (R.t1 - R0), tau = t - R.t1, wd = BW * Math.sqrt(1 - BZ * BZ);
+  return R.n + BK * (v / wd) * Math.exp(-BZ * BW * tau) * Math.sin(wd * tau);
+}
+(() => { let p = 0; for (let t = 10.10; t < 10.5; t += 0.0005) p = Math.max(p, reelPos(1, t) - 12); BK = 0.06 / p; })();
+const pinY = (P, t) => -380 * (1 - SPR10(clamp((t - P.t0) / 0.34)));
+window.motionAt = t => {
+  const f = frameState(t);
+  return { t, push: sPush(t), punch: sPunch(t), frameW: t < 2.30 ? 0 : f.w, slide: slide1(t), swing: swing2(t), drawer: drawer3(t), louvres: slat4(5.5, t),
+    scroll: scrollY(t), reel0: reelPos(0, t), reel1: reelPos(1, t), pinF: pinY(PIN_F, t), pinS: pinY(PIN_S, t) };
+};
+
+/* ============================================================================================
+   draw(t)
+   ============================================================================================ */
+function draw(t) {
+  const tq = frameT(t);
+  const warm = seg(t, 2.66, 3.00);
+  $('#grain').style.opacity = (lerp(0.05, 0.03, warm) * seg(t, 0, 0.2)).toFixed(4);
+  $('#vig').style.opacity = (lerp(0.18, 0.06, warm) * seg(t, 0, 0.2)).toFixed(4);
+  drawOpener(t);
+  drawSec2(t, tq);
+  drawPage(t, tq);
+  drawLogo(t);
+}
+
+function drawOpener(t) {
+  const on = t < 3.01;
+  show($('#dark'), on);
+  if (!on) return;
+  $('#flatCover').style.opacity = (1 - seg(t, 0, 0.2)).toFixed(4);
+  $('#floorGlow').style.opacity = (0.55 * seg(t, 0, 0.2)).toFixed(4);
+  for (const s of EL.dust) css(s.el, { transform: `translate(${px(s.x + 6 * Math.sin(s.ph + 1.3 * t))}, ${px(s.y - s.v * t)})`, opacity: seg(t, 0, 0.2).toFixed(3) });
+  const mOn = t < 2.62;
+  show($('#pushCam'), mOn);
+  if (!mOn) return;
+  show($('#letterPunch'), t < 2.33);
+  const sp = sPush(t), sk = sPunch(t), so = sOutline(t);
+  $('#pushCam').style.transform = sp === 1 ? 'none' : `scale(${sp.toFixed(5)})`;
+  $('#letterPunch').style.transform = sk === 1 ? 'none' : `scale(${sk.toFixed(5)})`;
+  $('#outlinePunch').style.transform = so === 1 ? 'none' : `scale(${so.toFixed(5)})`;
+  // the two opening lines blur in word by word, then fly off with the punch-in
+  [['#w1', 0.25], ['#w2', 0.38], ['#w3', 0.55], ['#w4', 0.68]].forEach(([id, a]) => blurIn($(id), seg(t, a, a + 0.22, E.out3), 12, 14));
+  const dsk = vel(sPunch, t), lb = Math.min(26, 0.0045 * Math.abs(dsk) * 300);
+  css($('#lines'), { filter: lb > 0.3 ? `blur(${lb.toFixed(2)}px)` : 'none', opacity: (1 - seg(t, 2.18, 2.27)).toFixed(3) });
+  EL.letters.forEach((L, i) => {
+    const st = letterState(i, t), G0 = G.letters[i];
+    let op = st.op, bx = st.bx, by = st.by;
+    if (t > 2.10 && i !== 2) { bx = Math.min(44, 0.16 * Math.abs(dsk * sp * (G0.cx - G.O.cx)) / FPS); op *= 1 - seg(t, 2.19, 2.27); }
+    if (i === 2) { L.bronze.style.opacity = seg(t, 2.17, 2.30, E.io2).toFixed(3); op *= 1 - seg(t, 2.30, 2.315); }
+    css(L.el, { opacity: op.toFixed(3), transform: `translate3d(${px(st.dx)}, ${px(st.dy)}, ${px(st.z)}) rotateX(${st.rx.toFixed(3)}deg) rotateY(${st.ry.toFixed(3)}deg) scale(${st.s.toFixed(5)})` });
+    setBlur('mbL' + i, bx, by);
+  });
+  EL.outlines.forEach((o, i) => o.setAttribute('opacity', (seg(t, 1.75 + 0.012 * i, 1.78 + 0.012 * i) * (1 - seg(t, 2.30, 2.55))).toFixed(3)));
+  for (const e of EL.embers) {
+    const u = clamp((t - e.t0) / 0.3);
+    css(e.el, { opacity: (u > 0 && u < 1 ? Math.min(1, u * 8) * (1 - u) : 0).toFixed(3), transform: `translate(${px(e.x)}, ${px(e.y + e.fall * u ** 1.4)}) rotate(${e.rot}deg)` });
+  }
+}
+
+function drawSec2(t, tq) {
+  // cream paper world grows out of the window opening
+  const cr = $('#bgCream'), kc = seg(t, 2.66, 3.00, E.in2);
+  show(cr, t >= 2.66);
+  const R = 2300 * kc;
+  cr.style.webkitMaskImage = cr.style.maskImage = t < 3.00 ? `radial-gradient(circle at ${FR.x}px ${FR.y}px, #000 ${px(Math.max(0, R - 40))}, transparent ${px(Math.max(R, 0.01))})` : 'none';
+  const on = t >= 2.295 && t < 9.45;
+  show($('#sec2'), on);
+  if (!on) return;
+  // frame (puffy bronze profile)
+  const f = t < 2.95 ? frameState(t) : { k: 1, x: FR.x, y: FR.y, w: FR.w, h: FR.h, r: FR.r, hw: IN.w, hh: IN.h, hr: FR.ir, sc: 1 };
+  const lw = f.w / f.sc, lh = f.h / f.sc, lhw = f.hw / f.sc, lhh = f.hh / f.sc;
+  $('#framePath').setAttribute('d', rrect(-lw / 2, -lh / 2, lw, lh, f.r / f.sc) + rrect(-lhw / 2, -lhh / 2, lhw, lhh, f.hr / f.sc));
+  $('#frameG').setAttribute('transform', `translate(${f.x.toFixed(3)} ${f.y.toFixed(3)}) scale(${f.sc.toFixed(5)})`);
+  $('#frameSvg').style.opacity = seg(t, 2.295, 2.31).toFixed(3);
+  const fv = t < 2.95 ? Math.abs(vel(u => frameState(u).w, t)) / 2 + Math.hypot(vel(u => frameState(u).x, t), vel(u => frameState(u).y, t)) : 0;
+  const fs = Math.min(16, 0.45 * fv / SUBF);
+  setBlur('mbFrame', fs / f.sc, fs / f.sc);
+  $('#frameG').setAttribute('filter', fs > 0.3 ? 'url(#mbFrame)' : '');
+  // window opening: the photos are clipped to the hole of the profile
+  const top = f.y - f.hh / 2, left = f.x - f.hw / 2;
+  $('#win').style.clipPath = `inset(${px(top)} ${px(W - left - f.hw)} ${px(H - top - f.hh)} ${px(left)} round ${px(f.hr)})`;
+  $('#win').style.opacity = seg(t, 2.42, 2.60).toFixed(3);
+  // 01 Coulissants — Ken Burns, then the pane slides away with its mullion
+  const p1 = $('#p1'), k1 = slide1(t);
+  p1.firstElementChild.style.transform = `scale(${lerp(1.16, 1.0, seg(t, 2.48, 4.30, E.out3)).toFixed(4)})`;
+  show(p1, k1 < 1);
+  const v1 = Math.abs(vel(slide1, t)) * IN.w, b1 = Math.min(18, 0.45 * v1 / SUBF);
+  setBlur('mbP1', b1, 0);
+  css(p1, { transform: k1 > 0 ? `translateX(${px(-IN.w * k1)})` : 'none', filter: b1 > 0.3 ? 'url(#mbP1)' : 'none' });
+  const mu = $('#mullion');
+  css(mu, { opacity: (k1 > 0 && k1 < 1 ? 1 : 0).toFixed(3), left: px(IN.x + IN.w - IN.w * k1 - 9), filter: b1 > 0.3 ? 'url(#puffy) url(#mbP1)' : 'url(#puffy)' });
+  // 02 Battants — revealed under the sliding pane, then swings away on its left hinge
+  const p2 = $('#p2'), k2 = swing2(t);
+  show(p2, t >= 4.28 && k2 < 1);
+  p2.firstElementChild.style.transform = `scale(${lerp(1.08, 1.0, seg(t, 4.30, 5.70, E.out3)).toFixed(4)})`;
+  css(p2, { transformOrigin: '0px 50%', transform: k2 > 0 ? `rotateY(${(100 * k2).toFixed(3)}deg)` : 'none' });
+  p2.lastElementChild.style.opacity = (0.55 * k2).toFixed(3);
+  // 03 Agencement — pulled down and out like a drawer
+  const p3 = $('#p3'), k3 = drawer3(t);
+  show(p3, t >= 5.68 && k3 < 1);
+  p3.firstElementChild.style.transform = `scale(${lerp(1.08, 1.0, seg(t, 5.70, 7.10, E.out3)).toFixed(4)})`;
+  const v3 = Math.abs(vel(drawer3, t)) * IN.h, b3 = Math.min(18, 0.45 * v3 / SUBF);
+  setBlur('mbP3', 0, b3);
+  css(p3, { transform: k3 > 0 ? `translateY(${px(IN.h * k3)}) scale(${(1 + 0.04 * k3).toFixed(4)})` : 'none', filter: b3 > 0.3 ? 'url(#mbP3)' : 'none' });
+  p3.lastElementChild.style.opacity = (0.25 * k3).toFixed(3);
+  // 04 Extérieur — then the pergola louvres close over it
+  const p4 = $('#p4');
+  show(p4, t >= 7.08);
+  p4.firstElementChild.style.transform = `scale(${lerp(1.08, 1.0, seg(t, 7.10, 8.60, E.out3)).toFixed(4)})`;
+  const lv = $('#louvres');
+  show(lv, t >= 8.44);
+  css(lv, { filter: t >= 8.44 ? 'url(#puffy)' : 'none' });
+  EL.slats.forEach((s, j) => { const k = slat4(j, t); s.style.transform = `rotateX(${(90 * (1 - k)).toFixed(3)}deg)`; s.style.opacity = k > 0 ? '1' : '0'; });
+  // caption, index, labels
+  blurIn($('#cap2'), seg(t, 2.92, 3.20, E.out3), 12, 16);
+  const idx = $('#idx'); blurIn(idx, seg(t, 3.00, 3.24, E.out3), 8, 10);
+  const cur = t < LAB_IN[1] ? 0 : t < LAB_IN[2] ? 1 : t < LAB_IN[3] ? 2 : 3;
+  idx.textContent = `0${cur + 1} / 04`;
+  EL.labs.forEach(([n, s], i) => {
+    const kin = seg(t, LAB_IN[i], LAB_IN[i] + 0.26, E.out3), kout = seg(t, LAB_OUT[i], LAB_OUT[i] + 0.15, E.in2);
+    const vis = kin > 0 && kout < 1;
+    show(n, vis); show(s, vis);
+    if (!vis) return;
+    const y = 24 * (1 - kin) - 30 * kout, op = kin * (1 - kout), bl = 10 * (1 - kin) + 8 * kout;
+    css(n, { opacity: op.toFixed(3), transform: `translateY(${px(y)})`, filter: bl > 0.05 ? `blur(${bl.toFixed(2)}px)` : 'none' });
+    const ks = seg(t, LAB_IN[i] + 0.08, LAB_IN[i] + 0.34, E.out3), op2 = ks * (1 - kout);
+    css(s, { opacity: op2.toFixed(3), transform: `translateY(${px(18 * (1 - ks) - 30 * kout)})` });
+  });
+}
+
+function drawPage(t, tq) {
+  // page scroll between sections, with vertical motion blur
+  const sy = scrollY(t), v = Math.abs(vel(scrollY, t)), bs = Math.min(16, 0.45 * v / SUBF);
+  $('#page').style.transform = sy ? `translateY(${px(sy)})` : 'none';
+  setBlur('mbScroll', 0, bs);
+  const out = seg(t, 12.85, 13.00);
+  const pa = $('#pageAll');
+  show(pa, t < 13.0);
+  css(pa, { filter: out > 0 ? `blur(${(16 * out).toFixed(2)}px)` : bs > 0.3 ? 'url(#mbScroll)' : 'none', opacity: (1 - out).toFixed(3) });
+  // section 3: "Pourquoi PROMPOLU" — +18 ans, distributeur officiel STRUGAL
+  const s3 = t >= 8.98 && t < 11.82;
+  show($('#sec3'), s3);
+  if (s3) {
+    EL.strips.forEach((r, k) => {
+      r.s.style.transform = `translateY(${px(-300 * reelPos(k, t))})`;
+      setBlur('mbR' + k, 0, Math.min(14, 0.7 * Math.abs(vel(u => reelPos(k, u), t))));
+    });
+    blurIn($('#ans'), seg(t, 10.00, 10.16, E.out3), 8, 22);
+    blurIn($('#distrib'), seg(t, 10.26, 10.44, E.out3), 10, 14);
+    $('#badge').style.transform = `scale(${lerp(0, 1, SPR12(clamp((t - 10.38) / 0.3))).toFixed(4)})`;
+    const nt = 'EN 12207 · EN 12208 · EN 12210', n = Math.floor(nt.length * seg(tq, 10.55, 10.95) + 1e-6);
+    $('#norms').textContent = nt.slice(0, n);
+  }
+  // section 4: Fès & Sefrou
+  const s4 = t >= 11.38;
+  show($('#sec4'), s4);
+  if (s4) {
+    for (const [P, id, mb] of [[PIN_F, '#pinF', 'mbPinF'], [PIN_S, '#pinS', 'mbPinS']]) {
+      const y = pinY(P, t), el = $(id), vy = Math.abs(vel(u => pinY(P, u), t)), b = Math.min(16, 0.45 * vy / SUBF);
+      css(el, { transform: `translate(${P.x}px, ${P.y}px)`, opacity: t >= P.t0 ? '1' : '0' });
+      const pin = el.querySelector('.pin'), sh = el.querySelector('.pinShadow');
+      setBlur(mb, 0, b);
+      css(pin, { transform: `translateY(${px(y)})`, filter: b > 0.3 ? `url(#puffy) url(#${mb})` : 'url(#puffy)' });
+      const hn = clamp(-y / 380);
+      css(sh, { transform: `scale(${(1 - 0.6 * hn).toFixed(3)})`, opacity: (1 - 0.8 * hn).toFixed(3) });
+    }
+    const kr = seg(t, 12.05, 12.45, E.io2);
+    EL.route.forEach((c, j) => c.setAttribute('opacity', (j + 1) / EL.route.length <= kr + 1e-6 ? '1' : '0'));
+    const kf = seg(t, 12.00, 12.22, E.out3), ks = seg(t, 12.15, 12.37, E.out3);
+    css($('#cityF'), { opacity: kf.toFixed(3), transform: `translateX(${px(-22 * (1 - kf))})` });
+    css($('#cityS'), { opacity: ks.toFixed(3), transform: `translateX(${px(22 * (1 - ks))})` });
+    blurIn($('#livraison'), seg(t, 12.45, 12.66, E.out3), 10, 16);
+  }
+}
+
+function drawLogo(t) {
+  $('#creamGlow').style.opacity = (seg(t, 12.90, 13.10) * (1 - seg(t, 13.50, 13.75))).toFixed(3);
+  const sk = $('#spark'), ks = seg(t, 12.98, 13.06, E.out2);
+  show(sk, t >= 12.98 && t < 13.07);
+  css(sk, { transform: `translate(${px(lerp(378, LOGO.x + 52.5, ks))}, ${px(LOGO.y + 45.75)})`, opacity: (seg(t, 12.98, 12.995) * (1 - seg(t, 13.025, 13.06))).toFixed(3) });
+  const settled = t >= 13.50;
+  show($('#logoFinal'), settled);
+  EL.wins.forEach(o => {
+    const k = o.k;
+    if (settled || t < 13.00) { show(o.w, false); return; }
+    show(o.w, true);
+    let dy = 0, dx = 0, op = 1, bx = 0, by = 0;
+    if (k === 0) { const kp = seg(t, 13.00, 13.08, E.out3); op = kp; dx = -12 * (1 - kp); bx = 14 * (1 - kp); }
+    else {
+      const t0 = k <= 7 ? 13.06 + 0.035 * (k - 1) : 13.32, dur = k <= 7 ? 0.14 : 0.18;
+      const u = clamp((t - t0) / dur), e = (k <= 7 ? RISE : RISE_A)(u);
+      dy = o.h * (1 - e); by = 10 * (1 - clamp(u / 0.6)); op = t >= t0 ? 1 : 0;
+    }
+    o.w.style.opacity = op.toFixed(3);
+    o.img.style.transform = dx || dy ? `translate(${px(dx)}, ${px(dy)})` : 'none';
+    o.img.style.filter = bx > 0.01 || by > 0.01 ? `url(#mbW${k})` : 'none';
+    setBlur('mbW' + k, bx, by);
+  });
+  blurIn($('#url'), seg(t, 13.60, 13.90, E.out3), 12, 14);
+  $('#endVig').style.opacity = seg(t, 14.05, 14.85, E.io2).toFixed(4);
+}
+const RISE = spring(8 / 91.5, 4.6), RISE_A = spring(8 / 33, 4.6);
+
+/* ============================================================================================
+   Film grain: feTurbulence (baseFrequency .9) re-seeded every frame (mulberry32), drawn once per frame
+   into a canvas shared by its 4 sub-frames; mean follows the world colour; never over the logo box.
+   ============================================================================================ */
+const gcv = $('#grain'), gctx = gcv.getContext('2d');
+let grainKey = '';
+async function grain(t) {
+  const f = frameOf(t), tf = f / FPS, warm = seg(tf, 2.66, 3.00);
+  const c = [lerp(79, 241, warm), lerp(71, 240, warm), lerp(64, 236, warm)].map(v => v / 255);
+  const hole = tf >= 12.95, key = `${f}|${warm.toFixed(3)}|${hole}`;
+  if (key === grainKey) return;
+  grainKey = key;
+  const seed = 1 + Math.floor(mulberry32(0x6A41 + f * 7919)() * 999983);
+  const A = 2.0, mtx = c.map(v => `${A} 0 0 0 ${(v - A / 2).toFixed(4)}`).join('  ') + '  0 0 0 0 1';
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}"><filter id="g" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="${seed}"/><feColorMatrix type="matrix" values="${mtx}"/></filter><rect width="${W}" height="${H}" filter="url(#g)"/></svg>`;
+  const img = new Image();
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  await img.decode();
+  if (grainKey !== key) return;
+  gctx.globalCompositeOperation = 'copy'; gctx.drawImage(img, 0, 0);
+  if (hole) { gctx.globalCompositeOperation = 'destination-out'; gctx.filter = 'blur(10px)'; gctx.fillStyle = '#000'; gctx.fillRect(LOGO.x - 24, LOGO.y - 24, LOGO.w + 48, LOGO.h + 48); gctx.filter = 'none'; }
+  gctx.globalCompositeOperation = 'source-over';
+}
+
+/* ============================================================================================
+   Master timeline, seek, preview
+   ============================================================================================ */
+const clock = { t: 0 };
+let drawnAt = -1;
+const tl = gsap.timeline({ paused: true });
+tl.to(clock, { t: DURATION, duration: DURATION, ease: 'none', onUpdate: () => { draw(clock.t); drawnAt = clock.t; } });
+function seek(t) {
+  t = clamp(+t || 0, 0, DURATION);
+  tl.seek(t, false);
+  if (drawnAt !== t) { clock.t = t; draw(t); drawnAt = t; }
+  return grain(t).then(() => t);
+}
+window.DURATION = DURATION;
+window.__fps = FPS; window.__width = W; window.__height = H; window.__duration = DURATION; window.__timeline = tl;
+window.__ready = (async () => {
+  await Promise.all([document.fonts.load('800 100px Archivo'), document.fonts.load('100 100px Inter'), document.fonts.load('800 100px Inter'),
+    document.fonts.load('400 17px "JetBrains Mono"'), document.fonts.load('600 17px "JetBrains Mono"')]);
+  await document.fonts.ready;
+  measure();
+  build();
+  const urls = ['coulissants', 'battants', 'agencement', 'exterieur'].map(n => `assets/photos/${n}.webp`);
+  await Promise.all([...document.images].map(i => i.decode()).concat(urls.map(u => { const i = new Image(); i.src = u; return i.decode(); })));
+  window.seek = seek;
+  await seek(FREEZE ?? 0);
+  if (!RENDER) {
+    const st = $('#stage'), fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); st.style.transform = `scale(${k})`; };
+    fit(); addEventListener('resize', fit);
+    if (PLAY) { const t0 = performance.now(); const loop = now => { seek(((now - t0) / 1000) % DURATION); requestAnimationFrame(loop); }; requestAnimationFrame(loop); }
+  }
+  return true;
+})();
+})();
+</script>
+</body>
+</html>

@@ -2,7 +2,18 @@
 
 All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. The first editable PROMPOLU technical animation is available below.
 
-## Latest video — PROMPOLU — Motion reel (10 s, 16:9, 60 fps)
+## Latest video — PROMPOLU — « La qualité, notre meilleur profil. » (9:16 for prompolu.com)
+
+A vertical website video (1080 × 1920, 60 fps, 15 s) in the motion-reel style, built from the site's own content:
+- the slogan, with the O of PROFIL becoming the bronze window frame;
+- the four ranges in the site's photos, each changing like its product (sliding pane, swinging sash, drawer, pergola louvres);
+- "+18 ans" and Distributeur officiel STRUGAL;
+- Fès & Sefrou, then the logo and prompolu.com.
+
+- [Master MP4 with sound](videos/prompolu-site-9x16/out.mp4) · [lighter web MP4](videos/prompolu-site-9x16/out-web.mp4) · [poster](videos/prompolu-site-9x16/poster.jpg)
+- [Contact sheet](videos/prompolu-site-9x16/evidence/contact-sheet.jpg) · [embed snippet, storyboard and choices](videos/prompolu-site-9x16/README.md)
+
+## PROMPOLU — Motion reel (10 s, 16:9, 60 fps)
 
 A tactile motion-design reel in puffy 3D type and polished bronze. It moves from the dark studio world to the brand's cream paper world: "MOTION", squash and stretch, an easing editor, a toggle morph, a bento of techniques and a "600 frames." odometer, then the supplied PROMPOLU logo. It is one deterministic HTML page with a paused GSAP timeline. Each frame averages 4 sub-frames for motion blur, rendered with Playwright and FFmpeg. The soundtrack is procedural, at 93 BPM, with pops, whooshes and ticks driven by the on-screen motion.
 

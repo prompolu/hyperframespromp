@@ -1,0 +1,53 @@
+{
+  "file": "out-web.mp4",
+  "ffprobe": {
+    "programs": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "profile": "High",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "r_frame_rate": "60/1",
+        "duration": "15.000000",
+        "bit_rate": "1255845",
+        "nb_read_frames": "900"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "profile": "LC",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "15.018000",
+        "bit_rate": "132343",
+        "nb_read_frames": "704"
+      }
+    ],
+    "format": {
+      "duration": "15.018000",
+      "size": "2628255"
+    }
+  },
+  "full_decode": "ok",
+  "audio_after_aac": {
+    "integrated_LUFS": -15.2,
+    "true_peak_dBTP": -1.2,
+    "LRA_LU": 3.5
+  },
+  "audio_sync": {
+    "offset_samples": 0,
+    "offset_ms": 0.0,
+    "correlation": 0.991
+  },
+  "problems": []
+}

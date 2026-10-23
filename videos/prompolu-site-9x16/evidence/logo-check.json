@@ -1,0 +1,12 @@
+{
+ "frame": "last frame of the film (899, average of its 4 sub-frames)",
+ "logo_box": [
+  88,
+  838,
+  903,
+  124.5
+ ],
+ "reference": "logo-prompolu.png as an <img> at 903x124.5 on #F1F0EC, same Chromium",
+ "max_diff": 0,
+ "pixels_over_2_levels": 0
+}
