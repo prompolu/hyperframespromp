@@ -1,0 +1,43 @@
+{
+ "frame": "t = 10.00 s still (render.mjs --stills 10.00)",
+ "logo_box": {
+  "x": 358,
+  "y": 457,
+  "w": 1204,
+  "h": 166
+ },
+ "logo_png_sha256": "2e23815cb6d79cfc040644d6d4f2e85c04b35e64d2578c560ca0a7b5605636cc",
+ "comparisons": [
+  {
+   "reference": "same PNG as an <img> at 1204x166 on #F1F0EC, same Chromium",
+   "max_diff": 0,
+   "mean_diff": 0.0,
+   "pixels_over_2_levels": 0
+  },
+  {
+   "reference": "PNG composited on #F1F0EC, scaled exactly 2x (bilinear, PIL)",
+   "max_diff": 2,
+   "mean_diff": 0.0785,
+   "pixels_over_2_levels": 0
+  },
+  {
+   "reference": "PNG composited on #F1F0EC, scaled exactly 2x (bicubic, PIL)",
+   "max_diff": 31,
+   "mean_diff": 1.4255,
+   "pixels_over_2_levels": 31360
+  },
+  {
+   "reference": "PNG composited on #F1F0EC, scaled exactly 2x (lanczos, PIL)",
+   "max_diff": 48,
+   "mean_diff": 2.1347,
+   "pixels_over_2_levels": 39993
+  },
+  {
+   "reference": "PNG composited on #F1F0EC, scaled exactly 2x (nearest, PIL)",
+   "max_diff": 90,
+   "mean_diff": 3.621,
+   "pixels_over_2_levels": 26720
+  }
+ ],
+ "verdict": "match: identical to the browser-drawn PNG; within 2 levels of the bilinear 2x composite (brief tolerance: 2 levels)"
+}

@@ -2,7 +2,15 @@
 
 All 21 official HyperFrames skills are vendored as real files under `.agents/skills/`, the repository skill discovery directory used by Codex. Each directory contains the complete upstream `SKILL.md`, references, scripts, and assets. Start future motion graphics work by reading `.agents/skills/hyperframes/SKILL.md`. The first editable PROMPOLU technical animation is available below.
 
-## Latest video — PROMPOLU — Nos gammes (10 s, 16:9)
+## Latest video — PROMPOLU — Motion reel (10 s, 16:9, 60 fps)
+
+A tactile motion-design reel in puffy 3D type and polished bronze. It moves from the dark studio world to the brand's cream paper world: "MOTION", squash and stretch, an easing editor, a toggle morph, a bento of techniques and a "600 frames." odometer, then the supplied PROMPOLU logo. It is one deterministic HTML page with a paused GSAP timeline. Each frame averages 4 sub-frames for motion blur, rendered with Playwright and FFmpeg. The soundtrack is procedural, at 93 BPM, with pops, whooshes and ticks driven by the on-screen motion.
+
+- [1920 × 1080, 60 fps MP4 with sound](videos/prompolu-motion-reel/out.mp4)
+- [Contact sheet](videos/prompolu-motion-reel/evidence/contact-sheet.jpg) · [brief stills](videos/prompolu-motion-reel/evidence/brief-stills.jpg) · [sound cues](videos/prompolu-motion-reel/cues.txt)
+- [Source, checks, choices and deviations](videos/prompolu-motion-reel/README.md)
+
+## PROMPOLU — Nos gammes (10 s, 16:9)
 
 A cut-free morph-chain website promo: the P mark becomes an app tile, a button, the prompolu.com address bar, a product grid, range cards (Coulissants · Battants · Extérieur) and finally the PROMPOLU ALUMINIUM logo. 1920 × 1080, 30 FPS, exactly 300 frames. It is built as one GSAP-driven HTML page and rendered frame by frame with Playwright and FFmpeg. The soundtrack is original and synthesised: a 125 BPM pop-house bed, with pops and swooshes that follow the motion of each transition.
 

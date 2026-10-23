@@ -1,0 +1,101 @@
+[
+ {
+  "area": "cream background between tiles (6.95)",
+  "frame": "stills/punch/t_06.950.png",
+  "xy": [
+   960,
+   150
+  ],
+  "measured_mean": "#F0EFEB",
+  "expected": "#F1F0EC",
+  "grain_sd": 1.26
+ },
+ {
+  "area": "tile #F8F7F4 (tile 01, 6.95)",
+  "frame": "stills/punch/t_06.950.png",
+  "xy": [
+   400,
+   300
+  ],
+  "measured_mean": "#F7F6F3",
+  "expected": "#F8F7F4",
+  "grain_sd": 1.29
+ },
+ {
+  "area": "Springs card #765333, centre (6.95)",
+  "frame": "stills/punch/t_06.950.png",
+  "xy": [
+   960,
+   470
+  ],
+  "measured_mean": "#7D5B3C",
+  "expected": "#765333",
+  "grain_sd": 1.4
+ },
+ {
+  "area": "counter card #F8F7F4 (8.35)",
+  "frame": "stills/t_08.350.png",
+  "xy": [
+   1450,
+   700
+  ],
+  "measured_mean": "#F7F6F3",
+  "expected": "#F8F7F4",
+  "grain_sd": 1.31
+ },
+ {
+  "area": "cream above the logo, inside the clean ellipse (10.00)",
+  "frame": "stills/t_10.000.png",
+  "xy": [
+   960,
+   430
+  ],
+  "measured_mean": "#F1F0EC",
+  "expected": "#F1F0EC",
+  "grain_sd": 0.89
+ },
+ {
+  "area": "cream beside the logo, outside the grain hole (10.00)",
+  "frame": "stills/t_10.000.png",
+  "xy": [
+   960,
+   700
+  ],
+  "measured_mean": "#F0EFEB",
+  "expected": "#F1F0EC",
+  "grain_sd": 1.28
+ },
+ {
+  "area": "editor outer background #3A332C (3.60)",
+  "frame": "stills/t_03.600.png",
+  "xy": [
+   120,
+   300
+  ],
+  "measured_mean": "#39322B",
+  "expected": "#3A332C",
+  "grain_sd": 3.2
+ },
+ {
+  "area": "editor panel #17120D (3.60)",
+  "frame": "stills/t_03.600.png",
+  "xy": [
+   600,
+   1000
+  ],
+  "measured_mean": "#19140F",
+  "expected": "#17120D",
+  "grain_sd": 2.74
+ },
+ {
+  "area": "final-frame corner, ink (10.00)",
+  "frame": "stills/t_10.000.png",
+  "xy": [
+   12,
+   12
+  ],
+  "measured_mean": "#1F1B16",
+  "expected": "#17120D",
+  "grain_sd": 2.58
+ }
+]

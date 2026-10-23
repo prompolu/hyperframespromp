@@ -1,0 +1,15 @@
+{
+  "name": "prompolu-motion-reel",
+  "private": true,
+  "type": "module",
+  "description": "PROMPOLU 10-second motion reel: one deterministic GSAP page rendered at 60 fps with sub-frame motion blur (Playwright + FFmpeg), with a procedural soundtrack.",
+  "scripts": {
+    "sfx": "node sfx.mjs",
+    "stills": "node render.mjs --stills 0.40,1.15,2.30,3.60,4.55,4.88,5.15,6.95,8.35,9.00,10.00",
+    "render": "node render.mjs",
+    "preview": "node serve.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}
